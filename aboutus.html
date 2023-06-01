@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logeinpage</title>
+    <!-- <link rel="stylesheet" href="{% static 'header.css'%}"> -->
+    <style>
+        .message {
+            border: 2px solid black;
+            width: 95vw;
+            margin: 20px auto 20px auto;
+            box-shadow: 0px 0px 8px black;
+            border-radius: 10px;
+            background-color: rgba(247, 213, 224, 0.854);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.2rem;
+            padding: 5px;
+        }
+
+        .list1 {
+            margin-left: 10px;
+            font-size: 1rem;
+            font-family: unset;
+
+            list-style: linear-gradient(red, blue);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+      {%include 'header.html'%}
+    <div class="message">
+        <h1>Founder President Message</h1>
+        <img src="{% static 'president_of college.jpeg' %}" />
+        <h1>Hon. Mr. P. N. Suke</h1>
+
+        <h2>Navsahyadri Education society, Pune</h2>
+        <p align="justify">
+            Education is not the filling of a pail, but the lighting of a fire. This fire has given the vision for
+            education in India which is an inspiration for the creation of a knowledge-based society that would not only
+            induce competitiveness, yet foster a sense of co-operation.<br><br>
+
+            Navsahyadri Education Society pioneers the national vision of creation of a society by molding the stratum
+            of knowledge and contributing to the building of a nation with the power of skilled and intellectual force
+            that would empower the Indian economy to become a powerful nation in the global map.<br><br>
+
+            With an aim to aid the twenty-first century, NESGI performs a multi-task role. It delivers innovative
+            technical knowledge, acquires capability to decipher and adapt knowledge produced elsewhere, and create an
+            intelligent human power at all levels through challenging teaching and research activities, thereby
+            balancing both; need (quality) and demand(quantity).<br><br>
+
+            In Education lies the key for creating, adapting, and spreading knowledge in technical and management
+            disciplines and all respective subjects. We believe technical and management education is a powerful
+            contrivance to build knowledge for an information-based society.<br><br>
+
+            We have a cherished goal in the educational process of a life span which presupposes universal awareness of
+            new innovations and technologies in the form of our esteemed institution, with high research and development
+            standards that shapes up the dynamic contours of higher technical education, We extend our welcome to the
+            leaders of the future at NESGI!!!<br><br>
+        </p>
+    </div>
+    <div class="message">
+        <h1>Engineering Principal's Message</h1>
+        <figure>
+            <img class="principalimg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWIWE_hoX4Tbe5Lij8aPCLwzsGOJ_BQv1UQwB2TQlDvSstAWsFmiqgdCWNkMZM-BQxwtw&usqp=CAU">
+            <figcaption>
+                <h2>Dr. R.J.Patil</h2>
+                <h3>Principal- Engineering NESGI Naigaon, Pune</h3>
+            </figcaption>
+        </figure>
+        <p align="justify">
+            The field of engineering is evolving rapidly and offers myriad of challenges across interdisciplinary
+            domains. To keep up with the fast-changing nature of engineering,
+            the college invests in renewal and transformation so as to leverage on our culture and tradition of
+            excellence in engineering education and reserch.<br><br>
+
+            We review and refocus our efforts in order to continually bring the best possible, relevant and robust
+            education to our students. We nuture innovation and creativity across
+            and between disciplines and have been committed to making education accessible to people from diverse
+            backgrounds since our inception. Today there is widespread knowledge everywhere with newer technologies,
+            skills and avenues emerging.<br><br>
+
+            I welcome you all to this unique family and look towards helping you develop as engineer, creating a better
+            future.<br><br></h4>
+        </p>
+    </div>
+    <div class="message">
+        <h2>The Institute</h2><br>
+        <p align="justify">
+            <b> About us</b><br><br>
+
+            Global Competitive Spirit is the trademark of all the technical and management institutes of the world as
+            the Globalization has indeed arrived on the wings of science & technology and is here to stay. NESGI, an
+            AICTE approved, recognized by Govt. Of Maharashtra & affiliated to University of Pune is a premier Center
+            for Excellence and has laid its foundation on this base in the year 2010.
+
+            Since then, the group has progressed in leaps and bounds and is undergoing a continuous process of
+            improvement in all aspects of curricular and extracurricular activities. One can experience a polarization
+            of facilities and resources of metro setting as well as peace, environment and true nature of the rural
+            setting on this campus.
+
+            Unique in its structure, methods and goals, the group is strongly rooted in a philosophy of training and
+            research that emphasizes the intimate relationship between knowledge and its application and seeks to
+            promote the creation of an Ideal society. NESGI provides a congenial atmosphere for diligent academic
+            pursuits.
+            <br><br>
+            <b>Location</b><br><br>
+
+            This institute is located at Naigaon, Pune on Pune-Banglore highway 30km away from Pune Railway Station.
+
+            The grandeur of the location provides a unique environment for education in
+
+            close proximity with nature which is farfetched from the hum-drum of the city. The NESGI campus has
+            enrapturing and captivating lush surroundings where silence is punctuated with birdsongs and gentle sway of
+            trees. The total atmosphere adds to an aura of serenity and peace. The institute is well connected and can
+            be reached by using bus from Bus Stand.
+        </p>
+    </div>
+    <div class="message">
+        <h2>Infrastructure</h2>
+        <p align="justify">
+            <b>Infrastructure/ Highlights</b>
+        <ul class="list1" align="justify">
+            <li>
+                Campus spread over 18 acres of land in eco-friendly and lush green environment
+            </li>
+            <li>
+                Campus floor area more than 3.5 lacs sq.ft (approx.) for academic
+                activities
+            </li>
+            <li>
+                670 sq.ft. floor area for each laboratory
+            </li>
+            <li>
+                Canteen with modern amenities of 4000 sq.ft.
+            </li>
+            <li>
+                Guest House with all amenities in an area of 500 sq.ft.
+            </li>
+            <li>
+                Separate girls and boys hostel with 500 studentscapacity each in an area of 1 Lacs sq.ft.
+            </li>
+            <li>
+                Staff quarters for Professors in a total area of 500 sq.ft. along with quarters for
+            </li>
+            <li>
+                HODs and Senior Professors in a total area of 12K sq.ft.
+            </li>
+            <li>
+                Open auditorium with seating capacity of 2000 students
+            </li>
+            <li>
+                Separate conference hall with seating capacity of 200 each
+            </li>
+            <li>
+                Separate hostels for boys & girls .Bank ATM facility at Campus
+            </li>
+            <li>
+                Sports Ground (Cricket, Football, Basketball, Volleyball, Badminton)
+            </li>
+            <li>
+                ARC at Navsahyadri
+            </li>
+            <li>
+                Bus facility from all routes
+            </li>
+        </ul>
+        <b>State of art Facility</b>
+        <ul class="list1" align="justify">
+            <li>
+                Central Workshop with Modern Machines and Equipments
+            </li>
+            <li>
+                Women Grievance Handling Cell
+            </li>
+            <li>
+                Entrepreneurship Development Cell
+            </li>
+            <li>
+                Research & Development Consultancy Cell
+            </li>
+            <li>
+                Digital library with NPTEL and e-Journals
+            </li>
+            <li>
+                Robotics Club
+            </li>
+            <li>
+                Well-equipped Modern Laboratories
+            </li>
+            <li>
+                Gymnasium, Outdoor & Indoor Play Ground Facilities
+            </li>
+            </p>
+    </div>
+    {% include 'footer.html' %}
+</body>
+
+<!-- https://lh5.googleusercontent.com/p/AF1QipMQw2HqzFfjN2LZUB4JN7Ypx2_eZOOisbB0czPy=w1080-k-no -->
+
+</html>

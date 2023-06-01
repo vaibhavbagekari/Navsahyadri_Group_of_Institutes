@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Engineering</title>
+    <!-- <link rel="stylesheet" href="header.css"> -->
+    <link rel="stylesheet" href="{% static 'department.css'%}">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'engnav.html' %}
+    <div class="a">
+        <div>
+            <div class="divh1">
+                <h2 class="meh2">Electrical Engineering</h2><br>
+            </div>
+            <div class="MEdiv">
+
+                <span class="span">Course Code:663229310</span>
+                <span class="span">Duration:4 year</span>
+                <span class="span">Course Type: Full Time</span>
+                <span class="span">Intake: 120,Direct 2<sup>th</sup>Year Intake:84 </span>
+            </div>
+           
+            <div width="100%" class="meimg">
+                <img width="50%" src="{% static 'Electrical_img2.jpg'%}">
+                <img width="50%" src="{% static 'Electrical_img3.webp'%}">
+            </div>
+            <div class="about-dep-div">
+                <h2 class="topic-title">About Department</h2>
+                <div class="about-container">
+                    <div class="about-text">
+                        Computer Engineering is a discipline that integrates several fields of Electrical Engineering
+                        and
+                        E&amp;TC Engineering. The goal of the Department is to prepare students for successful careers
+                        in
+                        the software and hardware industry that meet the needs of Indian and multinational companies
+                        and to excel in higher studies. The Department has experienced and dedicated faculty members
+                        with strong commitment to engineering education and professional ethics.
+                        <br>
+                        <br>
+                        <b>Vision:</b> Contributing to the welfare of society through technical and quality education to
+                        the
+                        rural
+                        base students.
+                        <br>
+                        <br>
+                        <b>Mission:</b> The Department vision is to establish the center for excellence in professional
+                        development and entrepreneurship development resulting in the enhancement of the rural area.<br>
+                        To produce Best Quality Computer Science Professionals by importing quality hands-on
+                        experience and value education.<br>
+                        To train the students to fulfill Professional and social requirements in the industry.
+                    </div>
+                    <br>
+                    <br>
+                    <div class="about-img">
+                        <img src="{% static 'cs_img2.jpeg' %}" alt="" width="100%" height="100%">
+                    </div>
+                </div>
+            </div>
+            <div class="about-dep-div">
+                <h2 class="topic-title">HOD Message</h2>
+                <div class="about-container" style="gap: 0px;">
+                    <div style="width:220px;">
+
+                        <img src="{% static 'enghod.jpg' %}" alt="" width="100%">
+
+                    </div>
+                    <div class="about-text" style="">
+                        <ul class="hod-info">
+                            <li class="hod-info-item">Name:</li><br>
+
+                            <li class="hod-info-item">Education:
+                            </li><br>
+
+                            <li class="hod-info-item">Email id:</li><br>
+
+                            <li class="hod-info-item">Contact No:</li><br>
+
+                        </ul>
+
+                        <b>HOD Message</b>
+
+                        Civil Engineering has to do with Civilization! With Civilization has developed Civil Engineering
+                        and with
+                        Civil Engineering has prospered Civilization! It is easily the oldest branch of Engineering.
+                        When the first
+                        human form thought of taking refuge in a cave, Civil Engineering was borne. Every man-made
+                        structure
+                        in this world is conceived, designed, constructed and maintained by Civil Engineers. A Civil
+                        Engineer is
+                        thus Vishwakarmaa of the modern world.<br><br>
+                        Civil Engineering Department at NGI has experienced, dynamic and dedicated faculty and
+                        state-of-art
+                        laboratories. We nurture our students with strong scientific and technical know-how and impart
+                        critical
+                        thinking skills on which, are founded their careers or higher studies. We endeavor to inculcate
+                        in our
+                        students, professional attitude, ethical values, creativity, leadership, innovative thinking,
+                        effective
+                        communication, team work, multidisciplinary approach and social awareness. The Department is
+                        committed to fostering a stimulating and intellectual environment in which both faculty and
+                        students
+                        excel in their professions.
+                    </div>
+                    <br>
+                    <br>
+
+                </div>
+            </div>
+            <h2 class="facultyh2">Faculty Profile</h2>
+            <div class="facultydiv">
+                <div class="facultydiv">
+                    {% for electrical_faculty in electrical_faculties %}
+                    <div class="facultyspan">
+                        <img class="facultyimg"
+                            src="http://www.navsahyadri.edu.in/assets/images/facultyprofile/Pankaj-Bhokare.jpg">
+                        <p>
+                        <h3>Prof. {{ electrical_faculty.name }}</h3>
+                        <b>Qualifications</b> {{ electrical_faculty.Qualifications }}<br>
+
+                        <b>Experience:</b> {{electrical_faculty.Experience}}<br>
+
+                        <b>Mob. No:</b>{{ electrical_faculty.contact_no }}<br>
+
+                        <b>Email Id:</b> {{ electrical_faculty.Email_Id }}<br>
+
+                        </p>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+            <h2 class="topic-title">Academics</h2>
+            <div class="face_div">
+                <div class="face_sub_div">
+                    <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+                    <h3 class="face_title">Laboratory</h3>
+                    <a class="dep" href="{% url 'eng_lab_civil' %}"><button class="button button3">click here to view</button></a>
+                    </p>
+                </div>
+                <div class="face_sub_div">
+                    <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+                    <h3 class="face_title">Syllabus</h3>
+                    <a href="{% url 'eng_syllabus'%}"> <button class="button button3">click here to view</button></a></p>
+                </div>
+                <div class="face_sub_div">
+                    <img src="{% static 'cs_img3.jpeg' %}" alt="" class="face_img">
+                    <a class="dep" href="{% url 'Electrical' %}"><button class="button button3">click here to view</button></a>
+                    </p>
+                </div>
+            </div>
+                </div>
+            {% include 'footer.html' %}
+        </div>
+</body>
+<!-- <script src="header.js"></script> -->
+
+</html>

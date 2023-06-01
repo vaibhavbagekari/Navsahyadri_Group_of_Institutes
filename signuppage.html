@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+
+
+        }
+
+        .form_div {
+            width: 60vw;
+            border: 2px solid black;
+            padding: 20px;
+            position: absolute;
+            /* left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%); */
+        }
+
+        input,
+        select {
+            width: 90%;
+            height: 30px;
+        }
+
+        h5 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <div class="form_div">
+                <h2>signup form</h2>
+                {%for message in messages %}
+                <h5>{{message}}</h5>
+                {% endfor %}
+                <br>
+                <form action="{% url 'signup' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input name="f_name" type="text" placeholder="Enter your first name" required><br><br>
+                    <input name="m_name" type="text" placeholder="Enter your middle name" required><br><br>
+                    <input name="l_name" type="text" placeholder="Enter your last name" required><br><br>
+                    <input name="email" type="email" placeholder="enter your email id" required><br><br>
+                    <input name="library_id" type="text" placeholder="enter your library id" required><br><br>
+                    <input name="contact_no" type="number" placeholder="enter your contact no." required><br><br>
+                    <select name="department" id="" required>
+                        <option value="mechanical">mechanical Engineering</option>
+                        <option value="civil">civil Engineering</option>
+                        <option value="Electrical">Electrical Engineering</option>
+                        <option value="CS">computer Engineering</option>
+                        <option value="ENTC">ENTC</option>
+                        <option value="AIML">AIML</option>
+                    </select><br><br>
+                    <select name="sem" id="" required>
+                        <option value="1"> 1<sp>st</sup> semister</option>
+                        <option value="2">2<sup>nd</sup> semister</option>
+                        <option value="3">3<sup>rd</sup> semister</option>
+                        <option value="4">4<sup>th</sup> semister</option>
+                        <option value="5">5<sup>th</sup> semister</option>
+                        <option value="6">6<sup>th</sup> semister</option>
+                        <option value="7">7<sup>th</sup> semister</option>
+                        <option value="8">8<sup>th</sup> semister</option>
+                    </select><br><br>
+                    <select name="year" id="" required>
+                        <option value="first year">first year</option>
+                        <option value="second year">second year</option>
+                        <option value="third year">third year</option>
+                        <option value="fourth year">fourth year</option>
+                    </select><br><br>
+                    <label for="photo">Passport Siz Photo</label><br><br>
+                    <input type="file" id="img" name="photo" accept="image/*">
+                    <input type="password" name="pass1" placeholder="new password"><br><br>
+                    <input type="password" name="pass2" placeholder="conform password"><br><br>
+
+                    <input type="submit">
+                </form>
+
+            </div>
+        </div>
+    </center>
+    <div id="map"></div>
+
+
+</body>
+
+</html>

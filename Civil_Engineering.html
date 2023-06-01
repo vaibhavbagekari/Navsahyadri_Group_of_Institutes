@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load static%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>civil</title>
+
+    <link rel="stylesheet" href="{% static 'department.css' %}">
+    <style>
+        .divh1 {
+            background-image: url("{% static 'engineering.jpg' %}");
+        }
+    </style>
+</head>
+
+<body>
+    {%include "header.html"%}
+    <div class="a">
+        <div>
+            <div class="divh1">
+                <h2 class="meh2">Civil Engineering</h2><br>
+            </div>
+            <div class="MEdiv">
+
+                <span class="span">Course Code:663219110</span>
+                <span class="span">Duration:4 year</span>
+                <span class="span">Course Type: Full Time</span>
+                <span class="span">Intake: 120,Direct 2<sup>th</sup>Year Intake:84 </span>
+            </div>
+            <div>
+                <p>
+                <h2>Aim of the Course</h2>
+                Civil engineering is a professional engineering discipline that deals with the
+                design, construction, and maintenance of the physical and naturally built
+                environment, including works like roads, bridges, canals, dams, and buildings.
+                Civil engineering is the second-oldest engineering discipline after military engineering.
+                </p>
+            </div>
+            <div width="100%" class="meimg">
+                <img width="50%" src="{% static 'civil-engineeringimg1.webp' %}">
+                <img width="50%" src="{% static 'civil-engineeringimg2.jpg' %}">
+            </div>
+            <div class="hod">
+                <h2>HOD'S Message</h2>
+                <figure>
+                    <img width="150px"
+                        src="http://www.navsahyadri.edu.in/assets/images/facultyprofile/Pankaj-Bhokare.jpg">
+                    <figcaption><b>HOD NAME</b>
+                        Head Of CIVIL Department
+                    </figcaption>
+                    <p class="p1">Ever science the establishment of this institution our primary goal has been to impart
+                        and
+                        train our future leaders with best of education.
+
+                        Our objective is to disseminate knowledge through various forms such as class room training,
+                        industrial
+                        visit and organise a attractive curriculum for the all ground development of our students.
+
+                        Mechanical engineering is the basic branch of all engineering that why it is known as MOTHER OF
+                        ENGINEERING as it add-ons state of art technically and exhilarates solution.
+
+                        Here at NAVSAYADRI education society we attempt to provide cheerful, productive and satisfying
+                        experience at all level to explore the amazing world mechanical engineering.
+
+                        With best wishes for a bright future.
+
+                    </p>
+            </div>
+            <h2 class="facultyh2">Faculty Profile</h2>
+            <div class="facultydiv">
+                {% for civil_faculty in civil_faculties %} 
+                 <div class="facultyspan">
+                    <img class="facultyimg"
+                        src="{{civil_faculty.photo.url}}">
+                    <p>
+                    <h3>Prof. {{ civil_faculty.f_name }} {{civil_faculty.m_name}} {{civil_faculty.l_name}}</h3>
+                    <b>Qualifications</b> {{ civil_faculty.Qualifications }}<br>
+
+                    <b>Experience:</b> {{ civil_faculty.Experience }}<br>
+
+                    <b>Mob. No:</b> {{civil_faculty.contact_no }}<br>
+
+                    <b>Email Id:</b> {{ civil_faculty.Email_Id }}<br>
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {%include 'footer.html'%}
+    </div>
+
+    
+</body>
+
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AICTE approvals</title>
+</head>
+<body>
+    
+</body>
+</html>
+{% include 'header.html' %}
+{% include 'mainnav.html' %}
+<style>
+    .approv-container{
+        width: 95%;
+      
+        margin: 20px auto 20px auto;
+    }
+    .approv-list{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 10px;
+    }
+   .approv-item{
+    padding: 10px;
+    background-color: #f65050;
+   }
+   
+   .aicte_title{
+    margin: 30px;
+   }
+</style>
+<div class="title-div">
+    <center>
+    <h2 class="aicte_title">AICTE approvals</h2>
+    </center>
+</div>
+<div class="approv-container">
+   
+    <ul class="approv-list">
+        {% for i in approvals %}
+        <li class="approv-item"><a href="{{ i.aicte_file.url }}">{{i.id}}.{{ i.title }}</a></li>
+        {%endfor%}
+    </ul>
+</div> 
+
+{% include 'footer.html' %}

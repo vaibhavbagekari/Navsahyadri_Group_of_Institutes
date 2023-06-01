@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    
+
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        body {
+            background-color: rgba(107, 106, 106, 0.101);
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: inline-flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 2em;
+            margin: 50px 10px 10px auto;
+            width: 100%;
+        }
+
+        .text {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1rem;
+            display: inline-block;
+
+
+        }
+
+        .info_table {
+            text-align: left;
+            height: 60vh;
+            width: 70vw;
+            background-color: beige;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 4px black;
+        }
+
+        .t_item {
+            border-bottom: 1px dashed rgb(62, 61, 61);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        .img_container {
+            width: 200px;
+            height: max-content;
+            margin: 80px 3px 20px 30px;
+            box-shadow: 6px 6px 10px rgba(59, 59, 59, 0.907);
+        }
+
+        .menu3 {
+            margin-top: 30px;
+            margin-left: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 2em;
+            justify-content: space-evenly;
+        }
+
+        .profile_container {
+            width: 100%;
+
+        }
+
+        .menu_itam {
+            font-size: 20px;
+            width: 55%;
+            padding: 5px;
+            color: azure;
+            background-color: rgb(90, 171, 241);
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 2px solid black;
+            box-shadow: 3px 3px 6px rgb(46, 46, 46);
+            transition-duration: .5s;
+            cursor: pointer;
+        }
+
+        .menu_itam:hover {
+            transform: scale(0.95);
+            box-shadow: 3px 3px 4px rgb(144, 144, 144);
+            background-color: rgb(7, 42, 181);
+        }
+
+        .btnlogin2 {
+            display: none;
+        }
+
+        .btnlogin1 {
+            display: none;
+        }
+
+        .h2 {
+            font-size: 2.5rem;
+            margin-top: 30px;
+            background-color: rgb(124, 244, 204);
+        }
+
+        .activ {
+            background-color: blue;
+        }
+
+        .s_menu,
+        .s_menux {
+            display: none;
+        }
+
+        .col_name {
+
+            font-size: 30px;
+            background-color: aliceblue;
+            padding: 10px;
+
+            box-shadow: 0px 4px 6px black;
+            position: sticky;
+            top: 0px;
+        }
+
+        .subject {
+            width: 95%;
+            border: 1px solid black;
+            margin: auto;
+            margin-top: 10px;
+            border-radius: 10px;
+            background-color: beige;
+        }
+
+        .ul_list {
+            list-style: none;
+        }
+
+        .unit_itam {
+            /* width: 100%; */
+            padding: 5px;
+            /* background-color: ; */
+            margin: 10px;
+            border: 1px solid blue;
+        }
+
+        #profile {
+            transition-duration: 2s;
+        }
+
+        .classdetails_titles {
+            padding: 10px;
+        }
+
+        .classdetails_card {
+            width: 90%;
+            margin: auto;
+            background-color: beige;
+            border-radius: 20px;
+            box-shadow: 2px 2px 7px black;
+            margin-top: 10px;
+        }
+
+        .char_div {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 1em;
+        }
+
+        .sub_list {
+            width: 100%;
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+        }
+
+        .sub_itam {
+            width: 60%;
+            align-self: center;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 10px;
+            border-left: 10px solid rgb(253, 107, 91);
+            background-color: rgb(163, 219, 246);
+        }
+        .row:hover{
+            background-color: blueviolet;
+
+        }
+        @media screen and (max-width:600px) {
+            .s_menu {
+                display: block;
+                position: fixed;
+                right: 9px;
+                top: 5px;
+                margin-top: 0px;
+            }
+
+            .s_menux {
+                display: block;
+                margin: 5px;
+            }
+
+            .container {
+                width: 100%;
+            }
+
+            .img_container {
+                margin: 10px;
+            }
+
+            .info_table {
+                width: 90vw;
+            }
+
+            .menu_itam {
+                margin-top: 40px;
+                padding: 0px;
+                width: 100%;
+                border-radius: 0px;
+            }
+
+            .menu3 {
+                top: 0px;
+                margin: 0px;
+                padding: 0px;
+                position: absolute;
+                right: -100%;
+                display: block;
+                flex-direction: column;
+                gap: 1em;
+                height: 100vh;
+                width: 250px;
+                transition-duration: 1s;
+                background-color: rgba(9, 9, 9, 0.988);
+            }
+
+            .menu1 {
+                position: absolute;
+                right: 0px;
+                position: fixed;
+                flex-direction: column;
+                height: 100vh;
+                width: 250px;
+                transition-duration: 1s;
+                background-color: rgba(9, 9, 9, 0.988);
+            }
+
+            .h2 {
+                margin-top: 0px;
+            }
+
+            .col_name {
+                font-size: 20px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="whole_container" style="width: 100%;overflow: hidden;">
+    <!-- <a href="#head"><button style="height: 40px;width: 40px; border-radius: 50%;position: fixed;bottom: 10px;right: 10px;">top </button></a>
+     <div id="head"></div> -->
+    <h2 class="col_name" id="header">&nbsp;&nbsp;Navsahyadri Group Of Institution, Pune </h2>
+    <div class="profile_container">
+
+        <div class="s_menu" id="nev1">
+            <button onclick="l_to_r()" style="background-color: transparent;border: none;"> <i class="fa fa-bars"
+                    style="font-size:24px"></i></button>
+        </div>
+        <div class="menu3" id="navigation">
+            <div class="s_menux" id="nev2">
+                <button onclick="l_to_r()" style="border: none;background-color: transparent; float: right;"> <i
+                        class="fa fa-close" style="font-size:24px; color:white;"></i></button>
+            </div>
+            <a href="#profile" class="menu_itam activ"><span>Student Profile</span></a>
+            <a href="#notes" class="menu_itam"><span>Notes</span></a>
+            <a href="#class_details" class="menu_itam"> <span>Class Details</span></a>
+            <a href="#schedule" class="menu_itam"><span>Schedule</span></a>
+            <a href="{% url 'home' %}" class="menu_itam"
+                style="background-color: rgb(243, 23, 23); color: black;">logout</span></a>
+        </div>
+        <center>
+            <h2 class="h2">Profile</h2>
+        </center>
+        <div class="container" id="profile">
+            {% for i in user %}
+            <div class="img_container">
+                <img width="100%" src="{{ i.photo.url }}" />
+            </div>
+            <div class="text">
+
+                <table class="info_table">
+                    <tr>
+                        <th class="t_item" style="font-size:25px"><i class="fa fa-user-circle-o"></i>&nbsp; Name :</th>
+                        <td class="t_item">{{i.f_name}} {{i.m_name}} {{i.l_name}}</td>
+                    </tr>
+                    <tr>
+                        <th class="t_item" style="font-size:20px"><i class="fa fa-envelope"></i>&nbsp;E-mail ID :</th>
+                        <td class="t_item">{{i.email}}</td>
+                    </tr>
+                    <tr>
+                        <th class="t_item" style="font-size:20px;"> <i class="fa fa-id-card-o"></i>&nbsp;Student ID :
+                        </th>
+                        <td class="t_item">{{i.library_id}}</td>
+                    </tr>
+                    <tr>
+                        <th class="t_item" style="font-size:20px">
+                            <i class="fa fa-phone"></i>&nbsp;Contact No. :
+                        </th>
+                        <td class="t_item">{{i.contact_no}}</td>
+                    </tr>
+                    <tr>
+                        <th class="t_item" style="font-size:20px"><i class="fa fa-graduation-cap"></i>&nbsp;Department :
+                        </th>
+                        <td class="t_item">{{i.department}}</td>
+                    </tr>
+                    <tr>
+                        <th class="t_item" style="font-size:20px"><i class='fa fa-calendar'></i>&nbsp;Year :</th>
+                        <td class="t_item">{{i.year}}</td>
+                    </tr>
+                    <tr>
+                        <th class="t_item" style="font-size:20px"><i class="fa fa-graduation-cap"></i>&nbsp;semester :
+                        </th>
+                        <td class="t_item">{{i.sem}}</td>
+                    </tr>
+                </table>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="classdetails_container height" id="class_details">
+        <h2 class="h2" align="center">Class Details</h2>
+        <div class="classdetails_card">
+            <h2 class="classdetails_titles">Attendance : </h2>
+            <div class="char_div">
+                <canvas id="myChart" style="width:100%; max-width:600px; height: 400px;"></canvas>
+                <canvas id="myChart2" style="width:100%;max-width:400px"></canvas>
+            </div>
+        </div>
+        <div class="classdetails_card">
+            <h2 class="classdetails_titles">Assignment : </h2>
+
+        </div>
+
+    </div>
+    <div class="notes_container" id="notes">
+        <h2 class="h2" align="center">notes</h2>
+        <div class="subject">
+            <ul class="sub_list">
+                {% for j in subjects %}
+                <li class="sub_itam">{{j.sub_name}} <a href="{{j.sub_notes.url}}" download>{{j.sub_notes}}</a></li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="schedule_container height" id="schedule">
+        <h2 class="h2" align="center">schedule</h2>
+
+        {% include 'sem4_schedule.html'%}
+    </div>
+</div>
+</body>
+<script>
+    var k1 = {{ s1 }};
+    var k2 = {{ s2 }};
+    var k3 = {{ s3 }};
+    var k4 = {{ s4 }};
+    var k5 = {{ s5 }};
+    var p = {{ p }};
+    var tp = {{ tp }};
+
+</script>
+<script src="/static/youtube.js"></script>
+
+<script>
+    function l_to_r() {
+        let box1 = document.getElementById('navigation');
+        box1.classList.toggle("menu1");
+    }
+
+    var xValues = ["DBMS", "M-3", "CG", "OS", "FAIML"];
+
+    // var xValues = ["vaibhav",k];
+    var yValues = [k1, k2, k3, k4, k5];
+    var barColors = ["red", "green", "blue", "orange", "brown"];
+
+    new Chart("myChart", {
+        type: "bar",
+        data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+        },
+        options: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: " Attendance"
+            }
+        }
+    });
+    var pxValues = ["Absent", "Present"]
+    var pbarColors = ["red", "green"];
+    var pyValues = [tp, p];
+    new Chart("myChart2", {
+        type: "pie",
+        data: {
+            labels: pxValues,
+            datasets: [{
+                backgroundColor: pbarColors,
+                data: pyValues
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: "Total attendance"
+            }
+        }
+    });
+
+</script>
+
+</html>

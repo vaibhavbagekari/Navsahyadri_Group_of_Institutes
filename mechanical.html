@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machanical Engineering</title>
+    <!-- <link rel="stylesheet" href="{% static 'header.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'department.css' %}">
+    <style>
+        .divh1 {
+            background-image: url("{% static 'entc_img1.webp' %}");
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    <div>
+        <div class="divh1">
+            <h2 class="meh2">Mechanical Engineering</h2><br>
+        </div>
+        <div class="MEdiv">
+            <span class="span">Course Code:663261210</span>
+            <span class="span">Duration:4 year</span>
+            <span class="span">Course Type: Full Time</span>
+            <span class="span">Intake: 120,Direct 2<sup>th</sup>Year Intake:84 </span>
+        </div>
+        <div>
+            <p>
+            <h2>Aim of the Course</h2>
+            The department aims at preparing and grooming the student for research and professional practices to make
+            them competitive in the era of rapidly advancing interdisciplinary technology the program is a combination
+            of in depth experience and competitiveness of the individual choosing the major specialty which is
+            background of basic and engineering science.
+            </p>
+        </div>
+        <div width="100%" class="meimg">
+            <img width="50%"
+                src="https://www.mitkundapura.com/Activities/Machanical-Students-MIT-Kundapura-Campus-01.jpg">
+            <img width="50%" src="https://www.bcpdgp.ac.in/wp-content/uploads/2019/12/mech-3.jpg">
+        </div>
+    </div>
+    <div class="hod">
+        <h2>HOD'S Message</h2>
+        <figure>
+            <img width="150px" src="http://www.navsahyadri.edu.in/assets/images/facultyprofile/Pankaj-Bhokare.jpg">
+            <figcaption><b>Prof. P.S. Bhokare</b>
+                Head Of Mechanical Department
+            </figcaption>
+            <p class="p1">Ever science the establishment of this institution our primary goal has been to impart and
+                train our future leaders with best of education.
+
+                Our objective is to disseminate knowledge through various forms such as class room training, industrial
+                visit and organise a attractive curriculum for the all ground development of our students.
+
+                Mechanical engineering is the basic branch of all engineering that why it is known as MOTHER OF
+                ENGINEERING as it add-ons state of art technically and exhilarates solution.
+
+                Here at NAVSAYADRI education society we attempt to provide cheerful, productive and satisfying
+                experience at all level to explore the amazing world mechanical engineering.
+
+                With best wishes for a bright future.
+
+            </p>
+    </div>
+    <h2 class="facultyh2">Faculty Profile</h2>
+    <div class="facultydiv">
+        {% for mechanical_faculty in mechanical_faculties %}
+        <div class="facultyspan">
+            <img class="facultyimg" src="http://www.navsahyadri.edu.in/assets/images/facultyprofile/Pankaj-Bhokare.jpg">
+            <p>
+            <h3>Prof. {{ mechanical_faculty.name }}</h3>
+            <b>Qualifications</b> {{ mechanical_faculty.Qualifications }}<br>
+
+            <b>Experience:</b> {{mechanical_faculty.Experience}}<br>
+
+            <b>Mob. No:</b>{{ mechanical_faculty.contact_no }}<br>
+
+            <b>Email Id:</b> {{ mechanical_faculty.Email_Id }}<br>
+
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+    
+    {%include 'footer.html'%}
+</body>
+
+</script>
+
+</html>

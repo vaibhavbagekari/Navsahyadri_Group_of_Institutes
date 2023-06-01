@@ -1,0 +1,107 @@
+<div class="btndiv">
+    <button class="btnlogin1" onclick="showModel()">STUDENT LOGIN</button>
+    <button class="btnlogin2" onclick="showModel2()">FACULTY LOGIN</button>
+    <!-- <a href="{% url 'signup' %}"></a> -->
+    <button class="btnlogin1" align="right" onclick="showModel23()">STUDENT SIGNUP</button>
+
+</div>
+<div class="loginform1 form_div">
+
+    <span onclick="closModel23()"><i class="fa fa-close" style="font-size:24px; color:rgb(0, 0, 0);"></i></span>
+    
+    <form action="{% url 'signup' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <center>
+            <input name="f_name" type="text" placeholder="Enter your first name" required><br><br>
+            <input name="m_name" type="text" placeholder="Enter your middle name" required><br><br>
+            <input name="l_name" type="text" placeholder="Enter your last name" required><br><br>
+            <input name="email" type="email" placeholder="enter your email id" required><br><br>
+            <input name="library_id" type="text" placeholder="enter your library id" required><br><br>
+            <input name="contact_no" type="number" placeholder="enter your contact no." required><br><br>
+            <select name="department" id="" required>
+                <option value="mechanical Engineering">mechanical Engineering</option>
+                <option value="civil Engineering">civil Engineering</option>
+                <option value="Electrical Engineering">Electrical Engineering</option>
+                <option value="computer Engineering">computer Engineering</option>
+                <option value="ENTC">ENTC</option>
+                <option value="AIML">AIML</option>
+            </select><br><br>
+            <select name="sem" id="" required>
+                <option value="1"> 1<sup>st</sup> semister</option>
+                <option value="2">2<sup>nd</sup> semister</option>
+                <option value="3">3<sup>rd</sup> semister</option>
+                <option value="4">4<sup>th</sup> semister</option>
+                <option value="5">5<sup>th</sup> semister</option>
+                <option value="6">6<sup>th</sup> semister</option>
+                <option value="7">7<sup>th</sup> semister</option>
+                <option value="8">8<sup>th</sup> semister</option>
+            </select><br><br>
+            <select name="year" id="" required>
+                <option value="first year">first year</option>
+                <option value="second year">second year</option>
+                <option value="third year">third year</option>
+                <option value="fourth year">fourth year</option>
+            </select><br><br>
+            <label for="photo">Passport Siz Photo</label><br><br>
+            <input type="file" id="img" name="photo" accept="image/*">
+            <input type="password" name="pass1" placeholder="new password"><br><br>
+            <input type="password" name="pass2" placeholder="conform password"><br><br>
+
+            <input type="submit">
+        </center>
+    </form>
+    
+
+</div>
+<div class="overlay"></div>
+<div class="loginform">
+    <span onclick="closModel()" class="closs1"><i class="fa fa-close"
+            style="font-size:24px; color:rgb(0, 0, 0);"></i></span>
+    <form action="{% url 'studenthome' %}" method="POST">
+        {% csrf_token %}
+        <div>
+            <h1>Student Login</h1>
+        </div>
+        <div>
+            <label for="">User ID :</label>
+            <input id="in2" required type="text" name="username" />
+        </div>
+        <div>
+            <label for="">Password :</label>
+            <input required type="password" name="password" />
+        </div>
+        <input type="submit" name="submit">
+    </form>
+</div>
+<div class="overlay2"></div>
+<div class="loginform2">
+
+    <span onclick="closModel2()" class="closs1"><i class="fa fa-close"
+            style="font-size:24px; color:rgb(0, 0, 0);"></i></span>
+    <form action="{% url 'facultyhome' %}" method="POST">
+        {% csrf_token %}
+        <div>
+            <h1>Faculty Login</h1>
+        </div>
+        <div>
+            <label for="">Username :</label>
+            <input id="in1" required type="text" name="username" />
+        </div>
+        <div>
+            <label for="">Password :</label>
+            <input required type="password" name="password" />
+        </div>
+        <input type="submit" name="submit">
+    </form>
+</div>
+{% include 'footer.html'%}
+<script>
+    function showModel23() {
+        document.querySelector('.overlay2').classList.add('showoverlay2');
+        document.querySelector('.loginform1').classList.add('showloginform2');
+    }
+    function closModel23() {
+        document.querySelector('.overlay2').classList.remove('showoverlay2');
+        document.querySelector('.loginform1').classList.remove('showloginform2');
+    }
+</script>

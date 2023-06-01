@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 2</title>
+    <style>
+        .form-container {
+            margin: 100px auto 100px auto;
+            border: 2px solid black;
+            border-radius: 10px;
+            box-shadow: 3px 3px 6px black;
+            background-color: aquamarine;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 50%;
+        }
+
+        input {
+            width: 50%;
+            align-self: center;
+            margin-top: 10px;
+        }
+        .container{
+            border: 1px solid black;
+            width: 30%;
+            margin: 10px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <form method="POST" action="form_co" >
+            {% csrf_token %}
+            <div class="form-container">
+                <label for="name">name</label>
+                <input type="text" name="name">
+
+                <label for="userID">userID</label>
+                <input type="text" name="userID">
+
+                <label for="password">password</label>
+                <input type="password" name="password">
+                <input type="submit">
+            </div>
+        </form>
+        {% for feature in features %}
+        <div class="container">
+            <h1>my name is {{feature.name}} </h1>
+            <h2>my id is {{feature.id}} </h2>
+            <h3>details is {{feature.details}}</h3>
+        </div>
+        {% endfor %}
+    </center>
+
+</body>
+
+</html>

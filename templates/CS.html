@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Engineering</title>
+    <!-- <link rel="stylesheet" href="{% static 'header.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'department.css' %}">
+    <style>
+       
+    </style>
+</head>
+{%include 'header.html'%}
+{% include 'engnav.html' %}
+
+<div class="a">
+    <div>
+        <div class="divh1">
+            <h2 class="meh2">Computer Engineering</h2><br>
+        </div>
+        <div class="MEdiv">
+
+            <span class="span">Course Code:663224510</span>
+            <span class="span">Duration:4 year</span>
+            <span class="span">Course Type: Full Time</span>
+            <span class="span">Intake: 120</span>
+        </div>
+        <div width="100%" class="meimg">
+            <img width="50%" src="{% static 'cs_img3.jpeg' %}">
+            <img width="50%" src="{% static 'cs_img2.jpeg' %}">
+        </div>
+        <div class="about-dep-div">
+            <h2 class="topic-title">About Department</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    Computer Engineering is a discipline that integrates several fields of Electrical Engineering and
+                    E&amp;TC Engineering. The goal of the Department is to prepare students for successful careers in
+                    the software and hardware industry that meet the needs of Indian and multinational companies
+                    and to excel in higher studies. The Department has experienced and dedicated faculty members
+                    with strong commitment to engineering education and professional ethics.
+                    <br>
+                    <br>
+                    <b>Vision:</b> Contributing to the welfare of society through technical and quality education to the
+                    rural
+                    base students.
+                    <br>
+                    <br>
+                    <b>Mission:</b> The Department vision is to establish the center for excellence in professional
+                    development and entrepreneurship development resulting in the enhancement of the rural area.<br>
+                    To produce Best Quality Computer Science Professionals by importing quality hands-on
+                    experience and value education.<br>
+                    To train the students to fulfill Professional and social requirements in the industry.
+                </div>
+                <br>
+                <br>
+                <div class="about-img">
+                    <img src="{% static 'cs_img2.jpeg' %}" alt="" width="100%" height="100%">
+                </div>
+            </div>
+        </div>
+        <div class="about-dep-div">
+            <h2 class="topic-title">HOD Message</h2>
+            <div class="about-container" style="gap: 0px;">
+                <div style="width:220px;">
+
+                    <img src="{% static 'enghod.jpg' %}" alt="" width="100%">
+
+                </div>
+                <div class="about-text" style="">
+
+
+                    <ul class="hod-info">
+                        <li class="hod-info-item">Name:Prof.C. S. Wagh</li><br>
+
+                        <li class="hod-info-item">Education:M.Tech(Information Technology),BE(Computer Engineering)</li>
+                        <br>
+
+                        <li class="hod-info-item">Email id:navshodcomp@gmail.com</li><br>
+
+                        <li class="hod-info-item">Contact No:7709092186</li><br>
+
+                    </ul>
+
+                    <b>HOD Message</b><br>
+
+                    The Department of Computer Engineering offers 8 semesters courses with a compulsory 1 Year project
+                    in the last year. Students are exposed to the latest software and development tools as per the need
+                    of
+                    the day. Computer Engineering is the field which deals with analyzing and designing hardware,
+                    software,
+                    and operating systems for a computer system. The Computer Center is available for internet access to
+                    all
+                    students of the department. Software for Database Management, Computer Graphics, Low Level
+                    Programming, Networking, Internet Applications etc. is used for developing customized applications.
+                    To
+                    achieve a student centric approach is practiced by all faculty members. All the faculties have good
+                    expertise in their respective domains.
+                </div>
+                <br>
+                <br>
+
+            </div>
+        </div>
+        <!-- <div>
+            <p>
+            <h2>Aim of the Course</h2>
+            Computer engineering is a discipline that integrates several
+            fields of electrical engineering and computer science required
+            to develop computer hardware and software. Computer engineers
+            usually have training in electronic engineering (or electrical
+            engineering), software design, and hardware-software integration
+            instead of only software engineering or electronic engineering.
+            </p>
+        </div>
+        <div width="100%" class="meimg">
+            <img width="50%" src="{% static 'cs_img3.jpeg' %}">
+            <img width="50%" src="{% static 'cs_img2.jpeg' %}">
+        </div>
+        <div class="hod">
+            <h2>HOD'S Message</h2>
+            <figure>
+                <img width="150px" src="http://www.navsahyadri.edu.in/assets/images/facultyprofile/Pankaj-Bhokare.jpg">
+                <figcaption><b>HOD NAME</b>
+                    Head Of Computer Engineering Department
+                </figcaption>
+                <p class="p1">Ever science the establishment of this institution our primary goal has been to impart
+                    and
+                    train our future leaders with best of education.
+
+                    Our objective is to disseminate knowledge through various forms such as class room training,
+                    industrial
+                    visit and organise a attractive curriculum for the all ground development of our students.
+
+                    Mechanical engineering is the basic branch of all engineering that why it is known as MOTHER OF
+                    ENGINEERING as it add-ons state of art technically and exhilarates solution.
+
+                    Here at NAVSAYADRI education society we attempt to provide cheerful, productive and satisfying
+                    experience at all level to explore the amazing world mechanical engineering.
+
+                    With best wishes for a bright future.
+
+                </p>
+        </div> -->
+        <h2 class="topic-title">Faculty Profile</h2>
+        <div class="facultydiv">
+            {% for CS_faculty in CS_faculties %}
+            <div class="facultyspan">
+                <img class="facultyimg" src="{{CS_faculty.photo.url}}">
+                <p>
+                <h3>Prof. {{ CS_faculty.f_name }} {{CS_faculty.m_name}} {{CS_faculty.l_name}}</h3>
+                <b>Qualifications</b> {{ CS_faculty.Qualifications }}<br>
+
+                <b>Experience:</b> {{ CS_faculty.Experience }}<br>
+
+                <b>Mob. No:</b> {{CS_faculty.contact_no }}<br>
+
+                <b>Email Id:</b> {{ CS_faculty.Email_Id }}<br>
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <h2 class="topic-title">Academics</h2>
+    <div class="face_div">
+        <div class="face_sub_div">
+            <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+            <h3 class="face_title">Laboratory</h3>
+            <a class="dep" href="{% url 'eng_lab_cs' %}"><button class="button button3">click here to view</button></a>
+            </p>
+        </div>
+        <div class="face_sub_div">
+            <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+            <h3 class="face_title">Syllabus</h3>
+            <a href="{% url 'eng_syllabus'%}"> <button class="button button3">click here to view</button></a></p>
+        </div>
+        <div class="face_sub_div">
+            <img src="{% static 'cs_img3.jpeg' %}" alt="" class="face_img">
+            <a class="dep" href="{% url 'Electrical' %}"><button class="button button3">click here to view</button></a>
+            </p>
+        </div>
+    </div>
+
+    {% include 'footer.html'%}
+</div>
+
+</body>
+
+
+</html>

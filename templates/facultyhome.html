@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculry home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            display: inline-flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 2em;
+            /* margin: 50px 10px 10px auto; */
+            width: 100%;
+        }
+
+        .profile_card {
+            width: 80%;
+            /* height: max-content; */
+            box-shadow: 2px 2px 7px black;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            /* justify-content: space-between; */
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+
+        .text {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1rem;
+            display: inline-block;
+
+        }
+
+        .info_table {
+            text-align: left;
+            height: 60vh;
+            width: 70vw;
+            background-color: beige;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 4px black;
+        }
+
+        .t_item {
+            border-bottom: 1px dashed rgb(62, 61, 61);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        .img_container {
+            width: 200px;
+            height: max-content;
+            margin: 10px;
+            /* box-shadow: 6px 6px 10px rgba(59, 59, 59, 0.907); */
+        }
+
+        .h2 {
+            font-size: 2.5rem;
+            margin-top: 30px;
+            background-color: rgb(124, 244, 204);
+        }
+
+        .title_bar {
+            background-image: url("{% static 'wallpaper1.jpeg' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 170px;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .title_text {
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            align-self: center;
+            margin: auto;
+        }
+
+        .col_name {
+
+            font-size: 30px;
+            background-color: aliceblue;
+            padding: 10px;
+            height: 70px;
+            box-shadow: 0px 4px 6px black;
+            position: sticky;
+            top: 0px;
+        }
+
+        .col_logo {
+            width: 70px;
+            margin: 10px;
+            text-align: left;
+        }
+
+        .container_from {
+            width: 100%;
+            max-height: max-content;
+            padding: 20px;
+            display: flex;
+
+        }
+
+        .form_div {
+            width: 600px;
+            background-color: beige;
+            height: max-content;
+            /* border: 2px solid black; */
+            margin: 10px;
+            box-shadow: 2px 2px 6px black;
+            padding-bottom: 10px;
+            /* position: absolute; */
+            /* left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%); */
+        }
+
+
+        .att_div {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 6px black;
+            width: 350px;
+        }
+
+        .att_div select,
+        input {
+            width: 100%;
+        }
+
+        @media screen and (max-width:600px) {
+            .col_name {
+                height: 100px;
+                font-size: 30px;
+                background-color: aliceblue;
+                padding: 10px;
+                box-shadow: 0px 4px 6px black;
+                position: sticky;
+                top: 0px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <center>
+        <h2 class="h2">Profile</h2>
+    </center> -->
+
+    <h2 class="col_name" id="header"><img src="{% static 'col-logo.png' %}" alt="" class="col_logo"
+            align="left">Navsahyadri
+        Group Of Institution, Pune </h2>
+    <div class="container" id="profile">
+        <div class="title_bar">
+            <h2 class="title_text">FACULTY MEMBER</h2>
+        </div>
+        {% for i in user %}
+        <div class="profile_card">
+            <div class="img_container">
+                <img src="{{i.photo.url}}" alt="" width="200px">
+            </div>
+            <div>
+                <br>
+                <h2>{{i.f_name}} {{i.m_name}} {{i.l_name}}</h2><br>
+                <i class="fa fa-envelope"></i>&nbsp;&nbsp;{{i.Email_Id}}<br><br>
+                <i class="fa fa-phone"></i>&nbsp;&nbsp;{{i.contact_no}}<br><br>
+                <p><i class="fa fa-graduation-cap"></i>Department :{{i.department}}</p>
+                <br><br>
+                <P> <i class="fa fa-graduation-cap"></i>Qualifications :{{i.Qualifications}}</P>
+                &nbsp;&nbsp;<br><br>
+                <P><i class="fa fa-graduation-cap"></i>Experience :{{i.Experience}} </P>
+                &nbsp;&nbsp;<br>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <br><br>
+    <div style="display: flex; flex-direction: row;flex-wrap: wrap;">
+        <div class="att_div">
+            <h3 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;margin: auto;">Add
+                Attendance</h3>
+            <form action="{% url 'url1' 'attendancesheet.html' %}" method="POST">
+                {% csrf_token %}
+                {% for i in user %}
+                <input type="text" value="{{i.department}}" name="department"><br><br>
+                {% endfor %}
+                <select name="sem" id="" required>
+                    <option value="1"> 1<sub>st</sub> semister</option>
+                    <option value="2">2<sup>nd</sup> semister</option>
+                    <option value="3">3<sup>rd</sup> semister</option>
+                    <option value="4">4<sup>th</sup> semister</option>
+                    <option value="5">5<sup>th</sup> semister</option>
+                    <option value="6">6<sup>th</sup> semister</option>
+                    <option value="7">7<sup>th</sup> semister</option>
+                    <option value="8">8<sup>th</sup> semister</option>
+                </select><br><br>
+                <input type="submit">
+            </form>
+        </div>
+        <div class="att_div">
+            <h3 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;margin: auto;">Add
+                Notes</h3>
+            <form action="{% url 'url1' 'attendancesheet.html' %}" method="POST">
+                {% csrf_token %}
+                {% for i in user %}
+                <input type="text" value="{{i.department}}" name="department"><br><br>
+                {% endfor %}
+                <select name="subject" id="">
+                    {% for k in subjects %}
+                    <option value="{{k.sub_name}}" name="subject">{{k.sub_name}}</option>
+                    {% endfor %}
+                </select><br><br>
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- <img width="100%" src="{{ i.photo.url }}" /> -->
+<!-- <table class="info_table">
+    <tr>
+        <th class="t_item" style="font-size:25px"><i class="fa fa-user-circle-o"></i>&nbsp; Name :</th>
+        <td class="t_item">{{i.f_name}} {{i.m_name}} {{i.l_name}}</td>
+    </tr>
+    <tr>
+        <th class="t_item" style="font-size:20px"><i class="fa fa-envelope"></i>&nbsp;E-mail ID :</th>
+        <td class="t_item">{{i.Email_Id}}</td>
+    </tr>
+    
+    <tr>
+        <th class="t_item" style="font-size:20px">
+            <i class="fa fa-phone"></i>&nbsp;Contact No. :
+        </th>
+        <td class="t_item">{{i.contact_no}}</td>
+    </tr>
+    <tr>
+        <th class="t_item" style="font-size:20px"><i class="fa fa-graduation-cap"></i>&nbsp;Department :
+        </th>
+        <td class="t_item">{{i.department}}</td>
+    </tr>
+    <tr>
+        <th class="t_item" style="font-size:20px"><i class='fa fa-calendar'></i>&nbsp;Qualifications :</th>
+        <td class="t_item">{{i.Qualifications}}</td>
+    </tr>
+    <tr>
+        <th class="t_item" style="font-size:20px"><i class="fa fa-graduation-cap"></i>&nbsp;Experience :
+        </th>
+        <td class="t_item">{{i.Experience}}</td>
+    </tr>
+</table> -->

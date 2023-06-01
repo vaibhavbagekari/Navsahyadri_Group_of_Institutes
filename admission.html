@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>admissions info.</title>
+  <!-- <link rel="stylesheet" href="header.css"> -->
+  <style>
+    .div2-contener {
+      border: 3px solid black;
+      margin: 10px;
+
+    }
+
+    .div2 {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2em;
+      display: flex;
+
+    }
+
+
+    .title {
+      background-color: rgba(0, 88, 966, 0.5);
+      padding: 5px;
+      margin: 5px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 5px 4px 8px black;
+    }
+    .course-title{
+      /* font-size: 20px; */
+      font-family:'Raleway', sans-serif;
+    }
+    .tab {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 10px;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #fa7777;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #fb9595;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ffffff;
+      border-bottom-left-radius: -10px;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 10px 18px;
+      border: 1px solid #f7a3a3;
+      border-top: none;
+    }
+
+    /* Style the close button */
+    .topright {
+      float: right;
+      cursor: pointer;
+      font-size: 28px;
+    }
+
+    .topright:hover {
+      color: red;
+    }
+
+    .tablist {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 2em;
+
+    }
+
+
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      width: 220px;
+      height: 300px;
+      transition-duration: 1s;
+    }
+
+    .card img {
+      height: 190px;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      transform: scale(1.03);
+    }
+
+    .container {
+      padding: 2px 16px;
+    }
+
+    .button {
+      background-color: #4CAF50;
+      
+      
+      border: none;
+      /* color: white; */
+      padding: .7rem 1.5rem;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      color: #fd1100;
+    }
+    .button:hover{
+      background-color: #f66a60;
+      color: azure;
+    }
+    .button3 {
+      background-color: white;
+      /* color: black; */
+      border: 2px solid #f44336;
+    }
+    .tablinks{
+      width: 220px;
+    }
+    @media screen and (max-width:600px) {
+      .card {
+        width: 170px;
+        height: 300px;
+      }
+      .button{
+        padding: .2rem 1.0rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  {%include 'header.html'%}
+  <div class="div2-contener">
+    <h1 class="title">
+      *COURSES OFFERED*</h1>
+
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'ENGINEERING')" id="defaultOpen">ENGINEERING</button>
+      <button class="tablinks" onclick="openCity(event, 'Polytechnic')">POLYTECHNIC</button>
+      <button class="tablinks" onclick="openCity(event, 'Pharmacy')">PHARMACY</button>
+      <button class="tablinks" onclick="openCity(event, 'MBA')">MBA</button>
+    </div>
+
+    <div id="ENGINEERING" class="tabcontent">
+      <!-- <span onclick="this.parentElement.style.display='none'" class="topright">&times</span> -->
+      <h3 style="margin: 5px;" >ENGINEERING</h3>
+      <ul class="tablist">
+        <li class="tablistitem">
+          <div class="card">
+            <img src="{% static 'nss18.jpg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4 class="course-title"><b>Machanical engineering</b></h4>
+              <p><a class="dep"
+                href="{% url 'mechanical' %}"><button class="button button3">click here to view</button></a></p>
+            </div>
+        </li>
+        <li class="tablistitem">
+          <div class="card">
+            <img src="{% static 'nss16.jpg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4 class="course-title"><b>civil engineering</b></h4>
+              <p><a class="dep"
+                href="{% url 'Civil' %}"><button class="button button3">click here to view</button></a></p>
+            </div>
+        </li>
+        <li class="tablistitem">
+          <div class="card">
+            <img src="{% static 'nss13.jpg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4 class="course-title"><b>Electrical Engineering</b></h4>
+              <p><a class="dep"
+                href="{% url 'Electrical' %}"><button class="button button3">click here to view</button></a></p>
+            </div>
+        </li>
+        <li class="tablistitem">
+          <div class="card">
+            <img src="{% static 'nss13.jpg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4 class="course-title"><b>Electronics & Telecommunication</b></h4>
+              <p><a class="dep" href="{% url 'ENTC' %}"><button class="button button3">click here to view</button></a></p>
+            </div>
+        </li>
+        <li class="tablistitem">
+          <div class="card">
+            <img src="{% static 'nss12.jpg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4 class="course-title"><b>Computer Engineering</b></h4>
+              <p><a class="dep" href="{% url 'CS' %}"><button class="button button3">click here to view</button></a></p>
+            </div>
+        </li>
+        <li class="tablistitem">
+          <div class="card">
+            <img src="{% static 'nss11.jpg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4 class="course-title"><b>AIML engineering</b></h4>
+              <p><a class="dep"
+                href="{% url 'AIML' %}"><button class="button button3">click here to view</button></a></p>
+            </div>
+        </li>
+
+      </ul>
+    </div>
+
+    <div id="Polytechnic" class="tabcontent">
+      <!-- <span onclick="this.parentElement.style.display='none'" class="topright">&times</span> -->
+      <h3>POLYTECHNIC</h3>
+      <ul class="tablist">
+        <ul class="tablist">
+          <li class="tablistitem">
+            <div class="card">
+              <img src="{% static ''%}" alt="Avatar" style="width:100%">
+              <div class="container">
+                <h4 class="course-title"><b>Machanical engineering</b></h4>
+                <p><button class="button button3">click here to view</button></p>
+              </div>
+          </li>
+          <li class="tablistitem">
+            <div class="card">
+              <img src="{% static ''%}" alt="Avatar" style="width:100%">
+              <div class="container">
+                <h4 class="course-title"><b>civil engineering</b></h4>
+                <p><button class="button button3">click here to view</button></p>
+              </div>
+          </li>
+          <li class="tablistitem">
+            <div class="card">
+              <img src="{% static ''%}" alt="Avatar" style="width:100%">
+              <div class="container">
+                <h4 class="course-title"><b>Electronics & Telecommunication</b></h4>
+                <p><button class="button button3">click here to view</button></p>
+              </div>
+          </li>
+          <li class="tablistitem">
+            <div class="card">
+              <img src="{% static ''%}" alt="Avatar" style="width:100%">
+              <div class="container">
+                <h4 class="course-title"><b>Computer Engineering</b></h4>
+                <p><button class="button button3">click here to view</button></p>
+              </div>
+          </li>
+        </ul>
+    </div>
+
+    <div id="Pharmacy" class="tabcontent">
+      <!-- <span onclick="this.parentElement.style.display='none'" class="topright">&times</span> -->
+      <h3>PHARMACY</h3>
+      <ul class="tablist">
+        <li class="tablistitem"></li>
+      </ul>
+    </div>
+    <div id="MBA" class="tabcontent">
+      <!-- <span onclick="this.parentElement.style.display='none'" class="topright">&times</span> -->
+      <h3>MBA</h3>
+      <ul class="tablist">
+        <li class="tablistitem"></li>
+      </ul>
+    </div>
+  </div>
+  <div class="div5" style="height:justify;
+                           border-style:solid;
+                            border-color:black;
+                            margin:10px;
+                            font-family:'Raleway', sans-serif;
+                            padding:10px;">
+    <h1 class="title">
+      *Admission Information*
+    </h1>
+    <table border="2" style="margin: 10px;
+                            width: 100%;
+                             
+                             border-style:solid;
+                             border-color:blue">
+      <tr>
+        <th colspan="2"><b>Scholarship</b></th>
+      </tr>
+      <tr>
+        <th><b>Category</b></th>
+        <th><b>Concessions in Tuition Fees</b></th>
+      </tr>
+      <tr>
+        <th>SC/ST/SBC/NT</th>
+        <th>100%</th>
+      </tr>
+      <tr>
+        <th>OBC</th>
+        <th>50%</th>
+      </tr>
+      <tr>
+        <th>EBC</th>
+        <th>50%</th>
+      </tr>
+      <tr>
+        <th>Minority</th>
+        <th>50%</th>
+      </tr>
+    </table>
+    <br><br>
+    <ul style="margin-left: 10px;">
+      <li>
+        <h3>Admission Procedure:</h3>
+        <br>
+      </li>
+      Admission to the Bachelor of Engineering (B.E.) Course and B Pharmacy is as per AICTE / DTE University of Pun
+      BATU
+      and Govt. of Maharashtra's Norms, les & Regulations. The detailed information can be Obtained from website
+      www.dte.org.in/www.navsahyadri.edu.in
+      <br>
+      <br>
+      <li>
+        
+        <h3>Eligibility:</h3>
+        
+      </li>
+      <br>
+      <h4>
+        
+        <font color="red">First Year Admission:</font>
+      </h4>
+      <br>
+      <ul style="margin-left: 10px;">
+        <li><b> For Engineering :-</b><br></li> 12<sup>th</sup> Science with Physics & Mathematics and compulsory
+
+        subjects along with one the Chemistry or Biotechnology or Biology or Technical or Vocational subjects and
+        obtained
+        at
+        least 45% marks (at least 40% marks, in case of backward class categories & Persons with Disability candidates
+        belonging
+        to Maharashtra State Only) in the above subjects taken together & obtained score in CET/JEE conducted by the
+        Competent Authority.
+        <br>
+
+        <li> <b>For Pharmacy :-</b></li> PCM / PCB Obtained at least 45% marks 40% marks, in case of backward class
+        categories and
+        Persons with Disability
+        candidates belonging to Maharashtra State Only) & obtained score in CET/NEET conducted by the Computhority.
+      </ul>
+      <br>
+      <h4>
+        <font color="red"> Direct Second Year: </font>
+        
+      </h4>
+      <br>
+      Passed Diploma Course in Engineering / Pharmacy with at least 45% marks (at least 40% marks in case of
+      candidates of backward class categories & Persons with Disability candidates belonging to Maharashtra Staten
+      Only)
+      in appropriate branch of Engineering from an All India Council for Technical Education or Central or State
+      Government approved Institution or its equivalent.
+      <br>
+      <br>
+      <li>
+        
+        <h3> Fees:</h3>
+      </li>As per Shikshan Shulka Samiti Govt. of Maharashtra
+    </ul>
+  </div>
+
+  <div class="div6" style="height:justify;
+                           border-style:solid;
+                           border-color:black;
+                           margin:10px;
+                           padding:10px;">
+    <h1 class="title">
+      *Required Documents*
+    </h1>
+    <table border="2" style="height: 400px;">
+      <tr>
+        <th>Common Document</th>
+        <th>10th (Mark Sheets / Board Certificate)
+
+          12th (Mark Sheets / Board Certificate)
+
+          Graduation Mark Sheet
+
+          TC (Transfer Certificate) / LC (Leaving Certificate)
+
+          Nationality & Domicile Certificate
+
+          Entrance CET/JEE/NEET Score Card / Print of Score Card
+        </th>
+      <tr>
+        <th>SC/ST</th>
+        <th>Cast Certificate,Cast Validity Certificate</th>
+      </tr>
+      <tr>
+        <th>OBC Catagery
+          NT/SBC</th>
+        <th>Caste Certificat,Cast Validity Certificate
+          non Creamy layer Certificate </th>
+      </tr>
+      <tr>
+        <th>EBC/MInority</th>
+        <th>Income Certificate, Community Certificate</th>
+      </tr>
+      <tr>
+        <th>Other Documents</th>
+        <th>Migration Certificate,Gap Affidavit</th>
+      </tr>
+    </table>
+  </div>
+
+  {% include 'footer.html' %}
+</body>
+<!-- <script src="header.js"> -->
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
+
+</script>
+
+</html>

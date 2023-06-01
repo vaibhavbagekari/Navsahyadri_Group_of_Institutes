@@ -1,0 +1,467 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* .headerdiv1 {
+    width: auto;
+} */
+
+header {
+    /* background-image: url(wallpaper1.jpeg); */
+    background-color: rgba(106, 107, 107, 0.719);
+    /* background-color: rgb(97, 97, 243); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 85px; */
+    background-position: center;
+    margin-top: 0px;
+    padding: 0%;
+    width: 100%;
+    /* position: fixed; */
+    top: 0px;
+    display: block;
+    /* border:2px solid black ;
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius: 15px; */
+}
+
+.college_name {
+    /* margin: 0px; */
+    text-align: center;
+    font-size: 4.5vw;
+    color: rgb(227, 16, 16);
+    text-shadow: 2px 2px 3px rgb(28, 12, 12);
+}
+
+.college_name1 {
+    font-size: 1.5vw;
+}
+
+.nevlist:hover {
+    background-color: rgb(249, 6, 6);
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+
+
+}
+
+.nevlist:hover .submenu {
+    display: block;
+}
+
+.nevlist {
+    float: left;
+    /* padding: 5px; */
+    list-style: none;
+    /* margin: 2px; */
+    padding: 2px;
+    cursor: pointer;
+    height: 100%;
+    display: block;
+    text-align: center;
+    /* border: 2px solid black; */
+    /* border-radius: 10px; */
+    /* padding-inline-start: 15px; */
+    /* margin: 5px; */
+    /* padding: 0px 25px; */
+    /* position: relative; */
+    /* display: flex; */
+    color: rgb(241, 235, 241);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .9rem;
+    /* border-right: 2px solid rgb(253, 7, 7); */
+}
+
+.snav {
+    display: none;
+    flex-direction: column;
+    height: 15px;
+    width: 23px;
+    justify-content: space-between;
+    transition-duration: 1s;
+}
+
+.t1 {
+    height: 15%;
+    background-color: rgb(18, 18, 18);
+    border-radius: 10px;
+}
+
+.snav1 {
+    display: none;
+    /* flex-direction: column; */
+    height: 15px;
+    width: 20px;
+    /* justify-content: space-between; */
+}
+
+.b1 {
+    margin: 7px;
+    /* padding: 6px; */
+    position: fixed;
+    top: 1px;
+    
+    right: 2px;
+    background-color: rgba(255, 255, 255, 0.01);
+    border: none;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+
+.b1:hover {
+    transform: scale(1.1);
+    background-color: rgba(240, 248, 255, 0.569);
+    box-shadow: 0px 0px 10px rgba(240, 248, 255, 0.736);
+}
+
+.b2 {
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.01);
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.navigation1 {
+    position: sticky;
+    top: 1px;
+    background-color: rgb(40, 39, 39);
+    padding: 5px;
+    height: auto;
+    /* margin-top: 0px; */
+    box-shadow: 0px 2px 6px rgb(30, 29, 29);
+    /* margin-top: 43px; */
+    /* transition-duration: 1s; */
+}
+
+
+.list {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.submenu {
+    
+    width: 200px;
+    background-color: rgba(20, 19, 19, 0.227);
+    left: 0px;
+    border-radius: 10px;
+    top: 100%;
+    display: none;
+    position: absolute;
+
+}
+
+.submenuitem {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.511);
+    /* border: 2px solid rgb(17, 3, 3); */
+    /* border-radius: 10px; */
+    margin: 1px;
+    list-style: none;
+    font-size: smaller;
+
+}
+
+.submenuitem:hover {
+    background-color: rgba(0, 0, 0, 0.841);
+}
+
+.btndiv {
+    /* margin-bottom: 10px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btnlogin1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgba(21, 28, 244, 0.982);
+    color: rgb(253, 251, 251);
+    box-shadow: 2px 2px 2px rgba(10, 10, 10, 0.853);
+    border-radius: 10px;
+    padding: 6px;
+    margin: 10px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    /* position: absolute; */
+}
+
+.btnlogin2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 6px;
+    background-color:  rgba(21, 28, 244, 0.982);
+    color: rgb(253, 252, 252);
+    box-shadow: 2px 2px 2px rgba(10, 10, 10, 0.853);
+    border-radius: 10px;
+    /* position: fixed; */
+    margin: 10px;
+    /* left: 100px ; */
+    /* position: absolute; */
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.btnlogin1:hover {
+    transform: scale(.95);
+
+}
+
+.btnlogin2:hover {
+    transform: scale(0.95);
+    /* transition-duration: 1s; */
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(9, 8, 21, 0.657);
+   
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    opacity: 0;
+    transition: 1s;
+}
+
+.showoverlay {
+    opacity: 1;
+    z-index: 1;
+    position: fixed;
+}
+
+.overlay2 {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(17, 24, 24, 0.657);
+    /* background-color:transparent; */
+    filter: blur(8px);
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    opacity: 0;
+    transition: 1s;
+}
+
+.showoverlay2 {
+    opacity: 1;
+    z-index: 1;
+    position: fixed;
+
+}
+
+.loginform {
+    width: 350px;
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    transition: 1s;
+    box-shadow: 0px 0px 10px 3px black;
+    transform: translate(-50%, -50%);
+}
+
+.showloginform {
+    top: 50%;
+    z-index: 1;
+    position: fixed;
+}
+
+.loginform2 {
+    width: 350px;
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    position: fixed;
+    transition: 1s;
+    box-shadow: 0px 0px 10px 3px black;
+    transform: translate(-50%, -50%);
+}
+
+.showloginform2 {
+    top: 50%;
+    z-index: 1;
+    position: fixed;
+}
+
+.closs {
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.loginform span {
+    position: absolute;
+    right: 5px;
+
+    color: white;
+    top: 0px;
+    background-color: rgb(20, 173, 53);
+}
+
+.loginform2 span {
+    position: absolute;
+    right: 5px;
+    color: white;
+    top: 0px;
+    background-color: rgb(20, 173, 53);
+}
+
+.loginform input {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 30px;
+}
+
+.loginform button {
+    background-color: black;
+    color: white;
+}
+
+.loginform2 input {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 30px;
+}
+
+.loginform2 button {
+    background-color: black;
+    color: white;
+}
+
+.colimg {
+    width: 100%;
+    background-attachment: fixed;
+}
+
+
+.headerdiv {
+    position: relative;
+    margin-top: 0px;
+}
+
+.college_name1 {
+    margin-top: 20px;
+
+}
+
+
+.footerdiv {
+    margin-top: 5px;
+    height: 300px;
+    width: 100%;
+    background-color: rgb(20, 20, 107);
+    /* background-image: url("wallpaper2.avif"); */
+    /* background: linear-gradient(rgba(0, 110, 255, 0.516), rgba(245, 90, 90, 0.671)), url("wallpaper2.avif"); */
+    /* background-color: rgb(4, 4, 60); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logoimg {
+    background-color: white;
+    margin: 5px;
+}
+
+.tlogo {
+    color: rgb(25, 26, 25);
+    margin: 5px;
+    font-size: 1.3rem;
+}
+
+.a {
+    height: 380px;
+}
+
+a {
+    color: white;
+
+}
+
+.active {
+    background-color: red;
+    transform: scale(1.4);
+}
+
+
+@media screen and (max-width:600px) {
+    .headerdiv{
+        padding-top: 25px;
+    }
+    .college_name {
+        font-size: 5.5vw;
+        
+    }
+
+    .college_name1 {
+        font-size: 2.5vw;
+    }
+
+    .navigation1 {
+        position: fixed;
+        width: 200px;
+        right: -210px;
+        top: 25px;
+        /* display: none; */
+        transition: .8s;
+        /* background-color: rgba(0, 0, 0, 0.011); */
+    }
+    .submenu{
+        top: 0px;
+        left: -100%;
+    }
+    .navigation2 {
+        position: fixed;
+        right: 0px;
+        top: 25px;
+        
+        display: block;
+        background-color: rgba(29, 29, 28, 0.872);
+        /* padding-left: 0px; */
+        height: auto;
+        /* top: 20px; */
+        box-shadow: 0px 2px 6px rgb(30, 29, 29);
+    }
+
+    .dis {
+        display: flex;
+    }
+
+    .snav12 {
+        display: flex;
+        flex-direction: column;
+        height: 20px;
+        width: 20px;
+        align-items: center;
+    }
+
+    .snav {
+        display: flex;
+        padding: 1px;
+        background-color: rgba(247, 244, 244, 0.005);
+    }
+
+    .headerdiv1 {
+        display: none;
+    }
+
+    .list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .nevlist {
+        border-top: 1px solid rgba(238, 242, 242, 0.868);
+    }
+
+}

@@ -1,0 +1,73 @@
+{% load static %}
+<footer>
+    <div class="footerdiv">
+        <div class="fdiv1">
+            <h2>
+                Quick Links
+            </h2>
+            <br>
+            <ul>
+                <li><a href="https://www.aicte-india.org/feedback/">
+                    AICTE - web Portal Feedback
+                </a>
+                </li>
+                <li>
+                    <a href="{% url 'ogc' %}">
+                    Online Grievance Redressal
+                </a>
+                </li>
+                <li>
+                    New's Update
+                </li>
+                <li>
+                    Alumni
+                </li>
+                <li>
+                    Student Achivments
+                </li>
+            </ul>
+        </div>
+        <div class="fdiv1">
+            <h2>
+                Institution
+            </h2>
+            <br>
+            <ul>
+                <li><a href="{% url 'engindex' %}">College of Engineering</a></li>
+                <li><a href="{% url 'polyindex' %}">College of Polytechnic</a></li>
+                <li>Faculty of Management</li>
+                <li><a href="{% url 'pharmindex' %}">College of Pharmacy</a></li>
+                <li>School and Jr. College</li>
+            </ul>
+        </div>
+        <div class="fdiv1">
+            <h2>
+                Get In Touch
+            </h2>
+            
+            <span> <a class="location" href="https://maps.google.com/?cid=7718872008692450879&entry=gps">
+                    <p style="font-family: 'Courier New', Courier, monospace;"><i class="fa fa-map-marker"></i><br>Navsahyadri Education Societys
+                        Group of Institution ,<br>Naigaon [Nasarapur],<br>Pune-412213</p>
+                </a></span>
+                <span class="tlogo"> <a 
+                    href="mailto:admissions@navsahyadri.edu.in"><p style="font-family: 'Courier New', Courier, monospace;">&#9993; <br>admissions@navsahyadri.edu.in</p></a></span>
+                <div width="100%" class="media-div">
+                    <span><img src="{% static 'facebook1.png' %}" alt="" width="41px"></span>
+                    <span><img src="{% static 'instagram1.png' %}" alt="" width="30px"></span>
+                    <span><img src="{% static 'twitter.png' %}" alt="" width="25px"></span>
+                    <span><img src="{% static 'linkedin.png' %}" alt="" width="25px"></span>
+                </div>
+
+        </div>
+        <!-- <div width="330px">
+            <img  class="logoimg" src="{% static 'col-logo.png' %}"><br>
+            <span class="tlogo">&#9742; </span>7769937007<br><br>
+            <span class="tlogo">&#9993; <a style="color: white;"
+                    href="mailto:admissions@navsahyadri.edu.in">admissions@navsahyadri.edu.in</a></span><br><br>
+            <span class="tlogo">&#10146; <a style="color: white;"
+                    href="https://maps.google.com/?cid=7718872008692450879&entry=gps">Navsahyadri Education Societys
+                    Group of Institution ,Sr.No 69,70,71,Naigaon [Nasarapur],Pune-412213</a></span>
+        </div> -->
+    </div>
+</footer>
+<script type="text/javascript" src="{% static 'header.js' %}"></script>

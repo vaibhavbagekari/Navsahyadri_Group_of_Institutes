@@ -1,0 +1,1020 @@
+{% load static %}
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'header_copy.css' %}"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    /* .headerdiv1 {
+    width: auto;
+} */
+
+    header {
+        /* background-image: url(wallpaper1.jpeg); */
+        /* background-color: rgba(106, 107, 107, 0.719); */
+        background-color: rgb(249, 249, 250);
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* height: 85px; */
+        background-position: center;
+        margin-top: 0px;
+        padding: 0%;
+        width: 100%;
+        /* position: fixed; */
+        top: 0px;
+        display: block;
+        /* border:2px solid black ;
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius: 15px; */
+    }
+
+    .college_name {
+        /* margin: 0px; */
+        text-align: center;
+        font-size: 4.5vw;
+
+        color: rgb(227, 16, 16);
+        text-shadow: 2px 2px 3px rgb(28, 12, 12);
+    }
+
+    .college_name1 {
+        font-size: 1.5vw;
+
+    }
+
+    .nevlist:hover {
+        background-color: rgb(255, 255, 255);
+        transform: scale(1.1);
+        color: black;
+        /* font-size: 20px; */
+        /* margin-top: -10px; */
+        transition-duration: 0.2s;
+
+
+    }
+
+    .nevlist:hover a {
+        color: rgb(0, 0, 0);
+    }
+
+    .nevlist:hover .submenu {
+        display: block;
+    }
+
+    .nevlist {
+        float: left;
+        /* padding: 5px; */
+        list-style: none;
+
+        padding: 10px;
+        cursor: pointer;
+        height: 100%;
+        display: block;
+        text-align: left;
+        /* border-radius: 5px; */
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: .9rem;
+        border-right: 10px;
+    }
+
+    .snav {
+        display: none;
+        flex-direction: column;
+        height: 15px;
+        width: 23px;
+        justify-content: space-between;
+        transition-duration: 1s;
+    }
+
+    .t1 {
+        height: 15%;
+        background-color: rgb(18, 18, 18);
+        /* background-color: red; */
+        border-radius: 10px;
+    }
+
+    .snav1 {
+        display: none;
+        /* flex-direction: column; */
+        height: 15px;
+        width: 20px;
+        /* justify-content: space-between; */
+    }
+
+    .b1 {
+        margin: 7px;
+        /* padding: 6px; */
+        position: fixed;
+        top: 1px;
+
+        right: 2px;
+        background-color: rgba(255, 255, 255, 0.01);
+        border: none;
+        cursor: pointer;
+        transition-duration: .2s;
+    }
+
+    .b1:hover {
+        transform: scale(1.1);
+        background-color: rgba(240, 248, 255, 0.569);
+        box-shadow: 0px 0px 10px rgba(240, 248, 255, 0.736);
+    }
+
+    .b2 {
+        margin: 5px;
+        background-color: rgba(255, 255, 255, 0.01);
+        border: none;
+        cursor: pointer;
+        display: none;
+    }
+
+    .navigation1 {
+        position: sticky;
+        top: 1px;
+        /* background-color: rgb(247, 68, 68); */
+        /* padding: 5px; */
+        height: auto;
+        background-color: rgb(250, 37, 37);
+        margin-top: 10px;
+        box-shadow: 0px 0px 6px rgb(30, 29, 29);
+        /* margin-top: 43px; */
+        /* transition-duration: 1s; */
+    }
+
+
+    .list {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .submenu {
+
+        width: 250px;
+        background-color: rgb(254, 254, 254);
+        left: 0px;
+        /* border-radius: 10px; */
+        top: 100%;
+
+        display: none;
+        position: absolute;
+
+    }
+
+    .submenuitem {
+
+        /* background-color: rgba(107, 106, 106, 0.511); */
+        border-bottom: 1px solid rgb(54, 171, 0);
+        /* border-radius: 10px; */
+        margin: 6px;
+        padding: 2px;
+        list-style: none;
+        /* font-size: smaller; */
+
+    }
+
+    .submenuitem:hover {
+        /* background-color: rgba(253, 145, 145, 0.841); */
+        color: black;
+    }
+
+    .btndiv {
+        /* margin-bottom: 10px; */
+
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+
+    .btnlogin1 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: rgba(21, 28, 244, 0.982);
+        color: rgb(253, 251, 251);
+        box-shadow: 2px 2px 2px rgba(10, 10, 10, 0.853);
+        border-radius: 10px;
+        padding: 6px;
+        margin: 10px;
+        cursor: pointer;
+        transition-duration: 0.3s;
+        /* position: absolute; */
+    }
+
+    .btnlogin2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding: 6px;
+        background-color: rgba(21, 28, 244, 0.982);
+        color: rgb(253, 252, 252);
+        box-shadow: 2px 2px 2px rgba(10, 10, 10, 0.853);
+        border-radius: 10px;
+        /* position: fixed; */
+        margin: 10px;
+        /* left: 100px ; */
+        /* position: absolute; */
+        cursor: pointer;
+        transition-duration: 0.3s;
+    }
+
+    .btnlogin1:hover {
+        transform: scale(.95);
+
+    }
+
+    .btnlogin2:hover {
+        transform: scale(0.95);
+        /* transition-duration: 1s; */
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(9, 8, 21, 0.657);
+
+        position: absolute;
+        top: 0px;
+        z-index: -1;
+        opacity: 0;
+        transition: 1s;
+    }
+
+    .showoverlay {
+        opacity: 1;
+        z-index: 1;
+        position: fixed;
+    }
+
+    .overlay2 {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(17, 24, 24, 0.657);
+        /* background-color:transparent; */
+        filter: blur(8px);
+        position: absolute;
+        top: 0px;
+        z-index: -1;
+        opacity: 0;
+        transition: 1s;
+    }
+
+    .showoverlay2 {
+        opacity: 1;
+        z-index: 1;
+        position: fixed;
+
+    }
+
+    .loginform {
+        width: 350px;
+        background-color: white;
+        padding: 20px;
+        position: absolute;
+        left: 50%;
+        top: -50%;
+        transition: 1s;
+        box-shadow: 0px 0px 10px 3px black;
+        transform: translate(-50%, -50%);
+    }
+
+    .loginform1 {
+        width: 350px;
+        background-color: white;
+        padding: 20px;
+        position: absolute;
+        left: 50%;
+        top: -70%;
+        transition: 1s;
+        box-shadow: 0px 0px 10px 3px black;
+        transform: translate(-50%, -50%);
+    }
+
+    .showloginform {
+        top: 50%;
+        z-index: 1;
+        position: fixed;
+    }
+
+    .loginform2 {
+        width: 350px;
+        background-color: white;
+        padding: 20px;
+        position: absolute;
+        left: 50%;
+        top: -50%;
+        position: fixed;
+        transition: 1s;
+        box-shadow: 0px 0px 10px 3px black;
+        transform: translate(-50%, -50%);
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .showloginform2 {
+        top: 50%;
+        z-index: 1;
+        position: fixed;
+    }
+
+    .showloginform3 {
+        top: 50%;
+        z-index: 1;
+        position: fixed;
+    }
+
+    .closs {
+        cursor: pointer;
+        padding: 2px;
+        border-radius: 50%;
+    }
+
+    .loginform span {
+        position: absolute;
+        right: 5px;
+
+        color: white;
+        top: 0px;
+        background-color: rgb(20, 173, 53);
+    }
+
+    .loginform2 span {
+        position: absolute;
+        right: 5px;
+        color: white;
+        top: 0px;
+        background-color: rgb(20, 173, 53);
+    }
+
+    .loginform input {
+        width: 100%;
+        margin-bottom: 10px;
+        height: 30px;
+    }
+
+    .loginform button {
+        background-color: black;
+        color: white;
+    }
+
+    .loginform2 input {
+        width: 100%;
+        margin-bottom: 10px;
+        height: 30px;
+    }
+
+    .loginform2 button {
+        background-color: black;
+        color: white;
+    }
+
+    .colimg {
+        width: 100%;
+        background-attachment: fixed;
+    }
+
+
+    .headerdiv {
+        position: relative;
+        margin-top: 0px;
+    }
+
+    .college_name1 {
+        margin-top: 20px;
+        /* color: rgb(80, 80, 81); */
+    }
+
+
+    .footerdiv {
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
+        justify-content: space-around;
+        margin-top: 5px;
+        height: max-content;
+        /* padding: 10px; */
+        width: 100%;
+        flex-wrap: wrap;
+        background-color: rgba(26, 26, 28, 0.889);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: rgb(169, 169, 169);
+        font-size: 20px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .fdiv1 {
+        border-right: 2px dotted rgb(169, 169, 169);
+        margin: 50px auto 50px auto;
+        width: 400px;
+    }
+
+    .fdiv1 ul li {
+        margin: 5px;
+    }
+
+    .logoimg {
+        background-color: white;
+        margin: 5px;
+    }
+
+    .tlogo {
+        color: rgb(25, 26, 25);
+        margin: 5px;
+        font-size: 1.3rem;
+    }
+
+    .a {
+        height: 380px;
+    }
+
+    a {
+        color: rgb(255, 255, 255);
+        /* font-family:'Raleway', sans-serif; */
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: black;
+
+    }
+
+    .active {
+        background-color: rgb(255, 184, 184);
+        color: rgb(0, 0, 0);
+        /* border-radius: 5px; */
+        padding: 3px;
+        height: 100%;
+        font-weight: 700;
+        /* margin-top: -10px; */
+        /* font-size: 18px; */
+        /* transform: translate(1.1); */
+    }
+
+    .responsiv_logo {
+        display: none;
+    }
+
+    .link {
+        width: 100%;
+    }
+
+    .form_div {
+        width: 40vw;
+        font-family: 'Raleway', sans-serif;
+        border: 2px solid black;
+        /* padding: 20px; */
+        /* position: absolute; */
+        /* left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%); */
+    }
+
+    input,
+    select {
+        width: 90%;
+        height: 20px;
+        margin: auto;
+    }
+
+    .icon {
+        font-size: 20px;
+        /* color:rgb(255, 255, 255) */
+    }
+
+    .dep {
+        color: black;
+    }
+
+    .text {
+        position: absolute;
+        top: 25px;
+        left: 40px;
+        opacity: 1;
+        font-size: 2em;
+        color: rgb(250, 247, 247);
+        text-shadow: 0px 2px 3px rgb(48, 46, 46);
+        animation-name: animation1;
+        animation-duration: 2s;
+        /* animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1); */
+    }
+
+    .form-button {
+        position: absolute;
+        /* padding: 6px; */
+        /* background-color: rgb(249, 93, 61); */
+        top: 150px;
+        left: 50px;
+        /* border: 1px solid red; */
+        overflow: hidden;
+        width: 70%;
+        height: 70%;
+        /* cursor: pointer; */
+        /* border-radius: 10px; */
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: rgba(251, 20, 20, 0.999);
+        font-size: 30px;
+        animation-name: animation2;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+    }
+
+    .inner {
+        position: absolute;
+        top: 35px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    @keyframes animation1 {
+        from {
+            /* top:-10px; */
+            opacity: 0.5;
+            left: -220px;
+        }
+
+        to {
+            top: 25px;
+            left: 40px;
+        }
+    }
+
+    @keyframes animation2 {
+        from {
+            opacity: 0.5;
+            left: -260px;
+        }
+
+        to {
+            top: 150px;
+            left: 50px;
+        }
+    }
+
+    .list-div {
+        /* border: 2px solid blue; */
+        position: absolute;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        animation-name: top-to-bottom;
+        animation-duration: 3s;
+        transition: 3s;
+    }
+
+    @keyframes top-to-bottom {
+        1% {
+            opacity: 0;
+            top: -100%;
+        }
+
+        70% {
+            opacity: 0;
+            top: -100%;
+        }
+
+        100% {
+            opacity: 1;
+            top: 0px;
+        }
+    }
+
+    .list-div2 {
+        top: 0%;
+    }
+
+
+    .slidermain {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .slidermain .colimg {
+        width: 100%;
+
+    }
+
+    .tableh {
+        /* background-color: rgb(158, 249, 249); */
+        /* border-radius: 5px; */
+        margin: 10px;
+        font-size: 1.3rem;
+    }
+
+    .form-contaner {
+        width: 90vw;
+        height: 80%;
+        box-shadow: 0px 0px 30px rgb(22, 239, 247);
+        border: 1px solid black;
+        margin: auto;
+        display: flex;
+        border-radius: 25px;
+        overflow: hidden;
+        align-items: flex-start;
+        justify-content: center;
+
+    }
+
+    .form-colname {
+        display: flex;
+        color: rgb(36, 4, 180);
+        text-shadow: 1px 2px 5px rgb(75, 40, 228);
+        justify-content: center;
+        font-size: 30px;
+        margin-top: 70px;
+    }
+
+    .media-div {
+        display: flex;
+        margin-top: 10px;
+        flex-direction: row;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .college-logo-img {
+        margin-top: 50px;
+    }
+
+    .table2 {
+        width: 45vw;
+        border-radius: 20px;
+        /* background-color: rgba(245, 72, 216, 0.681); */
+        height: 100%;
+        font-size: 1.2rem;
+        /* box-shadow: 5px 5px 9px rgb(109, 109, 109); */
+        border-spacing: 15px;
+        /* color: rgba(0, 888, 988, 0.9); */
+    }
+
+    .table3 {
+        height: 100%;
+    }
+
+    .dis-contener {
+        /* float: right; */
+        width: 45vw;
+
+        border: 1px solid red;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-image: linear-gradient(rgb(78, 227, 247), rgb(239, 20, 177));
+        height: 100%;
+
+    }
+
+    .form-input {
+        background-color: transparent;
+        width: 80%;
+        /* border: none; */
+        height: 30px;
+        box-shadow: 0px 0px 9px rgba(243, 75, 229, 0.816);
+        border-radius: 10px;
+        border-bottom: 2px solid black;
+    }
+
+    .submit {
+        width: 50%;
+        height: 1.6rem;
+        font-size: 1rem;
+        background-color: rgb(251, 123, 239);
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.558);
+        border-radius: 10px;
+        transition-duration: .7s;
+        cursor: pointer;
+    }
+
+    .submit:hover {
+        transform: scale(1.1);
+    }
+
+    .table2 input {
+        font-size: 15px;
+        /* width: 50%; */
+    }
+
+    .formdiv {
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        width: 100%;
+        height: 80vh;
+
+
+    }
+
+    select {
+        width: 80%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid black;
+
+    }
+
+    .box {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        background: linear-gradient(rgba(220, 17, 246, 0.516), rgba(31, 141, 238, 0.671));
+    }
+
+    .subbox {
+        width: 200px;
+        border: 2px solid black;
+        /* font-weight: 4000;  */
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px rgba(17, 18, 18, 0.984);
+        color: rgb(238, 19, 19);
+        margin: 20px;
+        height: 200px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        transition-duration: 0.5s;
+    }
+
+    .subbox:hover {
+        transform: scale(1.1);
+
+        /* transition-timing-function: ease-in-out; */
+
+    }
+
+    .subbox .subtext {
+        text-shadow: 2px 1px 0px rgb(0, 102, 255);
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0.435);
+        width: 100%;
+        display: flex;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        justify-content: center;
+    }
+
+    .c1 {
+        background-image: url("{% static 'polytechnic.jpg' %}");
+
+    }
+
+    .c2 {
+        background-image: url("{% static 'engineering.jpg' %}");
+    }
+
+    .c3 {
+        background-image: url("{% static 'MBA.avif' %}");
+    }
+
+    .c4 {
+        background-image: url("{% static 'pharmacy1.jpg' %}");
+    }
+
+    .opgroup {
+        background-color: #00000086;
+    }
+
+    .sel {
+        border-radius: 5px;
+    }
+
+    .hlist {
+        color: rgb(20, 19, 18);
+        margin-left: 30px;
+        font-size: 70%;
+    }
+
+    .col_logo_s {
+        display: none;
+    }
+
+    .submenuitem {
+        position: relative;
+    }
+
+    .submenu1 {
+
+        width: 250px;
+        background-color: rgb(254, 254, 254);
+        left: 100%;
+        /* border-radius: 10px; */
+        top: 0px;
+
+        display: none;
+        position: absolute;
+
+    }
+
+    .submenuitem1 {
+        /* width: 100%; */
+        /* background-color: rgba(107, 106, 106, 0.511); */
+        border-bottom: 1px solid rgb(54, 171, 0);
+        /* border-radius: 10px; */
+        margin: 6px;
+        padding: 2px;
+        list-style: none;
+        /* font-size: smaller; */
+
+    }
+
+    .submenuitem1:hover {
+        /* background-color: rgba(253, 145, 145, 0.841); */
+        color: black;
+    }
+
+    .submenuitem:hover .submenu1 {
+        display: block;
+    }
+
+    @media screen and (max-width:600px) {
+        .text {
+            font-size: 1.2em;
+        }
+
+        .table2 {
+            width: 100%;
+        }
+
+        .hlist {
+            font-size: 16px;
+        }
+
+        .form-button {
+            top: 90px;
+            /* font-size: 10px; */
+            left: 50px;
+            height: 50%;
+            width: 70%;
+            height: 70%;
+            font-size: 25px;
+        }
+
+        .slidermain .colimg {
+            height: 60vh;
+        }
+
+        @keyframes animation2 {
+            from {
+                opacity: 0.5;
+                left: -100px;
+
+            }
+
+            to {
+                top: 90px;
+                left: 50px;
+            }
+
+        }
+
+        .dis-contener {
+            display: none;
+        }
+
+
+    }
+
+    .college_name {
+        text-shadow: 2px 2px 4px black;
+    }
+
+    .container-subnav {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        gap: 1em;
+    }
+
+    .subnav {}
+
+    @media screen and (max-width:600px) {
+        .headerdiv {
+            padding-top: 25px;
+        }
+
+        .college_name {
+            font-size: 5.5vw;
+
+        }
+
+        .college_name1 {
+            font-size: 2.5vw;
+        }
+
+        .navigation1 {
+            position: fixed;
+            width: 240px;
+            right: -100%;
+            top: 35px;
+            z-index: 1;
+            height: max-content;
+            /* display: none; */
+            transition: 1s;
+            /* background-color: rgba(0, 0, 0, 0.011); */
+        }
+
+        .submenu {
+            top: 0px;
+            left: -70%;
+        }
+
+        .navigation2 {
+            position: fixed;
+            right: 0px;
+            top: 35px;
+
+            display: block;
+            background-color: rgb(250, 37, 37);
+            /* padding-left: 0px; */
+            height: 100vh;
+            /* top: 20px; */
+            box-shadow: 0px 2px 6px rgb(30, 29, 29);
+        }
+
+        .dis {
+            display: flex;
+        }
+
+        .snav12 {
+            display: flex;
+            flex-direction: column;
+            height: 20px;
+            width: 20px;
+            align-items: center;
+        }
+
+        .snav {
+            display: flex;
+            padding: 1px;
+            background-color: rgba(247, 244, 244, 0.005);
+        }
+
+        .headerdiv1 {
+            display: none;
+        }
+
+        .list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .nevlist {
+            /* border-top: 1px solid rgba(238, 242, 242, 0.868); */
+            margin-top: 20px;
+        }
+
+        .responsiv_logo {
+            display: block;
+        }
+    }
+
+    .location {
+        text-decoration: none;
+    }
+</style>
+<header>
+    <center>
+        <img class="responsiv_logo img1" src="{% static 'col-logo.png' %}" height="90px" width="100px"></img>
+    </center>
+    <div class="headerdiv">
+        <img class="headerdiv1" class="img1" align="right" src="{% static 'col-logo.png' %}" align="" height="90px"
+            width="100px"></img>
+        <img class="headerdiv1" align="left"
+            src="https://i0.wp.com/sjbit.edu.in/wp-content/uploads/2021/07/NAAC-Logo-250x250-1.png?ssl=1" align="left"
+            height="100px" width="120px"></img>
+        <h1 class="college_name">Navsahyadri Group Of Institution, Pune</h1>
+        <center>
+            <h3 class="college_name1" align="center">Approved by AICTE and PCI, New Delhi | <br> Recognized by Govt. of
+                Maharashra and
+                DTE, Mumbai Affiliated to DBATU, University of pune</h3>
+        </center>
+
+        <ul class="container-subnav">
+            <li class="subnav">AICTE approvals</li>
+            <li class="subnav">Mandatery Disclosure</li>
+            <li class="subnav">AICTE web portal feedback</li>
+            <li class="subnav">Grievance Redressal Community</li>
+
+        </ul>
+    </div>
+    </div>
+
+
+</header>
+
+<!--  -->
+
+
+</div>
+</div>

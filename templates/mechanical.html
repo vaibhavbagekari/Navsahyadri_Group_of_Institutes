@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machanical Engineering</title>
+    <!-- <link rel="stylesheet" href="{% static 'header.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'department.css' %}">
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'engnav.html' %}
+    <div>
+        <div class="divh1">
+            <h2 class="meh2">Mechanical Engineering</h2><br>
+        </div>
+        <div class="MEdiv">
+            <span class="span">Course Code:663261210</span>
+            <span class="span">Duration:4 year</span>
+            <span class="span">Course Type: Full Time</span>
+            <span class="span">Intake: 120,Direct 2<sup>th</sup>Year Intake:84 </span>
+        </div>
+
+        <div width="100%" class="meimg">
+            <img width="50%"
+                src="https://www.mitkundapura.com/Activities/Machanical-Students-MIT-Kundapura-Campus-01.jpg">
+            <img width="50%" src="https://www.bcpdgp.ac.in/wp-content/uploads/2019/12/mech-3.jpg">
+        </div>
+    </div>
+
+
+    <h2 class="facultyh2">Faculty Profile</h2>
+    <div class="facultydiv">
+        {% for mechanical_faculty in mechanical_faculties %}
+        <div class="facultyspan">
+            <img class="facultyimg" src="http://www.navsahyadri.edu.in/assets/images/facultyprofile/Pankaj-Bhokare.jpg">
+            <p>
+            <h3>Prof. {{ mechanical_faculty.name }}</h3>
+            <b>Qualifications</b> {{ mechanical_faculty.Qualifications }}<br>
+
+            <b>Experience:</b> {{mechanical_faculty.Experience}}<br>
+
+            <b>Mob. No:</b>{{ mechanical_faculty.contact_no }}<br>
+
+            <b>Email Id:</b> {{ mechanical_faculty.Email_Id }}<br>
+
+            </p>
+        </div>
+        
+        {% endfor %}
+    </div>
+    <h2 class="topic-title">Academics</h2>
+    <div class="face_div">
+        <div class="face_sub_div">
+            <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+            <h3 class="face_title">Laboratory</h3>
+            <a class="dep" href="{% url 'eng_lab_entc' %}"><button class="button button3">click here to view</button></a>
+            </p>
+        </div>
+        <div class="face_sub_div">
+            <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+            <h3 class="face_title">Syllabus</h3>
+            <a href="{% url 'eng_syllabus'%}"> <button class="button button3">click here to view</button></a></p>
+        </div>
+        <div class="face_sub_div">
+            <img src="{% static 'cs_img3.jpeg' %}" alt="" class="face_img">
+            <a class="dep" href="{% url 'Electrical' %}"><button class="button button3">click here to view</button></a>
+            </p>
+        </div>
+    </div>
+
+    {%include 'footer.html'%}
+</body>
+
+</script>
+
+</html>

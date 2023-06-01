@@ -1,0 +1,141 @@
+<div class="menu" style="width: 100%; background-color: brown;">
+    <div class="menu_top" style="width: 100%; position:fixed; top:0px; height:30px;  background-color: brown; " ></div>
+    <button class="b1" id="navbtn" onclick="droupdown()">
+        
+        <div class="snav">
+            <span class="t1"></span>
+            <span class="t1"></span>
+            <span class="t1"></span>
+        </div>
+    </button>
+    <button class="b1" id="navbtn" onclick="droupdown()">
+        <div class="snav1" id="navbtn2">
+            &#x2715;
+        </div>
+    </button>
+</div>
+<div class="navigation1" id="nav1">
+    <nav class="nav">
+        <ul class="list">
+            <a style="height: 100%;"
+            class="{% if request.path == '/home/' %} active {% endif %}" href="{% url 'home' %}"><li class="nevlist {% if request.path == '/home/' %} active {% endif %}"><i
+                        class="fa fa-home" style="font-size:20px"></i>&nbsp;Home
+            </li></a>
+            <li class="nevlist  style="color: rgb(0, 0, 0);"> <a
+                    href=""><i class="fa fa-address-card icon"></i>&nbsp; programs</a>
+                <ul class="submenu">
+
+                    <li class="submenuitem"> <a href="{% url 'engindex' %}">Engineering</a>
+
+                        <ul class=" submenu1">
+                            <li class="submenuitem1"><a href="{% url 'url2' 'AIML.html' %}"> AIML</a></li>
+                            <li class="submenuitem1"><a href="{% url 'url2' 'CS.html' %}">Computer Engineering</a></li>
+                            <li class="submenuitem1"><a href="{% url 'url2' 'Civil_Engineering.html' %}">Civil
+                                    Engineering</a></li>
+                            <li class="submenuitem1"><a href="{% url 'url2' 'Electrical.html' %}"> Electrical
+                                    Engineering</a></li>
+                            <li class="submenuitem1"><a href="{% url 'url2' 'ENTC.html' %}">E&TC Engineering</a></li>
+                            <li class="submenuitem1"><a href="{% url 'url2' 'mechanical.html' %}">Mechanical
+                                    Engineering</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="submenuitem"><a href="{% url 'polyindex' %}"> Polytechnic </a>
+                        <ul class=" submenu1">
+
+                            <li class="submenuitem1">Mechanical Engineering</li>
+                            <li class="submenuitem1">Civil Engineering</li>
+                            <li class="submenuitem1">Electrical Engineering</li>
+                            <li class="submenuitem1">Computer Engineering</li>
+                        </ul>
+                    </li>
+                    <li class="submenuitem"><a href="{% url 'pharmindex' %}">Pharmacy</a>
+                        <ul class=" submenu1">
+                            <li class="submenuitem1">B-Pharmacy</li>
+                            <li class="submenuitem1">D-Pharmacy</li>
+                            <li class="submenuitem1">M-Pharmacy</li>
+                        </ul>
+                    </li>
+                    <li class="submenuitem"><a href="{% url 'mbaindex' %}">MBA</a></li>
+
+                </ul>
+
+            </li>
+            <li class="nevlist {% if request.path == '/aboutus/' %} active {% endif %}" style="color: rgb(0, 0, 0);"> <a
+                    href="{% url 'aboutus' %}"><i class="fa fa-address-card icon"></i>&nbsp; About us</a>
+                <ul class="submenu">
+
+                    <li class="submenuitem"><a href="{% url 'establishment' %}">Establishment And Affiliation</a></li>
+                    <li class="submenuitem"><a href="{% url 'coc' %}"> Code of Conduct</a></li>
+                    <li class="submenuitem"><a href="{% url 'prinsipal_desk' %}"> Prinsipal's Desk </a></li>
+                    <li class="submenuitem"><a href="{% url 'president_desk' %}">President's Desk</a></li>
+                    <li class="submenuitem"><a href="{% url 'reaching' %}"> Reaching College</a></li>
+                    <li class="submenuitem"><a href="{% url 'awardss' %}"> Awardss and Appreciation</a></li>
+                </ul>
+
+            </li>
+            <li class="nevlist {% if request.path == '/admission/' %} active {% endif %}"><a
+                    href="{% url 'admission' %}">&nbsp;<i class="fa fa-info icon"> </i>&nbsp;Admission</a>
+                <ul class="submenu">
+                    <li class="submenuitem">from</li>
+                    <li class="submenuitem">
+                        <p class="" style="color: black;"><a href="{% url 'engadmission' %}"> Engineering</a></p>
+                        
+                    </li>
+                    <li class="submenuitem"><a href="{% url 'polyadmission' %}">Polytechnic</a>
+                        
+                    </li>
+                    <li class="submenuitem"><a href="{% url 'pharmadmission' %}">Pharmacy</a>
+                        <ul class=" submenu1">
+                            <li class="submenuitem1">D-Pharmacy</li>
+                            <li class="submenuitem1">B-Pharmacy</li>
+                            <li class="submenuitem1">M-Pharmacy</li>
+                        </ul>
+                    </li>
+                    <li class="submenuitem"><a href="{% url 'mbaadmission' %}">MBA</a></li>
+            </li>
+        </ul>
+        </li>
+        <li class="nevlist {% if request.path == '//' %} active {% endif %}"><a href="">&nbsp;<i
+                    class="fa fa-info icon"> </i>&nbsp;facilities</a>
+            <ul class="submenu">
+                <li class="submenuitem"><a href="{% url 'girl_hostel' %}">Girl's Hostel</a></li>
+                <li class="submenuitem"><a href="{% url 'boys_hostel' %}">Boy's Hostel</a></li>
+                <li class="submenuitem"><a href="{% url 'tronsport' %}">Transport</a></li>
+                <li class="submenuitem"><a href="{% url 'library' %}">library</a></li>
+                <li class="submenuitem"><a href="{% url 'e_library' %}">E-library</a></li>
+                <li class="submenuitem"><a href="{% url 'counselling' %}">Counselling</a></li>
+                <li class="submenuitem"><a href="{% url 'internet_facilities' %}">Internet facilities</a></li>
+            </ul>
+        </li>
+        <li class="nevlist {% if request.path == '//' %} active {% endif %}"><a href="{% url 'mainactivity'%}"><i
+                    class="fa fa-child icon"></i>&nbsp; Activity</a>
+
+        </li>
+        <li class="nevlist {% if request.path == '//' %} active {% endif %}"><a href="">
+                <!-- <i  class="fa-duotone fa-file-chart-column"></i> -->
+                <i class="fa fa-file"></i>
+                &nbsp; report</a>
+            <ul class="submenu">
+                <li class="submenuitem">NACC</li>
+                <li class="submenuitem">NSS</li>
+                <li class="submenuitem">IQCIE</li>
+                <li class="submenuitem">AICIE</li>
+            </ul>
+        </li>
+
+        <li class="nevlist {% if request.path == '//' %} active {% endif %}"><a href="{% url 'gallery' %}"><i
+                    class="fa fa-image"></i>&nbsp; gallery</a>
+            <ul class="submenu">
+                <li class="submenuitem">Photo</li>
+                <li class="submenuitem">video</li>
+
+            </ul>
+        </li>
+        <li class="nevlist {% if request.path == '/Activity/' %} active {% endif %}"><a href="{% url 'contact' %}"><i
+                    class="fa fa-child icon"></i>&nbsp; contact</a>
+        </li>
+
+        </ul>
+    </nav>
+</div>

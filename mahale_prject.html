@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doc_to_pdf</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+      
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: max-content;
+            width: 400px;
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: rgb(251, 252, 252);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.704);
+        }
+        input,button{
+            width: 100%;
+            padding: 5px;
+        }
+        .form{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+        <div class="container">
+            <h2 style="background-color: aquamarine; color: rgb(230, 20, 20); padding: 5px; " align="center">doc to pdf</h2>
+            <form action="" class="form">
+                <label for="file1">Doc file</label>
+                <br>
+                <br>
+                <input type="file" name="file1">
+                <br>
+                <br>
+                <button>convert</button>
+                </form>
+        </div>
+   
+</body>
+
+</html>

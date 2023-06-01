@@ -1,0 +1,84 @@
+{% load static %}
+<div class="menu">
+    <button class="b1" id="navbtn" onclick="droupdown()">
+        <div class="snav">
+            <span class="t1"></span>
+            <span class="t1"></span>
+            <span class="t1"></span>
+        </div>
+    </button>
+    <button class="b1" id="navbtn" onclick="droupdown()">
+        <div class="snav1" id="navbtn2">
+            &#x2716;
+        </div>
+    </button>
+</div>
+<div class="navigation1" id="nav1">
+    <nav class="nav">
+        <ul class="list">
+            <li class="nevlist {% if request.path == '/polyindex/' %} active {% endif %}"> <a
+                    class="{% if request.path == '/polyindex/' %} active {% endif %}" href="{% url 'polyindex' %}"><i
+                        class="fa fa-home" style="font-size:20px"></i>&nbsp;Home</a>
+            </li>
+            <li class="nevlist"> <i class="fa fa-book icon"></i>&nbsp;
+                Department
+                <ul class="submenu">
+                    <a href="{% url 'poly_mechanical'%}"><li class="submenuitem">Mechanical Engineering</li></a>
+                    <a href="{% url 'poly_civil'%}"><li class="submenuitem">Civil Engineering</li></a>
+                    <a href="{% url 'poly_electrical'%}"><li class="submenuitem">Electrical Engineering</li></a>
+                    <a href="{% url 'poly_cs'%}"><li class="submenuitem"><abbr title="computer Engineering">computer Engineering</abbr></li></a>
+                </ul>
+            </li>
+            <li class="nevlist"><i class="fa fa-calendar icon"></i>&nbsp;
+                Academic
+                calender
+                <ul class="submenu">
+
+                    <li class="submenuitem">Mechanical Engineering</li>
+                    <li class="submenuitem">Civil Engineering</li>
+                    <li class="submenuitem">Electrical Engineering</li>
+
+                    <li class="submenuitem"><abbr title="computer science/Engineering">C.S.</abbr></li>
+
+            </li>
+        </ul>
+        </li>
+
+        <li class="nevlist {% if request.path == '/a/' %} active {% endif %}"><a
+                class="{% if request.path == '/a/' %} active {% endif %}" href=""><i
+                    class="fa fa-book icon"></i> &nbsp;E-library</a>
+        </li>
+        <li class="nevlist {% if request.path == '/a/' %} active {% endif %}"><a
+                href="">&nbsp;<i class="fa fa-info icon"> </i>&nbsp;Admission info.</a>
+        </li>
+        <li class="nevlist {% if request.path == '/englaboratery/' %} active {% endif %}" style="color: rgb(0, 0, 0);">
+            <a><i class="fa fa-address-card icon"></i>&nbsp; laboratery</a>
+            <ul class="submenu">
+
+                <a href="{% url 'poly_lab_mechanical' %}"><li class="submenuitem">Mechanical Engineering</li></a> 
+                <a href="{% url 'poly_lab_civil' %}"><li class="submenuitem">Civil Engineering</li></a>
+                <a href="{% url 'poly_lab_electrical' %}"><li class="submenuitem">Electrical Engineering</li></a>
+
+                <a href="{% url 'poly_lab_cs' %}"><li class="submenuitem"><abbr title="computer science/Engineering">C.S.</abbr></li></a>
+            </ul>
+        </li>
+
+        <li class="nevlist {% if request.path == '/a/' %} active {% endif %}"> <a href=""><i
+                    class="fa fa-line-chart icon"></i>&nbsp; TPO</a>
+        </li>
+        <li class="nevlist {% if request.path == '/a/' %} active {% endif %}"><a href=""><i
+                    class="fa fa-child icon"></i>&nbsp; Course Outcome</a>
+            <ul class="submenu">
+
+                <li class="submenuitem">Mechanical Engineering</li>
+                    <li class="submenuitem">Civil Engineering</li>
+                    <li class="submenuitem">Electrical Engineering</li>
+                    <li class="submenuitem"><abbr title="computer science/Engineering">C.S.</abbr></li>
+            </ul>
+        </li>
+        <li class="nevlist "><a href="" class="link {% if request.path == '/a/' %} active {% endif %}">
+                <i class="icon fa fa-soccer-ball-o"></i>
+                &nbsp; NSS/Sports</a></li>
+        </ul>
+    </nav>
+</div>

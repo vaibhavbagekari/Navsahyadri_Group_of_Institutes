@@ -1,0 +1,81 @@
+<div class="menu">
+    <button class="b1" id="navbtn" onclick="droupdown()">
+        <div class="snav">
+            <span class="t1"></span>
+            <span class="t1"></span>
+            <span class="t1"></span>
+        </div>
+    </button>
+    <button class="b1" id="navbtn" onclick="droupdown()">
+        <div class="snav1" id="navbtn2">
+            &#x2716;
+        </div>
+    </button>
+</div>
+<div class="navigation1" id="nav1">
+    <nav class="nav">
+        <ul class="list">
+            <li class="nevlist {% if request.path == '/home/' %} active {% endif %}"> <a
+                    class="{% if request.path == '/home/' %} active {% endif %}" href="{% url 'home' %}"><i
+                        class="fa fa-home" style="font-size:20px"></i>&nbsp;Home</a>
+            </li>
+            <li class="nevlist"> <i class="fa fa-book icon" ></i>&nbsp;
+                Department 
+                <ul class="submenu">
+                    <li class="submenuitem {% if request.path == '/mechanical/' %} active {% endif %}"><a class="dep"
+                            href="{% url 'mechanical' %}">Mechanical Engineering</a></li>
+                    <li class="submenuitem {% if request.path == '/Civil/' %} active {% endif %}"><a class="dep"
+                            href="{% url 'Civil' %}">Civil Engineering</a></li>
+                    <li class="submenuitem {% if request.path == '/Electrical/' %} active {% endif %}"><a class="dep"
+                            href="{% url 'Electrical' %}">Electrical Engineering</a></li>
+                    <li class="submenuitem {% if request.path == '/ENTC/' %} active {% endif %}"><abbr
+                            title="Electronics & Telicommunication"><a class="dep" href="{% url 'ENTC' %}">E&TC</a></abbr></li>
+                    <li class="submenuitem {% if request.path == '/CS/' %} active {% endif %}"><abbr
+                            title="computer science/Engineering"><a class="dep" href="{% url 'CS' %}">C.S.</a></abbr></li>
+                    <li class="submenuitem {% if request.path == '/AIML/' %} active {% endif %}"><abbr
+                            title="Artificial Intelligence and Machine Learning"><a class="dep"
+                                href="{% url 'AIML' %}">AIML</a></abbr></li>
+                </ul>
+            </li>
+            <li class="nevlist"><i class="fa fa-calendar icon" ></i>&nbsp;
+                Academic
+                calender
+                <ul class="submenu">
+
+                    <li class="submenuitem">Mechanical Engineering</li>
+                    <li class="submenuitem">Civil Engineering</li>
+                    <li class="submenuitem">Electrical Engineering</li>
+                    <li class="submenuitem"><abbr title="Electronics & Telicommunication">E&TC</abbr></li>
+                    <li class="submenuitem"><abbr title="computer science/Engineering">C.S.</abbr></li>
+                    <li class="submenuitem"><abbr title="Artificial Intelligence and Machine Learning">AIML</abbr>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nevlist {% if request.path == '/elibrary/' %} active {% endif %}"><a class="{% if request.path == '/elibrary/' %} active {% endif %}"
+                    href="{% url 'elibrary' %}"><i class="fa fa-book icon"></i> &nbsp;E-library</a>
+            </li>
+            <li class="nevlist {% if request.path == '/admission/' %} active {% endif %}"><a
+                    href="{% url 'admission' %}">&nbsp;<i class="fa fa-info icon"
+                        > </i>&nbsp;Admission info.</a>
+            </li>
+            <li class="nevlist {% if request.path == '/aboutus/' %} active {% endif %}" style="color: rgb(0, 0, 0);"> <a
+                    href="{% url 'aboutus' %}"><i class="fa fa-address-card icon"
+                        ></i>&nbsp; About us</a>
+
+            </li>
+
+            <li class="nevlist {% if request.path == '/tpo/' %} active {% endif %}"> <a href="{% url 'tpo' %}"><i
+                        class="fa fa-line-chart icon" ></i>&nbsp; TPO</a>
+            </li>
+            <li class="nevlist {% if request.path == '/Activity/' %} active {% endif %}"><a
+                    href="{% url 'Activity' %}"><i class="fa fa-child icon"
+                        ></i>&nbsp; Activity</a>
+            </li>
+            <li class="nevlist "><a href="{% url 'nss' %}"
+                    class="link {% if request.path == '/nss/' %} active {% endif %}"> <i class="icon fa fa-soccer-ball-o"
+                        ></i>
+                    &nbsp; NSS/Sports</a></li>
+        </ul>
+    </nav>
+</div>
