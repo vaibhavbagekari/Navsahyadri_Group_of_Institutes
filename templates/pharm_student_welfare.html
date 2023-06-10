@@ -1,0 +1,87 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student's Welfare</title>
+    <style>
+        .divh1 {
+            background-image: url("{% static 'pharm_background.png' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100px;
+            padding: 50px;
+            text-align: center;
+            font-size: 40px;
+            color: rgb(255, 0, 0);
+            text-shadow: 2px 2px 2px black;
+        }
+
+        .main_div {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            margin: 50px 80px 80px 80px;
+            padding: 10px;
+            /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+        }
+
+        .para {
+            margin: 20px;
+            padding: 30px;
+            text-align: justify;
+            background-color: white;
+            font-size: 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
+{% include 'header.html' %}
+{% include 'pharmnav.html' %}
+<div style="background-color: rgba(109, 109, 109, 0.67);">
+    <div class="divh1">
+        <h2 class="meh2">Student's Welfare</h2><br>
+    </div>
+    <div class="main_div">
+        <p class="para">
+            <b style="color: rgb(1, 33, 107); font-size: 20px;">Student's Welfare</b>
+            <br>
+            <br>
+            The Department of Students Welfare in association with Training placement cell of Navsahyadri group of
+            institutes looks after the protection of rights and supervises the welfare activities of the students of
+            Constituent Units of Navsahyadri Institute of Pharmacy. They promotes and co-ordinates the different
+            students activities for better corporate life. They try to nurture students' mental, physical, cultural
+            growth with various activities to improve their overall personality development and to make them civilized
+            Indian citizens to compete in the globalized world.
+            <br><br>
+
+            Various Students Welfare prominent activities undertaken are as following:
+            <br><br>
+             Annual Prize Distribution (Culture /Sports).
+            <br> Anti-ragging Cell.
+            <br> 
+            <br> Training & Placement Cell.
+            <br>
+            <br> Soft Skills Development Programme.
+            <br>
+            <br> Career Guidance Scheme.
+            <br>
+            <br> Student-related Seminar/Conferences/Workshops/Camps etc.
+            <br>
+            <br> Youth Festivals- Avishkar.
+            <br>
+            <br> Scholarship Department etc.
+
+
+        </p>
+    </div>
+</div>
+{% include 'footer.html' %}

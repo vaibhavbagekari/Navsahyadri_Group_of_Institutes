@@ -1,7 +1,8 @@
+{% load static %}
 <div class="menu" style="width: 100%; background-color: brown;">
-    <div class="menu_top" style="width: 100%; position:fixed; top:0px; height:30px;  background-color: brown; " ></div>
+    <div class="menu_top" style="width: 100%; position:fixed; top:0px; height:30px;  background-color: brown; "></div>
     <button class="b1" id="navbtn" onclick="droupdown()">
-        
+
         <div class="snav">
             <span class="t1"></span>
             <span class="t1"></span>
@@ -14,18 +15,35 @@
         </div>
     </button>
 </div>
+<ul class="container-subnav">
+
+    <li class="subnav"><a href="{% url 'aicte' %}" style="color: rgb(255, 60, 60);">AICTE approvals</a></li>
+    <a href="{% url 'mandatory_disclosure' %}" style="color: rgb(255, 60, 60);">
+        <li class="subnav">Mandatory Disclosure</li>
+    </a>
+    <a href="{% url 'sppu_approvals'%}" style="color: rgb(255, 60, 60);">
+        <li class="subnav">SPPU Affiliation</li>
+    </a>
+    <li class="subnav"><a href="{% url 'committees' %}" style="color: rgb(255, 60, 60);">
+            Committees</a></li>
+
+</ul>
 <div class="navigation1" id="nav1">
     <nav class="nav">
         <ul class="list">
-            <a style="height: 100%;"
-            class="{% if request.path == '/home/' %} active {% endif %}" href="{% url 'home' %}"><li class="nevlist {% if request.path == '/home/' %} active {% endif %}"><i
-                        class="fa fa-home" style="font-size:20px"></i>&nbsp;Home
-            </li></a>
-            <li class="nevlist  style="color: rgb(0, 0, 0);"> <a
-                    href=""><i class="fa fa-address-card icon"></i>&nbsp; programs</a>
+            <a style="height: 100%;" class="{% if request.path == '/home/' %} active {% endif %}"
+                href="{% url 'home' %}">
+                <li class="nevlist {% if request.path == '/home/' %} active {% endif %}"><i class="fa fa-home"
+                        style="font-size:20px"></i>&nbsp;Home
+                </li>
+            </a>
+            <li class="nevlist  style=" color: rgb(0, 0, 0);"> <a href=""> institutes <b
+                        style="font-weight: 700;">&#8628;</b></a>
                 <ul class="submenu">
 
-                    <li class="submenuitem"> <a href="{% url 'engindex' %}">Engineering</a>
+                    <li class="submenuitem"> <a href="{% url 'engindex' %}" target="_blank">
+                        College of Engineering <b
+                                style="font-weight: 700;">&#8628;</b></a>
 
                         <ul class=" submenu1">
                             <li class="submenuitem1"><a href="{% url 'url2' 'AIML.html' %}"> AIML</a></li>
@@ -40,7 +58,8 @@
 
                         </ul>
                     </li>
-                    <li class="submenuitem"><a href="{% url 'polyindex' %}"> Polytechnic </a>
+                    <li class="submenuitem"><a href="{% url 'polyindex' %}">College of Polytechnic <b
+                                style="font-weight: 700;">&#8628;</b></a>
                         <ul class=" submenu1">
 
                             <li class="submenuitem1">Mechanical Engineering</li>
@@ -49,55 +68,82 @@
                             <li class="submenuitem1">Computer Engineering</li>
                         </ul>
                     </li>
-                    <li class="submenuitem"><a href="{% url 'pharmindex' %}">Pharmacy</a>
+                    <li class="submenuitem"><a href="{% url 'pharmindex' %}">College of Pharmacy <b
+                                style="font-weight: 700;">&#8628;</b></a>
                         <ul class=" submenu1">
-                            <li class="submenuitem1">B-Pharmacy</li>
-                            <li class="submenuitem1">D-Pharmacy</li>
-                            <li class="submenuitem1">M-Pharmacy</li>
+                            <a href="{% url 'd_pharm' %}">
+                                <li class="submenuitem1">D-Pharmacy</li>
+                            </a>
+                            <a href="{% url 'b_pharm'%}">
+                                <li class="submenuitem1">B-Pharmacy</li>
+                            </a>
+                            <a href="{% url 'm_pharm' %}">
+                                <li class="submenuitem1">M-Pharmacy</li>
+                            </a>
                         </ul>
                     </li>
-                    <li class="submenuitem"><a href="{% url 'mbaindex' %}">MBA</a></li>
+                    <li class="submenuitem"><a href="{% url 'mbaindex' %}">College of MBA <b
+                                style="font-weight: 700;">&#8628;</b></a>
+                        <ul class=" submenu1">
+
+                            <li class="submenuitem1">MBA</li>
+                            <li class="submenuitem1">MBA++</li>
+                            <li class="submenuitem1">MCA</li>
+                        </ul>
+                    </li>
 
                 </ul>
 
             </li>
             <li class="nevlist {% if request.path == '/aboutus/' %} active {% endif %}" style="color: rgb(0, 0, 0);"> <a
-                    href="{% url 'aboutus' %}"><i class="fa fa-address-card icon"></i>&nbsp; About us</a>
+                    href="{% url 'aboutus' %}"> About us <b style="font-weight: 700;">&#8628;</b></a>
                 <ul class="submenu">
-
-                    <li class="submenuitem"><a href="{% url 'establishment' %}">Establishment And Affiliation</a></li>
-                    <li class="submenuitem"><a href="{% url 'coc' %}"> Code of Conduct</a></li>
-                    <li class="submenuitem"><a href="{% url 'prinsipal_desk' %}"> Prinsipal's Desk </a></li>
+                    <li class="submenuitem"><a href="{% url 'about_nesgi' %}"> About NGI</a></li>
+                    <li class="submenuitem"><a href="{% url 'vision-mission' %}"> vision-mission</a></li>
+                    <li class="submenuitem"><a href="{% url 'director_Desk' %}"> Director's Desk</a></li>
                     <li class="submenuitem"><a href="{% url 'president_desk' %}">President's Desk</a></li>
                     <li class="submenuitem"><a href="{% url 'reaching' %}"> Reaching College</a></li>
                     <li class="submenuitem"><a href="{% url 'awardss' %}"> Awardss and Appreciation</a></li>
                 </ul>
 
             </li>
-            <li class="nevlist {% if request.path == '/admission/' %} active {% endif %}"><a
-                    href="{% url 'admission' %}">&nbsp;<i class="fa fa-info icon"> </i>&nbsp;Admission</a>
+            <li class="nevlist" style="color: rgb(0, 0, 0);"> <a href="{% url 'aboutus' %}"> Governance <b
+                        style="font-weight: 700;">&#8628;</b></a>
                 <ul class="submenu">
-                    <li class="submenuitem">from</li>
+                    <li class="submenuitem"><a href="{% url 'establishment' %}">Establishment And Affiliation</a></li>
+                    <li class="submenuitem"><a href="{% url 'coc' %}"> Code of Conduct</a></li>
+                    <li class="submenuitem"><a href="{% static 'governing_body.pdf' %}">Governing Body</a></li>
+                    <li class="submenuitem"><a href="{% url 'mandatory_disclosure'%}">Mandatory Disclosure</a></li>
+
+                </ul>
+
+            </li>
+
+            <li class="nevlist {% if request.path == '/admission/' %} active {% endif %}"><a
+                    href="{% url 'admission' %}">Admission <b style="font-weight: 700;">&#8628;</b></a>
+                <ul class="submenu">
+                    <li class="submenuitem">form</li>
                     <li class="submenuitem">
                         <p class="" style="color: black;"><a href="{% url 'engadmission' %}"> Engineering</a></p>
-                        
+
                     </li>
                     <li class="submenuitem"><a href="{% url 'polyadmission' %}">Polytechnic</a>
-                        
+
                     </li>
-                    <li class="submenuitem"><a href="{% url 'pharmadmission' %}">Pharmacy</a>
-                        <ul class=" submenu1">
-                            <li class="submenuitem1">D-Pharmacy</li>
-                            <li class="submenuitem1">B-Pharmacy</li>
-                            <li class="submenuitem1">M-Pharmacy</li>
-                        </ul>
+                    <li class="submenuitem"><a href="{% url 'pharmadmission' %}">Pharmacy </a>
+
                     </li>
-                    <li class="submenuitem"><a href="{% url 'mbaadmission' %}">MBA</a></li>
+                    <li class="submenuitem"><a href="{% url 'mbaadmission' %}">MBA</a>
+
+                    </li>
             </li>
         </ul>
         </li>
-        <li class="nevlist {% if request.path == '//' %} active {% endif %}"><a href="">&nbsp;<i
-                    class="fa fa-info icon"> </i>&nbsp;facilities</a>
+        <li class="nevlist {% if request.path == '//' %} active {% endif %}"><a href="{% url 'main_placement'%}">Placements</a>
+
+    </li>
+        <li class="nevlist {% if request.path == '//' %} active {% endif %}"><a href="">facilities <b
+                    style="font-weight: 700;">&#8628;</b></a>
             <ul class="submenu">
                 <li class="submenuitem"><a href="{% url 'girl_hostel' %}">Girl's Hostel</a></li>
                 <li class="submenuitem"><a href="{% url 'boys_hostel' %}">Boy's Hostel</a></li>
@@ -108,34 +154,38 @@
                 <li class="submenuitem"><a href="{% url 'internet_facilities' %}">Internet facilities</a></li>
             </ul>
         </li>
-        <li class="nevlist {% if request.path == '//' %} active {% endif %}"><a href="{% url 'mainactivity'%}"><i
-                    class="fa fa-child icon"></i>&nbsp; Activity</a>
+        <li class="nevlist {% if request.path == '//' %} active {% endif %}"><a href="{% url 'mainactivity'%}">
+                Activities</a>
 
         </li>
         <li class="nevlist {% if request.path == '//' %} active {% endif %}"><a href="">
                 <!-- <i  class="fa-duotone fa-file-chart-column"></i> -->
-                <i class="fa fa-file"></i>
-                &nbsp; report</a>
+                report <b style="font-weight: 700;">&#8628;</b></a>
             <ul class="submenu">
-                <li class="submenuitem">NACC</li>
+                <a href="{% static 'NAAC-Certificate.pdf' %}" target="_blank">
+                    <li class="submenuitem">NACC</li>
+                </a>
                 <li class="submenuitem">NSS</li>
-                <li class="submenuitem">IQCIE</li>
-                <li class="submenuitem">AICIE</li>
+                <li class="submenuitem">IQAC</li>
+                <a href="{%url 'aicteindex'%}">
+                    <li class="submenuitem">AICTE</li>
+                </a>
             </ul>
         </li>
 
-        <li class="nevlist {% if request.path == '//' %} active {% endif %}"><a href="{% url 'gallery' %}"><i
-                    class="fa fa-image"></i>&nbsp; gallery</a>
-            <ul class="submenu">
-                <li class="submenuitem">Photo</li>
-                <li class="submenuitem">video</li>
+        <li class="nevlist {% if request.path == '/gallery/' %} active {% endif %}"><a href="{% url 'gallery' %}">
+                gallery <b style="font-weight: 700;"></b></a>
+            <!-- <ul class="submenu">
+               <a href="{% url 'gallery'%}"> <li class="submenuitem">Photo</li></a>
+               <a href="{% url 'gallery'%}"><li class="submenuitem">video</li></a>
 
-            </ul>
+            </ul> -->
         </li>
-        <li class="nevlist {% if request.path == '/Activity/' %} active {% endif %}"><a href="{% url 'contact' %}"><i
-                    class="fa fa-child icon"></i>&nbsp; contact</a>
+        <li class="nevlist {% if request.path == '/Activity/' %} active {% endif %}"><a href="{% url 'contact' %}">
+                contact</a>
         </li>
 
         </ul>
     </nav>
+
 </div>

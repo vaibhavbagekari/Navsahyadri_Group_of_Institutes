@@ -1,0 +1,784 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'department.css'%}">
+    <link rel="stylesheet" href="{% static 'course.css'%}">
+    <title>B Pharmacy</title>
+    <style>
+        .cs_table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 80%;
+            height: max-content;
+            line-height: 25px;
+        }
+
+        .ec_div {
+            background-image: url("{%static 'pharm_background1.png'%}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .h_row {
+            background-color: rgb(249, 64, 64);
+            color: white;
+            font-weight: 700;
+        }
+
+        .cs_table tr td,
+        th {
+            padding: 5px;
+        }
+
+        .alternet_row {
+            background-color: rgb(206, 205, 205);
+        }
+
+        .face_div1 {
+            overflow-x: auto;
+        }
+
+        .divh1 {
+            background-image: url("{%static 'd-pharm_header.jpg'%}");
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'pharmnav.html' %}
+    <div>
+        <div class="divh1">
+            <h2 class="meh2">
+                Bachelor of Pharmacy
+            </h2><br>
+        </div>
+        <div class="MEdiv">
+
+            <span class="span">Course Code:</span>
+            <span class="span">Duration:4 year</span>
+            <span class="span">Course Type: Full Time</span>
+            <span class="span">Intake: </span>
+        </div>
+
+        <div width="100%" class="meimg">
+            <img width="50%" src="{% static ''%}">
+            <img width="50%" src="{% static ''%}">
+        </div>
+        <div class="about-dep-div">
+            <h2 class="topic-title">About Course</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    Bachelor of Pharmacy (B.Pharm) is an undergraduate degree course in the field of Pharmacy education.
+                    The students those are interested in the medical field (except to become a doctor) can choose this
+                    course after the completion of class 12th (PCM/B).
+
+                    After the completion of this degree, the students can practice as a Pharmacist. Pharmacists can work
+                    in a range of industries related to the prescription, manufacture & provision of medicines. The
+                    duration of this course is 4 years.
+
+                    The B.Pharm is one of the popular job oriented course among the science students after class 12th.
+                    In this course the students study about the drugs and medicines, Pharmaceutical Engineering,
+                    Medicinal Chemistry etc. This course provides a large no. of job opportunities in both the public
+                    and private sector.
+
+
+                </div>
+                <br>
+                <br>
+                <div class="about-img">
+                    <img src="{% static '' %}" alt="" width="100%" height="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ec_div">
+        <h2 class="topic-title">Eligibility Criteria</h2>
+        <p>
+        <ul style="list-style: square; margin: 30px; ">
+            <li> First year B. Pharm:</li>
+            <ul style=" margin: 10px; ">
+                <li>Candidate shall have passed 10+2 examination conducted by the respective state/central government
+                    authorities recognized as equivalent to 10+2 examination by the Association of Indian Universities
+                    (AIU) with English as one of the subjects and Physics, Chemistry, Mathematics (P.C.M) and or Biology
+                    (P.C.B / P.C.M.B.) as optional subjects individually.</li>
+                <li>Any other qualification approved by the Pharmacy Council of India as equivalent to any of the above
+                    examinations. </li>
+            </ul>
+
+            <li>B. Pharm lateral entry (to third semester):</li>
+            <ul style=" margin: 10px; ">
+                <li> pass in D. Pharm. course from an institution approved by the Pharmacy Council of India under
+                    section 12 of the Pharmacy Act.</li>
+            </ul>
+        </ul>
+        </p>
+    </div>
+    <div class="ac_div">
+        <h2 class="topic-title">Academics</h2>
+        <div class="face_div">
+            <div class="face_sub_div">
+                <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+                <h3 class="face_title">Laboratory</h3>
+                <a class="dep" href="{% url 'eng_lab_electrical' %}"><button class="button button3">click here to
+                        view</button></a>
+                </p>
+            </div>
+            <div class="face_sub_div">
+                <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+                <h3 class="face_title">Syllabus</h3>
+                <a href="http://www.pci.nic.in/pdf/Syllabus_B_Pharm.pdf" target="_blank"> <button
+                        class="button button3">click here to view</button></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="face_div1">
+        <h2 class="topic-title">Course Structure</h2>
+        <h3>Table-I: Course of study for semester I </h3>
+        <table class="cs_table" border="1">
+            <tr class="h_row">
+                <th>Course code</th>
+                <th>Name of the course</th>
+                <th>No. of hours</th>
+                <th>Tutorial</th>
+                <th>Credit Points</th>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP101T</td>
+                <td>Human Anatomy and Physiology I-Theory</td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>BP102T</td>
+                <td>Pharmaceutical Analysis I - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP102T</td>
+                <td>Pharmaceutical Analysis I - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>BP103T</td>
+                <td>Pharmaceutics I - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP104T</td>
+                <td>Pharmaceutical Inorganic Chemistry - Theory</td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>BP105T</td>
+                <td>Communication skills - Theory * </td>
+                <td>2</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP106RBT</td>
+                <td>Remedial Biology/</td>
+                <td>2</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>BP307P</td>
+                <td>Pharmaceutical Microbiology - Practica </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP 308P</td>
+                <td>Pharmaceutical Engineering - Practical </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Total</td>
+                <td>28</td>
+                <td>4</td>
+                <td>24</td>
+            </tr>
+
+
+        </table>
+        <br>
+        <h3>Table-II: Course of study for semester II </h3>
+        <br>
+        <table class="cs_table" border="1">
+            <tr class="h_row">
+                <th>Course code</th>
+                <th>Name of the course</th>
+                <th>No. of hours</th>
+                <th>Tutorial</th>
+                <th>Credit Points</th>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP201T</td>
+                <td>Human Anatomy and Physiology II - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>BP202T</td>
+                <td>Pharmaceutical Organic Chemistry I - Theory </td>
+                <td>3</th>
+                <td>1</th>
+                <td>4</th>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP203T</td>
+                <td>Biochemistry - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>BP204T</td>
+                <td>Pathophysiology - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP205T</td>
+                <td>Computer Applications in Pharmacy - Theory * </td>
+                <td>3</td>
+                <td>-</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>BP206T</td>
+                <td>Environmental sciences - Theory * </td>
+                <td>3</td>
+                <td>-</td>
+                <td>3</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP207P</td>
+                <td>Human Anatomy and Physiology II - Practical </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>BP208P</td>
+                <td>Pharmaceutical Organic Chemistry I - Practical </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP209P</td>
+                <td>Biochemistry - Practical </th>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>BP210P</td>
+                <td>Computer Applications in Pharmacy - Practical* </td>
+                <td>2</td>
+                <td>-</td>
+                <td>1</td>
+            </tr>
+            <tr class="alternet_row">
+                <td></td>
+                <td>total</td>
+                <td>32</td>
+                <td>4</td>
+                <td>29</td>
+            </tr>
+            <tr>
+                <td colspan="3">*Non University Examination (NUE)</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <br>
+        <h3>Table-III: Course of study for semester III </h3>
+        <br>
+        <table class="cs_table" border="1">
+            <tr class="h_row">
+                <th>Course code</th>
+                <th>Name of the course</th>
+                <th>No. of hours</th>
+                <th>Tutorial</th>
+                <th>Credit Points</th>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP301T</td>
+                <td>Pharmaceutical Organic Chemistry II - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>BP303T</td>
+                <td>Pharmaceutical Microbiology - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP304T</td>
+                <td>Pharmaceutical Engineering - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>BP305P</td>
+                <td>Pharmaceutical Organic Chemistry II - Practical </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP306P</td>
+                <td>Physical Pharmaceutics I - Practical </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>BP307P</td>
+                <td>Pharmaceutical Microbiology - Practical </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP 308P</td>
+                <td>Pharmaceutical Engineering - Practical </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Total</td>
+                <td>28</td>
+                <td>4</td>
+                <td>24</td>
+            </tr>
+        </table>
+        <br>
+        <h3>Table-IV: Course of study for semester IV</h3>
+        <br>
+        <table class="cs_table" border="1">
+            <tr class="h_row">
+                <th>Course code</th>
+                <th>Name of the course</th>
+                <th>No. of hours</th>
+                <th>Tutorial</th>
+                <th>Credit Points</th>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP401T</td>
+                <td>Pharmaceutical Organic Chemistry III - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>BP402T</td>
+                <td>Medicinal Chemistry I - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+
+            </tr>
+            <tr class="alternet_row">
+                <td>BP403T</td>
+                <td>Physical Pharmaceutics II - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>BP404T</td>
+                <td>Pharmacology I - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP405T</td>
+                <td>Pharmacognosy and Phytochemistry I - Theory </td>
+                <td>3</td>
+                <td>-</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>BP406P</td>
+                <td>Medicinal Chemistry I - Practical </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP407P</td>
+                <td>Physical Pharmaceutics II - Practical </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>BP408P</td>
+                <td>Pharmacology I - Practical </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP409P</td>
+                <td>Pharmacognosy and Phytochemistry I - Practical </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Total</td>
+                <td>31</td>
+                <td>5</td>
+                <td>28</td>
+            </tr>
+        </table>
+        <br>
+        <h3>Table-V: Course of study for semester V </h3>
+        <br>
+        <table class="cs_table" border="1">
+            <tr class="h_row">
+                <th>Course code</th>
+                <th>Name of the course</th>
+                <th>No. of hours</th>
+                <th>Tutorial</th>
+                <th>Credit Points</th>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP501T</td>
+                <td>Medicinal Chemistry II - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>BP503T</td>
+                <td>Pharmacology II - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP504T</td>
+                <td>Pharmacognosy and Phytochemistry II - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>BP505T</td>
+                <td>Pharmaceutical Jurisprudence - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP506P</td>
+                <td>Industrial PharmacyI - Practical </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>BP507P</td>
+                <td>Pharmacology II - Practical </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP508P</td>
+                <td>Pharmacognosy and Phytochemistry II - Practical </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Total</td>
+                <td>27</td>
+                <td>5</td>
+                <td>26</td>
+
+            </tr>
+        </table>
+        <br>
+        <h3>Table-VI: Course of study for semester VI </h3>
+        <br>
+        <table class="cs_table" border="1">
+            <tr class="h_row">
+                <th>Course code</th>
+                <th>Name of the course</th>
+                <th>No. of hours</th>
+                <th>Tutorial</th>
+                <th>Credit Points</th>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP601T</td>
+                <td>Medicinal Chemistry III - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>BP602T</td>
+                <td>Pharmacology III - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP603T</td>
+                <td>Herbal Drug Technology - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>BP604T</td>
+                <td>Biopharmaceutics and Pharmacokinetics - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP605T</td>
+                <td>Pharmaceutical Biotechnology - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>BP606T</td>
+                <td>Quality Assurance - Theory </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP607P</td>
+                <td>Medicinal chemistry III - Practical </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>BP608P</td>
+                <td>Pharmacology III - Practical </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP609P</td>
+                <td>Herbal Drug Technology - Practical </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Total</td>
+                <td>30</td>
+                <td>6</td>
+                <td>30</td>
+            </tr>
+        </table>
+        <br>
+        <h3>Table-VII: Course of study for semester VII </h3>
+        <br>
+        <table class="cs_table" border="1">
+            <tr class="h_row">
+                <th>Course code</th>
+                <th>Name of the course</th>
+                <th>No. of hours</th>
+                <th>Tutorial</th>
+                <th>Credit Points</th>
+            </tr>
+            <tr class="alternet_row">
+                <td>BBP701T</td>
+                <td>Instrumental Methods of Analysis - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>BP702T</td>
+                <td>Industrial PharmacyII - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP703T</td>
+                <td>Pharmacy Practice - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>BP704T</td>
+                <td>Novel Drug Delivery System - Theory </td>
+                <td>3</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP705P</td>
+                <td>Instrumental Methods of Analysis - Practical </td>
+                <td>4</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>BP706PS</td>
+                <td>Practice School* </td>
+                <td>12</td>
+                <td>5</td>
+                <td>24</td>
+            </tr>
+            <tr class="alternet_row">
+                <td></td>
+                <td>Total</td>
+                <td>28</td>
+                <td>5</td>
+                <td>24</td>
+            </tr>
+
+        </table>
+        <br>
+        <h3>Table-VIII: Course of study for semester VIII </h3>
+        <br>
+        <table class="cs_table" border="1">
+            <tr class="h_row">
+                <th>Course code</th>
+                <th>Name of the course</th>
+                <th>No. of hours</th>
+                <th>Tutorial</th>
+                <th>Credit Points</th>
+            </tr>
+            <tr class="alternet_row">
+               <td>BP801T</td>
+               <td>Biostatistics and Research Methodology </td>
+               <td>3</td>
+               <td>1</td>
+               <td>4</td>
+            </tr>
+            <tr>
+                <td>BP802T</td>
+                <td>Social and Preventive Pharmacy </td>
+                <td>3</td>
+               <td>1</td>
+               <td>4</td>
+            </tr>
+            <tr class="alternet_row">
+                <td>BP803ET</td>
+                <td>Pharma Marketing Management </td>
+                <td></td>
+                <td></td>
+                <td></td>
+             </tr>
+             <tr>
+                <td>BP804ET</td>
+                <td>Pharmaceutical Regulatory Science </td>
+                <td rowspan="9">3 + 3 = 6</td>
+                <td rowspan="9">1 + 1 = 2</td>
+                <td rowspan="9">4 + 4 = 8</td>
+             </tr>
+             <tr class="alternet_row">
+                <td>BP804ET</td>
+                <td>Pharmaceutical Regulatory Science </td>
+             </tr>
+             <tr>
+                <td>BP805ET</td>
+                <td>Pharmacovigilance</td>
+             </tr>
+             <tr class="alternet_row">
+                <td>BP806ET</td>
+                <td>Quality Control and Standardization of Herbals </td>
+             </tr>
+             <tr >
+                <td>BP807ET</td>
+                <td>Computer Aided Drug Design </td>
+             </tr>
+             <tr  class="alternet_row">
+                <td>BP808ET</td>
+                <td>Cell and Molecular Biology </td>
+             </tr>
+             <tr >
+                <td>BP809ET</td>
+                <td>Cosmetic Science </td>
+             </tr>
+             <tr  class="alternet_row">
+                <td>BP810ET</td>
+                <td>Experimental Pharmacology </td>
+             </tr>
+             <tr  >
+                <td>BP811ET</td>
+                <td>Advanced Instrumentation Techniques </td>
+             </tr>
+             <tr class="alternet_row">
+                <td>BP812ET</td>
+                <td>Dietary Supplements and Nutraceuticals </td>
+                <td></td>
+                <td></td>
+                <td></td>
+             </tr >
+             <tr  >
+                <td>BP813PW</td>
+                <td>BP813PW</td>
+                <td>12</td>
+                <td>-</td>
+                <td>6</td>
+             </tr>
+             <tr class="alternet_row">
+                <td></td>
+                <td>Total</td>
+                <td>24</td>
+                <td>4</td>
+                <td>22</td>
+             </tr>
+        </table>
+
+    </div>
+
+    {% include 'footer.html' %}
+</body>
+
+</html>

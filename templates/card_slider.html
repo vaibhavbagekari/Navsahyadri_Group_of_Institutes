@@ -1,0 +1,153 @@
+
+     <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+       
+
+        .corousel_div{
+            display: grid;
+            height: 100%;
+            width: 100%;
+            place-items: center;
+            text-align: center;
+            background: #f2f2f2;
+        
+        }
+
+        .corousel_slider {
+            max-width: 1100px;
+            display: flex;
+            z-index:0.5;
+        }
+
+        .corousel_slider .corousel_card {
+            flex: 1;
+            margin: 0 10px;
+            background: #fff;
+        
+        }
+
+        .corousel_slider .corousel_card .img {
+            height: 200px;
+            width: 100%;
+        }
+
+        .corousel_slider .corousel_card .img img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .corousel_slider .corousel_card .carousel_content {
+            padding: 10px 20px;
+        }
+
+        .corousel_card .carousel_content ._name {
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .corousel_card .carousel_content .sub-_name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #000000;
+            line-height: 20px;
+        }
+
+        .corousel_card .carousel_content p {
+            text-align: justify;
+            margin: 10px 0;
+        }
+
+        .corousel_card .carousel_content .btn {
+            display: block;
+            text-align: left;
+            margin: 10px 0;
+        }
+
+        .corousel_card .carousel_content .btn button {
+            background: #e74c3c;
+            color: #fff;
+            border: none;
+            outline: none;
+            font-size: 17px;
+            padding: 5px 8px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .corousel_card .carousel_content .btn button:hover {
+            transform: scale(0.9);
+        }
+        .owl-carousel{
+            z-index: 0.85;
+        }
+    </style>
+
+<div class="corousel_div">
+    <div class="corousel_slider owl-carousel">
+        <div class="corousel_card">
+            <div class="img">
+                <img src="#" alt="">
+            </div>
+            <div class="carousel_content">
+                <div class="_name">
+                    vaibhav</div>
+                <div class="sub-_name">
+                    Graphic Designer</div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil
+                    minus sed unde voluptas cumque.</p>
+                <div class="btn">
+                    <button>Read more</button>
+                </div>
+            </div>
+        </div>
+        <div class="corousel_card">
+            <div class="img">
+                <img src="#" alt="">
+            </div>
+            <div class="carousel_content">
+                <div class="_name">
+                    rushi</div>
+                <div class="sub-_name">
+                    Web Developer</div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil
+                    minus sed unde voluptas cumque.</p>
+                <div class="btn">
+                    <button>Read more</button>
+                </div>
+            </div>
+        </div>
+        <div class="corousel_card">
+            <div class="img">
+                <img src="#" alt="">
+            </div>
+            <div class="carousel_content">
+                <div class="_name">
+                    sagar</div>
+                <div class="sub-_name">
+                    App Developer</div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil
+                    minus sed unde voluptas cumque.</p>
+                <div class="btn">
+                    <button>Read more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".corousel_slider").owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 1000, //2000ms = 2s;
+            autoplayHoverPause: true,
+        });
+    </script>
+
+</div>
+
+</html>

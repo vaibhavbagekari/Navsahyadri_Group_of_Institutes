@@ -1,0 +1,60 @@
+{% load static %}
+<style>
+ .a_container{
+    width: 70%;
+    margin: 50px auto 50px auto;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: space-around;
+    /* border-radius: 15px; */
+    box-shadow: 4px 4px 18px black;
+    font-family: "Rubik", sans-serif;
+ 
+ }
+ .a_img_container{
+    width: 100%;
+ }
+ .cam_img{
+   
+ }
+ .a_text_container{
+    padding: 15px;
+    /* width: 80%; */
+    /* margin: 10px; */
+ }
+ @media screen and (max-width: 600px){
+    .a_container{
+        width: 95%;
+    }
+    
+ }
+</style>
+{% include 'header.html' %}
+{% include 'mainnav.html' %}
+<div class="a_container">
+    <div class="a_img_container">
+        `<img class="cam_img" src="{% static 'college_campus.jpg' %}" alt="" width="100%">
+    </div>
+    <div class="a_text_container">
+<br>
+<h2>Vision</h2>
+<br>
+The institute vision is to establish the centre for excellence in professional development and entrepreneurship development resulting into the enhancement of rural area. The institute also vision for developing professionals and citizens/citizenship to foster professional and rural development.
+<br><br>
+<h2>Mission</h2>
+<br>
+NESGI offers skill based programs, graduate and post-graduate programmes in engineering and management to build competent manpower to suit the ever-changing requirements in industry and business by supporting students for continual development through excellence, technology based instructions and overall development of personality in all domains. The institute provides industry based education and practical training to the rural base.
+
+<br><br>
+<h2>Quality Policy</h2>
+<br>
+NESGI provides the future achievers/performers the right amount of knowledge skills and attitude for the purpose of business and life in general by creating academic excellence in the field of management and engineering.
+
+The balanced approach has been continual improving the quality in every aspect of the student and the involvement of various stakeholder, parents, industry staff & management.
+</div>
+
+</div>
+{% include 'footer.html' %}

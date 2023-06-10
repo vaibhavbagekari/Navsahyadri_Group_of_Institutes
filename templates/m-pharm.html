@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'department.css'%}">
+    <link rel="stylesheet" href="{% static 'course.css'%}">
+    <title>M Pharmacy</title>
+    <style>
+        .ec_div{
+            background-image: url("{%static 'pharm_background1.png'%}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }s
+        .divh1{
+            background-image: url("{% static 'm_pharm_header.jpg' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+         .cs_table {
+            margin: 10px auto 10px auto;
+            border-collapse: collapse;
+            width: 80%;
+            height: max-content;
+            line-height: 25px;
+
+        }
+         .h_row {
+            background-color: rgb(249, 64, 64);
+            color: white;
+            font-weight: 700;
+        }
+
+        .cs_table tr td,
+        th {
+            padding: 5px;
+        }
+
+        .alternet_row {
+            background-color: rgb(206, 205, 205);
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'pharmnav.html' %}
+    <div>
+        <div class="divh1">
+            <h2 class="meh2">Post Graduate Pharmacy (M. Pharm.)</h2><br>
+        </div>
+        <h2 class="topic-title">Pharmaceutics</h2>
+        <div class="MEdiv">
+
+            <span class="span">Course Code:</span>
+            <span class="span">Duration:2 year</span>
+            <span class="span">Course Type: Full Time</span>
+            <span class="span">Intake: </span>
+        </div>
+        <h2 class="topic-title">Pharmacology
+        </h2>
+        <div class="MEdiv">
+
+            <span class="span">Course Code:</span>
+            <span class="span">Duration:2 year</span>
+            <span class="span">Course Type: Full Time</span>
+            <span class="span">Intake: </span>
+        </div>
+        <div width="100%" class="meimg">
+            <img width="50%" src="{% static ''%}">
+            <img width="50%" src="{% static ''%}">
+        </div>
+        <div class="about-dep-div">
+            <h2 class="topic-title">About Course</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    There has never been a more exciting time to consider a career in pharmacy. The profession is
+                    experiencing a period of unprecedented progress and development. The skills of pharmacists have
+                    never been in greater demand and to deliver the latest, cutting-edge treatments and medicines to
+                    millions of patients every day.
+                </div>
+                <br>
+                <br>
+                <div class="about-img">
+                    <img src="{% static '' %}" alt="" width="100%" height="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ec_div">
+        <h2 class="topic-title">Eligibility Criteria</h2>
+        <p>
+
+        <ul class="ec_list">
+
+            <li class="ec_list_item">For Maharashtra Candidature Candidates and All India Candidature Candidates.</li>
+            <li class="ec_list_item">The candidate should be an Indian National;</li>
+            <li class="ec_list_item">Obtained non zero positive score in GPAT;</li>
+            <li class="ec_list_item">For sponsored candidates, minimum of two years of fulltime work experience (in a
+                registered firm/ company/industry/ educational and/ or research institute/ any Government Department or
+                Government Autonomous Organization in the relevant field of admission. </li>
+
+        </ul>
+       
+        </p>
+    </div>
+    <div class="ac_div">
+        <h2 class="topic-title">Academics</h2>
+        <div class="face_div">
+            <div class="face_sub_div">
+                <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+                <h3 class="face_title">Laboratory</h3>
+                <a class="dep" href="{% url 'eng_lab_electrical' %}"><button class="button button3">click here to
+                        view</button></a>
+                </p>
+            </div>
+            <div class="face_sub_div">
+                <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+                <h3 class="face_title">Syllabus</h3>
+                <a href="http://www.pci.nic.in/education_regulations_chapter2.html" target="_blank"> <button
+                        class="button button3">click here to view</button></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="ec_table_div">
+        <table class="cs_table" border="1">
+            <tr class="h_row">
+                <th colspan="5">For Engineerign and Technology,Pharmacy,Hotel Management and Catering Technology ,Pharm.D.(post Baccalaureate) and Planning Courses</th>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td> unaided private Professional Education institute (Excluding minority institution)</td>
+                <td> 80%(60% for Non-Sponsored and 20% for Sponsored Seats)</td>
+                <td>Nill</td>
+                <td>20% (15% for Non-Sponsored Seats and %% for Sponsored Seats0</td>
+            </tr>
+        </table>
+        Adhoc Fees- 90909/- + 9091/- = Rs. 1,00,000/- per year. 
+    </div>
+
+    {% include 'footer.html' %}
+</body>
+
+</html>

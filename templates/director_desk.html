@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Director's Desk</title>
+    <link rel="stylesheet" href="{% static 'desk.css'%}">
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'mainnav.html' %}
+    <div class="desks_title_container">
+        <h1 class="desks_title">Director's Desk</h1>
+    </div>
+    <div class="desk_container">
+        <div class="desks_img_div"  style="width: 350px;">
+            <div class="s_div" style="left: 90%;"></div>
+            <img src="{% static 'directer_img2.jpg'%}" alt="president_of_college" class="president_img">
+            <div class="s_div1"></div>
+        </div>
+        <div class="desks_txt_div">
+            <br>
+            <h1>From Group Director Desk</h1>
+            <p><br><br>
+                NESGI Naigaon, Pune was established in 2009 in response to growing for quality Engineering Education for the youth of Pune. The institute is situated on lush-green, pollution free serene environment at out skirts of Pune city on Satara road.We offer 5 Undergraduate programs in Engineering & Technology.
+
+                NESGI campus provides an ideal opportunity to students to learn and shape their career and is committed to highest standards of academic excellence inculcating learning skills, creativity, team work and leadership.
+                
+                The upto date world class facilities – computing, laboratory and other educational and recreational facilities aid and the process of learning. We respect merit, encourage innovation and collaboration. We invite bright students and faculty to come and be part of NESGI family.
+                
+                The graduates from NESGI, Naigaon Pune have done exceedingly well in all spheres of life and brought name, fame and laurels for them as well for alma Mater. While, we feel proud of our achievement, we are not contended, we still want to add to our strength. In doing this we seek cooperation from student, parent, alumni and prospective employer. We look forward to working with you.
+                
+                Take a tour of our campus virtually or in person. we are sure you will get impressed. Email me at director@NESGI.edu.in with any concerns or suggestions or to work together for development of NESGI.
+                We have great confidence in our students, staff and faculty with their support and cooperation NESGI mission of providing world class technical education will be fulfilled.<br><br>
+
+            <b>Mr.Sagar P. Suke </b><br>
+            Group Director, NESGI , Pune<br>
+
+
+
+        </div>
+    </div>
+    <br><br>
+    {% include 'footer.html' %}
+</body>
+
+</html>

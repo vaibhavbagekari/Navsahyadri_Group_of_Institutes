@@ -1,0 +1,50 @@
+{% load static %}
+<style>
+ .a_container{
+    width: 70%;
+    margin: 50px auto 50px auto;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: space-around;
+    /* border-radius: 15px; */
+    box-shadow: 4px 4px 18px black;
+    font-family: "Rubik", sans-serif;
+ 
+ }
+ .a_img_container{
+    width: 100%;
+ }
+ .cam_img{
+   
+ }
+ .a_text_container{
+    padding: 15px;
+    /* width: 80%; */
+    /* margin: 10px; */
+ }
+ @media screen and (max-width: 600px){
+    .a_container{
+        width: 95%;
+    }
+    
+ }
+</style>
+{% include 'header.html' %}
+{% include 'mainnav.html' %}
+<div class="a_container">
+    <div class="a_img_container">
+        `<img class="cam_img" src="{% static 'college_campus.jpg' %}" alt="" width="100%">
+    </div>
+    <div class="a_text_container">
+        <p> Globalization has hit the areas of Science and Technology and its established to stay in the long run and hence Global competitiveness has become the trademark in all technical institutes. Recognized by Government of Maharashtra and affiliated to the University of Pune, as well as an AICTE approved organization. The foundation laid in the year 2010, NESGI.
+            <br><br>
+            Ever since its establishment has helped persistently to improve in both curriculum and extra-curriculum activities. An individual can experience the resources and facilities of a relax and the calm peacefulness in this campus at once.
+            <br><br>
+            The organized structure of NESGI trains the individuals to strongly root the philosophy of training and research that develops and emphasizes the intimate relationship between the knowledge of the practical application in the society. NESGI provides a great platform for pursuing an designed academic pursuit. </p>
+    </div>
+
+</div>
+{% include 'footer.html' %}

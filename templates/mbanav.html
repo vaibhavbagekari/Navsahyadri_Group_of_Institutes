@@ -14,6 +14,19 @@
         </div>
     </button>
 </div>
+<ul class="container-subnav">
+
+    <li class="subnav"><a href="{% url 'aicte' %}" style="color: rgb(255, 60, 60);">AICTE approvals</a></li>
+    <a href="{% url 'mandatory_disclosure' %}" style="color: rgb(255, 60, 60);">
+        <li class="subnav">Mandatory Disclosure</li>
+    </a>
+    <a href="{% url 'sppu_approvals'%}" style="color: rgb(255, 60, 60);">
+        <li class="subnav">SPPU Affiliation</li>
+    </a>
+    <li class="subnav"><a href="{% url 'committees' %}" style="color: rgb(255, 60, 60);">
+            Committees</a></li>
+
+</ul>
 <div class="navigation1" id="nav1">
     <nav class="nav">
         <ul class="list">
@@ -21,11 +34,11 @@
                     class="{% if request.path == '/mbaindex/' %} active {% endif %}" href="{% url 'pharmindex' %}"><i
                         class="fa fa-home" style="font-size:20px"></i>&nbsp;Home</a>
             </li>
-            <li class="nevlist"> <i class="fa fa-book icon"></i>&nbsp;
+            <li class="nevlist">
                 Department
                 
             </li>
-            <li class="nevlist"><i class="fa fa-calendar icon"></i>&nbsp;
+            <li class="nevlist">
                 Academic
                 calender
                 
@@ -34,27 +47,22 @@
         </li>
 
         <li class="nevlist {% if request.path == '/elibrary/' %} active {% endif %}"><a
-                class="{% if request.path == '/elibrary/' %} active {% endif %}" href="{% url 'elibrary' %}"><i
-                    class="fa fa-book icon"></i> &nbsp;E-library</a>
+                class="{% if request.path == '/elibrary/' %} active {% endif %}" href="{% url 'elibrary' %}">E-library</a>
         </li>
         <li class="nevlist {% if request.path == '/admission/' %} active {% endif %}"><a
-                href="{% url 'admission' %}">&nbsp;<i class="fa fa-info icon"> </i>&nbsp;Admission info.</a>
+                href="{% url 'admission' %}">Admission</a>
         </li>
         <li class="nevlist {% if request.path == '/englaboratery/' %} active {% endif %}" style="color: rgb(0, 0, 0);">
-            <a><i class="fa fa-address-card icon"></i>&nbsp; laboratery</a>
+            <a> laboratery</a>
             
         </li>
 
-        <li class="nevlist {% if request.path == '/tpo/' %} active {% endif %}"> <a href="{% url 'tpo' %}"><i
-                    class="fa fa-line-chart icon"></i>&nbsp; TPO</a>
+        <li class="nevlist {% if request.path == '/tpo/' %} active {% endif %}"> <a href="{% url 'tpo' %}"> TPO</a>
         </li>
-        <li class="nevlist {% if request.path == '/Activity/' %} active {% endif %}"><a href="{% url 'Activity' %}"><i
-                    class="fa fa-child icon"></i>&nbsp; Course Outcome</a>
+        <li class="nevlist {% if request.path == '/Activity/' %} active {% endif %}"><a href="{% url 'Activity' %}"> Course Outcome</a>
             
         </li>
-        <li class="nevlist "><a href="{% url 'nss' %}" class="link {% if request.path == '/nss/' %} active {% endif %}">
-                <i class="icon fa fa-soccer-ball-o"></i>
-                &nbsp; NSS/Sports</a></li>
+        <li class="nevlist "><a href="{% url 'nss' %}" class="link {% if request.path == '/nss/' %} active {% endif %}">NSS/Sports</a></li>
     </ul>
     </nav>
 </div>

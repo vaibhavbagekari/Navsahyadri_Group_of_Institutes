@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>President's Desk</title>
+    <link rel="stylesheet" href="{% static 'desk.css'%}">
+    <style>
+       
+    </style>
 </head>
+
 <body>
     {% include 'header.html' %}
     {% include 'mainnav.html' %}
-    <h1>President's Deskv</h1>
+    <div class="desks_title_container">
+        <h1 class="desks_title">President's Desks</h1>
+    </div>
+    <div class="desk_container">
+        <div class="desks_img_div">
+            <div class="s_div"></div>
+            <img src="{% static 'president_of_college.jpeg'%}" alt="president_of_college" class="president_img">
+            <div class="s_div1"></div>
+        </div>
+        <div class="desks_txt_div">
+            <br>
+            <h1>From President Desk</h1>
+            <p><br><br>
+                Being torch-bearer of growth and prosperity of technology and leadership, it essentially requires
+                skilled, knowledgeable and focused Technologists and Leaders. Such personalities can only be groomed in
+                an educational institution having international academic standard and facilities. With such vision in
+                mind, NESGI began its journey in 2010. Since its inception, NESGI has been dedicated towards providing
+                quality education in every possible way and we are working hard to import more expertise and innovation
+                to meet the expectations and technical needs of our students so that they prosper professionally amidst
+                ruthless competition.
+
+                NESGI is providing opportunities to the young minds to evolve their core competency to build their
+                careers as world class professionals and leaders with broad based foundation, in-depth knowledge and
+                versatile personality to meet the emerging challenges of the global competition and at the same time
+                keeping pace with the industrial aspirations.
+
+                We extend our heartiest welcome to all the upcoming technocrats and leaders at NESGI.</p>
+            <br><br>
+
+            <b>Hon. P.N.Suke</b><br>
+            President, NESGI , Pune.<br>
+
+
+
+        </div>
+    </div>
+    <br><br>
     {% include 'footer.html' %}
 </body>
+
 </html>

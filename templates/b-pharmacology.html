@@ -1,0 +1,74 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacology</title>
+    <style>
+        .divh1 {
+            background-image: url("{% static 'pharm_background.png' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100px;
+            padding: 50px;
+            text-align: center;
+            font-size: 40px;
+            color: rgb(255, 0, 0);
+            text-shadow: 2px 2px 2px black;
+        }
+
+        .main_div {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            margin: 50px 80px 80px 80px;
+            padding: 10px;
+            /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+        }
+
+        .para {
+            margin: 20px;
+            padding: 30px;
+            text-align: justify;
+            background-color: white;
+            font-size: 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
+{% include 'header.html' %}
+{% include 'pharmnav.html' %}
+<div style="background-color: rgba(109, 109, 109, 0.67);">
+    <div class="divh1">
+        <h2 class="meh2">Pharmacology</h2><br>
+    </div>
+    <div class="main_div">
+        <p class="para">
+            <b style="color: rgb(1, 33, 107); font-size: 20px;">Pharmacology</b>
+            <br>
+            <br>
+
+            Pharmacology involves the study of the actions of drugs and chemicals on cells, tissues and the whole body.
+            Pharmacological studies may involve gaining knowledge of the mechanism of drug action, drug toxicity, the
+            use of drugs as tools to delineate biological processes during health and disease, identification and
+            validation of new cellular targets for drug action, and the design and development of new drugs. The aim of
+            Pharmacology studies is to improve the way drugs are tested and to give greater benefit in the treatment of
+            disease.
+            <br><br>
+            The departmental staff is engaged in various collaborative and self-supported research projects. This
+            research work is routinely presented at various national and international symposia's and published in
+            reputed national as well as international journals.
+
+
+        </p>
+    </div>
+</div>
+{% include 'footer.html' %}

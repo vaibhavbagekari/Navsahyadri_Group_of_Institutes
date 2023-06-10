@@ -7,8 +7,162 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engineering Laboratory civil</title>
+
+    <link rel="stylesheet" href="{% static 'department.css' %}">
 </head>
-{% include 'header.html' %}
-{% include 'engnav.html' %}
-<h1>Engineering Laboratory civil</h1>
-{% include 'footer.html' %}
+
+<body>
+    {% include 'header.html' %}
+    {% include 'engnav.html' %}
+    <center>
+        <h2 class="dep_title"><a href="{% url 'CS' %}"><i class="fa fa-home" style="font-size:35px"></i></a> Civil Engineering </h2></center>
+    <div class="about-dep-div">
+        <h2 class="topic-title">Laboratory</h2>
+        <h2 align="center"
+            style="margin: 10px; ">
+            Environmental  Laboratory -  </h2>
+        <div class="about-container">
+            <div class="about-img" style="height: 350px; width: 500px;">
+
+                <img src="{% static 'eng_civil_lab_evn.jpg' %}" alt="" width="100%" height="100%">
+
+            </div>
+            <div class="about-text">
+                <br><br><br><br>
+                <b> Lab: </b>Computer Center <br><br>
+                Environmental lab is utilized by the Undergraduate students for Water Supply Engineering as well as Waste Water Engineering in Sem I and Sem II respectively.
+                <br>This lab is responsible for analyzing environmental and biological samples for the presence and quantities of toxic substances.                      
+
+            </div>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+        <h2 align="center"
+            style="margin: 20px;  ">Transportation Laboratory  </h2>
+        <br><br>
+        <div class="about-container">
+
+            <div class="about-text" style="font-family:; ">
+                <br><br><br><br>
+                <b>Lab:</b>Transportation Laboratory   <br><br>
+            Transportation lab is utilized by the Undergraduate students for Transportation Engineering Course in Sem I and Advanced Transportation Engineering Course (Elective) in Sem II.
+               <br> The objective of this lab is to determine some of the properties of coarse aggregates and bitumen.   
+                
+
+            </div>
+            <div class="about-img" style="height: 350px; width: 500px;">
+
+                <img src="{% static 'eng_civil_lab_treans.jpg' %}" alt="" width="100%" height="100%">
+
+            </div>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+        <h2 align="center"
+            style="margin: 20px;">Engineering mechanics  Laboratory </h2>
+        <div class="about-container">
+
+            <div class="about-img" style="height: 350px; width: 500px;">
+
+                <img src="{% static 'eng_civil_lab_mechin.jpg' %}" alt="" width="100%" height="100%">
+
+            </div>
+            <div class="about-text">
+                <br><br><br><br>
+                <b> Lab: </b>Engineering mechanics  Laboratory -  <br><br>
+                This laboratory gives the basic understanding of structural member under the action of loads. The students will experience the changes in behaviour of structure due to application of loads. Basics of determinate structures will be introduced through experiment.  
+               <br> This lab setup adequately caters to the academic requirements of UG students .    
+                
+            </div>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+        <h2 align="center"
+        style="margin: 20px;">Concrete Technology Laboratory </h2>
+        <div class="about-container">
+
+            <br><br><br><br>
+            <div class="about-text">
+                <br><br><br><br>
+                <b> Lab: </b>Concrete Technology Laboratory  <br><br>
+                Concrete Technology Laboratory provides facilities to conduct all quality control tests on cement, aggregates and concrete (Fresh and hardened).
+                <br> Experiments of Advances concrete technology (BE civil) for Sem - I and Concrete Technology (SE Civil) For Sem -II are performed. Utilized for Research Project of PG Students and UG students.
+                
+
+            </div>
+            <div class="about-img" style="height: 350px; width: 500px;">
+
+                <img src="{% static 'eng_civil_lab_con.jpg' %}" alt="" width="100%" height="100%">
+
+            </div>
+            <br>
+            <br>
+            <h2 align="center"
+            style="margin: 20px;">Survey Laboratory </h2>
+        <div class="about-container">
+
+            <div class="about-img" style="height: 350px; width: 500px;">
+
+                <img src="{% static 'eng_civil_lab_sUrvey.jpg' %}" alt="" width="100%" height="100%">
+
+            </div>
+            <div class="about-text">
+                <br><br><br><br>
+                <b> Lab: </b>Survey Laboratory   <br><br>
+                This laboratory since its inception to the Civil Department carries instruments right from Dumpy Level to advanced Total Station to cater the need of syllabus for undergraduate students from Second and Third year engineering.
+                <br>The laboratory of Surveying is well equipped with all the required instruments and tools that are helpful in the overall understanding and practical knowledge of a student
+                
+            </div>
+            
+        </div>
+        <h2 align="center"
+            style="margin: 20px;">Computer lab</h2>
+        
+        <div class="about-container">
+
+           
+            <div class="about-text">
+                <br><br><br><br>
+                <b> Lab: </b>Computer lab <br><br>
+                The laboratory has seven software these are used by undergraduate students for performing exercises given in various course domains. Final year students exclusively use the software for their project work.
+                    <br>Well equipped lab. Students perform practical’s of Operating System based on Windows 7 platform.
+
+            </div>
+            <div class="about-img" style="height: 350px; width: 500px;">
+
+                <img src="{% static 'eng_civil_lab_com.jpg' %}" alt="" width="100%" height="100%">
+
+            </div>
+            
+        </div>
+        <h2 align="center"
+            style="margin: 20px;">Geotechnical Laboratory </h2>
+        
+        <div class="about-container">
+
+            <div class="about-img" style="height: 350px; width: 500px;">
+
+                <img src="{% static 'eng_civil_lab_geo.jpg' %}" alt="" width="100%" height="100%">
+
+            </div>
+            <div class="about-text">
+                <br><br><br><br>
+                <b> Lab: </b>Geotechnical Laboratory    <br><br>
+                The Geotechnical  lab setup is according to university syllabus and consultancy purpose. Lab is utilized by Under Graduate students of second year semester I
+                <br>This lab is well-equipped with testing equipment for evaluating all engineering properties of soils and rocks, including index properties, compaction characteristics of soils, hydraulic characteristics, compressibility, rate of consolidation and sheer strength.
+
+            </div>
+            
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+</body>
+
+</html>

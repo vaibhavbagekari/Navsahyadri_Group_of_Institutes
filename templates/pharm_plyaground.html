@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'department.css'%}">
+    <link rel="stylesheet" href="{% static 'course.css'%}">
+    <title>Playing Ground</title>
+    <style>
+        .divh1 {
+            background-image: url("{% static 'pharm_background.png' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100px;
+            padding: 50px;
+            text-align: center;
+            font-size: 40px;
+            color: rgb(255, 0, 0);
+            text-shadow: 2px 2px 2px black;
+        }
+
+        .meimg {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .main_div {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            margin: 50px 80px 80px 80px;
+            padding: 10px;
+            /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+        }
+
+        .tabl {
+            margin: auto;
+            border-collapse: collapse;
+            width: 80%;
+            height: max-content;
+            line-height: 25px;
+        }
+
+        .para {
+            margin: 20px;
+            padding: 30px;
+            text-align: justify;
+            background-color: white;
+            font-size: 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'pharmnav.html' %}
+    <div>
+        <div class="divh1">
+            <h2 class="meh2">Playing Ground</h2><br>
+        </div>
+
+        <div width="100%" class="meimg">
+            <img width="50%" src="{% static ''%}">
+            <img width="50%" src="{% static ''%}">
+        </div>
+        <div style="background-color: rgba(109, 109, 109, 0.67);">
+            <div class="main_div">
+                <p class="para">
+
+
+                    <b style="color: rgb(1, 33, 107); font-size: 20px;">Playing Ground</b>
+                    <br>
+                    Campus comes to life as the clock turns 5 in the evening. The playing grounds and courts bustle with
+                    energetic students, some experienced and some taking to sports for the first time! Sports Officers
+                    inculcate right mix of skills, persistence, discipline and regularity in each student.
+                    <br>
+                    Keeping the old adage "All work and no play make Jack a dull boy" We have provided excellent sports
+                    facility for our students which will be an excellent source of recreation. Sporting accessories like
+                    cricket bats, balls, carom boards, badminton and table -tennis racquets are readily available for
+                    our students at all times.
+                   <br><br>
+                    Contact: Mr. Tamboli A.R (M.Ed.Physical Education)- +91 9960868607
+
+                </p>
+            </div>
+        </div>
+        {% include 'footer.html'%}
+
+</body>
+
+</html>

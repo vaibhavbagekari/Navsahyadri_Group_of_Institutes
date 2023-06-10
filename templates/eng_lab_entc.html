@@ -7,8 +7,158 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engineering Laboratory ENTC</title>
+
+    <link rel="stylesheet" href="{% static 'department.css' %}">
 </head>
-{% include 'header.html' %}
-{% include 'engnav.html' %}
-<h1>Engineering Laboratory ENTC</h1>
-{% include 'footer.html' %}
+
+<body>
+    {% include 'header.html' %}
+    {% include 'engnav.html' %}
+    <center>
+        <h2 class="dep_title"><a href="{% url 'CS' %}"><i class="fa fa-home" style="font-size:35px"></i></a> ENTC</h2>
+    </center>
+    <div class="about-dep-div">
+        <h2 class="topic-title">Laboratory</h2>
+        <h2 align="center" style="margin: 20px; ">
+            Power Electronics Laboratory - </h2>
+        <div class="about-container">
+            <div class="about-img" style="height: 350px; width: 500px;">
+
+                <img src="{% static '' %}" alt="" width="100%" height="100%">
+
+            </div>
+            <div class="about-text">
+                <br><br><br><br>
+                <b>Laboratory Name:</b> Power Electronics Laboratory<br><br>
+                <b>Location of laboratory:</b> Room No. 324<br><br>
+                <b>Laboratory in charge:</b> Prof. S. Kale<br><br>
+                <b>Software Installed :</b> Psim<br><br>
+                <b>Equipment’s:</b> Three Phase Power Analyzer, Single & Three Phase Converter, PWM Generation & Test
+                kit, Single & Three Phase Inverter, Cyclo converter, Power scope, Single & Three Phase Drive
+
+
+            </div>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+        <h2 align="center" style="margin: 20px;  ">DSP and VLSI Laboratory </h2>
+        <br><br>
+        <div class="about-container">
+
+            <div class="about-text" style="font-family:; ">
+                <br><br><br><br>
+                <b>Laboratory Name:</b> DSP and VLSI Laboratory <br><br>
+                <b>Location of laboratory:</b> Room No. 327 <br><br>
+                <b>Laboratory in charge:</b> Prof. S. Kale <br><br>
+                <b>Software Installed :</b> Xilinx ISE 9.2i, Microwind 3.0, Mentor Graphics <br><br>
+                <b>Equipment’s:</b> FPGA Family Spartan 3, Spartan 2, Spartan 3 DSP kits <br><br>
+
+            </div>
+            <div class="about-img" style="height: 350px; width: 500px;">
+
+                <img src="{% static '' %}" alt="" width="100%" height="100%">
+
+            </div>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+        <h2 align="center" style="margin: 20px;">Communication Engineering Laboratory</h2>
+        <div class="about-container">
+
+            <div class="about-img" style="height: 350px; width: 500px;">
+
+                <img src="{% static '' %}" alt="" width="100%" height="100%">
+
+            </div>
+            <div class="about-text">
+                <br><br><br><br>
+                <b>Laboratory Name:</b> Communication Engineering Laboratory<br><br>
+                <b>Location of laboratory:</b> Room No. 328<br><br>
+                <b>Laboratory in charge:</b> Prof. S. N. Thorat<br><br>
+                <b>Software Installed :</b> Multisim software11, Proteus<br><br>
+                <b>Equipment’s:</b> function generators, Digital Storage Oscilloscopes, power supplies, digital & analog
+                millimeters, 6 ½ Digit DMM, Analog & Digital Communication Kits, Spectrum etc.
+
+            </div>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+        <h2 align="center" style="margin: 20px;">Advance Communication Laboratory </h2>
+        <div class="about-container">
+
+            <br><br><br><br>
+            <div class="about-text">
+                <br><br><br><br>
+                <b>Laboratory Name:</b> Advance Communication Laboratory<br><br>
+                <b>Location of laboratory:</b> Room No. 329<br><br>
+                <b>Laboratory in charge:</b> Prof. L. M. Sagale<br><br>
+                <b>Software Installed :</b> Anntena Software, Software for Microwave<br><br>
+                <b>Equipment’s:</b> Analog & Digital Communication Kits, Digital Storage Oscilloscope, Spectrum
+                Analyzer, Microwave Test Set Up, Microwave Power Meter, 6 ½ DMM, Optical
+                Fiber Communication Link etc.
+
+            </div>
+            <div class="about-img" style="height: 350px; width: 500px;">
+
+                <img src="{% static '' %}" alt="" width="100%" height="100%">
+
+            </div>
+            <br>
+            <br>
+            <h2 align="center" style="margin: 20px;">Microcontroller Laboratory </h2>
+            <div class="about-container">
+
+                <div class="about-img" style="height: 350px; width: 500px;">
+
+                    <img src="{% static '' %}" alt="" width="100%" height="100%">
+
+                </div>
+                <div class="about-text">
+                    <br><br><br><br>
+                    <b>Laboratory Name:</b> Microcontroller Laboratory<br><br>
+                    <b>Location of laboratory:</b> Room No. 330<br><br>
+                    <b>Laboratory in charge:</b> Prof. A. R. Lokhande<br><br>
+                    <b>Software Installed :</b> Open source tools for 8051, MPLAB IDE for PIC 18F, open source
+                    Python<br><br>
+                    <b>Equipment’s:</b> Digital Electronics Training Kits ,Raspberry pi, aurdino, 8051, Arm 2148, PIC
+                    18F,Microcontroller 8051 kits etc
+
+                </div>
+
+            </div>
+            <h2 align="center" style="margin: 20px;">Basic Electronics Engineering Laboratory</h2>
+
+            <div class="about-container">
+
+
+                <div class="about-text">
+                    <br><br><br><br>
+                    <b>Laboratory Name:</b> Basic Electronics Engineering Laboratory<br><br>
+                    <b>Location of laboratory:</b> Room No. 342<br><br>
+                    <b>Laboratory in charge:</b> Prof. S. A. Gawande<br><br>
+                    <b>Software Installed :</b> Multisim 11, Proteus<br><br>
+                    <b>Equipment’s:</b> Electronics Training Kits, function generators, Digital Storage Oscilloscopes, power
+                    supplies, digital & analog millimeters, 6 ½ Digit DMM, PN junction diode , FET, Analog 741, DSO, CRO
+                    etc.
+
+                </div>
+                <div class="about-img" style="height: 350px; width: 500px;">
+
+                    <img src="{% static '' %}" alt="" width="100%" height="100%">
+
+                </div>
+
+            </div>
+           
+        </div>
+
+        {% include 'footer.html' %}
+</body>
+
+</html>

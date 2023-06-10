@@ -1,0 +1,56 @@
+{% load static %}
+{% include 'header.html' %}
+<style>
+    .aicte_container{
+        width: 100%;
+        height: max-content;
+        /* padding: 20px; */
+       margin: auto;
+       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .aicte_list{
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: row;
+        gap: 3em;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        list-style: none;
+        margin: 20px auto 20px auto;
+    }
+    .aicte_list_item{
+        width: 300px;
+        padding: 10px;
+        /* margin: 5px; */
+        box-shadow: 2px 2px 6px black;
+        border-radius: 10px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition-duration: .3s;
+    }
+    .aicte_list_item:hover{
+        background-color: rgb(255, 126, 126);
+        color: white;
+        transform: scale(1.05);
+    }
+    
+</style>
+{% include 'mainnav.html' %}
+<div class="aicte_container">
+    <ul class="aicte_list">
+      
+        <a href="{% static 'Grievances_Redressal_Mechanism.pdf'%}" target="_blank" style="color: black;"><li class="aicte_list_item" >
+            <h2>Grievances Redressal Mechanism</h2>
+        </li>
+        </a>
+    <a href="{% static 'All-Committees.pdf'%}" target="_blank" style="color: black;"><li class="aicte_list_item">
+           <h2>All Committees</h2>
+        </li>
+    </a>
+       
+    </ul>
+</div>
+
+{% include 'footer.html' %}

@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
-
 from django.contrib import messages
-from .models import feature, nss_photo, elibrary_url, e_Books_table, student, faculty, subject, attendance, sem, aicte_approvals
+from .models import *
+# feature, nss_photo, elibrary_url, e_Books_table, student, faculty, sppu_approvals, subject, attendance, sem, aicte_approvals, event, notices,mandatory_disclosure
 from django.contrib.auth import authenticate
+from django.core.mail import send_mail
 
 
 # Create your views here.
@@ -94,7 +95,16 @@ def stud_login(request):
 
 
 def pharmindex(request):
-    return render(request, 'pharmindex.html')
+    approvals = aicte_approvals.objects.all()
+    return render(request, 'pharmindex.html', {'approvals': approvals})
+
+
+def d_pharm(request):
+    return render(request, 'd-pharm.html')
+
+
+def b_pharm(request):
+    return render(request, 'b-pharm.html')
 
 
 def polyindex(request):
@@ -117,32 +127,60 @@ def coc(request):
     return render(request, 'coc.html')
 
 
-def prinsipal_desk(request):
-    return render(request, 'prinsipal_desk.html')
+def about_nesgi(request):
+    return render(request, 'about_nesgi.html')
+
+
+def vision_mission(request):
+    return render(request, "vision-mission.html")
+
+
+def director_Desk(request):
+    return render(request, 'director_desk.html')
+
+
+def eng_fe(request):
+    return render(request, 'eng_fe.html')
+
 
 def eng_lab_cs(request):
     return render(request, 'eng_lab_cs.html')
 
+
 def eng_lab_mechanical(request):
     return render(request, 'eng_lab_mechanical.html')
+
 
 def eng_lab_civil(request):
     return render(request, 'eng_lab_civil.html')
 
+
+def aicteindex(request):
+    return render(request, 'aicteindex.html')
+
+
 def eng_lab_electrical(request):
     return render(request, 'eng_lab_electrical.html')
+
+
+def committees(reques):
+    return render(reques, 'committees.html')
+
 
 def eng_lab_aiml(request):
     return render(request, 'eng_lab_aiml.html')
 
+
 def eng_lab_entc(request):
     return render(request, 'eng_lab_entc.html')
+
 
 def engindex(request):
     return render(request, 'engindex.html')
 
+
 def eng_syllabus(request):
-    return render(request,'eng_syllabus.html')
+    return render(request, 'eng_syllabus.html')
 
 
 def mbaindex(request):
@@ -152,57 +190,159 @@ def mbaindex(request):
 def ogc(request):
     return render(request, 'ogc.html')
 
+
 def awardss(request):
-    return render(request,'awardss.html')
+    return render(request, 'awardss.html')
+
 
 def engadmission(request):
-    return render(request,'engadmission.html')
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        Contact = request.POST.get('Contact')
+        Department = request.POST.get('Department')
+        gendar = request.POST.get('gendar')
+        
+        engadmissions = engadmission_model.objects.create(name=name,
+                                                    email=email,
+                                                    contact_no=int(Contact),
+                                                    Department=Department,
+                                                    gendar=gendar)
+        engadmissions.save()
+        return render(request, 'engadmission.html')
+    else:
+        return render(request, 'engadmission.html')
+
 
 def polyadmission(request):
-    return render(request,'polyadmission.html')
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        Contact = request.POST.get('Contact')
+        Department = request.POST.get('Department')
+        gendar = request.POST.get('gendar')
+        print(name,email,Contact,Department,gendar)
+        polyadmissions = polyadmission_model.objects.create(name=name,
+                                                      email=email,
+                                                      contact_no=int(Contact),
+                                                      Department=Department,
+                                                      gendar=gendar)
+        polyadmissions.save()
+        return render(request, 'polyadmission.html')
+    else:
+        return render(request, 'polyadmission.html')
+
 
 def pharmadmission(request):
-    return render(request,'pharmadmission.html')
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        Contact = request.POST.get('Contact')
+        Department = request.POST.get('Department')
+        gendar = request.POST.get('gendar')
+        pharmadmissions = pharmadmission_model.objects.create(name=name,
+                                                      email=email,
+                                                      contact_no=int(Contact),
+                                                      Department=Department,
+                                                      gendar=gendar)
+        pharmadmissions.save()
+        return render(request, 'pharmadmission.html')
+    else:
+        return render(request, 'pharmadmission.html')
+
 
 def mbaadmission(request):
-    return render(request,'mbaadmission.html')
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        Contact = request.POST.get('Contact')
+        Department = request.POST.get('Department')
+        gendar = request.POST.get('gendar')
+        mbaadmissions = mbaadmission_model.objects.create(name=name,
+                                                    email=email,
+                                                    contact_no=int(Contact),
+                                                    Department=Department,
+                                                    gendar=gendar)
+        mbaadmissions.save()
+        return render(request, 'mbaadmission.html')
+    else:
+        return render(request, 'mbaadmission.html')
+
 
 def girl_hostel(request):
-    return render(request,'girl_hostel.html')
+    return render(request, 'girl_hostel.html')
+
 
 def boys_hostel(request):
-    return render(request,'boys_hostel.html')
+    return render(request, 'boys_hostel.html')
+
 
 def tronsport(request):
-    return render(request,'tronsport.html')
+    return render(request, 'tronsport.html')
+
 
 def library(request):
-    return render(request,'library.html')
+    return render(request, 'library.html')
+
 
 def e_library(request):
-    return render(request,'e_library.html')
+    return render(request, 'e_library.html')
+
 
 def counselling(request):
-    return render(request,'counselling.html')
+    return render(request, 'counselling.html')
+
 
 def internet_facilities(request):
-    return render(request,'internet_facilities.html')
+    return render(request, 'internet_facilities.html')
+
 
 def mainactivity(request):
-    return render(request,'mainactivity.html')
+    return render(request, 'mainactivity.html')
+
 
 def gallery(request):
-    return render(request,'gallery.html')
+    return render(request, 'gallery.html')
+
+
+def main_placement(request):
+    return render(request, 'main_placement.html')
+
 
 def contact(request):
-    return render(request,'contact.html')
- 
+    return render(request, 'contact.html')
+
+
 def login(request):
     return render(request, 'login.html')
 
 
 def home(request):
-    return render(request, 'index.html')
+    notice = notices.objects.all()
+    events = event.objects.all()
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        contact_number = request.POST.get('contact_number')
+        Department = request.POST.get('Department')
+        send_mail(
+            "Testing mail",
+            "hii " + name + " your department is " + Department,
+            "webtestbyvaibhav.com",
+            [email],
+            fail_silently=False,
+        )
+
+        return render(request, 'index.html', {
+            'notice': notice,
+            'events': events
+        })
+    else:
+
+        return render(request, 'index.html', {
+            'notice': notice,
+            'events': events
+        })
 
 
 def mechanical(request):
@@ -257,29 +397,102 @@ def admission(requesd):
 def tpo(request):
     return render(request, 'tpo.html')
 
+
 def poly_mechanical(request):
-    return render(request, 'poly_mechanical.html') 
+    return render(request, 'poly_mechanical.html')
+
 
 def poly_civil(request):
-    return render(request, 'poly_civil.html') 
+    return render(request, 'poly_civil.html')
+
 
 def poly_electrical(request):
-    return render(request, 'poly_electrical.html') 
+    return render(request, 'poly_electrical.html')
+
 
 def poly_cs(request):
-    return render(request, 'poly_cs.html') 
+    return render(request, 'poly_cs.html')
+
 
 def poly_lab_mechanical(request):
-    return render(request, 'poly_lab_mechanical.html') 
+    return render(request, 'poly_lab_mechanical.html')
+
+
+def b_pharmaceutics_cem(request):
+    return render(request, 'b-pharmaceutics-cem.html')
+
 
 def poly_lab_civil(request):
-    return render(request, 'poly_lab_civil.html') 
+    return render(request, 'poly_lab_civil.html')
+
 
 def poly_lab_electrical(request):
-    return render(request, 'poly_lab_electrical.html') 
+    return render(request, 'poly_lab_electrical.html')
+
 
 def poly_lab_cs(request):
-    return render(request, 'poly_lab_cs.html') 
+    return render(request, 'poly_lab_cs.html')
+
+
+def m_pharm(request):
+    return render(request, 'm-pharm.html')
+
+
+def b_pharmaceuitcs(request):
+    return render(request, "b-pharmaceuitcs.html")
+
+
+def pharm_student_welfare(request):
+    return render(request, "pharm_student_welfare.html")
+
+
+def pharm_computer_center(request):
+    return render(request, "pharm_computer_center.html")
+
+
+def pharm_library(request):
+    return render(request, "pharm_library.html")
+
+
+def transpotation(request):
+    return render(request, "transportation.html")
+
+
+def b_pharmacolory(request):
+    return render(request, "b-pharmacology.html")
+
+
+def pharm_health_care(request):
+    return render(request, "pharm_health_care.html")
+
+
+def pharm_coc(request):
+    return render(request, "pharm_coc.html")
+
+
+def b_pharmacognosy(request):
+    return render(request, "b_pharmacognosy.html")
+
+
+def manual_slider(request):
+    return render(request, "manual_slider.html")
+
+
+def pharm_plyaground(request):
+    return render(request, "pharm_plyaground.html")
+
+
+def pharm_gallery(request):
+    return render(request, "pharm_gallery.html")
+
+
+def pharm_hostel(request):
+    return render(request, "pharm_hostel.html")
+
+
+def slider(request):
+    return render(request, "slider.html")
+
 
 def studenthome(request):
 
@@ -544,6 +757,18 @@ def url2(request, url2):
 def aicte(request):
     approvals = aicte_approvals.objects.all()
     return render(request, 'aicte_approvals.html', {'approvals': approvals})
+
+
+def sppu_approval(request):
+    sppu_approval = sppu_approvals.objects.all()
+    return render(request, 'SPPU_affiliation.html',
+                  {'sppu_approvals': sppu_approval})
+
+
+def mandatory_disclosures(request):
+    mandatory_disclosures = mandatory_disclosure.objects.all()
+    return render(request, "mandatory_disclosure.html",
+                  {'mandatory_disclosure': mandatory_disclosures})
 
 
 def add_atten(request):

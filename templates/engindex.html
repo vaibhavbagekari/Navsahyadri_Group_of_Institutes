@@ -1,228 +1,169 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engineering Index</title>
- 
-    <!-- <link rel="stylesheet" type="text/css" href="{% static 'header.css' %}"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="header.css"> -->
-    <style>
-        .div2-contener {
-          border: 3px solid black;
-          margin: 10px;
-    
-        }
-    
-        .div2 {
-          flex-wrap: wrap;
-          justify-content: space-between;
-          gap: 2em;
-          display: flex;
-    
-        }
-    
-    
-        .title {
-          background-color: rgba(0, 88, 966, 0.5);
-          padding: 5px;
-          margin: 5px;
-          text-align: center;
-          border-radius: 20px;
-          box-shadow: 5px 4px 8px black;
-        }
-        .course-title{
-          /* font-size: 20px; */
-          font-family:'Raleway', sans-serif;
-        }
-        .tab {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          margin-top: 10px;
-          overflow: hidden;
-          border: 1px solid #ccc;
-          background-color: #fa7777;
-        }
-    
-        /* Style the buttons inside the tab */
-        .tab button {
-          background-color: inherit;
-          float: left;
-          border: none;
-          outline: none;
-          cursor: pointer;
-          padding: 14px 16px;
-          transition: 0.3s;
-          font-size: 17px;
-        }
-    
-        /* Change background color of buttons on hover */
-        .tab button:hover {
-          background-color: #fb9595;
-        }
-    
-        /* Create an active/current tablink class */
-        .tab button.active {
-          background-color: #ffffff;
-          border-bottom-left-radius: -10px;
-        }
-    
-        /* Style the tab content */
-        .tabcontent {
-          
-          padding: 10px 18px;
-          border: 1px solid #f7a3a3;
-          border-top: none;
-        }
-    
-        /* Style the close button */
-        .topright {
-          float: right;
-          cursor: pointer;
-          font-size: 28px;
-        }
-    
-        .topright:hover {
-          color: red;
-        }
-    
-        .tablist {
-          list-style: none;
-          display: flex;
-          flex-wrap: wrap;
-          flex-direction: row;
-          gap: 2em;
-    
-        }
-    
-    
-    
-        .card {
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          transition: 0.3s;
-          width: 220px;
-          height: 300px;
-          transition-duration: 1s;
-        }
-    
-        .card img {
-          height: 190px;
-        }
-    
-        .card:hover {
-          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-          transform: scale(1.03);
-        }
-    
-        .container {
-          padding: 2px 16px;
-        }
-    
-        .button {
-          background-color: #4CAF50;
-          
-          
-          border: none;
-          /* color: white; */
-          padding: .7rem 1.5rem;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 16px;
-          margin: 4px 2px;
-          cursor: pointer;
-          color: #fd1100;
-        }
-        .button:hover{
-          background-color: #f66a60;
-          color: azure;
-        }
-        .button3 {
-          background-color: white;
-          /* color: black; */
-          border: 2px solid #f44336;
-        }
-        .tablinks{
-          width: 220px;
-        }
-        @media screen and (max-width:600px) {
-          .card {
-            width: 170px;
-            height: 300px;
-          }
-          .button{
-            padding: .2rem 1.0rem;
-          }
-        }
-      </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Index</title>
+
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'header.css' %}"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="header.css"> -->
+  <style>
+    .title_div {
+      width: 100%;
+      height: 350px;
+      background-image: url("{% static 'college_campus.jpg'%}");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .principal_container {
+      width: 100%;
+      height: max-content;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1em;
+    }
+
+    .pro_title {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      color: rgb(255, 255, 255);
+      text-shadow: 5px 5px 6px black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(rgba(43, 67, 247, 0.45), rgba(255, 255, 255, 0.513));
+    }
+    .principal_container{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 20px auto 20px auto;
+    }
+    .p_img_container {
+      width: 300px;
+
+    }
+
+    .p_text_container {
+      width: 60%;
+    }
+    .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+  </style>
 </head>
-    {% include "header.html" %}
-    {% include 'engnav.html'%}
-    {% include 'loginbtn.html'%}
-    <h1>Engineering</h1>
-    <div id="ENGINEERING" class="tabcontent">
-        <!-- <span onclick="this.parentElement.style.display='none'" class="topright">&times</span> -->
-        {% comment %} <h3 style="margin: 5px;" >ENGINEERING</h3> {% endcomment %}
-        <ul class="tablist">
-          <li class="tablistitem">
-            <div class="card">
-              <img src="{% static 'nss18.jpg'%}" alt="Avatar" style="width:100%">
-              <div class="container">
-                <h4 class="course-title"><b>Machanical engineering</b></h4>
-                <p><a class="dep"
-                  href="{% url 'mechanical' %}"><button class="button button3">click here to view</button></a></p>
-              </div>
-          </li>
-          <li class="tablistitem">
-            <div class="card">
-              <img src="{% static 'nss16.jpg'%}" alt="Avatar" style="width:100%">
-              <div class="container">
-                <h4 class="course-title"><b>civil engineering</b></h4>
-                <p><a class="dep"
-                  href="{% url 'Civil' %}"><button class="button button3">click here to view</button></a></p>
-              </div>
-          </li>
-          <li class="tablistitem">
-            <div class="card">
-              <img src="{% static 'nss13.jpg'%}" alt="Avatar" style="width:100%">
-              <div class="container">
-                <h4 class="course-title"><b>Electrical Engineering</b></h4>
-                <p><a class="dep"
-                  href="{% url 'Electrical' %}"><button class="button button3">click here to view</button></a></p>
-              </div>
-          </li>
-          <li class="tablistitem">
-            <div class="card">
-              <img src="{% static 'nss13.jpg'%}" alt="Avatar" style="width:100%">
-              <div class="container">
-                <h4 class="course-title"><b>Electronics & Telecommunication</b></h4>
-                <p><a class="dep" href="{% url 'ENTC' %}"><button class="button button3">click here to view</button></a></p>
-              </div>
-          </li>
-          <li class="tablistitem">
-            <div class="card">
-              <img src="{% static 'nss12.jpg'%}" alt="Avatar" style="width:100%">
-              <div class="container">
-                <h4 class="course-title"><b>Computer Engineering</b></h4>
-                <p><a class="dep" href="{% url 'CS' %}"><button class="button button3">click here to view</button></a></p>
-              </div>
-          </li>
-          <li class="tablistitem">
-            <div class="card">
-              <img src="{% static 'nss11.jpg'%}" alt="Avatar" style="width:100%">
-              <div class="container">
-                <h4 class="course-title"><b>AIML engineering</b></h4>
-                <p><a class="dep"
-                  href="{% url 'AIML' %}"><button class="button button3">click here to view</button></a></p>
-              </div>
-          </li>
+{% include "header.html" %}
+{% include 'loginbtn.html'%}
+{% include 'engnav.html'%}
+
+<div class="title_div" align="center">
+  <div class="pro_title">
+    <h1>Navsahyadri Education Society's College of Engineering</h1>
+  </div>
+</div>
+<br><br>
+<h1>Principal's Desk</h1>
+<div class="principal_container">
+
+  <div class="p_img_container">
+    <img src="{% static 'profile1.png' %}" alt="" width="100%">
+  </div>
+  <div class="p_text_container">
+    <h1>Name of Principal</h1>
+    <p>
+
+      Our aims to prepare students for tomorrow, equipping them today with the right knowledge, skills and attitude that
+      will help them be effective in any venture they choose, nurturing and developing them to become good individuals
+      who are sensitive to the society around them.
+      <br>
+      Learning and teaching in the management school covers all the aspects of management. There are experienced faculty
+      members and relevant pedagogy is followed. There is lot of emphasis on learning by doing.
+      <br><br>
+      Our aims to prepare students for tomorrow, equipping them today with the right knowledge, skills and attitude that
+      will help them be effective in any venture they choose, nurturing and developing them to become good individuals
+      who are sensitive to the society around them.
+      <br>
+      Learning and teaching in the management school covers all the aspects of management. There are experienced faculty
+      members and relevant pedagogy is followed. There is lot of emphasis on learning by doing.
+    </p>
+    </p>
+  </div>
   
-        </ul>
-      </div>
-    {% include 'footer.html' %}
-   
-   
-   
+</div>
+<h1> Courses We Offered </h1>
+  <div class="course_container">
+    <ul class="tablist">
+      <li class="tablistitem">
+        <div class="card">
+          <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4 class="course-title"><b>Machanical engineering</b></h4>
+            <p><a class="dep" href="{% url 'mechanical' %}"><button class="button button3">click here to
+                  view</button></a></p>
+          </div>
+      </li>
+      <li class="tablistitem">
+        <div class="card">
+          <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4 class="course-title"><b>civil engineering</b></h4>
+            <p><a class="dep" href="{% url 'Civil' %}"><button class="button button3">click here to view</button></a>
+            </p>
+          </div>
+      </li>
+      <li class="tablistitem">
+        <div class="card">
+          <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4 class="course-title"><b>Electrical Engineering</b></h4>
+            <p><a class="dep" href="{% url 'Electrical' %}"><button class="button button3">click here to
+                  view</button></a></p>
+          </div>
+      </li>
+      <li class="tablistitem">
+        <div class="card">
+          <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4 class="course-title"><b>Electronics & Telecommunication</b></h4>
+            <p><a class="dep" href="{% url 'ENTC' %}"><button class="button button3">click here to view</button></a></p>
+          </div>
+      </li>
+      <li class="tablistitem">
+        <div class="card">
+          <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4 class="course-title"><b>Computer Engineering</b></h4>
+            <p><a class="dep" href="{% url 'CS' %}"><button class="button button3">click here to view</button></a></p>
+          </div>
+      </li>
+      <li class="tablistitem">
+        <div class="card">
+          <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4 class="course-title"><b>AIML engineering</b></h4>
+            <p><a class="dep" href="{% url 'AIML' %}"><button class="button button3">click here to view</button></a></p>
+          </div>
+      </li>
+
+    </ul>
+  </div>
+{% include 'footer.html' %}

@@ -1,0 +1,79 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacognosy</title>
+    <style>
+        .divh1 {
+            background-image: url("{% static 'pharm_background.png' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100px;
+            padding: 50px;
+            text-align: center;
+            font-size: 40px;
+            color: rgb(255, 0, 0);
+            text-shadow: 2px 2px 2px black;
+        }
+
+        .main_div {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            margin: 50px 80px 80px 80px;
+            padding: 10px;
+            /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+        }
+
+        .para {
+            margin: 20px;
+            padding: 30px;
+            text-align: justify;
+            background-color: white;
+            font-size: 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
+{% include 'header.html' %}
+{% include 'pharmnav.html' %}
+<div style="background-color: rgba(109, 109, 109, 0.67);">
+    <div class="divh1">
+        <h2 class="meh2">Pharmacognosy </h2><br>
+    </div>
+    <div class="main_div">
+        <p class="para">
+            <b style="color: rgb(1, 33, 107); font-size: 20px;">Pharmacognosy </b>
+            <br>
+            <br>
+            Pharmacognosy derives from two Greek words, pharmakon or drug, and "gnosis" or knowledge. Thus,
+            Pharmacognosy (chemistry and biology of natural products) is the study of natural substances found in
+            terrestrial and marine organisms (plants, animals, or microbes). Pharmacognosy has undergone significant
+            change in recent years and today represents a highly interdisciplinary science which is one of five major
+            areas of pharmaceutical education.
+            <br><br>
+            Despite convincing progress in Synthetic Chemistry, plants are the most important sources for preventive and
+            curative medical preparations. WHO has estimated that at least 80% of all the global inhabitants rely on
+            curative medical systems of medicine for their primary health needs and these systems are largely plant
+            based.
+            <br><br>
+            Research in Pharmacognosy is important because it leads new types of therapeutic moiety; increased
+            understanding of the pharmacological, ecological and biochemical roles of molecules produced by nature;
+            information on herbal medicines; and new methods for the analysis of drugs and herbal formulations. Research
+            in the department of Pharmacognosy focused on analysis of medicinal plants including isolation,
+            purification, identification and structure determination of bioactive substances from plant sources.
+
+
+        </p>
+    </div>
+</div>
+{% include 'footer.html' %}

@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic import TemplateView
 
 urlpatterns = [
     # path('', views.index ,name='index'),
@@ -17,6 +18,7 @@ urlpatterns = [
     path('ENTC/', views.ENTC, name='ENTC'),
     path('CS/', views.CS, name='CS'),
     path('AIML/', views.AIML, name='AIML'),
+    path('eng_fe/', views.eng_fe, name='eng_fe'),
     path('aboutus/', views.aboutus, name='aboutus'),
     path('Activity/', views.Activity, name='Activity'),
     path('admission/', views.admission, name='admission'),
@@ -48,7 +50,7 @@ urlpatterns = [
     path('eng_lab_entc/', views.eng_lab_entc, name="eng_lab_entc"),
     path('mbaindex/', views.mbaindex, name="mbaindex"),
     path('coc/', views.coc, name="coc"),
-    path('prinsipal_desk/', views.prinsipal_desk, name='prinsipal_desk'),
+    path('director_Desk/', views.director_Desk, name='director_Desk'),
     path('president_desk', views.president_desk, name="president_desk"),
     path('reaching/', views.reaching, name='reaching'),
     path('establishment/', views.establishment, name="establishment"),
@@ -83,6 +85,33 @@ urlpatterns = [
          name="poly_lab_electrical"),
     path("poly_lab_cs/", views.poly_lab_cs, name="poly_lab_cs"),
     path("eng_syllabus/", views.eng_syllabus, name="eng_syllabus"),
+    path("about_nesgi/", views.about_nesgi, name="about_nesgi"),
+    path("vision-mission/", views.vision_mission, name="vision-mission"),
+    path('aicteindex/', views.aicteindex, name="aicteindex"),
+    path('committees/', views.committees, name='committees'),
+    path('d_pharm/', views.d_pharm, name='d_pharm'),
+    path('b_pharm/', views.b_pharm, name='b_pharm'),
+    path('m_pharm/', views.m_pharm, name="m_pharm"),
+    path('b_pharmaceuitc/s', views.b_pharmaceuitcs, name="b_pharmaceuitcs"),
+    path('b_pharmaceutics_cem/',
+         views.b_pharmaceutics_cem,
+         name="b_pharmaceutics_cem"),
+    path('b_pharmacolory/', views.b_pharmacolory, name="b_pharmacolory"),
+    path('b_pharmacognosy/',views.b_pharmacognosy,name="b_pharmacognosy"),
+    path('pharm_coc',views.pharm_coc,name="pharm_coc"),
+    path('pharm_student_welfare',views.pharm_student_welfare,name="pharm_student_welfare"),
+    path('pharm_library',views.pharm_library,name="pharm_library"),
+    path('pharm_computer_center',views.pharm_computer_center,name="pharm_computer_center"),
+    path('pharm_health_care',views.pharm_health_care,name="pharm_health_care"),
+    path('transpotation/',views.transpotation,name="transpotation"),
+    path('pharm_plyaground',views.pharm_plyaground,name="pharm_plyaground"),
+    path('pharm_hostel',views.pharm_hostel,name="pharm_hostel"),
+    path('pharm_gallery',views.pharm_gallery,name="pharm_gallery"),
+    path('manual_slider',views.manual_slider,name="manual_slider"),
+    path('slider',views.slider,name="slider.html"),
+    path('sppu_approvals',views.sppu_approval,name="sppu_approvals"),
+    path('mandatory_disclosure',views.mandatory_disclosures,name="mandatory_disclosure"),
+    path('main_placement',views.main_placement,name="main_placement")
     
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'department.css'%}">
+    <link rel="stylesheet" href="{% static 'course.css'%}">
+    <title>D Pharmacy</title>
+    <style>
+      .divh1{
+        background-image: url("{% static 'pharm_background.png' %}");
+      }
+      .ec_div{
+            background-image: url("{%static 'pharm_background1.png'%}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'pharmnav.html' %}
+    <div>
+        <div class="divh1">
+            <h2 class="meh2">Diploma in Pharmacy</h2><br>
+        </div>
+        <div class="MEdiv">
+
+            <span class="span">Course Code:</span>
+            <span class="span">Duration:2 year</span>
+            <span class="span">Course Type: Full Time</span>
+            <span class="span">Intake: </span>
+        </div>
+
+        <div width="100%" class="meimg">
+            <img width="50%" src="{% static ''%}">
+            <img width="50%" src="{% static ''%}">
+        </div>
+        <div class="about-dep-div">
+            <h2 class="topic-title">About Course</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    There has never been a more exciting time to consider a career in pharmacy. The profession is
+                    experiencing a period of unprecedented progress and development. The skills of pharmacists have
+                    never been in greater demand and to deliver the latest, cutting-edge treatments and medicines to
+                    millions of patients every day.
+                </div>
+                <br>
+                <br>
+                <div class="about-img">
+                    <img src="{% static '' %}" alt="" width="100%" height="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ec_div">
+        <h2 class="topic-title">Eligibility Criteria</h2>
+        <p>
+            Minimum qualification for admission to Diploma in Pharmacy Part-I course -
+        <ul class="ec_list">
+            <li class="ec_list_item">A pass in any of the following examinations with Physics, Chemistry and Biology or
+                Mathematics.</li>
+            <li class="ec_list_item">Intermediate examination in Science;</li>
+            <li class="ec_list_item">The first year of the three year degree course in Science,</li>
+            <li class="ec_list_item">10+2 examination (academic stream) in Science;</li>
+            <li class="ec_list_item">Pre-degree examination;</li>
+            <li class="ec_list_item">Any other qualification approved by the Pharmacy Council of India as equivalent to
+                any of the above examination.</li>
+        </ul>
+        Provided that there shall be reservation of seats for Scheduled Caste and Scheduled Tribes candidates in
+        accordance with the instructions issued by the Central Govt. /State Govts./Union Territory Andaman as the case
+        may be from time to time.
+        </p>
+    </div>
+    <div class="ac_div">
+    <h2 class="topic-title">Academics</h2>
+    <div class="face_div">
+        <div class="face_sub_div">
+            <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+            <h3 class="face_title">Laboratory</h3>
+            <a class="dep" href="{% url 'eng_lab_electrical' %}"><button class="button button3">click here to
+                    view</button></a>
+            </p>
+        </div>
+        <div class="face_sub_div">
+            <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+            <h3 class="face_title">Syllabus</h3>
+            <a href="http://www.pci.nic.in/education_regulations_chapter2.html" target="_blank"> <button class="button button3">click here to view</button></a>
+            </p>
+        </div>
+    </div>
+    </div>
+    <div class="face_div1">
+        <h2 class="topic-title">Course Structure</h2>
+         <p>The duration of the course shall be for 2 academic years with each academic year spread over a period of not less than one hundred and eighty working days in addition to 500 hours practical training spread over a period of not less than 3 months.</p>
+         <br>
+         <p>The various subjects and curriculum activities which will be covered over the course duration of 2 years are mentioned below:</p>
+         <br><br>
+         <div class="flex_div">
+            <ul class="cs_list">
+                <h3>1st Year </h3>
+                <li class="cs_list_item">Pharmaceutics - I (Theory and Practical)</li>
+                <li class="cs_list_item">Pharmaceutical Chemistry (Theory and Practical)</li>
+                <li class="cs_list_item">Pharmacognosy (Theory and Practical)</li>
+                <li class="cs_list_item">Biochemistry and Clinical Pathology (Theory and Practical)</li>
+                <li class="cs_list_item">Human Anatomy and Physiology (Theory and Practical) </li>
+                <li class="cs_list_item">Heath Education and Community Pharmacy (Theory)</li>
+                
+            </ul>
+            <ul class="cs_list">
+                <h3>2nd Year </h3>
+                <li class="cs_list_item"> Pharmaceutics - II (Theory and Practical) </li>
+                <li class="cs_list_item">Pharmaceutical Chemistry - II (Theory and Practical) </li>
+                <li class="cs_list_item">Pharmacology and Toxicology (Theory and Practical) </li>
+                <li class="cs_list_item">Pharmaceutical Jurisprudence (Theory) </li>
+                <li class="cs_list_item">Drug Store and Business Management (Theory) </li>
+                <li class="cs_list_item">Hospital and Clinical Pharmacy (Theory and Practical)</li>
+            
+            </ul>
+         </div>
+        </div>
+        
+    {% include 'footer.html' %}
+</body>
+
+</html>

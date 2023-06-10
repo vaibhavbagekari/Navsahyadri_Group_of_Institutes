@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'department.css'%}">
+    <link rel="stylesheet" href="{% static 'course.css'%}">
+    <title>Health Care</title>
+    <style>
+        .divh1 {
+            background-image: url("{% static 'pharm_background.png' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100px;
+            padding: 50px;
+            text-align: center;
+            font-size: 40px;
+            color: rgb(255, 0, 0);
+            text-shadow: 2px 2px 2px black;
+        }
+
+        .meimg {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .main_div {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            margin: 50px 80px 80px 80px;
+            padding: 10px;
+            /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+        }
+
+        .tabl {
+            margin: auto;
+            border-collapse: collapse;
+            width: 80%;
+            height: max-content;
+            line-height: 25px;
+        }
+
+        .para {
+            margin: 20px;
+            padding: 30px;
+            text-align: justify;
+            background-color: white;
+            font-size: 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'pharmnav.html' %}
+    <div>
+        <div class="divh1">
+            <h2 class="meh2">Health Care</h2><br>
+        </div>
+
+        <div style="background-color: rgba(109, 109, 109, 0.67);">
+            <div class="main_div">
+                <p class="para">
+                    <b style="color: rgb(1, 33, 107); font-size: 20px;">Health Care</b>
+                    <br>
+                    <br>
+
+                    The Navsahyadri institute of Pharmacy having MOU with Hospital in Nasrapur. The visitor doctor
+                    exclusively visits campus frequently for check up of students, staff and faculty.
+                    <br>
+                    <br>
+                    In case of emergency, ambulatory care is provided and consulted with the most equipped hospitals in
+                    Nasrapur.
+
+
+                </p>
+            </div>
+        </div>
+        {% include 'footer.html'%}
+</body>

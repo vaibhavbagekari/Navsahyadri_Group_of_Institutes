@@ -1,243 +1,729 @@
 {%load static%}
 {% include 'header.html' %}
 {% include 'mainnav.html' %}
+
 <style>
-    .notice-div{
-        width: 100%;
-        padding: 15px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-    .notice-subdiv{
-        width: 500px;
-        /* border: 1px solid black; */
-        height: 400px;
-        padding: 20px;
-        overflow: hidden;
-        background-color: rgba(196, 193, 193, 0.176);
-    }
-    .wc-title{
-        margin: 10px 40px 10px 10px;
-        border-bottom: 4px solid rgb(243, 45, 45);
-        width: max-content;
-        font-size: 1.35rem;
-    }
-    .notice-title{
-        border-bottom: 3px solid rgb(249, 94, 94);
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.3rem;
-    }
-    .notice-mar{
-        width: 100%;
-        height: 100%;
-        
-    }
-    .note-list{
-        display: flex;
-        flex-direction: column;
-        align-content: space-between;
-        gap: 1em;
-        list-style: none;
-    
-    }
-    .note{
-        padding: 3px;
-        border-left:10px solid rgb(40, 64, 252) ;
-        height: 50px;
-        margin: 5px;
-        background-color: rgb(234, 158, 158);
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-        box-shadow: 2px 2px 5px black;
-        /* border-radius: 10px; */
-    }
-    .note:hover{
-        background-color: rgb(252, 53, 53);
-    }
+  .notice-div {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .notice-subdiv {
+    width: 500px;
+    /* border: 1px solid black; */
+    height: 400px;
+    padding: 20px;
+    overflow: hidden;
+    background-color: rgba(196, 193, 193, 0.176);
+  }
+
+  .wc-title {
+    margin: 10px 40px 10px 10px;
+    border-bottom: 4px solid rgb(243, 45, 45);
+    width: max-content;
+    font-size: 1.35rem;
+  }
+
+  .notice-title {
+    border-bottom: 3px solid rgb(249, 94, 94);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+  }
+
+  .notice-mar {
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .note-list {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    gap: 1em;
+    list-style: none;
+
+  }
+
+  .note {
+    padding: 3px;
+    border-left: 10px solid rgb(40, 64, 252);
+    height: 50px;
+    margin: 5px;
+    background-color: rgb(234, 158, 158);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+    /* border-radius: 10px; */
+  }
+
+  .s_logo:hover {
+    transform: scale(1.2);
+  }
+
+  .note:hover {
+    background-color: rgb(252, 53, 53);
+  }
+
+  .com {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
+  .eliment {
+    display: flex;
+    box-shadow: 3px 3px 8px black;
+    /* border: 2px solid black; */
+    width: 100px;
+    margin: 10px;
+    transition-duration: .6s;
+  }
+
+  .title2 {
+    margin: 20px auto 20px auto;
+    display: flex;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+
+  }
+
+  .counter_div {
+    width: 100%;
+    background-image: url("{% static 'counter_background.jpg' %}");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 300px;
+
+  }
+
+  .counter_eliment {
+    width: 220px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+  }
+
+  .popup_div {
+    width: 320px;
+    height: max-content;
+    padding: 20px ;
+    position: fixed;
+    transform: translate(50%, -50%);
+    top: 50%;
+    right: 50%;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    transition-duration: 1;
+    box-shadow: 2px 2px 2px rgb(53, 53, 53);
+  }
+
+  .overlayf {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.686);
+    position: fixed;
+    top: 0px;
+    z-index: 0.9;
+    /* transition: 1s; */
+  }
+
+  .overlayf2 {
+    display: none;
+  }
+
+  .popup_div2 {
+    display: none;
+  }
+
+  .popup_div select {
+    margin: 20px;
+
+  }
+
+  .popup_div input {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .submit {
+    background-color: rgb(255, 47, 47);
+    width: 100%;
+    /* width: max-content; */
+  }
+  select{
+    border-style: none;
+  }
+
+  
+  
 </style>
-<div class="slidermain">
+<!-- <div class="slidermain">
 
-    <img src="{% static 'college.jpg' %}" class="colimg">
-    <h2 class="text">
-        “It's not about perfect.<br>&nbsp; It's about effort.”
-    </h2>
-    <div class="form-button">Highlights
-        <div class="inner">
-            <div class="list-div">
-                <ul class="hlist">
-                    <li>Campus spread over 18 acres of land in eco-friendly.</li>
-                    <li>Campus floor area more than 3.5 lacs sq.ft</li>
-                    <li>670 sq.ft. floor area for each laboratory </li>
-                    <li>Robotics Club </li>
-                    <li>Bus facility from all routes </li>
-                </ul>
-            </div>
-        </div>
+  <img src="{% static 'college.jpg' %}" class="colimg">
+  <h2 class="text">
+    “It's not about perfect.<br>&nbsp; It's about effort.”
+  </h2>
+  <div class="form-button">Highlights
+    <div class="inner">
+      <div class="list-div">
+        <ul class="hlist">
+          <li>Campus spread over 18 acres of land in eco-friendly.</li>
+          <li>Campus floor area more than 3.5 lacs sq.ft</li>
+          <li>670 sq.ft. floor area for each laboratory </li>
+          <li>Robotics Club </li>
+          <li>Bus facility from all routes </li>
+        </ul>
+      </div>
     </div>
-    </div>
+  </div>
+</div> -->
 
-    <div class="welcom-div">
-        <h1 class="wc-title">Welcome to Navsahyadri Group Of Institution</h1>
-       <p>
+{% comment %} <div class="slid_div">
+  {% include 'manual_slider.html' %}
+</div> {% endcomment %}
 
-       </p>
+
+{% comment %} <video muted loop autoplay width="100%" style="margin: auto;">
+  <source src="{% static 'background_vedio.mp4' %}" type="video/mp4">
+</video>  {% endcomment %}
+<div style="z-index: 0.7;">
+  <div style="z-index:0.6;">
+  {% include 'slider.html' %}
+  </div>
+  <div class="welcom-div">
+    <h1 class="wc-title">Welcome to Navsahyadri Group Of Institution</h1>
+    <p>
+
+    </p>
+  </div>
+  <div class="notice-div">
+    <div class="notice-subdiv">
+      <h3 class="notice-title">
+        Notice
+      </h3>
+      <marquee behavior="scroll" onmouseover="this.stop();"
+      onmouseout="this.start();" direction="up" class="notice-mar">
+        <ul class="note-list">
+          {% for i in notice %}
+          <a href="{{ i.notice_file.url }}">
+            <li class="note">{{i.notice_title}}</li>
+          </a>
+          {% endfor %}
+        </ul>
+      </marquee>
     </div>
-    <div class="notice-div">
-        <div class="notice-subdiv">
-            <h3 class="notice-title">
-                Notice
-            </h3>
-            <marquee behavior="1" direction="up" class="notice-mar">
-                <ul class="note-list">
-                    <li class="note">vaibhav bagekari</li>
-                    <li class="note">vaibhav bagekari</li>
-                    <li class="note">vaibhav bagekari</li>
-                    <li class="note">vaibhav bagekari</li>
-                </ul>
-            </marquee>
-        </div>
-        <div class="notice-subdiv">
-             <h3 class="notice-title">
-                Event
-             </h3>
-            <marquee behavior="2" direction="up" class="notice-mar">
-                <ul class="note-list">
-                    <li class="note">vaibhav bagekari</li>
-                    <li class="note">vaibhav bagekari</li>
-                    <li class="note">vaibhav bagekari</li>
-                </ul>
-            </marquee>
-        </div>
+    <div class="notice-subdiv">
+      <h3 class="notice-title">
+        Event
+      </h3>
+      <marquee behavior="scroll" onmouseover="this.stop();"
+      onmouseout="this.start();" direction="up" class="notice-mar">
+        <ul class="note-list">
+          {% for k in events%}
+          <a href="{{ k.event_file.url }}">
+            <li class="note">{{k.event_title}}</li>
+          </a>
+          {% endfor %}
+        </ul>
+      </marquee>
     </div>
-<!-- <marquee class="marquee">welcome to Navsahyadri Group Of Institute, Pune</marquee> -->
-<div class="formdiv">
+  </div>
+  <marquee class="marquee1" behavior="scroll" onmouseover="this.stop();"
+  onmouseout="this.start();">
+    <div class="mar-container">
+      <div class="marquee1_container"><a href="{% static 'notice_img.jpg'%}"><img src="{% static 'notice_img.jpg'%}"
+            width="100%" alt=""></a></div>
+      <div class="marquee1_container"><img src="{% static 'notice_img1.jpg'%}" width="100%" alt=""></div>
+      <div class="marquee1_container"><img src="{% static 'notice_img.jpg'%}" width="100%" alt=""></div>
+    </div>
+  </marquee>
+  <div class="formdiv">
     <div class="form-contaner">
-        <div class="table3">
-            <form action="header.html" method="POST" height="100%">
-                <table class="table2">
-                    <center>
-                        <tr>
-                            <th>
-                                <h2 class="tableh">
-                                    <font color="black"> &#9990; &nbsp; &nbsp; CONTACT US &nbsp; &nbsp;&#9990;
-                                    </font>
-                                </h2>
-                            </th>
-                        </tr>
-                        <tr>
+      <div class="table3">
+        <form action="{% url 'home'%}" method="POST" height="100%" enctype="multipart/form-data">
+          {% csrf_token%}
+          <table class="table2">
+            <center>
+              <tr>
+                <th>
+                  <h2 class="tableh">
+                    <font color="black"> &#9990; &nbsp; &nbsp;Keep in Touch &nbsp; &nbsp;&#9990;
+                    </font>
+                  </h2>
+                </th>
+              </tr>
+              <tr>
 
-                            <th><input type="text" name="name" placeholder="Name" class="form-input"></th>
-                        </tr>
-                        <tr>
-                            <th><input type="email" name="email" placeholder="Email" class="form-input"></th>
-                        </tr>
-                        <tr>
+                <th><input type="text" name="name" placeholder="Name" class="form-input"></th>
+              </tr>
+              <tr>
+                <th><input type="email" name="email" placeholder="Email" class="form-input"></th>
+              </tr>
+              <tr>
 
-                            <th><input type="text" name="number" placeholder="Contact Number" maxlength="10"
-                                    class="form-input">
-                            </th>
-                        </tr>
+                <th><input type="number" name="contact_number" placeholder="Contact Number" maxlength="10"
+                    class="form-input">
+                </th>
+              </tr>
 
-                        <tr>
+              <tr>
 
-                            <th>
-                                <select class="sel" name="faculty">
-                                    <option>---select faculty---</option>
-                                    <optgroup label="Engineering" class="opgroup">
-                                        <option class="op" value="civil Engineering">1.civil Engineering</option>
-                                        <option class="op" value="Computer Engineering">2.Computer Engineering
-                                        </option>
-                                        <option class="op" value="Mechanical Engineering">3.Mechanical Engineering
-                                        </option>
-                                        <option class="op" value="Electronics and Telicomunication(E&TC)">
-                                            4.Electronics and
-                                            Telicomunication(E&TC)</option>
-                                        <option class="op" value="AI & ML Engineering">5.AI & ML Engineering
-                                        </option>
-                                    </optgroup>
-                                    <optgroup label="barnches of polytechnic" class="opgroup">
-                                        <option class="op" value="p.Machanical Engineering">1.Machanical Engineering
-                                        </option>
-                                        <option class="op" value="p.Electrical Engineering">2.Electrical Engineering
-                                        </option>
-                                        <option class="op" value="p.Civil Engineering">3.Civil Engineering</option>
-                                        <option class="op" value="p.Computer Engineering">4.Computer Engineering
-                                        </option>
-                                    <optgroup label="Courses of Pharmacy" class="opgroup">
-                                        <option class="op" value="B pharmacy">1.B pharmacy</option>
-                                        <option class="op" value="D pharmacy">2.D pharmacy</option>
-                                    </optgroup>
-                                    <optgroup label="Other Institute" class="opgroup">
-                                        <option class="op" value="MBA">1.MBA</option>
-                                        <option class="op" value="Navsahyadri Gurukul">2.Navsahyadri Gurukul
-                                        </option>
-                                        <option class="op" value="Navsahyadri Jr. college ">3.Navsahyadri Jr.
-                                            college
-                                        </option>
-                                    </optgroup>
+                <th>
+                  <select class="sel" name="Department">
+                    <option>---select Department---</option>
+                    <optgroup label="Engineering" class="opgroup">
+                      <option class="op" value="Civil-Engineering">1.civil Engineering</option>
+                      <option class="op" value="Computer-Engineering">2.Computer Engineering
+                      </option>
+                      <option class="op" value="Mechanical-Engineering">3.Mechanical Engineering
+                      </option>
+                      <option class="op" value="E&TC">
+                        4.Electronics and
+                        Telicomunication(E&TC)</option>
+                      <option class="op" value="AI & ML Engineering">5.AI & ML Engineering
+                      </option>
+                    </optgroup>
+                    <optgroup label="barnches of polytechnic" class="opgroup">
+                      <option class="op" value="Machanical-Engineering">1.Machanical Engineering
+                      </option>
+                      <option class="op" value="Electrical-Engineering">2.Electrical Engineering
+                      </option>
+                      <option class="op" value="Civil-Engineering">3.Civil Engineering</option>
+                      <option class="op" value="Computer-Engineering">4.Computer Engineering
+                      </option>
+                    <optgroup label="Courses of Pharmacy" class="opgroup">
+                      <option class="op" value="B-pharmacy">1.B pharmacy</option>
+                      <option class="op" value="D-pharmacy">2.D pharmacy</option>
+                    </optgroup>
+                    <optgroup label="Other Institute" class="opgroup">
+                      <option class="op" value="MBA">1.MBA</option>
+                      <option class="op" value="MBA++">2.MBA++</option>
+                      <option class="op" value="MCA">3.MCA</option>
+                      
+                    </optgroup>
 
-                                </select>
-                            </th>
-                        </tr>
-                        <tr>
+                  </select>
+                </th>
+              </tr>
+              <tr>
 
-                            <th><select class="sel" name="gender">
-                                    <option value="nun">---select gender ---</option>
-                                    <option value="male">male</option>
-                                    <option value="female">female</option>
-                                    <option value="female">other</option>
-                                </select>
-                            </th>
-                            <!-- <th><input type="radio" name="gender">male &nbsp; &nbsp; &nbsp;<input type="radio" name="gender">
+                <th><select class="sel" name="gender">
+                    <option value="nun">---select gender ---</option>
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                    <option value="female">other</option>
+                  </select>
+                </th>
+                <!-- <th><input type="radio" name="gender">male &nbsp; &nbsp; &nbsp;<input type="radio" name="gender">
                     female</th> -->
-                        </tr>
+              </tr>
 
-                        <tr>
-                            <th><input type="submit" name="submit" value="submit" class="submit" title="submit">
-                            </th>
-                        </tr>
-                    </center>
-                </table>
-            </form>
+              <tr>
+                <th><input type="submit" name="submit" class="submit">
+                </th>
+              </tr>
+            </center>
+          </table>
+        </form>
+      </div>
+      <div class="dis-contener">
+        <!-- <h3 class="form-colname" style="color:black;">Welcome to Navsahyadri Group Of Institution</h3> -->
+        <img src="{% static 'col-logo copy.png' %}" alt="" class="college-logo-img">
+        <div width="100%" class="media-div">
+          <span><img src="{% static 'facebook1.png' %}" alt="" width="55px" class="s_logo"></span>
+          <span><img src="{% static 'instagram1.png' %}" alt="" width="45px" class="s_logo"></span>
+          <span><img src="{% static 'twitter.png' %}" alt="" width="35px" class="s_logo"></span>
+          <span><img src="{% static 'linkedin.png' %}" alt="" width="35px" class="s_logo"></span>
+          <span><img src="{% static 'yt_logo.jpg' %}" alt="" width="38px" style="border-radius: 50%;"
+              class="s_logo"></span>
         </div>
-        <div class="dis-contener">
-            <h3 class="form-colname">Welcome to Navsahyadri Group Of Institution</h3>
-            <img src="{% static 'col-logo.png' %}" alt="" class="college-logo-img">
-            <div width="100%" class="media-div">
-                <span><img src="{% static 'facebook1.png' %}" alt="" width="41px"></span>
-                <span><img src="{% static 'instagram1.png' %}" alt="" width="30px"></span>
-                <span><img src="{% static 'twitter.png' %}" alt="" width="25px"></span>
-                <span><img src="{% static 'linkedin.png' %}" alt="" width="25px"></span>
+      </div>
+    </div>
+  </div>
+  {% include 'card_slider.html' %}
+  <div class="div2-contener">
+
+    <h1 class="title2">
+      Programs</h1>
+
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'ENGINEERING')" id="defaultOpen">ENGINEERING</button>
+      <button class="tablinks" onclick="openCity(event, 'Polytechnic')">POLYTECHNIC</button>
+      <button class="tablinks" onclick="openCity(event, 'Pharmacy')">PHARMACY</button>
+      <button class="tablinks" onclick="openCity(event, 'MBA')">MBA</button>
+    </div>
+
+    <div id="ENGINEERING" class="tabcontent">
+      <!-- <span onclick="this.parentElement.style.display='none'" class="topright">&times</span> -->
+      <h3 style="margin: 5px;">ENGINEERING</h3>
+      <ul class="tablist">
+        <li class="tablistitem">
+          <div class="card">
+            <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4 class="course-title"><b>Machanical engineering</b></h4>
+              <p><a class="dep" href="{% url 'mechanical' %}"><button class="button button3">click here to
+                    view</button></a></p>
             </div>
-        </div>
+        </li>
+        <li class="tablistitem">
+          <div class="card">
+            <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4 class="course-title"><b>civil engineering</b></h4>
+              <p><a class="dep" href="{% url 'Civil' %}"><button class="button button3">click here to view</button></a>
+              </p>
+            </div>
+        </li>
+        <li class="tablistitem">
+          <div class="card">
+            <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4 class="course-title"><b>Electrical Engineering</b></h4>
+              <p><a class="dep" href="{% url 'Electrical' %}"><button class="button button3">click here to
+                    view</button></a></p>
+            </div>
+        </li>
+        <li class="tablistitem">
+          <div class="card">
+            <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4 class="course-title"><b>Electronics & Telecommunication</b></h4>
+              <p><a class="dep" href="{% url 'ENTC' %}"><button class="button button3">click here to view</button></a>
+              </p>
+            </div>
+        </li>
+        <li class="tablistitem">
+          <div class="card">
+            <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4 class="course-title"><b>Computer Engineering</b></h4>
+              <p><a class="dep" href="{% url 'CS' %}"><button class="button button3">click here to view</button></a></p>
+            </div>
+        </li>
+        <li class="tablistitem">
+          <div class="card">
+            <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4 class="course-title"><b>AIML engineering</b></h4>
+              <p><a class="dep" href="{% url 'AIML' %}"><button class="button button3">click here to view</button></a>
+              </p>
+            </div>
+        </li>
+
+      </ul>
     </div>
-</div>
-<div class="box">
-    <div class="subbox c1">
-        <h1 class="subtext">Polytechnic</h1><br /><br />
-        <h2 class="subtext">200+</h2>
+
+    <div id="Polytechnic" class="tabcontent">
+      <!-- <span onclick="this.parentElement.style.display='none'" class="topright">&times</span> -->
+      <h3>POLYTECHNIC</h3>
+      <ul class="tablist">
+      
+          <li class="tablistitem">
+            <div class="card">
+              <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+              <div class="container">
+                <h4 class="course-title"><b>Machanical engineering</b></h4>
+                <p><button class="button button3">click here to view</button></p>
+              </div>
+          </li>
+          <li class="tablistitem">
+            <div class="card">
+              <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+              <div class="container">
+                <h4 class="course-title"><b>civil engineering</b></h4>
+                <p><button class="button button3">click here to view</button></p>
+              </div>
+          </li>
+          <li class="tablistitem">
+            <div class="card">
+              <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+              <div class="container">
+                <h4 class="course-title"><b>Electronics & Telecommunication</b></h4>
+                <p><button class="button button3">click here to view</button></p>
+              </div>
+          </li>
+          <li class="tablistitem">
+            <div class="card">
+              <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+              <div class="container">
+                <h4 class="course-title"><b>Computer Engineering</b></h4>
+                <p><button class="button button3">click here to view</button></p>
+              </div>
+          </li>
+        </ul>
     </div>
-    <div class="subbox c2">
+
+    <div id="Pharmacy" class="tabcontent">
+      <!-- <span onclick="this.parentElement.style.display='none'" class="topright">&times</span> -->
+      <h3>PHARMACY</h3>
+      <ul class="tablist">
+        <li class="tablistitem">
+          <div class="card">
+            <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4 class="course-title"><b>D-Pharmacy</b></h4>
+              <p><a href="{% url 'b_pharm' %}"><button class="button button3">click here to view</button></a></p>
+            </div>
+        </li>
+        <li class="tablistitem">
+          <div class="card">
+            <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4 class="course-title"><b>B-Pharmacy</b></h4>
+              <p><a href="{% url 'b_pharm'%}"><button class="button button3">click here to view</button></a></p>
+            </div>
+        </li>
+        <li class="tablistitem">
+          <div class="card">
+            <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4 class="course-title"><b>M-Pharmacy</b></h4>
+              <p><a href="{% url 'm_pharm' %}"><button class="button button3">click here to view</button></a></p>
+            </div>
+        </li>
+      </ul>
+    </div>
+    <div id="MBA" class="tabcontent">
+      <!-- <span onclick="this.parentElement.style.display='none'" class="topright">&times</span> -->
+      <h3>MBA</h3>
+      <ul class="tablist">
+        <li class="tablistitem">
+          <div class="card">
+            <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4 class="course-title"><b>MBA</b></h4>
+              <p><a href=""><button class="button button3">click here to view</button></a></p>
+            </div>
+        </li>
+        <li class="tablistitem">
+          <div class="card">
+            <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4 class="course-title"><b>MBA++</b></h4>
+              <p><a href=""><button class="button button3">click here to view</button></a></p>
+            </div>
+        </li>
+        <li class="tablistitem">
+          <div class="card">
+            <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4 class="course-title"><b>MCA</b></h4>
+              <p><a href=""><button class="button button3">click here to view</button></a></p>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="box">
+
+    <a href="{% url 'engindex'%}">
+      <div class="subbox c2">
         <h1 class="subtext">Engineering</h1><br /><br />
         <h2 class="subtext">200+</h2>
-    </div>
-    <div class="subbox c3">
-        <h1 class="subtext">MBA</h1><br /><br />
+      </div>
+    </a>
+    <a href="{% url 'polyindex'%}">
+      <div class="subbox c1">
+        <h1 class="subtext">Polytechnic</h1><br /><br />
         <h2 class="subtext">200+</h2>
-    </div>
-    <div class="subbox c4">
+      </div>
+    </a>
+    <a href="{% url 'pharmindex' %}">
+      <div class="subbox c4">
         <h1 class="subtext">Pharmacy</h1><br /><br />
         <h2 class="subtext">200+</h2>
+      </div>
+    </a>
+    <a href="{% url 'mbaindex' %}">
+      <div class="subbox c3">
+        <h1 class="subtext">MBA</h1><br /><br />
+        <h2 class="subtext">200+</h2>
+      </div>
+    </a>
+
+  </div>
+  
+  <div class="counter_div">
+    <div class="counter_eliment">
+      <div id="counter1">
+        <!-- counts -->
+      </div>
+      <h3 style="font-size: 20px;">Learners & counting</h3>
+      <script>
+        let counts1 = setInterval(updated);
+        let upto1 = 9500;
+        function updated() {
+          let count = document.getElementById("counter1");
+          count.innerHTML = ++upto1;
+          if (upto1 === 10000) {
+            clearInterval(counts1);
+          }
+        }
+      </script>
     </div>
+    <div class="counter_eliment">
+      <div id="counter2">
+        <!-- counts -->
+      </div>
+      <h3 style="font-size: 20px;">Alumns</h3>
+      <script>
+        let counts2 = setInterval(updated);
+        let upto2 = 14500;
+        function updated() {
+          let count = document.getElementById("counter2");
+          count.innerHTML = ++upto2;
+          if (upto2 === 15000) {
+            clearInterval(counts2);
+          }
+        }
+      </script>
+    </div>
+    <div class="counter_eliment">
+      <div id="counter3">
+        <!-- counts -->
+      </div>
+      <h3 style="font-size: 20px;">Placement</h3>
+
+      <script>
+        let counts3 = setInterval(updated);
+        let upto3 = 6500;
+        function updated() {
+          let count = document.getElementById("counter3");
+          count.innerHTML = ++upto3;
+          if (upto3 === 7000) {
+            clearInterval(counts3);
+          }
+        }
+      </script>
+    </div>
+    <div class="counter_eliment">
+      <div id="counter4">
+        <!-- counts -->
+      </div>
+      <h3 style="font-size: 20px;">Recruiters</h3>
+
+      <script>
+        let counts4 = setInterval(updated);
+        let upto4 = 400;
+        function updated() {
+          let count = document.getElementById("counter4");
+          count.innerHTML = ++upto4;
+          if (upto4 === 500) {
+            clearInterval(counts4);
+          }
+        }
+      </script>
+    </div>
+
+  </div>
+  <center>
+    <h1 class="title2">
+      OUR key RECRUITERS</h1>
+  </center>
+  <div class="com">
+
+    <span class="eliment"><img src="{% static 'renault.webp'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'bhel.jpeg'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'john-deere.webp'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'kirloskar.jpg'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'bharat petroleum.png'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'wipro applying thought.jpg'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'maruti suzuki.png'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'reliance communications.png'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'STC.jpg'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'amazon.webp'%}" alt="" width="100%"></span>
+    <!-- <span class="eliment"><img src="{% static 'google.png'%}" alt="" width="100%"></span> -->
+    <span class="eliment"><img src="{% static 'coco cola.jpg'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'hp.jpeg'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'tata.png'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'samsung.webp'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'oracle.png'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'microsoft.png'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'lenevo.png'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'nestle.webp'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'wolkswagen.webp'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'Bajaj.png'%}" alt="" width="100%"></span>
+    <!-- <span class="eliment"><img src="{% static 'apple.png'%}" alt="" width="100%"></span> -->
+    <span class="eliment"><img src="{% static 'LG.jpg'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'airtel.jpg'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'mahindra.jpg'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'toyota.jpg'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'ibm.png'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'dell.png'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'mg.jpg'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'hdfc.png'%}" alt="" width="100%"></span>
+    <span class="eliment"><img src="{% static 'hero.jpg'%}" alt="" width="100%"></span>
+  </div>
+  <div class="overlayf"></div>
+  <div class="popup_div">
+    <button onclick="showModel()"><i class="fa fa-close" style="font-size:24px; color:rgb(0, 0, 0);"></i></button>
+    <form id="task-form" method="post">
+      {% csrf_token %}
+
+      <input type="text" name="name" placeholder="Enter your Full name" required>
+      <input type="number" maxlength="10" required placeholder="Enter Your Contact Number">
+      <select class="sel" name="Department" required>
+        <option>---select Department---</option>
+        <optgroup label="Engineering" class="opgroup">
+          <option class="op" value="Civil-Engineering">1.civil Engineering</option>
+          <option class="op" value="Computer-Engineering">2.Computer Engineering
+          </option>
+          <option class="op" value="Mechanical-Engineering">3.Mechanical Engineering
+          </option>
+          <option class="op" value="E&TC">
+            4.Electronics and
+            Telicomunication(E&TC)</option>
+          <option class="op" value="AI & ML Engineering">5.AI & ML Engineering
+          </option>
+        </optgroup>
+        <optgroup label="barnches of polytechnic" class="opgroup">
+          <option class="op" value="Machanical-Engineering">1.Machanical Engineering
+          </option>
+          <option class="op" value="Electrical-Engineering">2.Electrical Engineering
+          </option>
+          <option class="op" value="Civil-Engineering">3.Civil Engineering</option>
+          <option class="op" value="Computer-Engineering">4.Computer Engineering
+          </option>
+        <optgroup label="Courses of Pharmacy" class="opgroup">
+          <option class="op" value="B-pharmacy">1.B pharmacy</option>
+          <option class="op" value="D-pharmacy">2.D pharmacy</option>
+        </optgroup>
+        <optgroup label="Other Institute" class="opgroup">
+          <option class="op" value="MBA">1.MBA</option>
+
+        </optgroup>
+
+      </select>
+      <input type="submit" name="submit">
+    </form>
+  </div>
+  {%include "footer.html"%}
 </div>
-{%include "footer.html"%}
 </body>
 
-
-
-
 </html>
+<script>
+  function showModel() {
+    //document.querySelector('.overlay2').classList.add('showoverlay2');
+    document.querySelector('.popup_div').classList.add('popup_div2');
+    document.querySelector('.overlayf').classList.add('overlayf2');
+  }
+</script>

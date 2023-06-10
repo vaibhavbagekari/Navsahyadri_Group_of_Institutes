@@ -1,0 +1,156 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library</title>
+    <style>
+        .divh1 {
+            background-image: url("{% static 'pharm_background.png' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100px;
+            padding: 50px;
+            text-align: center;
+            font-size: 40px;
+            color: rgb(255, 0, 0);
+            text-shadow: 2px 2px 2px black;
+        }
+        .meimg{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .main_div {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            margin: 50px 80px 80px 80px;
+            padding: 10px;
+            /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+        }
+
+        .tabl {
+            margin: auto;
+            border-collapse: collapse;
+            width: 80%;
+            height: max-content;
+            line-height: 25px;
+        }
+
+        .para {
+            margin: 20px;
+            padding: 30px;
+            text-align: justify;
+            background-color: white;
+            font-size: 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
+{% include 'header.html' %}
+{% include 'pharmnav.html' %}
+<div style="background-color: rgba(109, 109, 109, 0.67);">
+    <div class="divh1">
+        <h2 class="meh2">Library</h2><br>
+    </div>
+    <div width="100%" class="meimg">
+        <img width="50%" src="{% static 'pharm_library.jpg'%}">
+        <img width="50%" src="{% static 'pharm_library2.jpg'%}">
+    </div>
+    <div class="main_div">
+        <div class="para">
+            <b style="color: rgb(1, 33, 107); font-size: 20px;">Library</b>
+            <p>"Shaping the vision of the students" The library & information Center has one of the finest collections.
+                Situated in an easily accessible place, it covers 150 sq. ft. and occupies two sections of the
+                references/lending section.</p>
+            <br><br>
+            <ul>
+                <li><b> Mission</b>
+
+                    Initiate, enhance and improve the library service. To support the instructional information research
+                    and curriculum needs to the staff through effective and up to date collection development. To save
+                    the time of the user by making easy reference service.
+                </li>
+                <br><br>
+                <li> <b>Collection</b>
+
+                    The Library has acquired a valuable collection of more than 6027 books. The Library has a good
+                    collection of Journals i.e. current as well as back volumes. The current journal subscription is
+                    about 20 including foreign and Indian Journals along with 115 e-journals.</li>
+                <br><br>
+                <li>
+                    <b> Library Details</b>
+                    <br><br>
+                    <table border="1" class="tabl">
+                        <tr>
+                            <td>Total area</td>
+                            <td>150 Sq. Mt.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>No. of Books Titles</td>
+                            <td>D. Pharm - 110 B. Pharm - 358 Total= 468 </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>No. of Books Volumes </td>
+                            <td>D. Pharm - 1125 B. Pharm - 2917 Total=4042 </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>No. of Journals Printed</td>
+                            <td>National =03 International = 12 Total = 15 </td>
+                            <td>No. of e -Journals Total = 05</td>
+                        </tr>
+                    </table>
+
+                </li>
+                <br><br>
+                <li> <b>Facility and Service</b>
+
+                    The library can accommodate about 75 users at a time. Separate sections are provided for diploma &
+                    degree in pharmacy students.</li>
+                <li>
+                    <br><br>
+                    <b> Home Issue</b>
+
+                    The students get 02 (Two Book) book for a period of 07 Days.
+                </li>
+                <br><br>
+                <li>
+                    <b>Internet Facility</b>
+
+                    The computerized information networking system has been a powerful tool for experimental and
+                    clinical research. Library has a server and 5 nodes available in LAN. Three (3) PC's are exclusively
+                    for Internet and CDROM reference. A good collection of audiovisual aids, specialized CD's like
+                    International Pharmaceutical Abstract up to 2000 and Medline and Drug Information full text are
+                    available for the benefit of student's staff and industry.
+                </li>
+                <br><br>
+                <li>
+                    <b>Newspaper Clipping</b>
+
+                    The latest new in Pharmacy field will be Xeroxed and displayed on the notice board for update.
+                </li>
+                <br><br>
+                <li>
+                    <b>Reprographic facility</b>
+
+                    Reprographic machine are in library for the users benefit.
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+{% include 'footer.html' %}

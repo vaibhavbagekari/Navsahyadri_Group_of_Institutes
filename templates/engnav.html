@@ -14,6 +14,19 @@
         </div>
     </button>
 </div>
+<ul class="container-subnav">
+
+    <li class="subnav"><a href="{% url 'aicte' %}" style="color: rgb(255, 60, 60);">AICTE approvals</a></li>
+    <a href="{% url 'mandatory_disclosure' %}" style="color: rgb(255, 60, 60);">
+        <li class="subnav">Mandatory Disclosure</li>
+    </a>
+    <a href="{% url 'sppu_approvals'%}" style="color: rgb(255, 60, 60);">
+        <li class="subnav">SPPU Affiliation</li>
+    </a>
+    <li class="subnav"><a href="{% url 'committees' %}" style="color: rgb(255, 60, 60);">
+            Committees</a></li>
+
+</ul>
 <div class="navigation1" id="nav1">
     <nav class="nav">
         <ul class="list">
@@ -21,8 +34,8 @@
                     class="{% if request.path == '/engindex/' %} active {% endif %}" href="{% url 'engindex' %}"><i
                         class="fa fa-home" style="font-size:20px"></i>&nbsp;Home</a>
             </li>
-            <li class="nevlist"> <i class="fa fa-book icon" ></i>&nbsp;
-                Department 
+            <li class="nevlist"> 
+                Department <b style="font-weight: 700;">&#8628;</b>
                 <ul class="submenu">
                     <a class="dep"
                             href="{% url 'mechanical' %}"><li class="submenuitem {% if request.path == '/mechanical/' %} active {% endif %}">Mechanical Engineering</li></a>
@@ -36,11 +49,13 @@
                             title="computer science/Engineering">C.S.</abbr></li></a>
                             <a class="dep" href="{% url 'AIML' %}"><li class="submenuitem {% if request.path == '/AIML/' %} active {% endif %}"><abbr
                             title="Artificial Intelligence and Machine Learning">AIML</abbr></li></a>
+                            <a class="dep" href="{% url 'eng_fe'%}"><li class="submenuitem {% if request.path == '/eng_fe/' %} active {% endif %}"><abbr
+                                title="Artificial Intelligence and Machine Learning">FE</abbr></li></a>
                 </ul>
             </li>
-            <li class="nevlist"><i class="fa fa-calendar icon" ></i>&nbsp;
+            <li class="nevlist">
                 Academic
-                calender
+                calender <b style="font-weight: 700;">&#8628;</b>
                 <ul class="submenu">
 
                     <li class="submenuitem">Mechanical Engineering</li>
@@ -54,15 +69,13 @@
             </li>
 
             <li class="nevlist {% if request.path == '/elibrary/' %} active {% endif %}"><a class="{% if request.path == '/elibrary/' %} active {% endif %}"
-                    href="{% url 'elibrary' %}"><i class="fa fa-book icon"></i> &nbsp;E-library</a>
+                    href="{% url 'elibrary' %}">E-library</a>
             </li>
             <li class="nevlist {% if request.path == '/admission/' %} active {% endif %}"><a
-                    href="{% url 'admission' %}">&nbsp;<i class="fa fa-info icon"
-                        > </i>&nbsp;Admission info.</a>
+                    href="{% url 'admission' %}">&nbsp;Admission info.</a>
             </li>
             <li class="nevlist {% if request.path == '/englaboratery/' %} active {% endif %}" style="color: rgb(0, 0, 0);"> <a
-                    ><i class="fa fa-address-card icon"
-                        ></i>&nbsp; laboratery</a>
+                    > laboratery <b style="font-weight: 700;">&#8628;</b></a>
                         <ul class="submenu">
 
                             <a href="{% url 'eng_lab_mechanical' %}"><li class="submenuitem">Mechanical Engineering</li></a>
@@ -75,26 +88,23 @@
                         </ul>
             </li>
 
-            <li class="nevlist {% if request.path == '/tpo/' %} active {% endif %}"> <a href="{% url 'tpo' %}"><i
-                        class="fa fa-line-chart icon" ></i>&nbsp; TPO</a>
+            <li class="nevlist {% if request.path == '/tpo/' %} active {% endif %}"> <a href="{% url 'tpo' %}">&nbsp; TPO</a>
             </li>
             <li class="nevlist {% if request.path == '/Activity/' %} active {% endif %}"><a
-                    href="{% url 'Activity' %}"><i class="fa fa-child icon"
-                        ></i>&nbsp; Course Outcome</a>
+                    href="{% url 'Activity' %}">Course Outcome <b style="font-weight: 700;">&#8628;</b></a>
                         <ul class="submenu">
 
                             <li class="submenuitem">Mechanical Engineering</li>
-                            <a href="{% static 'CIVIL_corse_outcome.pdf' %}"> <li class="submenuitem">Civil Engineering</li></a>
-                            <li class="submenuitem">Electrical Engineering</li>
-                            <li class="submenuitem"><abbr title="Electronics & Telicommunication">E&TC</abbr></li>
-                            <a href="{% static 'computer_Course_Outcomes.pdf' %}"><li class="submenuitem"><abbr title="computer science/Engineering">C.S.</abbr></li></a>
+                            <a href="{% static 'CIVIL_corse_outcome.pdf' %}" target="_blank"> <li class="submenuitem">Civil Engineering</li></a>
+                            <a href="{% static 'Electrical_COURSE_OUTCOMES.pdf' %}" target="_blank"><li class="submenuitem">Electrical Engineering</li></a>
+                            <a href="{% static 'ENTC_Cource_outcome.pdf' %}" target="_blank"><li class="submenuitem"><abbr title="Electronics & Telicommunication">E&TC</abbr></li></a>
+                            <a href="{% static 'computer_Course_Outcomes.pdf' %}" target="_blank"><li class="submenuitem"><abbr title="computer science/Engineering">C.S.</abbr></li></a>
                             <li class="submenuitem"><abbr title="Artificial Intelligence and Machine Learning">AIML</abbr>
                             </li>
                         </ul>
             </li>
             <li class="nevlist "><a href="{% url 'nss' %}"
-                    class="link {% if request.path == '/nss/' %} active {% endif %}"> <i class="icon fa fa-soccer-ball-o"
-                        ></i>
+                    class="link {% if request.path == '/nss/' %} active {% endif %}"> 
                     &nbsp; NSS/Sports</a></li>
         </ul>
     </nav>

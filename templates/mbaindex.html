@@ -1,15 +1,257 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MBA index</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navsahyadri Education Society's</title>
+
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'header.css' %}"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="header.css"> -->
+  <style>
+    .title_div {
+      width: 100%;
+      height: 350px;
+      background-image: url("{% static 'college_campus.jpg'%}");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .principal_container {
+      width: 100%;
+      height: max-content;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1em;
+    }
+
+    .pro_title {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      color: rgb(255, 255, 255);
+      text-shadow: 5px 5px 6px black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(rgba(43, 67, 247, 0.45), rgba(255, 255, 255, 0.513));
+    }
+    .principal_container{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 20px auto 20px auto;
+    }
+    .p_img_container {
+      width: 300px;
+
+    }
+
+    .p_text_container {
+      width: 60%;
+    }
+    .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.sampale_div{
+  background-image: url("{% static 'mba_background_img.jpg' %}");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 10px;
+}
+.counter_div{
+    width: 100%;
+    background-image: url("{% static 'counter_background.jpg' %}");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 300px;
+
+  }
+  .counter_eliment{
+    width: 220px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+  }
+ 
+  </style>
 </head>
-<body>
-    {% include 'header.html' %}
-    {% include 'mbanav.html' %}
-  <h1>MBA</h1>
+{% include "header.html" %}
+
+{% include 'mbanav.html'%}
+
+<div class="title_div" align="center">
+ 
+  <div class="pro_title" >
+    
+    <h1>Navsahyadri Education Society's College of MBA</h1>
+  </div>
+  
+</div>
+<br><br>
+<h1>Principal's Desk</h1>
+<div class="principal_container">
+
+  <div class="p_img_container">
+    <img src="{% static 'profile1.png' %}" alt="" width="100%">
+  </div>
+  <div class="p_text_container">
+    <h1>Name of Principal</h1>
+    <p>
+
+      Our aims to prepare students for tomorrow, equipping them today with the right knowledge, skills and attitude that
+      will help them be effective in any venture they choose, nurturing and developing them to become good individuals
+      who are sensitive to the society around them.
+      <br>
+      Learning and teaching in the management school covers all the aspects of management. There are experienced faculty
+      members and relevant pedagogy is followed. There is lot of emphasis on learning by doing.
+      <br><br>
+      Our aims to prepare students for tomorrow, equipping them today with the right knowledge, skills and attitude that
+      will help them be effective in any venture they choose, nurturing and developing them to become good individuals
+      who are sensitive to the society around them.
+      <br>
+      Learning and teaching in the management school covers all the aspects of management. There are experienced faculty
+      members and relevant pedagogy is followed. There is lot of emphasis on learning by doing.
+    </p>
+    </p>
+  </div>
+  
+</div>
+<div class="sampale_div">
+  <p style="text-align: center; color: white; padding: 50px; font-size: 15px;">
+    
+<b style="font-size: 30px;"> Corporate Interface @ NGI, Pune</b>
+<br>
+One of the fastest emerging centers of excellence in research and academics across the globe, NGI Pune has been pushing the bar higher for others since some time now.
+
+  </p>
+</div>
+
+<h1> Courses We Offered </h1>
+  <div class="course_container">
+    <ul class="tablist">
+      
+      <li class="tablistitem">
+        <div class="card">
+          <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4 class="course-title"><b>MBA</b></h4>
+            <p><a class="dep" href=""><button class="button button3">click here to
+                  view</button></a></p>
+          </div>
+      </li>
+     
+      <li class="tablistitem">
+        <div class="card">
+          <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4 class="course-title"><b>MBA++</b></h4>
+            <p><a class="dep" href=""><button class="button button3">click here to view</button></a></p>
+          </div>
+      </li>
+      <li class="tablistitem">
+        <div class="card">
+          <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4 class="course-title"><b>MCA</b></h4>
+            <p><a class="dep" href=""><button class="button button3">click here to view</button></a></p>
+          </div>
+      </li>
+      
+
+    </ul>
+  </div>
+  <div class="counter_div">
+  <div class="counter_eliment">
+    <div id="counter1">
+      <!-- counts -->
+  </div>
+  <h3 style="font-size: 20px;">Learners & counting</h3>
+  <script>
+      let counts1 = setInterval(updated);
+      let upto1 = 9500;
+      function updated() {
+          let count = document.getElementById("counter1");
+          count.innerHTML = ++upto1;
+          if (upto1 === 10000) {
+              clearInterval(counts1);
+          }
+      }
+  </script>
+  </div>
+  <div class="counter_eliment">  <div id="counter2">
+    <!-- counts -->
+</div>
+<h3 style="font-size: 20px;">Alumns</h3>
+<script>
+    let counts2 = setInterval(updated);
+    let upto2 = 14500;
+    function updated() {
+        let count = document.getElementById("counter2");
+        count.innerHTML = ++upto2;
+        if (upto2 === 15000) {
+            clearInterval(counts2);
+        }
+    }
+</script></div>
+  <div class="counter_eliment">
+    <div id="counter3">
+      <!-- counts -->
+  </div>
+  <h3 style="font-size: 20px;">Placement</h3>
+
+  <script>
+      let counts3 = setInterval(updated);
+      let upto3 = 6500;
+      function updated() {
+          let count = document.getElementById("counter3");
+          count.innerHTML = ++upto3;
+          if (upto3 === 7000) {
+              clearInterval(counts3);
+          }
+      }
+  </script>
+  </div>
+  <div class="counter_eliment">
+    <div id="counter4">
+      <!-- counts -->
+  </div>
+  <h3 style="font-size: 20px;">Recruiters</h3>
+
+  <script>
+      let counts4 = setInterval(updated);
+      let upto4 = 400;
+      function updated() {
+          let count = document.getElementById("counter4");
+          count.innerHTML = ++upto4;
+          if (upto4 === 500) {
+              clearInterval(counts4);
+          }
+      }
+  </script>
+  </div>
+ 
+</div>
 {% include 'footer.html' %}
-</body>
-</html>

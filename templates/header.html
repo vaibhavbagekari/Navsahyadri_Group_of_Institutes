@@ -1,6 +1,11 @@
 {% load static %}
+<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <!-- <link rel="stylesheet" type="text/css" href="{% static 'header_copy.css' %}"> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 <style>
     * {
@@ -51,7 +56,8 @@
         color: black;
         /* font-size: 20px; */
         /* margin-top: -10px; */
-        transition-duration: 0.2s;
+        transition-duration: 0.6s;
+
 
 
     }
@@ -62,14 +68,15 @@
 
     .nevlist:hover .submenu {
         display: block;
+        transition-duration: .5s;
     }
 
     .nevlist {
         float: left;
         /* padding: 5px; */
-        list-style: none;
-
-        padding: 10px;
+        
+        z-index: 1;
+        padding: 8px 0px 8px 0px ;
         cursor: pointer;
         height: 100%;
         display: block;
@@ -79,8 +86,9 @@
         text-transform: uppercase;
         font-family: 'Raleway', sans-serif;
         font-weight: 700;
-        font-size: .9rem;
+        font-size: .8rem;
         border-right: 10px;
+        transition-duration: .4s;
     }
 
     .snav {
@@ -140,10 +148,11 @@
         /* background-color: rgb(247, 68, 68); */
         /* padding: 5px; */
         height: auto;
+        z-index: 0.8999;
 
         background-color: rgb(250, 37, 37);
         margin-top: 10px;
-        box-shadow: 0px 0px 6px rgb(30, 29, 29);
+        /* box-shadow: 0px 0px 6px rgb(30, 29, 29); */
         /* margin-top: 43px; */
         /* transition-duration: 1s; */
     }
@@ -163,6 +172,7 @@
         left: 0px;
         /* border-radius: 10px; */
         top: 100%;
+        
 
         display: none;
         position: absolute;
@@ -178,6 +188,7 @@
         padding: 2px;
         list-style: none;
         /* font-size: smaller; */
+        
 
     }
 
@@ -321,6 +332,7 @@
         position: fixed;
     }
 
+
     .showloginform3 {
         top: 50%;
         z-index: 1;
@@ -393,24 +405,22 @@
         display: flex;
         flex-direction: row;
         gap: 2px;
-        justify-content: space-around;
+        align-items: space-around;
         margin-top: 5px;
         height: max-content;
         /* padding: 10px; */
         width: 100%;
         flex-wrap: wrap;
         background-color: rgba(26, 26, 28, 0.889);
-        background-repeat: no-repeat;
-        background-size: cover;
         color: rgb(169, 169, 169);
-        font-size: 20px;
+        font-size: 18px;
         font-family: 'Raleway', sans-serif;
     }
 
     .fdiv1 {
         border-right: 2px dotted rgb(169, 169, 169);
         margin: 50px auto 50px auto;
-        width: 400px;
+        width: 350px;
     }
 
     .fdiv1 ul li {
@@ -446,12 +456,14 @@
     
 
     .active {
-        background-color: rgb(255, 184, 184);
+        background-color: rgb(243, 243, 243);
         color: rgb(0, 0, 0);
-        /* border-radius: 5px; */
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
         padding: 3px;
         height: 100%;
-        font-weight: 700;
+        color: #fd1100;
+        /* font-weight: 700; */
         /* margin-top: -10px; */
         /* font-size: 18px; */
         /* transform: translate(1.1); */
@@ -615,11 +627,11 @@
     .form-contaner {
         width: 90vw;
         height: 80%;
-        box-shadow: 0px 0px 30px rgb(22, 239, 247);
+        box-shadow: 4px 4px 9px rgb(244, 104, 104);
         border: 1px solid black;
         margin: auto;
         display: flex;
-        border-radius: 25px;
+        /* border-radius: 25px; */
         overflow: hidden;
         align-items: flex-start;
         justify-content: center;
@@ -629,7 +641,7 @@
     .form-colname {
         display: flex;
         color: rgb(36, 4, 180);
-        text-shadow: 1px 2px 5px rgb(75, 40, 228);
+        /* text-shadow: 1px 2px 5px rgb(75, 40, 228); */
         justify-content: center;
         font-size: 30px;
         margin-top: 70px;
@@ -666,11 +678,12 @@
         /* float: right; */
         width: 45vw;
 
-        border: 1px solid red;
+        /* border: 1px solid red; */
         display: flex;
         align-items: center;
         flex-direction: column;
-        background-image: linear-gradient(rgb(78, 227, 247), rgb(239, 20, 177));
+        /* background-image: linear-gradient(rgb(78, 227, 247), rgb(255, 255, 255)); */
+        background-image: radial-gradient(white,rgb(252, 92, 92));
         height: 100%;
 
     }
@@ -679,25 +692,27 @@
         background-color: transparent;
         width: 80%;
         /* border: none; */
+        padding: 10px;
         height: 30px;
-        box-shadow: 0px 0px 9px rgba(243, 75, 229, 0.816);
-        border-radius: 10px;
-        border-bottom: 2px solid black;
+        border: 1px solid rgb(251, 21, 21);
+        /* box-shadow: 0px 0px 9px rgba(243, 75, 229, 0.816); */
+        /* border-radius: 10px; */
+        /* border-bottom: 2px solid black; */
     }
 
     .submit {
-        width: 50%;
+        width: 70%;
         height: 1.6rem;
         font-size: 1rem;
-        background-color: rgb(251, 123, 239);
+        background-color: rgb(252, 90, 90);
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.558);
-        border-radius: 10px;
+        /* border-radius: 10px; */
         transition-duration: .7s;
         cursor: pointer;
     }
 
     .submit:hover {
-        transform: scale(1.1);
+        transform: scale(1.04);
     }
 
     .table2 input {
@@ -718,16 +733,17 @@
         width: 80%;
         background-color: transparent;
         border: none;
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid rgb(255, 91, 91);
 
     }
+   
 
     .box {
         width: 100%;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        background: linear-gradient(rgba(220, 17, 246, 0.516), rgba(31, 141, 238, 0.671));
+        /* background: linear-gradient(rgba(251, 140, 140, 0.516), rgba(31, 141, 238, 0.671)); */
     }
 
     .subbox {
@@ -801,6 +817,9 @@
 
     .submenuitem {
         position: relative;
+        padding: 7px;
+        transition-duration: 1s;
+        
     }
 
     .submenu1 {
@@ -822,7 +841,7 @@
         border-bottom: 1px solid rgb(54, 171, 0);
         /* border-radius: 10px; */
         margin: 6px;
-        padding: 2px;
+        padding: 5px;
         list-style: none;
         /* font-size: smaller; */
 
@@ -831,10 +850,33 @@
     .submenuitem1:hover {
         /* background-color: rgba(253, 145, 145, 0.841); */
         color: black;
+        transition-duration: 1s;
     }
 
     .submenuitem:hover .submenu1 {
         display: block;
+    }
+    .marquee1{
+        height: 330px;
+        margin: 20px;
+        
+    }
+    .mar-container{
+        height: 100%;
+        display: flex;
+        /* flex-wrap: nowrap; */
+        flex-direction: row;
+        gap: 1em;
+        align-content: space-around;
+        
+
+    }
+    .marquee1_container{
+        /* border: 1px solid red; */
+       max-width: 300px;
+        max-height: 90%;
+        margin: 10px;
+
     }
 
     @media screen and (max-width:600px) {
@@ -862,6 +904,9 @@
 
         .slidermain .colimg {
             height: 60vh;
+        }
+        .submenu1{
+            width: 200px;
         }
 
         @keyframes animation2 {
@@ -937,16 +982,16 @@
             right: -100%;
             top: 20px;
             z-index: 1;
-            height: max-content;
+            height: 100vh;
             /* display: none; */
             transition: 1s;
             /* background-color: rgba(0, 0, 0, 0.011); */
         }
 
         .submenu {
-            width: 200px;
+            width: 150px;
             top: 0px;
-            left: -70%;
+            left: -50%;
         }
 
         .navigation2 {
@@ -1007,19 +1052,197 @@
         .menu_top{
             display: block;
         }
+        .table3{
+            width: 100%;
+        }
 
     }
     
     .location {
         text-decoration: none;
     }
+    
+    .title {
+      background-color: rgba(0, 88, 966, 0.5);
+      padding: 5px;
+      margin: 5px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 5px 4px 8px black;
+    }
+    .course-title{
+      /* font-size: 20px; */
+      font-family:'Raleway', sans-serif;
+    }
+    .tab {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 10px;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #fa7777;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #fb9595;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ffffff;
+      border-bottom-left-radius: -10px;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 10px 18px;
+      border: 1px solid #f7a3a3;
+      border-top: none;
+    }
+
+    /* Style the close button */
+    .topright {
+      float: right;
+      cursor: pointer;
+      font-size: 28px;
+    }
+
+    .topright:hover {
+      color: red;
+    }
+
+    .tablist {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      flex-direction: row;
+      gap: 2em;
+
+    }
+
+
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      width: 220px;
+      height: 300px;
+      transition-duration: .5s;
+      overflow: hidden;
+      border-radius: 10px;
+
+    }
+
+    .card img {
+      height: 190px;
+    }
+
+    .card:hover {
+      box-shadow: 5px 8px 16px 0 rgba(0, 0, 0, 0.2);
+      transform: scale(1.03);
+    }
+
+    .container {
+      padding: 2px 16px;
+    }
+
+    .button {
+      background-color: #4CAF50;
+      
+      
+      border: none;
+      /* color: white; */
+      padding: .7rem 1.5rem;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      color: #fd1100;
+    }
+    .button:hover{
+      background-color: #f66a60;
+      color: azure;
+    }
+    .button3 {
+      background-color: white;
+      /* color: black; */
+      border: 2px solid #f44336;
+    }
+    .tablinks{
+      width: 220px;
+    }
+    .menu_top{
+        z-index: .9;
+    }
+    .marquee_div{
+       background-color: rgb(44, 1, 132);
+       height: 25px;
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    @media screen and (max-width:600px) {
+      .card {
+        width: 170px;
+        height: 300px;
+      }
+      .button{
+        padding: .2rem 1.0rem;
+      }
+      .marquee_div{
+        margin-top: 26px;
+      }
+    }
+   
 </style>
+<script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+  
 <header>
+    <div class="marquee_div">  <marquee behavior="scroll" direction="left"
+        onmouseover="this.stop();"
+        onmouseout="this.start();">Welcome to Navsahyadri Group Of Institution</marquee>
+</div>
     <center>
-        <a href="{% url 'home' %}"><img  style="margin-top: 30px;" class="responsiv_logo img1" src="{% static 'col-logo.png' %}" height="90px" width="100px"></img></a>
+        <a href="{% url 'home' %}"><img  style="margin-top: 30px;" class="responsiv_logo img1" src="{% static 'col-logo copy.png' %}" height="90px" width="100px"></img></a>
     </center>
     <div class="headerdiv">
-        <a href="{% url 'home' %}"><img class="headerdiv1" class="img1" align="left" src="{% static 'col-logo.png' %}" align="" height="90px"
+        <a href="{% url 'home' %}"><img class="headerdiv1" class="img1" align="left" src="{% static 'col-logo copy.png' %}" align="" height="90px"
             width="100px"></img></a>
         <img class="headerdiv1" align="right"
             src="https://i0.wp.com/sjbit.edu.in/wp-content/uploads/2021/07/NAAC-Logo-250x250-1.png?ssl=1" align="left"
@@ -1028,18 +1251,10 @@
         <center>
             <h3 class="college_name1" align="center">Approved by AICTE and PCI, New Delhi | <br> Recognized by Govt. of
                 Maharashtra and
-                DTE, Mumbai Affiliated to Savitribai Phule Pune University / MSBTE</h3>
+                DTE, Mumbai Affiliated to Savitribai Phule Pune University / MSBTE / BATU</h3>
 
         </center>
-        <ul class="container-subnav">
-
-            <li class="subnav"><a href="{% url 'aicte' %}" style="color: rgb(255, 60, 60);">AICTE approvals</a></li>
-            <li class="subnav">Mandatery Disclosure</li>
-            <li class="subnav">AICTE web portal feedback</li>
-            <li class="subnav"><a href="{% url 'ogc' %}" style="color: rgb(255, 60, 60);;">Grievance Redressal
-                    Community</a></li>
-
-        </ul>
+        
 
     </div>
     </div>

@@ -1,0 +1,70 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmaceutical Chemistry</title>
+    <style>
+        .divh1 {
+            background-image: url("{% static 'pharm_background.png' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100px;
+            padding: 50px;
+            text-align: center;
+            font-size: 40px;
+            color: rgb(255, 0, 0);
+            text-shadow: 2px 2px 2px black;
+        }
+
+        .main_div {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            margin: 50px 80px 80px 80px;
+            padding: 10px;
+            /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+        }
+        .para{
+            margin: 20px;
+            padding: 30px;
+            text-align: justify;
+            background-color: white;
+            font-size: 15px;
+            
+        }
+       
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
+{% include 'header.html' %}
+{% include 'pharmnav.html' %}
+<div style="background-color: rgba(109, 109, 109, 0.67);">
+<div class="divh1">
+    <h2 class="meh2">Pharmaceutical Chemistry</h2><br>
+</div>
+<div class="main_div">
+    <p class="para">
+        <b style="color: rgb(1, 33, 107); font-size: 20px;">Pharmaceutical Chemistry</b>
+        <br>
+        <br>
+        
+Pharmaceutical Chemistry is the study of the molecular and mechanistic aspects of pharmaceuticals. The discipline emphasizes the chemistry of drug design and development, drug action, drug transport, drug delivery, and targeting. The development of new pharmaceuticals is critically dependent on a molecular-level understanding of biological processes and mechanisms of drug action. Progress in the field now depends on the design and synthesis of new molecules using tools such as structure activity relationships, combinatorial chemistry, and computer-aided drug design. In recent years rational design of drugs tuned to specific target sites is becoming a reality due to concurrent advances in chemistry and biology, including elucidation of the human genome. Chemists continue to be at the forefront of drug design, synthesis, testing, and development. Pharmaceutical Chemistry will emphasize the molecular basis underlying the creation of new drugs and health applications of bioactive compounds.
+<br><br>
+Pharmaceutical chemistry is a discipline at the intersection of chemistry, especially synthetic organic chemistry, and pharmacology and various other biological specialties, where they are involved with design, chemical synthesis and development for market of pharmaceutical agents, or bio-active molecules (drugs). In particular, Pharmaceutical chemistry in its most common guide focusing on small organic molecules encompasses synthetic organic chemistry and aspects of natural products and computational chemistry in close combination with chemical biology, enzymology and structural biology, together aiming at the discovery and development of new therapeutic agents. Practically speaking, it involves chemical aspects of identification, and then systematic, thorough synthetic alteration of new chemical entities to make them suitable for therapeutic use. It includes synthetic and computational aspects of the study of existing drugs and agents in development in relation to their bioactivities (biological activities and properties), i.e., understanding their structure-activity relationships (SAR). Pharmaceutical chemistry is focused on quality aspects of medicines and aims to assure fitness for purpose of medicinal products.
+<br><br>
+
+Computer-assisted drug design (CADD), also called computer-assisted molecular design (CAMD), represents more recent applications of computers as tools in the drug design process. Quantitative structure-activity relationships (QSAR) represent an attempt to correlate structural or property descriptors of compounds with activities. These physicochemical descriptors, which include parameters to account for hydrophobicity, topology, electronic properties, and steric effects, are determined empirically or, more recently, by computational methods. Activities used in QSAR include chemical measurements and biological assays. QSAR currently are being applied in many disciplines, with many pertaining to drug design and environmental risk assessment.
+<br><br>
+
+    </p>
+</div>
+</div>
+{% include 'footer.html' %}
