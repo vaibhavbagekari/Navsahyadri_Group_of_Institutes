@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Framework</title>
+    <style>
+        .title_div {
+            width: 100%;
+            height: 250px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 2px 2px 2px red;
+            background-image: url("{% static 'MBA-image.jpg' %}");
+            background-position: top;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-repeat: no-repeat;
+        }
+
+        .container_main_div {
+            width: 80%;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .container_div_flex {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 2em;
+        }
+
+        .topic_title {
+            color: red;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 20px;
+        }
+        .activity_div{
+            width: 300px;
+            text-align: center;
+            margin: 10px;
+            background-color: rgba(184, 184, 184, 0.325);
+            padding: 10px;
+            transition-duration: 0.3s;
+        }
+        .activity_div:hover{
+            transform: scale(1.05);
+            box-shadow: 2px 2px 5px black;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'mbanav.html' %}
+    <div class="title_div">
+        <h1>TRAINING FRAMEWORK</h1>
+    </div>
+    <div class="container_main_div">
+        <h2 class="topic_title">Student Centric Pedagogies</h2>
+
+        <div class="container_div_flex">
+            <div class="tex_div">NGI is a firm believer and practitioner of Student Centric Learning methodologies and
+                styles when it comes to Instructional methods. The benefits which are observed by practicing
+                Student-centric methods are vast and long term when compared to Teacher centric methods. Few outcomes
+                and benefits are self-learning, critical thinking, self-actualization, improved quality of learning.
+                Students are more receptive during the sessions, knowledge is imparted effectively across a spectrum of
+                learners, and the development of higher cognitive skills in students to name a few.
+                <br><br>
+                Enlisted are few of the methodologies adapted to train students at NGI.
+                <br><br>
+                <b>
+                    <ul>
+                        <li>Discussion Based</li>
+                        <li>Case Based</li>
+                        <li>Collaborative</li>
+                        <li>Learning</li>
+                        <li>Presentations</li>
+                        <li>Peer Feedback</li>
+                        <li>Brain Storming</li>
+                        <li>Role Playing</li>
+                    </ul>
+                </b>
+            </div>
+            <img src="{% static 'training_img1.jpg'%}" alt="taining_img1" width="500px">
+        </div>
+        <h2 class="topic_title">Skill Based Certifications</h2>
+        <p>To meet the Industry demands for quality employment, NGI offers a variety of certification programmes to
+            students as per their specialization to enhance their technical and hard skills. This not only makes them
+            job-ready but also increases their knowledge and confidence which helps them to ace the interviews.
+
+            The certification programmes are delivered by Top and Reputed Experts and Training agencies for the
+            relevancy of content and practical application. Few of the Certificate programmes offered are as follows:
+        </p>
+        <div class="container_div">
+            <b> Digital Marketing</b>
+            <br><br>
+            In this, the student learns skills related to Website development with WordPress, Content Marketing, Social
+            Media Marketing, Search Engine Optimization, Email Marketing etc.
+            <br><br>
+            <b>SAP</b>
+            <br><br>
+            It is one of the eminent and largest ERP solution provider and almost 80% of Forbes companies prefer ERP by
+            SAP for their Marketing, Finance, HR and Operation functions.
+            <br><br>
+
+            <b>Six Sigma Green Belt</b>
+            <br><br>
+            The professional Six Sigma Green Belt training at NGI concentrates on all the 5 phases of productivity i.e.
+            Define, Measure, Analyse, Improve and Control. This certification trains a professional in handling projects
+            with a strategic approach and problem solving methods.
+            <br><br>
+
+            <b>Business Intelligence</b>
+            <br><br>
+            This refers to tools, technologies, applications and practices used to collect, integrate, analyze and
+            present an organization’s raw data in order to create insightful and actionable business information.
+            <br><br>
+
+            <b>MS Excel (Advanced)</b>
+            <br><br>
+            It is considered as one of the best spreadsheet tool which is used for calculation, graphical representation
+            of data, developing pivot charts, tables and much more.
+        </div>
+        <h2 class="topic_title">Placements Readiness</h2>
+        <p>A good and meaningful Placement is the desired outcome of any Management Programme and we at NGI don’t leave
+            any stone unturned when it comes to hitting the bull’s eye. Placement preparation is a long and continuous
+            process till finally the dream comes true for the students. Various elements of placement preparation are as
+            follows</p>
+        <div class="container_div_flex">
+            <div class="activity_div">
+                <img src="{% static 'check.png'%}" alt="check" width="55px">
+                <h2>CV Preparation</h2>
+                <p>Since every student is different and comes with different set of achievements, skills, internships,
+                    interests so we assist every student to align same in their CV which helps them during their
+                    interview process. </p>
+            </div>
+            <div class="activity_div">
+                <img src="{% static 'check.png'%}" alt="check" width="55px">
+                <h2>Mock Interviews </h2>
+                <p>Multiple rounds of mock interviews are conducted with the students by Internal and external Experts
+                    to help students realise their performance, discuss areas of improvements till the students feels
+                    confident about himself/herself. </p>
+            </div>
+            <div class="activity_div">
+                <img src="{% static 'check.png'%}" alt="check" width="55px">
+                <h2>Mock GD’s </h2>
+                <p>Since GD comes in various shapes and flavours so throughout the year, students undergo practice for
+                    same with different formats of GD with a range of topics </p>
+            </div>
+            <div class="activity_div">
+                <img src="{% static 'check.png'%}" alt="check" width="55px">
+                <h2> Aptitude preparation </h2>
+                <p>Most of the renowned brands start their campus placement process with Aptitude testing so yearlong
+                    inputs on various topics are provided to students with regular mock tests to evaluate their
+                    performance. </p>
+            </div>
+            <div class="activity_div">
+                <img src="{% static 'check.png'%}" alt="check" width="55px">
+                <h2> Domain Input Sessions </h2>
+                <p>To handle the domain/function related questions during the Interviews, we impart domain capsule
+                    sessions via our Practicing Functional Experts who provide the contemporary knowledge and trends in
+                    the domain and discuss practical applications of various core concepts. </p>
+            </div>
+            <div class="activity_div">
+                <img src="{% static 'check.png'%}" alt="check" width="55px">
+                <h2>Live Internships </h2>
+                <p>Hands on and learning by observation is one of the best forms of learning. Our Industry partners
+                    offer short projects for 5-20 days where students are engaged in on-going projects of the companies
+                    which help students to learn in Live work environment under the supervision of experts. </p>
+            </div>
+
+        </div>
+        <h2 class="topic_title">Soft Skills and Leadership Training </h2>
+        <p>The core objective of having 500 hours of Soft Skills training is to boost the Confidence of the student.
+            Management is more about mastering Soft Skills along with the functional or technical skills as we deal with
+            humans at the end of the day. At NGI we understand the importance of Soft Skills in the industry so a great
+            emphasis is laid on developing and enhancing same. 500 hours journey of Soft Skills programme includes</p>
+        <div class="container_div_flex">
+            <div class="activity_div">
+                <img src="{% static 'web.png'%}" alt="check" width="55px">
+                <h2> Business Communication </h2>
+                <p>This includes writing professional Emails, Meetings Management, Report writing, Creative writing, Art
+                    of Listening, Giving and Receiving Feedback. </p>
+            </div>
+            <div class="activity_div">
+                <img src="{% static 'web.png'%}" alt="check" width="55px">
+                <h2>Outbound Trainings </h2>
+                <p>A large number of topics like Team Building, Problem Solving, Creativity are best taught on the Field
+                    and Outdoors. </p>
+            </div>
+
+            <div class="activity_div">
+                <img src="{% static 'web.png'%}" alt="check" width="55px">
+                <h2>Presentation Skills and Public Speaking </h2>
+                <p>In the corporate one has to deliver lot of presentations like Product presentation, Policy
+                    presentations, Sales report presentations, Training presentations etc. so one should be comfortable
+                    around people and tools of same. </p>
+            </div>
+            <div class="activity_div">
+                <img src="{% static 'web.png'%}" alt="check" width="55px">
+                <h2>Leadership Lab </h2>
+                <p>In this, students gets practical exposure to manage a group of people and ensure the completion
+                    of tasks. Understand various stages of team formation, identifying issues, conflicts and solve
+                    them. </p>
+            </div>
+            <div class="activity_div">
+                <img src="{% static 'web.png'%}" alt="check" width="55px">
+                <h2>General Awareness </h2>
+                <p>Hands on and learning by observation is one of the best forms of learning. Our Industry partners
+                    offer short projects for 5-20 days where students are engaged in on-going projects of the
+                    companies which help students to learn in Live work environment under the supervision of
+                    experts. </p>
+            </div>
+        </div>
+
+    </div>
+    {% include 'footer.html' %}
+</body>
+
+</html>

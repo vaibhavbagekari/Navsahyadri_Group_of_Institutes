@@ -111,7 +111,12 @@ urlpatterns = [
     path('slider',views.slider,name="slider.html"),
     path('sppu_approvals',views.sppu_approval,name="sppu_approvals"),
     path('mandatory_disclosure',views.mandatory_disclosures,name="mandatory_disclosure"),
-    path('main_placement',views.main_placement,name="main_placement")
+    path('main_placement',views.main_placement,name="main_placement"),
+    path('mba_contact',views.mba_contact,name="mba_contact"),
+    path('mba_Infrastucture',views.mba_Infrastucture,name="mba_Infrastucture"),
+    path('mba_placement',views.mba_placement,name="mba_placement"),
+    path('mba_training',views.mba_training,name="mba_training"),
+    path('mba_about_ngi',views.mba_about_ngi,name="mba_about_ngi")
     
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

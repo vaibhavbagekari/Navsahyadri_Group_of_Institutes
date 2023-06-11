@@ -1,6 +1,6 @@
 {% load static %}
 <div class="menu">
-    <div class="menu_top" style="width: 100%; position:fixed; top:0px; height:30px;  background-color: brown; " ></div>
+    <div class="menu_top" style="width: 100%; position:fixed; top:0px; height:30px;  background-color: brown; "></div>
     <button class="b1" id="navbtn" onclick="droupdown()">
         <div class="snav">
             <span class="t1"></span>
@@ -31,38 +31,64 @@
     <nav class="nav">
         <ul class="list">
             <li class="nevlist {% if request.path == '/mbaindex/' %} active {% endif %}"> <a
-                    class="{% if request.path == '/mbaindex/' %} active {% endif %}" href="{% url 'pharmindex' %}"><i
+                    class="{% if request.path == '/mbaindex/' %} active {% endif %}" href="{% url 'mbaindex' %}"><i
                         class="fa fa-home" style="font-size:20px"></i>&nbsp;Home</a>
             </li>
             <li class="nevlist">
-                Department
-                
+                Abaut Us
+                <ul class="submenu">
+                    <li class="submenuitem"><a href="{% url 'mba_about_ngi' %}"> About NGI</a></li>
+                    <li class="submenuitem"><a href="">Why NGI for MBA / MBA++/MCA</a></li>
+                    <li class="submenuitem"><a href="">Director’s Desk</a></li>
+                </ul>
             </li>
             <li class="nevlist">
-                Academic
-                calender
-                
+                programmers
+                <ul class="submenu">
+                    <li class="submenuitem"><a href="">MBA</a></li>
+                    <li class="submenuitem"><a href="">MBA++</a></li>
+                    <li class="submenuitem"><a href="">MCA</a></li>
+                </ul>
+
             </li>
-        
-        </li>
 
-        <li class="nevlist {% if request.path == '/elibrary/' %} active {% endif %}"><a
-                class="{% if request.path == '/elibrary/' %} active {% endif %}" href="{% url 'elibrary' %}">E-library</a>
-        </li>
-        <li class="nevlist {% if request.path == '/admission/' %} active {% endif %}"><a
-                href="{% url 'admission' %}">Admission</a>
-        </li>
-        <li class="nevlist {% if request.path == '/englaboratery/' %} active {% endif %}" style="color: rgb(0, 0, 0);">
-            <a> laboratery</a>
-            
-        </li>
+            </li>
 
-        <li class="nevlist {% if request.path == '/tpo/' %} active {% endif %}"> <a href="{% url 'tpo' %}"> TPO</a>
-        </li>
-        <li class="nevlist {% if request.path == '/Activity/' %} active {% endif %}"><a href="{% url 'Activity' %}"> Course Outcome</a>
-            
-        </li>
-        <li class="nevlist "><a href="{% url 'nss' %}" class="link {% if request.path == '/nss/' %} active {% endif %}">NSS/Sports</a></li>
-    </ul>
+            <li class="nevlist {% if request.path == '/elibrary/' %} active {% endif %}"><a
+                    class="{% if request.path == '/elibrary/' %} active {% endif %}"
+                    href="{% url 'elibrary' %}">Faculty</a>
+            </li>
+            <li class="nevlist {% if request.path == '/admission/' %} active {% endif %}">Training @ NGI
+                <ul class="submenu">
+                    <li class="submenuitem"><a href="{% url 'mba_training' %}">Training Framework
+                    </a></li>
+                    <li class="submenuitem"><a href="">Internships</a></li>
+                    <li class="submenuitem"><a href="">Certification</a></li>
+                    <li class="submenuitem"><a href="">Academic Excellence
+                    </a></li>
+                </ul>
+
+            </li>
+            <li class="nevlist {% if request.path == '/mba_placement/' %} active {% endif %}"
+                style="color: rgb(0, 0, 0);">
+                Placement
+                <ul class="submenu">
+                    <li class="submenuitem"><a href="{% url 'mba_placement' %}">Recruters</a></li>
+                </ul>
+            </li>
+
+           
+            <li class="nevlist {% if request.path == '/Activity/' %} active {% endif %}">
+                    student LIFE
+                    <ul class="submenu">
+                        <li class="submenuitem"><a href="{% url 'mba_Infrastucture' %}">Infrastructure</a></li>
+                        <li class="submenuitem"><a href="">Sports Activity</a></li>
+                        <li class="submenuitem"><a href="">Committee</a></li>
+                    </UL>
+
+            </li>
+            <li class="nevlist "><a href="{% url 'mba_contact' %}"
+                    class="link {% if request.path == '/nss/' %} active {% endif %}">Contact</a></li>
+        </ul>
     </nav>
 </div>

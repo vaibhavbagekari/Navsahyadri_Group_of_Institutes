@@ -68,6 +68,30 @@
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+.counter_div {
+  width: 100%;
+  background-image: url("{% static 'counter_background.jpg' %}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  /* margin: 20px auto 20px auto; */
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: max-content;
+  
+
+}
+
+.counter_eliment {
+  width: 220px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+}
 
   </style>
 </head>
@@ -85,7 +109,7 @@
 <div class="principal_container">
 
   <div class="p_img_container">
-    <img src="{% static 'profile1.png' %}" alt="" width="100%">
+    <img src="{% static 'eng_principal.jpg' %}" alt="" width="100%">
   </div>
   <div class="p_text_container">
     <h1>Name of Principal</h1>
@@ -165,5 +189,78 @@
       </li>
 
     </ul>
+  </div>
+  <div class="counter_div">
+    <div class="counter_eliment">
+      <div id="counter1">
+        <!-- counts -->
+      </div>
+      <h3 style="font-size: 20px;">Learners & counting</h3>
+      <script>
+        let counts1 = setInterval(updated);
+        let upto1 = 9500;
+        function updated() {
+          let count = document.getElementById("counter1");
+          count.innerHTML = ++upto1;
+          if (upto1 === 10000) {
+            clearInterval(counts1);
+          }
+        }
+      </script>
+    </div>
+    <div class="counter_eliment">
+      <div id="counter2">
+        <!-- counts -->
+      </div>
+      <h3 style="font-size: 20px;">Alumns</h3>
+      <script>
+        let counts2 = setInterval(updated);
+        let upto2 = 14500;
+        function updated() {
+          let count = document.getElementById("counter2");
+          count.innerHTML = ++upto2;
+          if (upto2 === 15000) {
+            clearInterval(counts2);
+          }
+        }
+      </script>
+    </div>
+    <div class="counter_eliment">
+      <div id="counter3">
+        <!-- counts -->
+      </div>
+      <h3 style="font-size: 20px;">Placement</h3>
+
+      <script>
+        let counts3 = setInterval(updated);
+        let upto3 = 6500;
+        function updated() {
+          let count = document.getElementById("counter3");
+          count.innerHTML = ++upto3;
+          if (upto3 === 7000) {
+            clearInterval(counts3);
+          }
+        }
+      </script>
+    </div>
+    <div class="counter_eliment">
+      <div id="counter4">
+        <!-- counts -->
+      </div>
+      <h3 style="font-size: 20px;">Recruiters</h3>
+
+      <script>
+        let counts4 = setInterval(updated);
+        let upto4 = 400;
+        function updated() {
+          let count = document.getElementById("counter4");
+          count.innerHTML = ++upto4;
+          if (upto4 === 500) {
+            clearInterval(counts4);
+          }
+        }
+      </script>
+    </div>
+
   </div>
 {% include 'footer.html' %}

@@ -202,17 +202,33 @@ def engadmission(request):
         Contact = request.POST.get('Contact')
         Department = request.POST.get('Department')
         gendar = request.POST.get('gendar')
-        
-        engadmissions = engadmission_model.objects.create(name=name,
-                                                    email=email,
-                                                    contact_no=int(Contact),
-                                                    Department=Department,
-                                                    gendar=gendar)
+
+        engadmissions = engadmission_model.objects.create(
+            name=name,
+            email=email,
+            contact_no=int(Contact),
+            Department=Department,
+            gendar=gendar)
         engadmissions.save()
         return render(request, 'engadmission.html')
     else:
         return render(request, 'engadmission.html')
 
+
+def mba_contact(request):
+    return render(request, 'mba_contact.html')
+
+def mba_Infrastucture(request):
+    return render(request,'mba_Infrastucture.html')
+
+def mba_placement(request):
+    return render(request,'mba_placement.html')
+
+def mba_training(request):
+    return render(request,'mba_training.html')
+
+def mba_about_ngi(request):
+    return render(request,'mba_about_ngi.html')
 
 def polyadmission(request):
     if request.method == 'POST':
@@ -221,12 +237,13 @@ def polyadmission(request):
         Contact = request.POST.get('Contact')
         Department = request.POST.get('Department')
         gendar = request.POST.get('gendar')
-        print(name,email,Contact,Department,gendar)
-        polyadmissions = polyadmission_model.objects.create(name=name,
-                                                      email=email,
-                                                      contact_no=int(Contact),
-                                                      Department=Department,
-                                                      gendar=gendar)
+        print(name, email, Contact, Department, gendar)
+        polyadmissions = polyadmission_model.objects.create(
+            name=name,
+            email=email,
+            contact_no=int(Contact),
+            Department=Department,
+            gendar=gendar)
         polyadmissions.save()
         return render(request, 'polyadmission.html')
     else:
@@ -240,11 +257,12 @@ def pharmadmission(request):
         Contact = request.POST.get('Contact')
         Department = request.POST.get('Department')
         gendar = request.POST.get('gendar')
-        pharmadmissions = pharmadmission_model.objects.create(name=name,
-                                                      email=email,
-                                                      contact_no=int(Contact),
-                                                      Department=Department,
-                                                      gendar=gendar)
+        pharmadmissions = pharmadmission_model.objects.create(
+            name=name,
+            email=email,
+            contact_no=int(Contact),
+            Department=Department,
+            gendar=gendar)
         pharmadmissions.save()
         return render(request, 'pharmadmission.html')
     else:
@@ -258,11 +276,12 @@ def mbaadmission(request):
         Contact = request.POST.get('Contact')
         Department = request.POST.get('Department')
         gendar = request.POST.get('gendar')
-        mbaadmissions = mbaadmission_model.objects.create(name=name,
-                                                    email=email,
-                                                    contact_no=int(Contact),
-                                                    Department=Department,
-                                                    gendar=gendar)
+        mbaadmissions = mbaadmission_model.objects.create(
+            name=name,
+            email=email,
+            contact_no=int(Contact),
+            Department=Department,
+            gendar=gendar)
         mbaadmissions.save()
         return render(request, 'mbaadmission.html')
     else:

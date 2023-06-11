@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastucture</title>
+    <style>
+       .titlep, hr{
+            width: 90%;
+            margin: auto;
+            color: rgb(35, 2, 89);
+        }
+    </style>
+</head>
+<body>
+    {% include 'header.html' %}
+    {% include 'mbanav.html' %}
+    <h1 class="titlep">Infrastucture</h1>
+    <hr>
+    <video muted loop autoplay width="100%" style="margin: auto;">
+        <source src="{% static 'background_vedio.mp4' %}" type="video/mp4">
+      </video> 
+    {% include 'footer.html' %}
+</body>
+</html>
