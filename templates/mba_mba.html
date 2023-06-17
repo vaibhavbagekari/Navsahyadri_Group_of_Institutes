@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCA</title>
+    <link rel="stylesheet" href="{% static 'department.css' %}">
+    <style>
+        .main_container {
+            color: white;
+            width: 100%;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgb(14, 14, 14);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            font-size: 25px;
+            background-image: url("{% static 'mba_header_img.avif' %}");
+        }
+
+        .info_container {
+            background-color: rgba(88, 88, 88, 0.596);
+            width: 100%;
+
+        }
+
+        .text_div {
+            background-color: white;
+            width: 80%;
+            margin: auto;
+            text-align: justify;
+            font-size: 1em;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'mbanav.html' %}
+    <div class="main_container">
+        <h1>MBA</h1>
+    </div>
+    <div class="info_container">
+
+        <div class="text_div">
+            <br><br>
+            <b>MBA</b> is one of the most popular post-graduate courses in India and abroad. The full form of MBA is <b> Master of
+            Business Administration.</b> For most managerial-level jobs across domains and sectors, an MBA degree is a
+            necessity which is why, nowadays a large number of BTech, BBA, BCom, BA, BSc, BCA graduates opt for MBA in
+            post graduation. The growing number of businesses has highlighted the importance of this professional
+            course. It teaches the necessary skills required to expand a company or lead a successful business. MBA
+            course also develops leadership skills among the students.
+           <br><br>
+            MBA admission is based on MBA entrance exams followed by a personality assessment test round (Group
+            Discussion or GD, Written Ability Test or WAT and Personal Interview or PI). Typically, students are
+            required to have more than 50 per cent in their undergraduate degree from any stream in order to pursue an
+            MBA course. The most popular <b> MBA entrance exams</b> are CAT, CMAT,XAT, MAH CET among others. IIM Ahmedabad, IIM
+            Bangalore, IIM Calcutta, IIM Lucknow, FMS Delhi, XLRI and ISB are some of the <b> top MBA colleges in India</b>
+            which take admission via these exams followed by individual GD-PI rounds. The <b>MBA fee generally ranges
+            between INR 10-25 lakh</b> depending on college to college, however there are certain very popular top colleges
+            where the course fee is much lower than INR 10 lakh like FMS Delhi, JBIMS Mumbai among others.
+        </div>
+    
+    <h1>Faculty Profile</h1>
+    <div class="table_div">
+        <table class="cs_table" border="1">
+            <tr class="h_row">
+                <th>Sr.no</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Qualification</th>
+                <th>Date of Joining</th>
+                <th>Professional Experience</th>
+                <th>Mob. No:</th>
+                <th>Email Id:</th>
+            </tr>
+            {% for i in faculties %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.designation}}</td>
+                <td>{{i.Qualifications }}</td>
+                <td>{{i.DOJ}}</td>
+                <td>{{i.Experience }}</td>
+                <td>{{i.contact_no }}</td>
+                <td>{{i.Email_Id }}</td>
+                
+            </tr>
+            {% endfor %}
+           
+        </table>
+</div>
+</div>
+    {% include 'footer.html' %}
+</body>
+
+</html>

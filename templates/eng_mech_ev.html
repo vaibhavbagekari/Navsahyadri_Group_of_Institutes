@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visits</title>
+    <style>
+        .main_container {
+            width: 100%;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgb(14, 14, 14);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            background-image: url("{% static 'header_img.jpg' %}");
+        }
+
+        .E-library_title {
+            font-size: 5rem;
+            color: rgb(251, 248, 249);
+            text-shadow: 5px 5px 6px black;
+        }
+
+        .img_container {
+            margin: 20px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2em;
+        }
+
+        .fig_div {
+            max-width: 300px;
+            min-width: 200px;
+            box-shadow: 2px 2px 5px black;
+        }
+        figcaption{
+            color: rgb(2, 2, 124);
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'engnav.html' %}
+    <div class="main_container">
+
+        <h1 class="E-library_title">Events and Activities</h1>
+    </div>
+    <div class="img_container">
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'eng_mech_ev1.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption>Visit to Divgi Torque Transmission system</figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'eng_mech_ev2.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption>Visit to Bhatgahar Hydroelectric power station</figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'eng_mech_ev3.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption>Visit to Rajgad Sugar Industry and Cogeneration Power plant</figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'eng_mech_ev4.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption>Visit to Tata motors service station</figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'eng_mech_ev5.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption>Visit to Pimpri Chinchwad Science Park</figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'eng_mech_ev6.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption>Visit to Kakade Laser Station</figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'eng_mech_ev7.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption>Guest lecture on performance of FFT Analyser</figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'eng_mech_ev8.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption>Guest lecture on ANSYS software</figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'eng_mech_ev9.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption>Guest lecture on Intellectual  Property Rights</figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'eng_mech_ev10.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption>Rob race Competition</figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'eng_mech_ev12.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption>Visit to Divgi Torque Transmission system</figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'eng_mech_ev13.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'eng_mech_ev14.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'eng_mech_ev15.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'eng_mech_ev16.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'eng_mech_ev17.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'eng_mech_ev18.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+        
+    </div>
+</body>
+
+</html>

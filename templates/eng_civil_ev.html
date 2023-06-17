@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Activities</title>
+    <style>
+        .main_container {
+            width: 100%;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgb(14, 14, 14);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            background-image: url("{% static 'header_img.jpg' %}");
+        }
+
+        .E-library_title {
+            font-size: 5rem;
+            color: rgb(251, 248, 249);
+            text-shadow: 5px 5px 6px black;
+        }
+
+        .img_container {
+            margin: 20px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 2em;
+        }
+
+        .fig_div {
+            max-width: 400px;
+            
+            box-shadow: 2px 2px 5px black;
+        }
+        figcaption{
+            color: rgb(2, 2, 124);
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'engnav.html' %}
+    <div class="main_container">
+
+        <h1 class="E-library_title">Events and Activities</h1>
+    </div>
+    <div class="img_container">
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'civil_ev1.png' %}" alt="Trulli" style="width:100%">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'civil_ev2.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'civil_ev3.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'civil_ev4.png' %}" alt="Trulli" style="width:100%">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'civil_ev5.png' %}" alt="Trulli" style="width:100%">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'civil_ev6.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'civil_ev7.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+        <div class="fig_div">
+            <figure>
+                <img src="{% static 'civil_ev8.jpg' %}" alt="Trulli" style="width:100%">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+      
+        
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+.about-dep-div {
+    margin: 10px;
+    /* background-color: rgba(167, 163, 163, 0.488); */
+    padding: 10px;
+    height: max-content;
+}
+
+.about-img {
+    height: 320px;
+    width: 300px;
+}
+
+.topic-title {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    border-bottom: 5px solid red;
+}
+
+.about-container {
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: space-around;
+}
+
+.about-text {
+
+    width: 500px;
+}
+
+.about-img {
+    border-radius: 10px;
+    width: 600px;
+    box-shadow: 6px 6px 6px black;
+}
+
+.hod-info {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.hod-info-item {
+    font-weight: 700;
+
+}
+
+.meh2 {
+    color: black;
+}
+.dep_title{
+    margin: 10px auto 10px auto;
+    color: black;
+    margin: 20px;
+    background-color: rgba(251, 162, 162, 0.628);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35px;
+}
+.dep_title:hover{
+    /* color: blue; */
+    
+}

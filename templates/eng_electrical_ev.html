@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Activities</title>
+    <style>
+        .main_container {
+            width: 100%;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgb(14, 14, 14);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            background-image: url("{% static 'header_img.jpg' %}");
+        }
+
+        .E-library_title {
+            font-size: 5rem;
+            color: rgb(251, 248, 249);
+            text-shadow: 5px 5px 6px black;
+        }
+
+        .img_container {
+            margin: 20px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2em;
+        }
+
+        .fig_div {
+            max-width: 300px;
+            min-width: 200px;
+            box-shadow: 2px 2px 5px black;
+        }
+        figcaption{
+            color: rgb(2, 2, 124);
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'engnav.html' %}
+    <div class="main_container">
+
+        <h1 class="E-library_title">Events and Activities</h1>
+    </div>
+    <div class="img_container">
+        <div class="img_container">
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'electrical_ev2.jpg' %}" alt="Trulli" style="width:100%">
+                    <figcaption>Industrial Visit to Bhatghar dam, bhor dist. Pune</figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'electrical_ev3.jpg' %}" alt="Trulli" style="width:100%">
+                    <figcaption>Industrial Visit to Students at Manisha Engineers Pvt.Ltd, Pune </figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'electrical_ev4.jpg' %}" alt="Trulli" style="width:100%">
+                    <figcaption>ial Visit to StIndustrudents at Manisha Engineers Pvt.Ltd, Pune </figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'electrical_ev5.jpg' %}" alt="Trulli" style="width:100%">
+                    <figcaption>Visit to Electrical Manufacturer & Contractor Association Exhibition at Pune 2021 </figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'electrical_ev6.jpg' %}" alt="Trulli" style="width:100%">
+                    <figcaption>Industrial Visit to Chalkewadi Windmill, Medha Dist. Satara</figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'electrical_ev7.jpg' %}" alt="Trulli" style="width:100%">
+                    <figcaption>Industrial Visit Rajgad Sahakari Sakhar Karkhana Ltd., Bhor, Dist.Pune
+
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'electrical_ev8.jpg' %}" alt="Trulli" style="width:100%">
+                    <figcaption>Alumni Visit to Electrical Engineering Department</figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'electrical_ev9.jpg' %}" alt="Trulli" style="width:100%">
+                    <figcaption>Visit to Electrical Manufacturer & Contractor Association Exhibition at Pune 2021 </figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'electrical_ev10.jpg' %}" alt="Trulli" style="width:100%">
+                    <figcaption>Appreciation By Hon’ble President Shri. P.N.Suke Saheb to final year students</figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'electrical_ev11.jpg' %}" alt="Trulli" style="width:100%">
+                    <figcaption>Intrnational Conference ICETRE</figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'electrical_ev12.jpg' %}" alt="Trulli" style="width:100%">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'electrical_ev13.jpg' %}" alt="Trulli" style="width:100%">
+                    <figcaption>Electrical  Engineering Student Association EESA</figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'electrical_ev14.jpg' %}" alt="Trulli" style="width:100%">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+            
+            
+        </div>
+        
+    </div>
+</body>
+
+</html>

@@ -12,7 +12,7 @@ class faculty(models.Model):
         default=
         "https://tse4.mm.bing.net/th?id=OIP.OesLvyzDO6AvU_hYUAT4IAHaHa&pid=Api&P=0",
         null=True)
-    designation= models.CharField(max_length=10 ,null=True)
+    designation= models.CharField(max_length=50 ,null=True)
     f_name = models.CharField(max_length=100, null=True)
     m_name = models.CharField(max_length=100, null=True)
     l_name = models.CharField(max_length=100, null=True)
@@ -21,6 +21,7 @@ class faculty(models.Model):
     Qualifications = models.CharField(max_length=50, null=True)
     Experience = models.CharField(max_length=50, null=True)
     contact_no = models.IntegerField(null=True)
+    DOJ=models.CharField(max_length=50,null=True)
     Email_Id = models.EmailField(max_length=100, null=True)
     program=models.CharField(max_length=50,null=True)
     department = models.CharField(max_length=50, null=True)
@@ -134,3 +135,45 @@ class mbaadmission_model(models.Model):
     contact_no=models.IntegerField()
     email=models.EmailField(max_length=100)
     gendar=models.CharField(max_length=50)
+
+class b_pharm_facultys(models.Model):
+    name=models.CharField(max_length=100)
+    designation=models.CharField(max_length=100)
+    qualification=models.CharField(max_length=100)
+    DOJ=models.CharField(max_length=100)
+    experience=models.CharField(max_length=100)
+class m_pharm_facultys(models.Model):
+    name=models.CharField(max_length=100)
+    designation=models.CharField(max_length=100)
+    qualification=models.CharField(max_length=100)
+    DOJ=models.CharField(max_length=100)
+    experience=models.CharField(max_length=100)
+
+
+class d_pharm_facultys(models.Model):
+    name=models.CharField(max_length=100)
+    designation=models.CharField(max_length=100)
+    qualification=models.CharField(max_length=100)
+    DOJ=models.CharField(max_length=100)
+    experience=models.CharField(max_length=100)
+
+class mba_facultys(models.Model):
+    name=models.CharField(max_length=100)
+    designation=models.CharField(max_length=100)
+    qualification=models.CharField(max_length=100)
+    DOJ=models.CharField(max_length=100)
+    experience=models.CharField(max_length=100)
+
+class mbapp_facultys(models.Model):
+    name=models.CharField(max_length=100)
+    designation=models.CharField(max_length=100)
+    qualification=models.CharField(max_length=100)
+    DOJ=models.CharField(max_length=100)
+    experience=models.CharField(max_length=100)
+
+class mca_facultys(models.Model):
+    name=models.CharField(max_length=100)
+    designation=models.CharField(max_length=100)
+    qualification=models.CharField(max_length=100)
+    DOJ=models.CharField(max_length=100)
+    experience=models.CharField(max_length=100)

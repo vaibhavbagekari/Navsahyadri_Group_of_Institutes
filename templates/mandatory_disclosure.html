@@ -57,7 +57,7 @@
 <div class="approv-container">
    
     <ul class="approv-list">
-        {% for i in mandatory_disclosures %}
+        {% for i in mandatory_disclosure %}
         <li class="approv-item"><a href="{{ i.sppu_file.url }}">{{i.id}}.{{ i.title }}</a></li>
         {%endfor%}
     </ul>

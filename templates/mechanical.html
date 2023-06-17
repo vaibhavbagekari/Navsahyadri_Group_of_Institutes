@@ -10,7 +10,7 @@
     <!-- <link rel="stylesheet" href="{% static 'header.css' %}"> -->
     <link rel="stylesheet" href="{% static 'department.css' %}">
     <style>
-       
+
     </style>
 </head>
 
@@ -25,39 +25,28 @@
             <span class="span">Course Code:663261210</span>
             <span class="span">Duration:4 year</span>
             <span class="span">Course Type: Full Time</span>
-            <span class="span">Intake: 120,Direct 2<sup>th</sup>Year Intake:84 </span>
+            <span class="span">Intake: 30</span>
         </div>
 
         <div width="100%" class="meimg">
-            <img width="50%"
-                src="{% static 'IMG_6503.JPG'%}">
-            <img width="50%" src="{% static 'IMG_6467.JPG'%}">
+            <img width="45%" src="{% static 'IMG_6503.JPG'%}">
+            <img width="45%" src="{% static 'IMG_6467.JPG'%}">
         </div>
     </div>
     <div class="about-dep-div">
         <h2 class="topic-title">About Department</h2>
         <div class="about-container">
             <div class="about-text">
-                Computer Engineering is a discipline that integrates several fields of Electrical Engineering
-                and
-                E&amp;TC Engineering. The goal of the Department is to prepare students for successful careers
-                in
-                the software and hardware industry that meet the needs of Indian and multinational companies
-                and to excel in higher studies. The Department has experienced and dedicated faculty members
-                with strong commitment to engineering education and professional ethics.
+                The Department of Mechanical Engineering at Navsahyadri College of Engineering believes in producing
+                engineers who take a product from an idea to the market place. The department has highly qualified and
+                experienced faculty with expertise in the areas of Design, Thermal Production, Manufacturing and CAD/CAM
+                Engineering. The department trains students through project based learning which is inculcated in the
+                students through the team of experienced faculty. The department has defined the vision and mission and
+                all the necessary initiatives are undertaken to facilitate and fulfill the same. Our students will have
+                taken many internship programs. Department provides many training programs to students so that they got
+                placed in many multinational companies.
                 <br>
-                <br>
-                <b>Vision:</b> Contributing to the welfare of society through technical and quality education to
-                the
-                rural
-                base students.
-                <br>
-                <br>
-                <b>Mission:</b> The Department vision is to establish the center for excellence in professional
-                development and entrepreneurship development resulting in the enhancement of the rural area.<br>
-                To produce Best Quality Computer Science Professionals by importing quality hands-on
-                experience and value education.<br>
-                To train the students to fulfill Professional and social requirements in the industry.
+               
             </div>
             <br>
             <br>
@@ -71,33 +60,29 @@
         <div class="about-container" style="gap: 0px;">
             <div style="width:220px;">
 
-                <img src="{% static 'profile1.png' %}" alt="" width="100%">
+                <img src="{% static 'mech_hod.jpg' %}" alt="" width="100%">
 
             </div>
-            <div class="about-text" style="">
+            <div class="about-text">
 
 
                 <ul class="hod-info">
-                    <li class="hod-info-item">Name:</li><br>
+                    <li class="hod-info-item">Name:Prof. S. V. Tawade</li><br>
 
-                    <li class="hod-info-item">Education:</li>
+                    <li class="hod-info-item">Education:B.E. (Mechanical) M.E.(Mech. Design)</li>
                     <br>
 
-                    <li class="hod-info-item">Email id:</li><br>
+                    <li class="hod-info-item">Email id:hodmech.navsahyadri@gmail.com</li><br>
 
-                    <li class="hod-info-item">Contact No:</li><br>
+                    <li class="hod-info-item">Contact No:9637235045</li><br>
 
                 </ul>
 
                 <b>HOD Message</b><br>
-
-                *************************************************************************************************88
-                **********************************************************************************************************************88
-                *******************************************************************************************************
-                ***********************************************************************************************************88
-                **************************************************************************************************************88888888888888888
-                8***********************************************************************************************88
-            </div>
+                Mechanical engineering is a very versatile and evergreen branch of engineering. Mechanical Engineering field deals with the development, design and manufacturing of machines as well as the maintenance of machinery. Mechanical engineer can work in various specialized industries like automotive industries, aerospace industries, chemicals industry, construction industry, defense industry, consumer goods industry, marine industry, materials and metals industry, oil and gas industry, pharmaceuticals industry, power generation industry, rail industry,  dynamic system and control, agricultural sector industries etc. and in software field also. 
+                <br><br>
+                Mechanical Department has well qualified and dedicated faculties and well developed laboratories. We impart quality engineering education through sound theoretical knowledge, hands on laboratory as well as computational skill and exposure to recent technologies by visiting industries. We are continuously arranging seminars, workshops expert lectures from industry personals on current trends related with mechanical engineering. Students are trained in various industry related software’s like CATIA, Ansys etc., to take competitive advantage and for better job opportunities. Students have the opportunities of undergoing different training programs, mini projects, project based learning, internship etc. We provide opportunities for students to participate in various technical events/competitions like, Go-Kart, BAJA championships. Our students take part in sport activities too. We promote students to work on multi-disciplinary projects as well. Regularly students are guided by faculty through guardian faculty mentoring scheme, to achieve academic and personal excellence. Our students have got placed in various reputed multinational companies with attractive packages. 
+                </div>
             <br>
             <br>
 
@@ -105,7 +90,7 @@
     </div>
 
     <h2 class="facultyh2">Faculty Profile</h2>
-    <div class="facultydiv">
+    <!-- <div class="facultydiv">
         {% for mechanical_faculty in mechanical_faculties %}
         <div class="facultyspan">
             <img class="facultyimg" src="http://www.navsahyadri.edu.in/assets/images/facultyprofile/Pankaj-Bhokare.jpg">
@@ -121,29 +106,60 @@
 
             </p>
         </div>
-        
+
         {% endfor %}
-    </div>
+    </div> -->
+    <div class="table_div">
+        <table class="cs_table" border="1">
+            <tr class="h_row">
+                <th>Sr.no</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Qualification</th>
+                <th>Date of Joining</th>
+                <th>Professional Experience</th>
+                <th>Mob. No:</th>
+                <th>Email Id:</th>
+            </tr>
+            {% for i in mechanical_faculties %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.f_name}} {{i.l_name}}</td>
+                <td>{{i.designation}}</td>
+                <td>{{i.Qualifications }}</td>
+                <td>{{i.DOJ}}</td>
+                <td>{{i.Experience }}</td>
+                <td>{{i.contact_no }}</td>
+                <td>{{i.Email_Id }}</td>
+                
+            </tr>
+            {% endfor %}
+           
+        </table>
+</div>
     <h2 class="topic-title">Academics</h2>
     <div class="face_div">
         <div class="face_sub_div">
-            <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+            <img src="{% static 'laboratory.png' %}" alt="" class="face_img">
             <h3 class="face_title">Laboratory</h3>
-            <a class="dep" href="{% url 'eng_lab_entc' %}"><button class="button button3">click here to view</button></a>
+            <a class="dep" href="{% url 'eng_lab_mechanical' %}"><button class="button button3">click here to
+                    view</button></a>
             </p>
         </div>
         <div class="face_sub_div">
-            <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+            <img src="{% static 'syllabus.img' %}" alt="" class="face_img">
             <h3 class="face_title">Syllabus</h3>
-            <a href="{% url 'eng_syllabus'%}"> <button class="button button3">click here to view</button></a></p>
+            <a href="{% url 'eng_mech_syllabus'%}"> <button class="button button3">click here to view</button></a></p>
         </div>
+       
         <div class="face_sub_div">
-            <img src="{% static 'cs_img3.jpeg' %}" alt="" class="face_img">
-            <a class="dep" href="{% url 'Electrical' %}"><button class="button button3">click here to view</button></a>
+            <img src="{% static 'events_activity.jpg' %}" alt="" class="face_img">
+            <h3 class="face_title">Events and Activities</h3>
+            <a class="dep" href="{% url 'eng_mech_ev' %}"><button class="button button3">click here to view</button></a>
             </p>
         </div>
     </div>
-
+    
     {%include 'footer.html'%}
 </body>
 

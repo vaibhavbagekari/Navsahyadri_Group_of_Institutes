@@ -1,5 +1,7 @@
 {% load static %}
 <div class="menu">
+    <div class="menu_top" style="width: 100%; position:fixed; top:0px; height:40px;  background-color: brown; "></div>
+
     <button class="b1" id="navbtn" onclick="droupdown()">
         <div class="snav">
             <span class="t1"></span>
@@ -26,8 +28,7 @@
     <nav class="nav">
         <ul class="list">
             <li class="nevlist {% if request.path == '/polyindex/' %} active {% endif %}"> <a
-                    class="{% if request.path == '/polyindex/' %} active {% endif %}" href="{% url 'polyindex' %}"><i
-                        class="fa fa-home" style="font-size:20px"></i>&nbsp;Home</a>
+                    class="{% if request.path == '/polyindex/' %} active {% endif %}" href="{% url 'polyindex' %}">Home</a>
             </li>
             <li class="nevlist">
                 Department
@@ -84,6 +85,9 @@
         </li>
         <li class="nevlist "><a href="" class="link {% if request.path == '/a/' %} active {% endif %}">
                  NSS/Sports</a></li>
-        </ul>
+                 <li class="nevlist "><a href="{% url 'poly_contact' %}" class="link {% if request.path == '/poly_contact/' %} active {% endif %}">
+                    Contact</a></li>
+       
+   </ul>
     </nav>
 </div>

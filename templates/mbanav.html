@@ -1,6 +1,12 @@
 {% load static %}
+<style>
+    .navigation1 {
+        background-color: rgb(86, 25, 178);
+        background-image: linear-gradient(rgb(74, 17, 148), rgb(149, 98, 238));
+    }
+</style>
 <div class="menu">
-    <div class="menu_top" style="width: 100%; position:fixed; top:0px; height:30px;  background-color: brown; "></div>
+    <div class="menu_top" style="width: 100%; position:fixed; top:0px; height:40px;  background-color: rgb(109, 0, 187); "></div>
     <button class="b1" id="navbtn" onclick="droupdown()">
         <div class="snav">
             <span class="t1"></span>
@@ -16,14 +22,14 @@
 </div>
 <ul class="container-subnav">
 
-    <li class="subnav"><a href="{% url 'aicte' %}" style="color: rgb(255, 60, 60);">AICTE approvals</a></li>
-    <a href="{% url 'mandatory_disclosure' %}" style="color: rgb(255, 60, 60);">
+    <li class="subnav"><a href="{% url 'aicte' %}" style="color: rgb(86, 25, 178);">AICTE approvals</a></li>
+    <a href="{% url 'mandatory_disclosure' %}" style="color: rgb(86, 25, 178);">
         <li class="subnav">Mandatory Disclosure</li>
     </a>
-    <a href="{% url 'sppu_approvals'%}" style="color: rgb(255, 60, 60);">
+    <a href="{% url 'sppu_approvals'%}" style="color: rgb(86, 25, 178);">
         <li class="subnav">SPPU Affiliation</li>
     </a>
-    <li class="subnav"><a href="{% url 'committees' %}" style="color: rgb(255, 60, 60);">
+    <li class="subnav"><a href="{% url 'committees' %}" style="color: rgb(86, 25, 178);">
             Committees</a></li>
 
 </ul>
@@ -31,60 +37,56 @@
     <nav class="nav">
         <ul class="list">
             <li class="nevlist {% if request.path == '/mbaindex/' %} active {% endif %}"> <a
-                    class="{% if request.path == '/mbaindex/' %} active {% endif %}" href="{% url 'mbaindex' %}"><i
-                        class="fa fa-home" style="font-size:20px"></i>&nbsp;Home</a>
+                    class="{% if request.path == '/mbaindex/' %} active {% endif %}" href="{% url 'mbaindex' %}">Home</a>
             </li>
             <li class="nevlist">
-                Abaut Us
+                About Us
                 <ul class="submenu">
                     <li class="submenuitem"><a href="{% url 'mba_about_ngi' %}"> About NGI</a></li>
-                    <li class="submenuitem"><a href="">Why NGI for MBA / MBA++/MCA</a></li>
-                    <li class="submenuitem"><a href="">Director’s Desk</a></li>
+                    
+                    <!-- <li class="submenuitem"><a href="">Why NGI for MBA / MBA++/MCA</a></li> -->
+                    
                 </ul>
             </li>
             <li class="nevlist">
                 programmers
                 <ul class="submenu">
-                    <li class="submenuitem"><a href="">MBA</a></li>
-                    <li class="submenuitem"><a href="">MBA++</a></li>
-                    <li class="submenuitem"><a href="">MCA</a></li>
+                    <a href="{% url 'mba_mba' %}"><li class="submenuitem">MBA</li></a>
+                   <a href="{% url 'mbapp' %}"><li class="submenuitem">MBA++</li></a>
+                   <a href="{% url 'mca' %}"><li class="submenuitem">MCA</li></a>
                 </ul>
 
             </li>
 
             </li>
 
-            <li class="nevlist {% if request.path == '/elibrary/' %} active {% endif %}"><a
-                    class="{% if request.path == '/elibrary/' %} active {% endif %}"
-                    href="{% url 'elibrary' %}">Faculty</a>
-            </li>
+            <li class="nevlist {% if request.path == '/elibrary/' %} active {% endif %}"><a href="{% url 'mba_awardss' %}"> Awardss</a></li>
             <li class="nevlist {% if request.path == '/admission/' %} active {% endif %}">Training @ NGI
                 <ul class="submenu">
                     <li class="submenuitem"><a href="{% url 'mba_training' %}">Training Framework
-                    </a></li>
+                        </a></li>
                     <li class="submenuitem"><a href="">Internships</a></li>
                     <li class="submenuitem"><a href="">Certification</a></li>
                     <li class="submenuitem"><a href="">Academic Excellence
-                    </a></li>
+                        </a></li>
                 </ul>
 
             </li>
-            <li class="nevlist {% if request.path == '/mba_placement/' %} active {% endif %}"
-                style="color: rgb(0, 0, 0);">
+            <li class="nevlist {% if request.path == '/mba_placement/' %} active {% endif %}">
                 Placement
                 <ul class="submenu">
                     <li class="submenuitem"><a href="{% url 'mba_placement' %}">Recruters</a></li>
                 </ul>
             </li>
 
-           
+
             <li class="nevlist {% if request.path == '/Activity/' %} active {% endif %}">
-                    student LIFE
-                    <ul class="submenu">
-                        <li class="submenuitem"><a href="{% url 'mba_Infrastucture' %}">Infrastructure</a></li>
-                        <li class="submenuitem"><a href="">Sports Activity</a></li>
-                        <li class="submenuitem"><a href="">Committee</a></li>
-                    </UL>
+                student LIFE
+                <ul class="submenu">
+                    <li class="submenuitem"><a href="{% url 'mba_Infrastucture' %}">Infrastructure</a></li>
+                    <li class="submenuitem"><a href="">Sports Activity</a></li>
+                    <li class="submenuitem"><a  href="{% static 'All-Committees.pdf'%}">Committee</a></li>
+                </UL>
 
             </li>
             <li class="nevlist "><a href="{% url 'mba_contact' %}"

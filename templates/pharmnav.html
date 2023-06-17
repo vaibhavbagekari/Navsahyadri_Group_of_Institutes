@@ -1,6 +1,6 @@
 {% load static %}
 <div class="menu">
-    <div class="menu_top" style="width: 100%; position:fixed; top:0px; height:30px;  background-color: brown; "></div>
+    <div class="menu_top" style="width: 100%; position:fixed; top:0px; height:40px;  background-color: brown; "></div>
     <button class="b1" id="navbtn" onclick="droupdown()">
         <div class="snav">
             <span class="t1"></span>
@@ -34,9 +34,13 @@
             <li class="nevlist">&nbsp;
                 course
                 <ul class="submenu">
-                    <a href="{% url 'd_pharm'%}">
-                        <li class="submenuitem">D-Pharmacy</li>
-                    </a>
+                    <li class="submenuitem"><a href="{% url 'm_pharm' %}">M-Pharmacy</a>
+
+                        <ul class=" submenu1">
+                            <li class="submenuitem1">Pharmaceuitcs</li>
+                            <li class="submenuitem1">Pharmacology</li>
+                        </ul>
+                    </li>
                     <li class="submenuitem"><a href="{% url 'b_pharm'%}">B-Pharmacy</a>
                         <ul class=" submenu1">
 
@@ -55,22 +59,19 @@
                             </a>
                         </ul>
                     </li>
-                    <li class="submenuitem"><a href="{% url 'm_pharm' %}">M-Pharmacy</a>
-
-                        <ul class=" submenu1">
-                            <li class="submenuitem1">Pharmaceuitcs</li>
-                            <li class="submenuitem1">Pharmacology</li>
-                        </ul>
-                    </li>
+                   
+                    <a href="{% url 'd_pharm'%}">
+                        <li class="submenuitem">D-Pharmacy</li>
+                    </a>
                 </ul>
             </li>
 
             <li class="nevlist">&nbsp;
-                Department
+                Faculty
                 <ul class="submenu">
-                    <li class="submenuitem">D-Pharmacy</li>
-                    <li class="submenuitem">B-Pharmacy</li>
-                    <li class="submenuitem">M-Pharmacy</li>
+                    <a href="{% url 'm_pharm_faculty' %}"><li class="submenuitem">M-Pharmacy</li> </a>
+                   <a href="{% url 'b_pharm_faculty' %}"><li class="submenuitem">B-Pharmacy</li></a>
+                   <a href="{% url 'd_pharm_faculty' %}"> <li class="submenuitem">D-Pharmacy</li></a>
                 </ul>
             </li>
             <li class="nevlist">&nbsp;
@@ -148,9 +149,9 @@
                     class="link {% if request.path == '/nss/' %} active {% endif %}">
                     Feedback
                 </a></li>
-            <li class="nevlist "><a href="{% url 'nss' %}"
-                    class="link {% if request.path == '/nss/' %} active {% endif %}">
-                    contact us
+            <li class="nevlist "><a href="{% url 'pharm_contact' %}"
+                    class="link {% if request.path == '/pharm_contact/' %} active {% endif %}">
+                    contact
                 </a></li>
         </ul>
 

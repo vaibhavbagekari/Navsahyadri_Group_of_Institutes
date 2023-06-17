@@ -1,15 +1,236 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-library</title>
+    <style>
+    .main_container {
+        width: 100%;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid rgb(14, 14, 14);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        background-image: url("{% static 'elibrary.webp' %}");
+    }
+
+    .E-library_title {
+        font-size: 5rem;
+        color: rgb(251, 248, 249);
+        text-shadow: 5px 5px 6px black;
+    }
+  
+    .url_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 1em;
+    }
+
+    .elimentnt {
+        margin-left: 10px;
+        width: 400px;
+        border: 1px solid black;
+        border-left: 8px solid orange;
+        border-right: 8px solid blue;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: rgb(136, 136, 207);
+        box-shadow: 2px 2px 4px black;
+        justify-content: center;
+    }
+
+    .url {
+        color: black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .ebooks_container {
+        margin-top: 10px;
+        width: 100vw;
+    }
+
+    .table1 {
+        width: 100%;
+    }
+    .Facility{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        flex-wrap: wrap;
+        gap: 2em;
+        
+    }
+
+    .Facility_item {
+        color: black;
+        font-size: 1.5rem;
+        margin-left: 40px;
+        padding: 5px;
+        background-color: rgb(246, 112, 112);
+    }
+
+    .para {
+        margin-left: 40px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+
+    }
+    .cs_table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 80%;
+    height: max-content;
+    line-height: 25px;
+}
+
+.ec_div {
+    background-image: url("{%static 'pharm_background1.png'%}");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.h_row {
+    background-color: rgb(249, 64, 64);
+    color: white;
+    font-weight: 700;
+}
+
+</style>
 </head>
 <body>
     {% include 'header.html' %}
     {% include 'mainnav.html' %}
-    <h1>E-library</h1>
+    <div class="main_container">
+
+        <h1 class="E-library_title">Library</h1>
+    </div>
+    <div class="college_library">
+     <!-- /  <h2>Facility Available In Library</h2> -->
+        <!-- <ul class="Facility">
+            <li class="Facility_item">Open access for all our users</li>
+            <li class="Facility_item">Web OPAC</li>
+            <li class="Facility_item">Barcode system</li>
+            <li class="Facility_item">NPTEL videos</li>
+            <li class="Facility_item">Internet/ Multimedia/ Scanning facility</li>
+            <li class="Facility_item">Internet/ Multimedia/ Scanning facility</li>
+            <li class="Facility_item">DELNET</li>
+            <li class="Facility_item">Shodhsindhu</li>
+            <li class="Facility_item">Shodh Ganga</li>
+            <li class="Facility_item">Library network</li>
+            <li class="Facility_item">Reference facility</li>
+            <li class="Facility_item">Reference facility</li>
+            <li class="Facility_item">Journal section</li>
+            <li class="Facility_item">News paper clipping</li>
+            <li class="Facility_item">Reprographic service</li>
+            <li class="Facility_item">ARAI</li>
+            <li class="Facility_item">Mat journal</li>
+        </ul> -->
+        <hr style="height: 3px;
+                    background: orange;">
+        <div style="
+                    align-items: center;
+                    width: 100%;
+                    display: flex;
+                    gap: 4em;
+                    flex-direction: column;">
+
+            <h2>Library Details</h2>
+            <table class="cs_table" border="1">
+                <tr class="h_row">
+                    <th>SR.NO</th>
+                    <th>Faculty</th>
+                    <th>Total No of Titles</th>
+                    <th>Total No of volume</th>
+                    <th>Total cost of books</th>
+                    <th>Print journals</th>
+                    <th>e-Books</th>
+                    <th>e-journals</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Engg</td>
+                    <td>2378</td>
+                    <td></td>
+                    <td></td>
+                    <td>30</td>
+                    <td>1745</td>
+                    <td>594</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>MBA</td>
+                    <td>728</td>
+                    <td></td>
+                    <td></td>
+                    <td>36</td>
+                    <td>896</td>
+                    <td>229</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Total</td>
+                    <td>3106</td>
+                    <td></td>
+                    <td>62,20,818</td>
+                    <td>66</td>
+                    <td>2641</td>
+                    <td>823</td>
+                </tr>
+            </table>
+
+            <table border="1" width="80%">
+                <tr>
+                    <th>Total Title
+                        (Print +e-Books)=5747
+                    </th>
+                    <th>Engg</th>
+                    <th>Print + e-Books</th>
+                    <th>12154</th>
+                </tr>
+                <tr>
+                    <th>Total Books
+                        (Print +e-Books)=17074
+                    </th>
+                    <th>MBA</th>
+                    <th>Print + e-Books</th>
+                    <th>4920</th>
+                </tr>
+            </table>
+        </div>
+        <br><br>
+        <hr style="height: 3px;
+                   background: orange;">
+        <div style="margin-top: 40px;" align="center">
+            <h2 class="elimentnt">NPTEL Video Lecture</h2>
+            <p class="para">NPTEL video lecture on e- library PC No 01 to 03</p>
+            <h2 class="elimentnt">Remote access OPAC</h2>
+            <p class="para"><a href="http://libraryserver/w27/" style="color: blue;">http://libraryserver/w27/</a>
+            </p>
+            <h2 class="elimentnt">e-Resource National Digital Library</h2>
+            <p class="para">ID=<a href="drcharal@gamail.com" style="color: blue;">drcharal@gamail.com</a><br>
+                ID=<a href="principalnav@gamail.com" style="color: blue;">principalnav@gamail.com</a><br>
+                Password=1234</p>
+            <h2 class="elimentnt">e-Resource KNIMBUS</h2>
+            <p class="para">Login=<a href="rahulingawal79@gemail.com"
+                    style="color: blue;">rahulingawal79@gemail.com</a><br>
+                Password=1234</p>
+            <h2 class="elimentnt">e-Resource DELNET</h2>
+            <p class="para">Login = mhnesgife <br>
+                Password = nes7637
+            </p>
+        </div>
+    </div>
+</div>
     {% include 'footer.html' %}
 </body>
 </html>

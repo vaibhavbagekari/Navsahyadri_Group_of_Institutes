@@ -10,7 +10,10 @@
     <!-- <link rel="stylesheet" href="{% static 'header.css' %}"> -->
     <link rel="stylesheet" href="{% static 'department.css' %}">
     <style>
-
+        .about-img{
+            height: max-content;
+        }
+     
     </style>
 </head>
 {%include 'header.html'%}
@@ -19,18 +22,18 @@
 <div class="a">
     <div>
         <div class="divh1">
-            <h2 class="meh2">ENTC Engineering</h2><br>
+            <h2 class="meh2">E&TC Engineering</h2><br>
         </div>
         <div class="MEdiv">
 
-            <span class="span">Course Code:</span>
+            <span class="span">Course Code:663237210</span>
             <span class="span">Duration:4 year</span>
             <span class="span">Course Type: Full Time</span>
-            <span class="span">Intake: 120</span>
+            <span class="span">Intake: 60</span>
         </div>
         <div width="100%" class="meimg">
-            <img width="50%" src="{% static 'IMG_6205.JPG' %}">
-            <img width="50%" src="{% static 'IMG_6209.JPG' %}">
+            <img width="45%" src="{% static 'IMG_6205.JPG' %}">
+            <img width="45%" src="{% static 'IMG_6209.JPG' %}">
         </div>
         <div class="about-dep-div">
             <h2 class="topic-title">About Department</h2>
@@ -73,7 +76,7 @@
                 <br>
                 <br>
                 <div class="about-img">
-                    <img src="{% static 'IMG_6185.JPG' %}" alt="" width="100%" height="100%">
+                    <img src="{% static 'IMG_6185.JPG' %}" alt="" width="100%" >
                 </div>
             </div>
         </div>
@@ -85,7 +88,7 @@
                     <img src="{% static 'profile1.png' %}" alt="" width="100%">
 
                 </div>
-                <div class="about-text" style="">
+                <div class="about-text">
 
 
                     <ul class="hod-info">
@@ -93,7 +96,7 @@
 
                         <li class="hod-info-item">Education:M. Tech. VLSI</li>
                         <br>
-                        <li class="hod-info-item">Designation: HoD-E&TC, CEO, NESGI-FOE</li>
+                        <li class="hod-info-item">Designation: HOD-E&TC, CEO, NESGI-FOE</li>
                         <br>
 
                         <li class="hod-info-item">Email id: vinod.jagdale.2008@gmail.com</li><br>
@@ -114,7 +117,7 @@
         </div>
         
         <h2 class="topic-title">Faculty Profile</h2>
-        <div class="facultydiv">
+        <!-- <div class="facultydiv">
             {% for entc_faculty in entc_faculties %}
             <div class="facultyspan">
                 <img class="facultyimg" src="{{entc_faculty.photo.url}}">
@@ -130,25 +133,56 @@
                 </p>
             </div>
             {% endfor %}
+        </div> -->
+        <div class="table_div">
+           
+        
+                <table class="cs_table" border="1">
+                    <tr class="h_row">
+                        <th>Sr.no</th>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>Qualification</th>
+                        <th>Date of Joining</th>
+                        <th>Professional Experience</th>
+                        <th>Mob. No:</th>
+                        <th>Email Id:</th>
+                    </tr>
+                    {% for i in entc_faculties %}
+                    <tr>
+                        <td>{{i.id}}</td>
+                        <td>{{i.f_name}} {{i.l_name}}</td>
+                        <td>{{i.designation}}</td>
+                        <td>{{i.Qualifications }}</td>
+                        <td>{{i.DOJ}}</td>
+                        <td>{{i.Experience }}</td>
+                        <td>{{i.contact_no }}</td>
+                        <td>{{i.Email_Id }}</td>
+                        
+                    </tr>
+                    {% endfor %}
+                   
+                </table>
         </div>
     </div>
     <h2 class="topic-title">Academics</h2>
     <div class="face_div">
         <div class="face_sub_div">
-            <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+            <img src="{% static 'laboratory.png' %}" alt="" class="face_img">
             <h3 class="face_title">Laboratory</h3>
             <a class="dep" href="{% url 'eng_lab_entc' %}"><button class="button button3">click here to
                     view</button></a>
             </p>
         </div>
         <div class="face_sub_div">
-            <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+            <img src="{% static 'syllabus.img' %}" alt="" class="face_img">
             <h3 class="face_title">Syllabus</h3>
-            <a href="{% url 'eng_syllabus'%}"> <button class="button button3">click here to view</button></a></p>
+            <a href="{% url 'eng_entc_syllabus'%}"> <button class="button button3">click here to view</button></a></p>
         </div>
         <div class="face_sub_div">
-            <img src="{% static 'cs_img3.jpeg' %}" alt="" class="face_img">
-            <a class="dep" href="{% url 'Electrical' %}"><button class="button button3">click here to view</button></a>
+            <img src="{% static 'events_activity.jpg' %}" alt="" class="face_img">
+            <h3 class="face_title">Events and Activities</h3>
+            <a class="dep" href="{% url 'eng_entc_ev' %}"><button class="button button3">click here to view</button></a>
             </p>
         </div>
     </div>

@@ -1,15 +1,145 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awardss and Appreciation</title>
+    <style>
+        .main_container {
+            width: 100%;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgb(14, 14, 14);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            background-image: url("{% static 'mba_background_img.jpg' %}");
+        }
+
+        .Placements_div {
+            margin: 10px;
+            padding: 10px;
+            margin: auto;
+            width: 85%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 100%;
+            justify-content: space-around;
+            align-items: baseline;
+            gap: 1em;
+            background-color: white;
+
+        }
+
+        .main_container h1 {
+            color: rgb(255, 255, 255);
+        }
+
+        figure {
+            width: 150px;
+        }
+
+        figcaption {
+            text-align: center;
+            color: black;
+
+        }
+
+        .fig_div {}
+    </style>
 </head>
+
 <body>
     {% include 'header.html' %}
     {% include 'mainnav.html' %}
-    <h1>Awardss and Appreciation</h1>
+    <div class="main_container">
+
+        <h1>Awardss and Appreciation</h1>
+    </div>
+    <div style="background-color: rgba(83, 83, 83, 0.452);">
+    <h1>Engineering : </h2>
+        <div class="Placements_div">
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static '6th Asia - Africa Best Campus Award.jpg' %}" alt="img" style="width:100%">
+                    <figcaption>6th Asia - Africa Best Campus Award</figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'Award by Sakal News paper.jpg' %}" alt="img" style="width:100%">
+                    <figcaption>Award by Sakal News paper</figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'ISO Certificate.jpg' %}" alt="img" style="width:100%">
+                    <figcaption>ISO Certificate</figcaption>
+                </figure>
+            </div>
+        </div>
+        <h1>MBA : </h1>
+        <div class="Placements_div">
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'Best Management Institute Award.jpg' %}" alt="img" style="width:100%">
+                    <figcaption>Best Management Institute Award</figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'Iconic Brand Maharashtra  Award 2022.jpg' %}" alt="img" style="width:100%">
+                    <figcaption>Iconic Brand Maharashtra  Award 2022</figcaption>
+                </figure>
+            </div>
+        </div>
+        <h1>Pharmacy : </h1>
+        <div class="Placements_div">
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'Best Pharmacy Institute Award.jpg' %}" alt="img" style="width:100%">
+                    <figcaption>Best Pharmacy Institute Award</figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'DSC_4144.jpg' %}" alt="img" style="width:100%">
+                    <figcaption>DSC_4144</figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'DSC_4149.jpg' %}" alt="img" style="width:100%">
+                    <figcaption>DSC_4149</figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'DSC_4154.jpg' %}" alt="img" style="width:100%">
+                    <figcaption>DSC_4154</figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'DSC_4156.jpg' %}" alt="img" style="width:100%">
+                    <figcaption>DSC_4156</figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'National Educational Excellance Award.jpg' %}" alt="img" style="width:100%">
+                    <figcaption>National Educational Excellance Award</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
     {% include 'footer.html' %}
 </body>
+
 </html>

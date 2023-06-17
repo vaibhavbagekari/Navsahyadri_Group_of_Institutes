@@ -1,20 +1,6 @@
 .meh2 {
-   
-    /* background-image: linear-gradient(-225deg,
-            #231557 0%,
-            #44107a 29%,
-            #f42e07 67%,
-            #fff800 100%);
-   
-    background-size: 200% auto; */
-    color: #fff;
 
-    
-    /* -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 5s linear infinite;
-    
-    font-size: 2.3rem; */
+    color: #fff;
 
 }
 
@@ -26,7 +12,7 @@
 
 
 .MEdiv {
-    margin:20px auto 20px auto;
+    margin: 20px auto 20px auto;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -41,31 +27,33 @@
     font-size: 20px;
     box-shadow: 2px 2px 2px black;
     text-align: center;
-    /* margin: 5px; */
 
     background-color: rgb(130, 161, 201);
 }
 
 .meimg {
-    margin: 0px;
-    padding: 0px;
+
     height: 45vh;
-    
+
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: row;
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-.meimg img{
+
+.meimg img {
     height: 100%;
 }
 
 .facultydiv {
-    /* padding: 5px; */
+
     width: 100vw;
     height: auto;
-    /* border: 2px solid black; */
+
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 1em;
 }
@@ -75,14 +63,14 @@
 }
 
 .facultyspan {
-    /* margin: 10px; */
-    box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.64);
-    width: 200px;
+
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.64);
+
     width: 220px;
     font-size: 16px;
-    border: 2px solid rgb(15, 1, 1);
-    border-radius: 10px;
-    transition-duration: 1s;
+
+    border-radius: 5px;
+    transition-duration: .5s;
 }
 
 .facultyspan:hover {
@@ -111,6 +99,7 @@
     display: flex;
     align-items: center;
 }
+
 .divh1 {
     background-image: linear-gradient(rgb(247, 74, 74), rgb(247, 190, 190));
     color: white;
@@ -125,12 +114,12 @@
 }
 
 .about-img {
-    height: 320px;
-    width: 500px;
+    /* height: 320px; */
+    width: 40%;
 }
 
 .topic-title {
-   margin: 10px auto 10px auto;
+    margin: 10px auto 10px auto;
 }
 
 .about-container {
@@ -150,7 +139,8 @@
 
 .about-img {
     border-radius: 10px;
-    /* width: 300px; */
+    width: 300px;
+    height: max-content;
     box-shadow: 6px 6px 6px black;
 }
 
@@ -203,7 +193,7 @@
 
 .face_title {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 28px;
+    font-size: 18px;
 }
 
 .button {
@@ -236,13 +226,34 @@
 .meh2 {
     color: black;
 }
-.dep_title{
+
+.dep_title {
     margin: 10px auto 10px auto;
     color: black;
     margin: 20px;
     background-color: rgb(254, 139, 139);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 35px;
+}
+.cs_table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 80%;
+    height: max-content;
+    line-height: 25px;
+}
+
+.ec_div {
+    background-image: url("{%static 'pharm_background1.png'%}");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.h_row {
+    background-color: rgb(249, 64, 64);
+    color: white;
+    font-weight: 700;
 }
 
 @media screen and (max-width:600px) {
@@ -251,9 +262,15 @@
         /* margin: 0px; */
 
     }
+    .meimg{
+        display: none;
+    }
 
     .MEdiv {
         flex-wrap: wrap;
         margin: 10px 10px 0px 10px;
+    }
+    .table_div{
+        overflow-x: auto;
     }
 }

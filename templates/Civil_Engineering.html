@@ -98,11 +98,11 @@
                 <span class="span">Course Code:663219110</span>
                 <span class="span">Duration:4 year</span>
                 <span class="span">Course Type: Full Time</span>
-                <span class="span">Intake: 120,Direct 2<sup>th</sup>Year Intake:84 </span>
+                <span class="span">Intake: 30</span>
             </div>
             <div width="100%" class="meimg">
-                <img width="50%" src="{% static 'IMG_7286.JPG' %}">
-                <img width="50%" src="{% static 'IMG_7271.JPG' %}">
+                <img width="45%" src="{% static 'IMG_7286.JPG' %}">
+                <img width="45%" src="{% static 'IMG_7271.JPG' %}">
             </div>
             <div class="about-dep-div">
                 <h2 class="topic-title">About Department</h2>
@@ -133,7 +133,7 @@
                     <br>
                     <br>
                     <div class="about-img">
-                        <img src="{% static 'IMG_7340.JPG' %}" alt="" width="100%" height="100%">
+                        <img src="{% static 'IMG_7340.JPG' %}" alt="" width="100%" >
                     </div>
                 </div>
             </div>
@@ -187,47 +187,9 @@
 
                 </div>
             </div>
-            <!-- <div>
-                <p>
-                <h2>Aim of the Course</h2>
-                Civil engineering is a professional engineering discipline that deals with the
-                design, construction, and maintenance of the physical and naturally built
-                environment, including works like roads, bridges, canals, dams, and buildings.
-                Civil engineering is the second-oldest engineering discipline after military engineering.
-                </p>
-            </div>
-            <div width="100%" class="meimg">
-                <img width="50%" src="{% static 'civil-engineeringimg1.webp' %}">
-                <img width="50%" src="{% static 'civil-engineeringimg2.jpg' %}">
-            </div>
-            <div class="hod">
-                <h2>HOD'S Message</h2>
-                <figure>
-                    <img width="150px"
-                        src="http://www.navsahyadri.edu.in/assets/images/facultyprofile/Pankaj-Bhokare.jpg">
-                    <figcaption><b>HOD NAME</b>
-                        Head Of CIVIL Department
-                    </figcaption>
-                    <p class="p1">Ever science the establishment of this institution our primary goal has been to impart
-                        and
-                        train our future leaders with best of education.
-
-                        Our objective is to disseminate knowledge through various forms such as class room training,
-                        industrial
-                        visit and organise a attractive curriculum for the all ground development of our students.
-
-                        Mechanical engineering is the basic branch of all engineering that why it is known as MOTHER OF
-                        ENGINEERING as it add-ons state of art technically and exhilarates solution.
-
-                        Here at NAVSAYADRI education society we attempt to provide cheerful, productive and satisfying
-                        experience at all level to explore the amazing world mechanical engineering.
-
-                        With best wishes for a bright future.
-
-                    </p>
-            </div> -->
+           
             <h2 class="facultyh2">Faculty Profile</h2>
-            <div class="facultydiv">
+            <!-- <div class="facultydiv">
                 {% for civil_faculty in civil_faculties %}
                 <div class="facultyspan">
                     <img class="facultyimg" src="{{civil_faculty.photo.url}}" widt="100%">
@@ -243,31 +205,62 @@
                     </p>
                 </div>
 
-                {% endfor %}
+                {% endfor %} -->
+                <div class="table_div">
+           
+        
+                    <table class="cs_table" border="1">
+                        <tr class="h_row">
+                            <th>Sr.no</th>
+                            <th>Name</th>
+                            <th>Designation</th>
+                            <th>Qualification</th>
+                            <th>Date of Joining</th>
+                            <th>Professional Experience</th>
+                            <th>Mob. No:</th>
+                            <th>Email Id:</th>
+                        </tr>
+                        {% for i in civil_faculties %}
+                        <tr>
+                            <td>{{i.id}}</td>
+                            <td>{{i.f_name}} {{i.l_name}}</td>
+                            <td>{{i.designation}}</td>
+                            <td>{{i.Qualifications }}</td>
+                            <td>{{i.DOJ}}</td>
+                            <td>{{i.Experience }}</td>
+                            <td>{{i.contact_no }}</td>
+                            <td>{{i.Email_Id }}</td>
+                            
+                        </tr>
+                        {% endfor %}
+                       
+                    </table>
+            </div>
             </div>
             <h2 class="topic-title">Academics</h2>
             <div class="face_div">
                 <div class="face_sub_div">
-                    <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+                    <img src="{% static 'laboratory.png' %}" alt="" class="face_img">
                     <h3 class="face_title">Laboratory</h3>
                     <a class="dep" href="{% url 'eng_lab_civil' %}"><button class="button button3">click here to
                             view</button></a>
                     </p>
                 </div>
                 <div class="face_sub_div">
-                    <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+                    <img src="{% static 'syllabus.img' %}" alt="" class="face_img">
                     <h3 class="face_title">Syllabus</h3>
-                    <a href="{% url 'eng_syllabus'%}"> <button class="button button3">click here to view</button></a>
+                    <a href="{% url 'eng_civil_syllabus'%}"> <button class="button button3">click here to view</button></a>
                     </p>
                 </div>
                 <div class="face_sub_div">
-                    <img src="{% static 'cs_img3.jpeg' %}" alt="" class="face_img">
-                    <a class="dep" href="{% url 'Electrical' %}"><button class="button button3">click here to
+                    <img src="{% static 'events_activity.jpg' %}" alt="" class="face_img">
+                    <h3 class="face_title">Events and Activity</h3>
+                    <a class="dep" href="{% url 'eng_civil_ev' %}"><button class="button button3">click here to
                             view</button></a>
                     </p>
                 </div>
             </div>
-        </div>
+        
         {%include 'footer.html'%}
     </div>
 

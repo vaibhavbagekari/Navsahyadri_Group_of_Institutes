@@ -1,6 +1,6 @@
 {% load static %}
 <div class="menu">
-    <div class="menu_top" style="width: 100%; position:fixed; top:0px; height:30px;  background-color: brown; " ></div>
+    <div class="menu_top" style="width: 100%; position:fixed; top:0px; height:40px;  background-color: brown; "></div>
     <button class="b1" id="navbtn" onclick="droupdown()">
         <div class="snav">
             <span class="t1"></span>
@@ -15,7 +15,6 @@
     </button>
 </div>
 <ul class="container-subnav">
-
     <li class="subnav"><a href="{% url 'aicte' %}" style="color: rgb(255, 60, 60);">AICTE approvals</a></li>
     <a href="{% url 'mandatory_disclosure' %}" style="color: rgb(255, 60, 60);">
         <li class="subnav">Mandatory Disclosure</li>
@@ -30,81 +29,106 @@
     <nav class="nav">
         <ul class="list">
             <li class="nevlist {% if request.path == '/engindex/' %} active {% endif %}"> <a
-                    class="{% if request.path == '/engindex/' %} active {% endif %}" href="{% url 'engindex' %}"><i
-                        class="fa fa-home" style="font-size:20px"></i>&nbsp;Home</a>
-            </li>
-            <li class="nevlist"> 
-                Department <b style="font-weight: 700;">&#8628;</b>
-                <ul class="submenu">
-                    <a class="dep"
-                            href="{% url 'mechanical' %}"><li class="submenuitem {% if request.path == '/mechanical/' %} active {% endif %}">Mechanical Engineering</li></a>
-                    <a class="dep"
-                            href="{% url 'Civil' %}"><li class="submenuitem {% if request.path == '/Civil/' %} active {% endif %}">Civil Engineering</li></a>
-                            <a class="dep"
-                            href="{% url 'Electrical' %}"><li class="submenuitem {% if request.path == '/Electrical/' %} active {% endif %}">Electrical Engineering</li></a>
-                            <a class="dep" href="{% url 'ENTC' %}"> <li class="submenuitem {% if request.path == '/ENTC/' %} active {% endif %}"><abbr
-                            title="Electronics & Telicommunication">E&TC</abbr></li></a>
-                            <a class="dep" href="{% url 'CS' %}"><li class="submenuitem {% if request.path == '/CS/' %} active {% endif %}"><abbr
-                            title="computer science/Engineering">C.S.</abbr></li></a>
-                            <a class="dep" href="{% url 'AIML' %}"><li class="submenuitem {% if request.path == '/AIML/' %} active {% endif %}"><abbr
-                            title="Artificial Intelligence and Machine Learning">AIML</abbr></li></a>
-                            <a class="dep" href="{% url 'eng_fe'%}"><li class="submenuitem {% if request.path == '/eng_fe/' %} active {% endif %}"><abbr
-                                title="Artificial Intelligence and Machine Learning">FE</abbr></li></a>
-                </ul>
+                    class="{% if request.path == '/engindex/' %} active {% endif %}"
+                    href="{% url 'engindex' %}">Home</a>
             </li>
             <li class="nevlist">
-                Academic
-                calender <b style="font-weight: 700;">&#8628;</b>
+                Department <b style="font-weight: 700;">&#8628;</b>
                 <ul class="submenu">
-
-                    <li class="submenuitem">Mechanical Engineering</li>
-                    <li class="submenuitem">Civil Engineering</li>
-                    <li class="submenuitem">Electrical Engineering</li>
-                    <li class="submenuitem"><abbr title="Electronics & Telicommunication">E&TC</abbr></li>
-                    <li class="submenuitem"><abbr title="computer science/Engineering">C.S.</abbr></li>
-                    <li class="submenuitem"><abbr title="Artificial Intelligence and Machine Learning">AIML</abbr>
+                    <a class="dep" href="{% url 'mechanical' %}">
+                        <li class="submenuitem {% if request.path == '/mechanical/' %} active {% endif %}">Mechanical
+                            Engineering</li>
+                    </a>
+                    <a class="dep" href="{% url 'Civil' %}">
+                        <li class="submenuitem {% if request.path == '/Civil/' %} active {% endif %}">Civil Engineering
+                        </li>
+                    </a>
+                    <a class="dep" href="{% url 'Electrical' %}">
+                        <li class="submenuitem {% if request.path == '/Electrical/' %} active {% endif %}">Electrical Engineering</li>
+                    </a>
+                    <a class="dep" href="{% url 'ENTC' %}">
+                        <li class="submenuitem {% if request.path == '/ENTC/' %} active {% endif %}"><abbr
+                                title="Electronics & Telicommunication">E&TC</abbr></li>
+                    </a>
+                    <a class="dep" href="{% url 'CS' %}">
+                        <li class="submenuitem {% if request.path == '/CS/' %} active {% endif %}"><abbr
+                                title="computer science/Engineering">C.S.</abbr></li>
+                    </a>
+                    <a class="dep" href="{% url 'AIML' %}">
+                        <li class="submenuitem {% if request.path == '/AIML/' %} active {% endif %}"><abbr
+                                title="Artificial Intelligence and Machine Learning">AIML</abbr></li>
+                    </a>
+                    <a class="dep" href="{% url 'eng_fe'%}">
+                        <li class="submenuitem {% if request.path == '/eng_fe/' %} active {% endif %}"><abbr
+                                title="Artificial Intelligence and Machine Learning">FE</abbr></li>
+                    </a>
+                </ul>
+            </li>
+            <a href="{% static 'Academic Calendar 2023-24 Science and Technology_01062023[745].pdf' %}">
+                <li class="nevlist">Academic Calender <b style="font-weight: 700;">&#8628;</b></li>
+            </a>
+            </li>
+            <li class="nevlist {% if request.path == '/elibrary/' %} active {% endif %}"><a
+                    class="{% if request.path == '/elibrary/' %} active {% endif %}"
+                    href="{% url 'elibrary' %}">Facilities</a>
+                <ul class="submenu">
+                    <li class="submenuitem"><a class="{% if request.path == '/elibrary/' %} active {% endif %}"
+                            href="{% url 'elibrary' %}">E-library</a></li>
+                    <li class="submenuitem" style="color: rgb(0, 0, 0);"> laboratery <b
+                            style="font-weight: 700;">&#8628;</b>
+                        <ul class="submenu1">
+                            <li>
+                                <a href="{% url 'eng_lab_mechanical' %}">
+                            <li class="submenuitem1">Mechanical Engineering</li></a>
+                            <a href="{% url 'eng_lab_civil' %}">
+                                <li class="submenuitem1">Civil Engineering</li>
+                            </a>
+                            <a href="{% url 'eng_lab_electrical' %}">
+                                <li class="submenuitem1">Electrical Engineering</li>
+                            </a>
+                            <a href="{% url 'eng_lab_entc' %}">
+                                <li class="submenuitem1"><abbr title="Electronics & Telicommunication">E&TC</abbr></li>
+                            </a>
+                            <a href="{% url 'eng_lab_cs' %}"><a href="{% url 'eng_lab_cs' %}">
+                                    <li class="submenuitem1"><abbr title="computer science/Engineering">Computer Department</abbr></li>
+                                </a>
+                                <a href="{% url 'eng_lab_aiml' %}">
+                                    <li class="submenuitem1"><abbr title="Artificial Intelligence and Machine Learning">AIML</abbr>
+                            </a>
                     </li>
                 </ul>
             </li>
-
-            <li class="nevlist {% if request.path == '/elibrary/' %} active {% endif %}"><a class="{% if request.path == '/elibrary/' %} active {% endif %}"
-                    href="{% url 'elibrary' %}">E-library</a>
-            </li>
-            <li class="nevlist {% if request.path == '/admission/' %} active {% endif %}"><a
-                    href="{% url 'admission' %}">&nbsp;Admission info.</a>
-            </li>
-            <li class="nevlist {% if request.path == '/englaboratery/' %} active {% endif %}" style="color: rgb(0, 0, 0);"> <a
-                    > laboratery <b style="font-weight: 700;">&#8628;</b></a>
-                        <ul class="submenu">
-
-                            <a href="{% url 'eng_lab_mechanical' %}"><li class="submenuitem">Mechanical Engineering</li></a>
-                                <a href="{% url 'eng_lab_civil' %}"><li class="submenuitem">Civil Engineering</li></a>
-                                    <a href="{% url 'eng_lab_electrical' %}"><li class="submenuitem">Electrical Engineering</li></a>
-                                        <a href="{% url 'eng_lab_entc' %}"><li class="submenuitem"><abbr title="Electronics & Telicommunication">E&TC</abbr></li></a>
-                                            <a href="{% url 'eng_lab_cs' %}"><a href="{% url 'eng_lab_cs' %}"><li class="submenuitem"><abbr title="computer science/Engineering">C.S.</abbr></li></a>
-                                            <a href="{% url 'eng_lab_aiml' %}"> <li class="submenuitem"><abbr title="Artificial Intelligence and Machine Learning">AIML</abbr></a>
-                            </li>
-                        </ul>
-            </li>
-
-            <li class="nevlist {% if request.path == '/tpo/' %} active {% endif %}"> <a href="{% url 'tpo' %}">&nbsp; TPO</a>
-            </li>
-            <li class="nevlist {% if request.path == '/Activity/' %} active {% endif %}"><a
-                    href="{% url 'Activity' %}">Course Outcome <b style="font-weight: 700;">&#8628;</b></a>
-                        <ul class="submenu">
-
-                            <li class="submenuitem">Mechanical Engineering</li>
-                            <a href="{% static 'CIVIL_corse_outcome.pdf' %}" target="_blank"> <li class="submenuitem">Civil Engineering</li></a>
-                            <a href="{% static 'Electrical_COURSE_OUTCOMES.pdf' %}" target="_blank"><li class="submenuitem">Electrical Engineering</li></a>
-                            <a href="{% static 'ENTC_Cource_outcome.pdf' %}" target="_blank"><li class="submenuitem"><abbr title="Electronics & Telicommunication">E&TC</abbr></li></a>
-                            <a href="{% static 'computer_Course_Outcomes.pdf' %}" target="_blank"><li class="submenuitem"><abbr title="computer science/Engineering">C.S.</abbr></li></a>
-                            <li class="submenuitem"><abbr title="Artificial Intelligence and Machine Learning">AIML</abbr>
-                            </li>
-                        </ul>
-            </li>
-            <li class="nevlist "><a href="{% url 'nss' %}"
-                    class="link {% if request.path == '/nss/' %} active {% endif %}"> 
+            <li class="submenuitem"><a href="{% url 'nss' %}" class="link">
                     &nbsp; NSS/Sports</a></li>
+        </ul>
+        </li>
+        <li class="nevlist {% if request.path == '/admission/' %} active {% endif %}"><a
+                href="{% url 'admission' %}">&nbsp;Admission</a>
+        </li>
+        <li class="nevlist {% if request.path == '/eng_placements/' %} active {% endif %}"> <a
+                href="{% url 'eng_placements' %}">Placements</a></li>
+        <li class="nevlist {% if request.path == '/Activity/' %} active {% endif %}">Course Outcome <b style="font-weight: 700;">&#8628;</b>
+            <ul class="submenu">
+                <a href="{% static 'Mechanical Course Outcomes.xlsx' %}" target="_blank">
+                    <li class="submenuitem">Mechanical Engineering</li>
+                    <a href="{% static 'CIVIL_corse_outcome.pdf' %}" target="_blank">
+                        <li class="submenuitem">Civil Engineering</li>
+                    </a>
+                    <a href="{% static 'Electrical_COURSE_OUTCOMES.pdf' %}" target="_blank">
+                        <li class="submenuitem">Electrical Engineering</li>
+                    </a>
+                    <a href="{% static 'ENTC_Cource_outcome.pdf' %}" target="_blank">
+                        <li class="submenuitem"><abbr title="Electronics & Telicommunication">E&TC</abbr></li>
+                    </a>
+                    <a href="{% static 'computer_Course_Outcomes.pdf' %}" target="_blank">
+                        <li class="submenuitem"><abbr title="computer science/Engineering">Computer Engineering</abbr></li>
+                    </a>
+                    <li class="submenuitem"><abbr title="Artificial Intelligence and Machine Learning">AIML</abbr>
+                    </li>
+            </ul>
+        </li>
+        <a
+        href="{% url 'eng_contact' %}"><li class="nevlist {% if request.path == '/eng_contact/' %} active {% endif %}">Contact</li></a>
         </ul>
     </nav>
 </div>

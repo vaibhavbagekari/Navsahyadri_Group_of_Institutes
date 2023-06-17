@@ -36,7 +36,7 @@
       font-size: 1.3rem;
       text-transform: uppercase;
       color: rgb(255, 255, 255);
-      text-shadow: 5px 5px 6px black;
+      /* text-shadow: 5px 5px 6px black; */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -69,19 +69,22 @@
       transition: 0.3s;
       width: 40%;
       border-radius: 5px;
+      background-color: white;
     }
 
     .card:hover {
       box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     }
-    .sub_title{
+
+    .sub_title {
       font-family: Georgia, 'Times New Roman', Times, serif;
       margin: 20px auto 20px auto;
       text-align: center;
       text-decoration: underline;
       color: rgb(0, 0, 175);
     }
-    .wc_div{
+
+    .wc_div {
       /* background-image: radial-gradient(white,rgb(251, 122, 204)); */
       background-image: url("{% static 'pharm_background.png' %}");
       background-position: center;
@@ -89,30 +92,34 @@
       background-size: cover;
       padding: 20px;
     }
-    .other_div{
+
+    .other_div {
       width: 100%;
-      padding: 20px;
-      background-color:#006cb0 ;
+      /* padding: 20px; */
+      background-color:rgba(106, 106, 106, 0.294);
     }
-    .approv-list{
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        gap: 2em;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 10px;
+
+    .approv-list {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      gap: 2em;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 10px;
     }
-   .approv-item{
-    padding: 10px;
-    background-color: #f65050;
-    
-   }
-   @media screen and (max-width:600px) {
-    .p_text_container {
-      width: 80%;
+
+    .approv-item {
+      padding: 10px;
+      background-color: #f65050;
+
     }
-   }
+
+    @media screen and (max-width:600px) {
+      .p_text_container {
+        width: 80%;
+      }
+    }
   </style>
 
 </head>
@@ -134,7 +141,7 @@
     <img src="{% static 'pharm_principal.jpg' %}" alt="pharm_principal" width="100%">
   </div>
   <div class="p_text_container">
-    <h1 >Dr.Kishor Vasant Otari</h1>
+    <h1>Dr.Kishor Vasant Otari</h1>
     <br>
     <p>
 
@@ -143,44 +150,54 @@
       campus at once.
       <br>
       <br>
-      <h2>PHARMASIST OATH</h2>
-      <br>
-  <ul>
-    <li>I swear by the code of ethics of pharmacy council of india in relation to the community and shall act as an integral part of health care team</li>
-    <li>I shall uphold the laws and standards governing my profession</li>
-    <li>I shall strive to perfect and enlarge my knowledge to contribute to the advancement of pharmacy and the public health</li>
-    <li>I shall follow the system which I consider best for pharmaceutical care and counselling of patients</li>
-  </ul>
+    <h2>PHARMASIST OATH</h2>
+    <br>
+    <ul>
+      <li>I swear by the code of ethics of pharmacy council of india in relation to the community and shall act as an
+        integral part of health care team</li>
+      <li>I shall uphold the laws and standards governing my profession</li>
+      <li>I shall strive to perfect and enlarge my knowledge to contribute to the advancement of pharmacy and the public
+        health</li>
+      <li>I shall follow the system which I consider best for pharmaceutical care and counselling of patients</li>
+    </ul>
     </p>
   </div>
 
 </div>
 <div class="wc_div">
   <h1 class="sub_title ">
-    
-    <b style="color: rgb(0, 0, 0);"> About NESGI </b></h1>
-    <p style="padding: 20px; font-size: 20px; color: rgb(1, 7, 0); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Globalization has hit the areas of Science and Technology and its established to stay in the long run and hence Global competitiveness has become the trademark in all technical institutes. Recognized by Government of Maharashtra and affiliated to the University of Pune, as well as an AICTE approved organization. The foundation laid in the year 2009, NESGI.
 
-      Ever since its establishment has helped persistently to improve in both curriculum and extra-curriculum activities. An individual can experience the resources and facilities of a relax and the calm peacefulness in this campus at once.
-      <p><a class="dep" href="{% url 'about_nesgi'%}"><button class="button button3">Read more</button></a></p>
+    <b style="color: rgb(0, 0, 0);"> About NESGI </b>
+  </h1>
+  <p
+    style="padding: 20px; font-size: 20px; color: rgb(1, 7, 0); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    Globalization has hit the areas of Science and Technology and its established to stay in the long run and hence
+    Global competitiveness has become the trademark in all technical institutes. Recognized by Government of Maharashtra
+    and affiliated to the University of Pune, as well as an AICTE approved organization. The foundation laid in the year
+    2009, NESGI.
+
+    Ever since its establishment has helped persistently to improve in both curriculum and extra-curriculum activities.
+    An individual can experience the resources and facilities of a relax and the calm peacefulness in this campus at
+    once.
+  <p><a class="dep" href="{% url 'about_nesgi'%}"><button class="button button3">Read more</button></a></p>
 </div>
 <div class="other_div">
- <h2>MANDATORY DISCLOSURE </h2>
- <div class="approv-container">
- <ul class="approv-list">
-  <li class="approv-item"><a href="{% static ''%}">Mendatory Disclosure</a></li>
- </ul>
-</div>
-<br><br>
-<h2>APPROVAL & AFFILIATION </h2>
- <div class="approv-container">
-  
-  <ul class="approv-list">
+  <h2>MANDATORY DISCLOSURE </h2>
+  <div class="approv-container">
+    <ul class="approv-list">
+      <li class="approv-item"><a href="{% static ''%}">Mendatory Disclosure</a></li>
+    </ul>
+  </div>
+  <br><br>
+  <h2>APPROVAL & AFFILIATION </h2>
+  <div class="approv-container">
+
+    <ul class="approv-list">
       {% for i in approvals %}
       <li class="approv-item"><a href="{{ i.aicte_file.url }}">{{i.id}}.{{ i.title }}</a></li>
       {%endfor%}
-  </ul>
-</div> 
+    </ul>
+  </div>
 </div>
 <h1 class="sub_title "> Courses We Offered </h1>
 <div class="course_container">

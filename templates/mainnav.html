@@ -1,6 +1,6 @@
 {% load static %}
 <div class="menu" style="width: 100%; background-color: brown;">
-    <div class="menu_top" style="width: 100%; position:fixed; top:0px; height:30px;  background-color: brown; "></div>
+    <div class="menu_top" style="width: 100%; position:fixed; top:0px; height:40px;  background-color: brown; "></div>
     <button class="b1" id="navbtn" onclick="droupdown()">
 
         <div class="snav">
@@ -33,13 +33,21 @@
         <ul class="list">
             <a style="height: 100%;" class="{% if request.path == '/home/' %} active {% endif %}"
                 href="{% url 'home' %}">
-                <li class="nevlist {% if request.path == '/home/' %} active {% endif %}"><i class="fa fa-home"
-                        style="font-size:20px"></i>&nbsp;Home
+                <li class="nevlist {% if request.path == '/home/' %} active {% endif %}">Home
                 </li>
             </a>
-            <li class="nevlist  style=" color: rgb(0, 0, 0);"> <a href=""> institutes <b
-                        style="font-weight: 700;">&#8628;</b></a>
+            <li class="nevlist"  >institutes <b
+                        style="font-weight: 700;">&#8628;</b>
                 <ul class="submenu">
+                    <li class="submenuitem"><a href="{% url 'mbaindex' %}">College of MBA <b
+                        style="font-weight: 700;">&#8628;</b></a>
+                <ul class=" submenu1">
+
+                  <a href="{% url 'mba_mba' %}"> <li class="submenuitem1">MBA</li></a>
+                   <a href="{% url 'mbapp' %}"> <li class="submenuitem1">MBA++</li></a>
+                    <a href="{% url 'mca' %}"><li class="submenuitem1">MCA</li></a>
+                </ul>
+            </li>
 
                     <li class="submenuitem"> <a href="{% url 'engindex' %}" target="_blank">
                         College of Engineering <b
@@ -58,6 +66,20 @@
 
                         </ul>
                     </li>
+                    <li class="submenuitem"><a href="{% url 'pharmindex' %}">College of Pharmacy <b
+                        style="font-weight: 700;">&#8628;</b></a>
+                <ul class=" submenu1">
+                    <a href="{% url 'd_pharm' %}">
+                        <li class="submenuitem1">D-Pharmacy</li>
+                    </a>
+                    <a href="{% url 'b_pharm'%}">
+                        <li class="submenuitem1">B-Pharmacy</li>
+                    </a>
+                    <a href="{% url 'm_pharm' %}">
+                        <li class="submenuitem1">M-Pharmacy</li>
+                    </a>
+                </ul>
+            </li>
                     <li class="submenuitem"><a href="{% url 'polyindex' %}">College of Polytechnic <b
                                 style="font-weight: 700;">&#8628;</b></a>
                         <ul class=" submenu1">
@@ -68,47 +90,25 @@
                             <li class="submenuitem1">Computer Engineering</li>
                         </ul>
                     </li>
-                    <li class="submenuitem"><a href="{% url 'pharmindex' %}">College of Pharmacy <b
-                                style="font-weight: 700;">&#8628;</b></a>
-                        <ul class=" submenu1">
-                            <a href="{% url 'd_pharm' %}">
-                                <li class="submenuitem1">D-Pharmacy</li>
-                            </a>
-                            <a href="{% url 'b_pharm'%}">
-                                <li class="submenuitem1">B-Pharmacy</li>
-                            </a>
-                            <a href="{% url 'm_pharm' %}">
-                                <li class="submenuitem1">M-Pharmacy</li>
-                            </a>
-                        </ul>
-                    </li>
-                    <li class="submenuitem"><a href="{% url 'mbaindex' %}">College of MBA <b
-                                style="font-weight: 700;">&#8628;</b></a>
-                        <ul class=" submenu1">
-
-                            <li class="submenuitem1">MBA</li>
-                            <li class="submenuitem1">MBA++</li>
-                            <li class="submenuitem1">MCA</li>
-                        </ul>
-                    </li>
+                    
+                    
 
                 </ul>
 
             </li>
-            <li class="nevlist {% if request.path == '/aboutus/' %} active {% endif %}" style="color: rgb(0, 0, 0);"> <a
-                    href="{% url 'aboutus' %}"> About us <b style="font-weight: 700;">&#8628;</b></a>
+            <li class="nevlist" >  About us <b style="font-weight: 700;">&#8628;</b>
                 <ul class="submenu">
                     <li class="submenuitem"><a href="{% url 'about_nesgi' %}"> About NGI</a></li>
                     <li class="submenuitem"><a href="{% url 'vision-mission' %}"> vision-mission</a></li>
                     <li class="submenuitem"><a href="{% url 'director_Desk' %}"> Director's Desk</a></li>
                     <li class="submenuitem"><a href="{% url 'president_desk' %}">President's Desk</a></li>
-                    <li class="submenuitem"><a href="{% url 'reaching' %}"> Reaching College</a></li>
+                    <!-- <li class="submenuitem"><a href="{% url 'reaching' %}"> Reaching College</a></li> -->
                     <li class="submenuitem"><a href="{% url 'awardss' %}"> Awardss and Appreciation</a></li>
                 </ul>
 
             </li>
-            <li class="nevlist" style="color: rgb(0, 0, 0);"> <a href="{% url 'aboutus' %}"> Governance <b
-                        style="font-weight: 700;">&#8628;</b></a>
+            <li class="nevlist"> Governance <b
+                        style="font-weight: 700;">&#8628;</b>
                 <ul class="submenu">
                     <li class="submenuitem"><a href="{% url 'establishment' %}">Establishment And Affiliation</a></li>
                     <li class="submenuitem"><a href="{% url 'coc' %}"> Code of Conduct</a></li>
@@ -119,10 +119,9 @@
 
             </li>
 
-            <li class="nevlist {% if request.path == '/admission/' %} active {% endif %}"><a
-                    href="{% url 'admission' %}">Admission <b style="font-weight: 700;">&#8628;</b></a>
+            <li class="nevlist">Admission <b style="font-weight: 700;">&#8628;</b>
                 <ul class="submenu">
-                    <li class="submenuitem">form</li>
+                   
                     <li class="submenuitem">
                         <p class="" style="color: black;"><a href="{% url 'engadmission' %}"> Engineering</a></p>
 
@@ -145,11 +144,11 @@
         <li class="nevlist {% if request.path == '//' %} active {% endif %}"><a href="">facilities <b
                     style="font-weight: 700;">&#8628;</b></a>
             <ul class="submenu">
-                <li class="submenuitem"><a href="{% url 'girl_hostel' %}">Girl's Hostel</a></li>
-                <li class="submenuitem"><a href="{% url 'boys_hostel' %}">Boy's Hostel</a></li>
+               
+                <li class="submenuitem"><a href="{% url 'hostel' %}">Hostel</a></li>
                 <li class="submenuitem"><a href="{% url 'tronsport' %}">Transport</a></li>
-                <li class="submenuitem"><a href="{% url 'library' %}">library</a></li>
-                <li class="submenuitem"><a href="{% url 'e_library' %}">E-library</a></li>
+                <li class="submenuitem"><a href="{% url 'e_library' %}">library & E-library</a></li>
+                {% comment %} <li class="submenuitem"><a href="{% url 'e_library' %}">E-library</a></li> {% endcomment %}
                 <li class="submenuitem"><a href="{% url 'counselling' %}">Counselling</a></li>
                 <li class="submenuitem"><a href="{% url 'internet_facilities' %}">Internet facilities</a></li>
             </ul>
@@ -173,7 +172,7 @@
             </ul>
         </li>
 
-        <li class="nevlist {% if request.path == '/gallery/' %} active {% endif %}"><a href="{% url 'gallery' %}">
+        <li class="nevlist"><a href="{% url 'gallery' %}">
                 gallery <b style="font-weight: 700;"></b></a>
             <!-- <ul class="submenu">
                <a href="{% url 'gallery'%}"> <li class="submenuitem">Photo</li></a>

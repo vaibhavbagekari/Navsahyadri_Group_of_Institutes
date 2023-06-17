@@ -39,44 +39,40 @@
     .college_name {
         /* margin: 0px; */
         text-align: center;
-        font-size: 4.5vw;
-
+        font-size: 4.4vw;
         color: rgb(227, 16, 16);
-        text-shadow: 2px 2px 3px rgb(28, 12, 12);
+        font-family: Arial, Helvetica, sans-serif;
+
+
     }
 
     .college_name1 {
         font-size: 1.5vw;
+        font-family: Arial, Helvetica, sans-serif;
 
     }
 
     .nevlist:hover {
         background-color: rgb(255, 255, 255);
-        transform: scale(1.1);
+        transform: scale(1.05);
         color: black;
-        /* font-size: 20px; */
-        /* margin-top: -10px; */
-        transition-duration: 0.6s;
-
-
-
     }
-    
+
     .nevlist:hover a {
         color: rgb(0, 0, 0);
     }
 
     .nevlist:hover .submenu {
         display: block;
-        transition-duration: .5s;
+        /* transition-duration: .5s; */
     }
 
     .nevlist {
         float: left;
         /* padding: 5px; */
-        
+
         z-index: 1;
-        padding: 8px 0px 8px 0px ;
+        padding: 8px 0px 8px 0px;
         cursor: pointer;
         height: 100%;
         display: block;
@@ -84,17 +80,17 @@
         /* border-radius: 5px; */
         color: rgb(255, 255, 255);
         text-transform: uppercase;
-        font-family: 'Raleway', sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         font-weight: 700;
         font-size: .8rem;
         border-right: 10px;
-        transition-duration: .4s;
+
     }
 
     .snav {
         display: none;
         flex-direction: column;
-        height: 15px;
+        height: 23px;
         width: 23px;
         justify-content: space-between;
         transition-duration: 1s;
@@ -117,10 +113,8 @@
 
     .b1 {
         margin: 7px;
-        /* padding: 6px; */
         position: fixed;
         top: 1px;
-
         right: 2px;
         background-color: rgba(255, 255, 255, 0.01);
         border: none;
@@ -144,9 +138,8 @@
 
     .navigation1 {
         position: sticky;
-        top: 1px;
-        /* background-color: rgb(247, 68, 68); */
-        /* padding: 5px; */
+        top: 0px;
+       
         height: auto;
         z-index: 0.8999;
 
@@ -172,29 +165,28 @@
         left: 0px;
         /* border-radius: 10px; */
         top: 100%;
-        
-
         display: none;
         position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
 
     }
 
     .submenuitem {
 
-        /* background-color: rgba(107, 106, 106, 0.511); */
-        border-bottom: 1px solid rgb(54, 171, 0);
-        /* border-radius: 10px; */
+      
+        border-bottom: 1px solid rgb(0, 0, 0);
+        font-family: Arial, Helvetica, sans-serif;
         margin: 6px;
         padding: 2px;
         list-style: none;
-        /* font-size: smaller; */
-        
+      
 
     }
 
     .submenuitem:hover {
-        /* background-color: rgba(253, 145, 145, 0.841); */
-        color: black;
+        /* color: rgba(251, 129, 129, 0.841); */
+
+        /* color: black; */
     }
 
     .btndiv {
@@ -408,7 +400,6 @@
         align-items: space-around;
         margin-top: 5px;
         height: max-content;
-        /* padding: 10px; */
         width: 100%;
         flex-wrap: wrap;
         background-color: rgba(26, 26, 28, 0.889);
@@ -444,7 +435,6 @@
 
     a {
         color: rgb(255, 255, 255);
-        /* font-family:'Raleway', sans-serif; */
         font-weight: 700;
         text-decoration: none;
     }
@@ -453,20 +443,17 @@
         color: black;
 
     }
-    
+
 
     .active {
-        background-color: rgb(243, 243, 243);
+        background-color: rgb(249, 249, 249);
         color: rgb(0, 0, 0);
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        padding: 3px;
+        padding-top: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
         height: 100%;
-        color: #fd1100;
-        /* font-weight: 700; */
-        /* margin-top: -10px; */
-        /* font-size: 18px; */
-        /* transform: translate(1.1); */
+        color: #000000;
     }
 
     .responsiv_logo {
@@ -479,13 +466,8 @@
 
     .form_div {
         width: 40vw;
-        font-family: 'Raleway', sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         border: 2px solid black;
-        /* padding: 20px; */
-        /* position: absolute; */
-        /* left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%); */
     }
 
     input,
@@ -497,7 +479,7 @@
 
     .icon {
         font-size: 20px;
-        /* color:rgb(255, 255, 255) */
+       
     }
 
     .dep {
@@ -529,7 +511,7 @@
         height: 70%;
         /* cursor: pointer; */
         /* border-radius: 10px; */
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         color: rgba(251, 20, 20, 0.999);
         font-size: 30px;
         animation-name: animation2;
@@ -546,9 +528,10 @@
         overflow: hidden;
     }
 
+    /* 
     @keyframes animation1 {
         from {
-            /* top:-10px; */
+            
             opacity: 0.5;
             left: -220px;
         }
@@ -557,9 +540,9 @@
             top: 25px;
             left: 40px;
         }
-    }
+    } */
 
-    @keyframes animation2 {
+    /* @keyframes animation2 {
         from {
             opacity: 0.5;
             left: -260px;
@@ -569,7 +552,7 @@
             top: 150px;
             left: 50px;
         }
-    }
+    } */
 
     .list-div {
         /* border: 2px solid blue; */
@@ -641,7 +624,6 @@
     .form-colname {
         display: flex;
         color: rgb(36, 4, 180);
-        /* text-shadow: 1px 2px 5px rgb(75, 40, 228); */
         justify-content: center;
         font-size: 30px;
         margin-top: 70px;
@@ -662,12 +644,9 @@
     .table2 {
         width: 45vw;
         border-radius: 20px;
-        /* background-color: rgba(245, 72, 216, 0.681); */
         height: 100%;
         font-size: 1.2rem;
-        /* box-shadow: 5px 5px 9px rgb(109, 109, 109); */
         border-spacing: 15px;
-        /* color: rgba(0, 888, 988, 0.9); */
     }
 
     .table3 {
@@ -675,15 +654,11 @@
     }
 
     .dis-contener {
-        /* float: right; */
         width: 45vw;
-
-        /* border: 1px solid red; */
         display: flex;
         align-items: center;
         flex-direction: column;
-        /* background-image: linear-gradient(rgb(78, 227, 247), rgb(255, 255, 255)); */
-        background-image: radial-gradient(white,rgb(252, 92, 92));
+        background-image: radial-gradient(white, rgb(252, 92, 92));
         height: 100%;
 
     }
@@ -691,13 +666,8 @@
     .form-input {
         background-color: transparent;
         width: 80%;
-        /* border: none; */
         padding: 10px;
         height: 30px;
-        border: 1px solid rgb(251, 21, 21);
-        /* box-shadow: 0px 0px 9px rgba(243, 75, 229, 0.816); */
-        /* border-radius: 10px; */
-        /* border-bottom: 2px solid black; */
     }
 
     .submit {
@@ -706,7 +676,6 @@
         font-size: 1rem;
         background-color: rgb(252, 90, 90);
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.558);
-        /* border-radius: 10px; */
         transition-duration: .7s;
         cursor: pointer;
     }
@@ -717,86 +686,56 @@
 
     .table2 input {
         font-size: 15px;
-        /* width: 50%; */
     }
-
     .formdiv {
         padding-top: 5vh;
         padding-bottom: 5vh;
         width: 100%;
         height: 80vh;
-
-
     }
-
     select {
         width: 80%;
         background-color: transparent;
         border: none;
         border-bottom: 2px solid rgb(255, 91, 91);
-
     }
-   
-
     .box {
         width: 100%;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        /* background: linear-gradient(rgba(251, 140, 140, 0.516), rgba(31, 141, 238, 0.671)); */
     }
 
     .subbox {
-        width: 200px;
-        border: 2px solid black;
-        /* font-weight: 4000;  */
-        border-radius: 20px;
-        box-shadow: 0px 0px 10px rgba(17, 18, 18, 0.984);
-        color: rgb(238, 19, 19);
+        width: 250px;
+        
+        color: rgb(0, 0, 0);
         margin: 20px;
-        height: 200px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        transition-duration: 0.5s;
+        background-color: #ff6b6ba0;
+       
+        text-align: center;
+        padding: 20px;
+        font-family:Arial, Helvetica, sans-serif;
     }
 
     .subbox:hover {
-        transform: scale(1.1);
-
+        transform: scale(1.02);
+        /* background-color: rgb(247, 135, 98); */
+        box-shadow: 2px 2px 4px rgba(17, 18, 18, 0.984);
+        
         /* transition-timing-function: ease-in-out; */
 
     }
 
     .subbox .subtext {
-        text-shadow: 2px 1px 0px rgb(0, 102, 255);
         margin: auto;
-        background-color: rgba(0, 0, 0, 0.435);
+        /* background-color: rgba(0, 0, 0, 0.435); */
         width: 100%;
         display: flex;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         justify-content: center;
     }
-
-    .c1 {
-        background-image: url("{% static 'polytechnic.jpg' %}");
-
-    }
-
-    .c2 {
-        background-image: url("{% static 'engineering.jpg' %}");
-    }
-
-    .c3 {
-        background-image: url("{% static 'MBA.avif' %}");
-    }
-
-    .c4 {
-        background-image: url("{% static 'pharmacy1.jpg' %}");
-    }
-
     .opgroup {
         background-color: #00000086;
     }
@@ -818,8 +757,6 @@
     .submenuitem {
         position: relative;
         padding: 7px;
-        transition-duration: 1s;
-        
     }
 
     .submenu1 {
@@ -838,7 +775,7 @@
     .submenuitem1 {
         /* width: 100%; */
         /* background-color: rgba(107, 106, 106, 0.511); */
-        border-bottom: 1px solid rgb(54, 171, 0);
+        /* border-bottom: 1px solid rgb(54, 171, 0); */
         /* border-radius: 10px; */
         margin: 6px;
         padding: 5px;
@@ -850,30 +787,33 @@
     .submenuitem1:hover {
         /* background-color: rgba(253, 145, 145, 0.841); */
         color: black;
-        transition-duration: 1s;
+        /* transition-duration: 1s; */
     }
 
     .submenuitem:hover .submenu1 {
         display: block;
     }
-    .marquee1{
+
+    .marquee1 {
         height: 330px;
         margin: 20px;
-        
+
     }
-    .mar-container{
+
+    .mar-container {
         height: 100%;
         display: flex;
         /* flex-wrap: nowrap; */
         flex-direction: row;
         gap: 1em;
         align-content: space-around;
-        
+
 
     }
-    .marquee1_container{
+
+    .marquee1_container {
         /* border: 1px solid red; */
-       max-width: 300px;
+        max-width: 300px;
         max-height: 90%;
         margin: 10px;
 
@@ -905,7 +845,8 @@
         .slidermain .colimg {
             height: 60vh;
         }
-        .submenu1{
+
+        .submenu1 {
             width: 200px;
         }
 
@@ -930,9 +871,7 @@
 
     }
 
-    .college_name {
-        text-shadow: 2px 2px 4px black;
-    }
+
 
     .container-subnav {
         padding: 5px;
@@ -957,7 +896,8 @@
         /* background-color: rgb(213, 69, 69); */
 
     }
-    .menu_top{
+
+    .menu_top {
         display: none;
     }
 
@@ -968,7 +908,7 @@
 
         .college_name {
             font-size: 6vw;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
         }
 
@@ -980,7 +920,7 @@
             position: fixed;
             width: 240px;
             right: -100%;
-            top: 20px;
+            top: 30px;
             z-index: 1;
             height: 100vh;
             /* display: none; */
@@ -997,7 +937,7 @@
         .navigation2 {
             position: fixed;
             right: 0px;
-            top: 20px;
+            top: 30px;
 
             display: block;
             background-color: rgb(250, 37, 37);
@@ -1036,225 +976,240 @@
             justify-content: space-evenly;
             flex-wrap: wrap;
         }
-       
+
         .nevlist {
             /* border-top: 1px solid rgba(238, 242, 242, 0.868); */
             margin-top: 20px;
-             font-size: .6rem;
+            font-size: .9rem;
         }
 
         .responsiv_logo {
             display: block;
         }
-        .form-button{
+
+        .form-button {
             display: none;
         }
-        .menu_top{
+
+        .menu_top {
             display: block;
         }
-        .table3{
+
+        .table3 {
             width: 100%;
         }
 
     }
-    
+
     .location {
         text-decoration: none;
     }
-    
+
     .title {
-      background-color: rgba(0, 88, 966, 0.5);
-      padding: 5px;
-      margin: 5px;
-      text-align: center;
-      border-radius: 20px;
-      box-shadow: 5px 4px 8px black;
+        background-color: rgba(0, 88, 966, 0.5);
+        padding: 5px;
+        margin: 5px;
+        text-align: center;
+        border-radius: 20px;
+        box-shadow: 5px 4px 8px black;
     }
-    .course-title{
-      /* font-size: 20px; */
-      font-family:'Raleway', sans-serif;
+
+    .course-title {
+        /* font-size: 20px; */
+        font-family: 'Raleway', sans-serif;
     }
+
     .tab {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      margin-top: 10px;
-      overflow: hidden;
-      border: 1px solid #ccc;
-      background-color: #fa7777;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 10px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #fa7777;
     }
 
     /* Style the buttons inside the tab */
     .tab button {
-      background-color: inherit;
-      float: left;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      transition: 0.3s;
-      font-size: 17px;
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
     }
 
     /* Change background color of buttons on hover */
     .tab button:hover {
-      background-color: #fb9595;
+        background-color: #fb9595;
     }
 
     /* Create an active/current tablink class */
     .tab button.active {
-      background-color: #ffffff;
-      border-bottom-left-radius: -10px;
+        background-color: #ffffff;
+        border-bottom-left-radius: -10px;
     }
 
     /* Style the tab content */
     .tabcontent {
-      display: none;
-      padding: 10px 18px;
-      border: 1px solid #f7a3a3;
-      border-top: none;
+        display: none;
+        padding: 10px 18px;
+        border: 1px solid #f7a3a3;
+        border-top: none;
     }
 
     /* Style the close button */
     .topright {
-      float: right;
-      cursor: pointer;
-      font-size: 28px;
+        float: right;
+        cursor: pointer;
+        font-size: 28px;
     }
 
     .topright:hover {
-      color: red;
+        color: red;
     }
 
     .tablist {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      flex-direction: row;
-      gap: 2em;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: row;
+        gap: 2em;
 
     }
 
 
 
     .card {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      transition: 0.3s;
-      width: 220px;
-      height: 300px;
-      transition-duration: .5s;
-      overflow: hidden;
-      border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 220px;
+        height: 300px;
+        transition-duration: .5s;
+        overflow: hidden;
+        border-radius: 10px;
 
     }
 
     .card img {
-      height: 190px;
+        height: 190px;
     }
 
     .card:hover {
-      box-shadow: 5px 8px 16px 0 rgba(0, 0, 0, 0.2);
-      transform: scale(1.03);
+        box-shadow: 5px 8px 16px 0 rgba(0, 0, 0, 0.2);
+        transform: scale(1.03);
     }
 
     .container {
-      padding: 2px 16px;
+        padding: 2px 16px;
     }
 
     .button {
-      background-color: #4CAF50;
-      
-      
-      border: none;
-      /* color: white; */
-      padding: .7rem 1.5rem;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      color: #fd1100;
+        background-color: #4CAF50;
+
+
+        border: none;
+        /* color: white; */
+        padding: .7rem 1.5rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        color: #fd1100;
     }
-    .button:hover{
-      background-color: #f66a60;
-      color: azure;
+
+    .button:hover {
+        background-color: #f66a60;
+        color: azure;
     }
+
     .button3 {
-      background-color: white;
-      /* color: black; */
-      border: 2px solid #f44336;
+        background-color: white;
+        /* color: black; */
+        border: 2px solid #f44336;
     }
-    .tablinks{
-      width: 220px;
+
+    .tablinks {
+        width: 220px;
     }
-    .menu_top{
+
+    .menu_top {
         z-index: .9;
     }
-    .marquee_div{
-       background-color: rgb(44, 1, 132);
-       height: 25px;
+
+    .marquee_div {
+        background-color: rgb(107, 52, 216);
+        height: 25px;
         width: 100%;
         color: white;
         font-size: 20px;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
+
     @media screen and (max-width:600px) {
-      .card {
-        width: 170px;
-        height: 300px;
-      }
-      .button{
-        padding: .2rem 1.0rem;
-      }
-      .marquee_div{
-        margin-top: 26px;
-      }
+        .card {
+            width: 170px;
+            height: 300px;
+        }
+
+        .button {
+            padding: .2rem 1.0rem;
+        }
+
+        .marquee_div {
+            margin-top: px;
+        }
     }
-   
 </style>
 <script>
     function openCity(evt, cityName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(cityName).style.display = "block";
-      evt.currentTarget.className += " active";
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
     }
-  
+
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
-  </script>
-  
+</script>
+
 <header>
-    <div class="marquee_div">  <marquee behavior="scroll" direction="left"
-        onmouseover="this.stop();"
-        onmouseout="this.start();">Welcome to Navsahyadri Group Of Institution</marquee>
-</div>
+    <div class="marquee_div">
+        <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">Welcome to
+            Navsahyadri Group Of Institution</marquee>
+    </div>
     <center>
-        <a href="{% url 'home' %}"><img  style="margin-top: 30px;" class="responsiv_logo img1" src="{% static 'col-logo copy.png' %}" height="90px" width="100px"></img></a>
+        <a href="{% url 'home' %}"><img style="margin-top: 30px;" class="responsiv_logo img1"
+                src="{% static 'col-logo copy.png' %}" height="90px" width="100px"></img></a>
     </center>
     <div class="headerdiv">
-        <a href="{% url 'home' %}"><img class="headerdiv1" class="img1" align="left" src="{% static 'col-logo copy.png' %}" align="" height="90px"
-            width="100px"></img></a>
+        <a href="{% url 'home' %}"><img class="headerdiv1" class="img1" align="left"
+                src="{% static 'col-logo copy.png' %}" align="" height="90px" width="100px"></img></a>
         <img class="headerdiv1" align="right"
             src="https://i0.wp.com/sjbit.edu.in/wp-content/uploads/2021/07/NAAC-Logo-250x250-1.png?ssl=1" align="left"
             height="100px" width="120px"></img>
-        <a href="{% url 'home' %}"><h1 class="college_name">Navsahyadri Group Of Institutes, Pune</h1></a>
+        <a href="{% url 'home' %}">
+            <h1 class="college_name">Navsahyadri Group Of Institutes, Pune</h1>
+        </a>
         <center>
             <h3 class="college_name1" align="center">Approved by AICTE and PCI, New Delhi | <br> Recognized by Govt. of
                 Maharashtra and
                 DTE, Mumbai Affiliated to Savitribai Phule Pune University / MSBTE / BATU</h3>
 
         </center>
-        
+
 
     </div>
     </div>

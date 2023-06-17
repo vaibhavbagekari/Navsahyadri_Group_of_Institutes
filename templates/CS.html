@@ -29,8 +29,8 @@
             <span class="span">Intake: 120</span>
         </div>
         <div width="100%" class="meimg">
-            <img width="50%" src="{% static 'IMG_6253.JPG' %}">
-            <img width="50%" src="{% static 'IMG_6272.JPG' %}">
+            <img width="45%" src="{% static 'IMG_6253.JPG' %}">
+            <img width="45%" src="{% static 'IMG_6272.JPG' %}">
         </div>
         <div class="about-dep-div">
             <h2 class="topic-title">About Department</h2>
@@ -104,48 +104,9 @@
 
             </div>
         </div>
-        <!-- <div>
-            <p>
-            <h2>Aim of the Course</h2>
-            Computer engineering is a discipline that integrates several
-            fields of electrical engineering and computer science required
-            to develop computer hardware and software. Computer engineers
-            usually have training in electronic engineering (or electrical
-            engineering), software design, and hardware-software integration
-            instead of only software engineering or electronic engineering.
-            </p>
-        </div>
-        <div width="100%" class="meimg">
-            <img width="50%" src="{% static 'cs_img3.jpeg' %}">
-            <img width="50%" src="{% static 'cs_img2.jpeg' %}">
-        </div>
-        <div class="hod">
-            <h2>HOD'S Message</h2>
-            <figure>
-                <img width="150px" src="http://www.navsahyadri.edu.in/assets/images/facultyprofile/Pankaj-Bhokare.jpg">
-                <figcaption><b>HOD NAME</b>
-                    Head Of Computer Engineering Department
-                </figcaption>
-                <p class="p1">Ever science the establishment of this institution our primary goal has been to impart
-                    and
-                    train our future leaders with best of education.
-
-                    Our objective is to disseminate knowledge through various forms such as class room training,
-                    industrial
-                    visit and organise a attractive curriculum for the all ground development of our students.
-
-                    Mechanical engineering is the basic branch of all engineering that why it is known as MOTHER OF
-                    ENGINEERING as it add-ons state of art technically and exhilarates solution.
-
-                    Here at NAVSAYADRI education society we attempt to provide cheerful, productive and satisfying
-                    experience at all level to explore the amazing world mechanical engineering.
-
-                    With best wishes for a bright future.
-
-                </p>
-        </div> -->
+        
         <h2 class="topic-title">Faculty Profile</h2>
-        <div class="facultydiv">
+        <!-- <div class="facultydiv">
             {% for CS_faculty in CS_faculties %}
             <div class="facultyspan">
                 <img class="facultyimg" src="{{CS_faculty.photo.url}}">
@@ -161,24 +122,55 @@
                 </p>
             </div>
             {% endfor %}
-        </div>
+        </div> -->
+        <div class="table_div">
+           
+        
+            <table class="cs_table" border="1">
+                <tr class="h_row">
+                    <th>Sr.no</th>
+                    <th>Name</th>
+                    <th>Designation</th>
+                    <th>Qualification</th>
+                    <th>Date of Joining</th>
+                    <th>Professional Experience</th>
+                    <th>Mob. No:</th>
+                    <th>Email Id:</th>
+                </tr>
+                {% for i in CS_faculties %}
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.f_name}} {{i.l_name}}</td>
+                    <td>{{i.designation}}</td>
+                    <td>{{i.Qualifications }}</td>
+                    <td>{{i.DOJ}}</td>
+                    <td>{{i.Experience }}</td>
+                    <td>{{i.contact_no }}</td>
+                    <td>{{i.Email_Id }}</td>
+                    
+                </tr>
+                {% endfor %}
+               
+            </table>
+    </div>
     </div>
     <h2 class="topic-title">Academics</h2>
     <div class="face_div">
         <div class="face_sub_div">
-            <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+            <img src="{% static 'laboratory.png' %}" alt="" class="face_img">
             <h3 class="face_title">Laboratory</h3>
             <a class="dep" href="{% url 'eng_lab_cs' %}"><button class="button button3">click here to view</button></a>
             </p>
         </div>
         <div class="face_sub_div">
-            <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+            <img src="{% static 'syllabus.img' %}" alt="" class="face_img">
             <h3 class="face_title">Syllabus</h3>
             <a href="{% url 'eng_syllabus'%}"> <button class="button button3">click here to view</button></a></p>
         </div>
         <div class="face_sub_div">
-            <img src="{% static 'cs_img3.jpeg' %}" alt="" class="face_img">
-            <a class="dep" href="{% url 'Electrical' %}"><button class="button button3">click here to view</button></a>
+            <img src="{% static 'events_activity.jpg' %}" alt="" class="face_img">
+            <h3 class="face_title">Events  and Activities</h3>
+            <a class="dep" href="{% url 'eng_cs_ev' %}"><button class="button button3">click here to view</button></a>
             </p>
         </div>
     </div>

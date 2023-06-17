@@ -1,15 +1,108 @@
 <!DOCTYPE html>
+{% load  static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transport</title>
 </head>
+
 <body>
     {% include 'header.html' %}
     {% include 'mainnav.html' %}
-    <h1>Transport</h1>
+    <style>
+        .divh1 {
+            background-image: url("{% static 'transpotation_header.jpg' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100px;
+            padding: 50px;
+            text-align: center;
+            font-size: 40px;
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 2px black;
+        }
+
+        .meimg {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .main_div {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            margin: 50px 80px 80px 80px;
+            padding: 10px;
+            /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+        }
+
+        .tabl {
+            margin: auto;
+            border-collapse: collapse;
+            width: 80%;
+            height: max-content;
+            line-height: 25px;
+        }
+
+        .para {
+            margin: 20px;
+            padding: 30px;
+            text-align: justify;
+            background-color: white;
+            font-size: 15px;
+
+        }
+    </style>
+
+    <div class="divh1">
+        <h2 class="meh2">Transportation</h2><br>
+    </div>
+    <br>
+    <div width="100%" class="meimg">
+        <img width="50%" src=" {% static 'transpotation.jpg' %}" style="margin: auto;">
+
+    </div>
+    <div style="background-color: rgba(109, 109, 109, 0.67);">
+        <div class="main_div">
+            <div class="para">
+                <b style="color: rgb(1, 33, 107); font-size: 20px;">Transportation</b>
+                <br>
+                <br>
+                Navsahyadri Institute of Pharmacy, Pune runs a large fleet of buses with well-planned diverse
+                routes. They connect various convenient locations spread across the city to the college.
+                <br>
+                The buses are well maintained and are driven by experienced drivers, who care for safety and comfort
+                of the staff and students as well.
+                <br>
+                <br>
+                <br>
+                <ul>
+                    <li> Bhor to college </li><br>
+                    <br>
+                    <li>Shirwal to college </li><br>
+                    <br>
+                    <li> Khandala to college </li><br>
+                    <br>
+                    <li> Saswad to college </li><br>
+                    <br>
+                    <li> Jejuri to collge</li><br>
+                    <br>
+                    <li> Wai to college</li><br>
+                    <br>
+                    <li> Warje to college</li><br>
+                    <br>
+                    <li> Katraj to college</li><br>
+                    <br>
+                    <li> Katraj to college</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
     {% include 'footer.html' %}
 </body>
+
 </html>

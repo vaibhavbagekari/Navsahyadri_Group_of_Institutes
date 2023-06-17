@@ -1,15 +1,184 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Placement</title>
+    <title>Engineering Placements</title>
+    <style>
+        .main_container {
+            width: 100%;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgb(14, 14, 14);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            background-image: url("{% static 'mba_background_img.jpg' %}");
+        }
+
+        .Placements_div {
+            margin: 10px;
+            padding: 10px;
+            margin: auto;
+            width: 85%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 100%;
+            justify-content: space-around;
+            align-items: baseline;
+            gap: 1em;
+            background-color: white;
+
+        }
+
+        .main_container h1 {
+            color: rgb(255, 255, 255);
+        }
+
+        figure {
+            width: 150px;
+        }
+
+        figcaption {
+            text-align: center;
+            color: black;
+
+        }
+
+        .fig_div {}
+    </style>
 </head>
+
 <body>
     {% include 'header.html' %}
     {% include 'mainnav.html' %}
-    <h1>Placement</h1>
+    <div class="main_container">
+
+        <h1>Placements</h1>
+    </div>
+    <div style="background-color: rgba(83, 83, 83, 0.452);">
+        <div class="Placements_div">
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'placement_img1.jpg' %}" alt="img" style="width:100%">
+                    <figcaption><b> AGAM RUTUJA JAYWANT</b><br>Q-spider<br><b>Package 3.5 LAC</b></figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'eng_placement_img2.jpg' %}" alt="img" style="width:100%">
+                    <figcaption><b>BHAGAT KETAKI JAGADISH</b><br>Infogain India Pvt Ltd <br><b>Package 4 LAC <br></b></figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'eng_placement_img3.jpg' %}" alt="img" style="width:100%">
+                    <figcaption><B> BHAIRAVKAR AKASH ASHOK </b><br> <b>-</b></figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'eng_placement_img4.jpg' %}" alt="img" style="width:100%">
+                    <figcaption><B>BHOITE MANASI ATUL </b> <br>Q-spider <br> <b>package 3.5 LAC<br></b></figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'eng_placement_img8.jpg' %}" alt="img" style="width:100%">
+                    <figcaption><b>CHAUDHARI DHANASHRI SHIVAJI</b> <br>Q –spider/ Wipro <br><b>package 3.5 LAC<br></b></figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'eng_placement_img11.jpg' %}" alt="img" style="width:100%">
+                    <figcaption><b>CHAVAN SNEHA KISHOR</b> <br>Wipro <br><b>package 3.5 LAC<br></b></figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'eng_placement_img10.jpg' %}" alt="img" style="width:100%">
+                    <figcaption><b>CHAVAN JYOTIRAM HANUMANT</b> <br>Pentagon Space <br><b>package 3.5 LAC<br></b></figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'eng_placement_img14.jpg' %}" alt="img" style="width:100%">
+                    <figcaption><b>DALAVE SHRINATH MADHUKAR</b> <br>Q spider<br><b>package 3.5 LAC<br></b></figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'eng_placement_img15.jpg' %}" alt="img" style="width:100%">
+                    <figcaption><b>DHUMAL PAYAL SHASHIKANT </b> <br>N/A <br><b>No<br></b></figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'eng_placement_img16.jpg' %}" alt="img" style="width:100%">
+                    <figcaption><b>DIMBLE VAIBHAV SUDHIR</b> <br>Wipro/infosis/techmahindra <br><b>package 3.60 LAC<br></b></figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'eng_placement_img31.jpg' %}" alt="img" style="width:100%">
+                    <figcaption><b>JANGALE DEVASHISH SUNIL</b> <br>TCS / Atos | Synte <br><b>package 3.5 LAC<br></b></figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'eng_placement_img23.jpg' %}" alt="img" style="width:100%">
+                    <figcaption><b>KAPADE VAIBHAV SHYAM</b> <br>Hexaware Tecnologies LTD 
+                        WIPRO - INFOSYS –
+                        TAP academy
+                        Q spider
+                        
+                        <br><b>package 3.5 LAC<br></b></figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'eng_placement_img33.jpg' %}" alt="img" style="width:100%">
+                    <figcaption><b>LAWANDE PRAJAKTA VASANT</b> <br>Hexaware <br><b>package 4 LAC<br></b></figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'eng_placement_img34.jpg' %}" alt="img" style="width:100%">
+                    <figcaption><b>LOHAR SURABHI BAJARANG</b> <br>Q-spider<br><b>package 3.5 LAC<br></b></figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'eng_placement_img40.jpg' %}" alt="img" style="width:100%">
+                    <figcaption><b>PAWAR ABHINAV KIRAN</b> <br>Q spider <br><b>package 3.5 LAC<br></b></figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'eng_placement_img41.jpg' %}" alt="img" style="width:100%">
+                    <figcaption><b>PHADTARE TEJAL RAJU</b> <br>Atos Synte
+                        l
+                         <br><b>package 3.4 LAC<br></b></figcaption>
+                </figure>
+            </div>
+            <div class="fig_div">
+                <figure>
+                    <img src="{% static 'eng_placement_img49.jpg' %}" alt="img" style="width:100%">
+                    <figcaption><b>SAVALE VISHAL ASHOK</b> <br>Wipro <br><b>package 4 LAC<br><b></figcaption>
+                </figure>
+            </div>
+            
+            
+
+        </div>
+    </div>
     {% include 'footer.html' %}
 </body>
+
 </html>

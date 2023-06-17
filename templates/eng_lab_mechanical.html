@@ -7,8 +7,571 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engineering Laboratory Mechanical</title>
+    <link rel="stylesheet" href="{% static 'labcss.css' %}">
+    <style>
+        .cs_table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 95%;
+            height: max-content;
+            line-height: 25px;
+        }
+
+        .h_row {
+            background-color: rgb(249, 64, 64);
+            color: white;
+            font-weight: 700;
+        }
+
+        .cs_table tr td,
+        th {
+            padding: 5px;
+        }
+
+        .alternet_row {
+            background-color: rgb(206, 205, 205);
+        }
+
+        .about-text {
+            width: 95%;
+        }
+    </style>
 </head>
 {% include 'header.html' %}
 {% include 'engnav.html' %}
-<h1>Engineering Laboratory Mechanical</h1>
-{% include 'footer.html' %}
+<h1 style="text-align:center;">Engineering Laboratory Mechanical</h1>
+<div class="about-dep-div">
+    <h2 class="topic-title">Laboratory</h2>
+    <h2  style="margin: 10px;  ">
+        Metrology and Quality Control</h2>
+    <div class="about-container">
+        <div class="about-img" style="height: 350px; width: 500px;">
+
+            <img src="{% static 'Metrology and Quality Control.jpg' %}" alt="" width="100%" height="100%">
+
+        </div>
+        <table border="2" class="cs_table" width="95%">
+            <tr>
+                <th>Total Cost of Equipment :-</th>
+                <th>Rs. 521856</th>
+            </tr>
+            <tr>
+                <th> Area of the Lab.:-</th>
+                <th>66 m2</th>
+            </tr>
+        </table>
+        <div class="about-text">
+            <br><br><br><br>
+            <h2>List of Equipment</h2>
+            <table border="2" class="cs_table">
+                <tr class="h_row">
+                    <th rowspan="2">SR. NO.</th>
+                    <th rowspan="2">EQUIPMENT NAME</th>
+                    <th rowspan="2">QTY</th>
+                    <th rowspan="2">DSR No.</th>
+                    <th colspan="2">PURCHASE</th>
+                </tr>
+                <tr class="h_row">
+                    <th>Year</th>
+                    <th>COST</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Slip Gauge box</td>
+                    <td>1</td>
+                    <td>NESGI/ENGG/MECH/MQC/2012-13/001</th>
+                    <td>2012</td>
+                    <td>12431</td>
+
+                </tr>
+                <tr class="alternet_row">
+                    <td>2</td>
+                    <td>Gear Tooth Vernier Calliper</td>
+                    <td>1</td>
+                    <td>NESGI/ENGG/MECH/MQC/2012-13/002</td>
+                    <td>2012</td>
+                    <td>6581</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sine Bar (200mm)</td>
+                    <td>1</td>
+                    <td>NESGI/ENGG/MECH/MQC/2012-13/003</td>
+                    <td>2012</td>
+                    <td>7312</td>
+                </tr>
+                <tr class="alternet_row">
+                    <td>4</td>
+                    <td>Sine Bar (300mm)</td>
+                    <td>1</td>
+                    <td>NESGI/ENGG/MECH/MQC/2012-13/005</td>
+                    <td>2012</td>
+                    <td>17550</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Mechanical Comparator</td>
+                    <td>1</td>
+                    <td>NESGI/ENGG/MECH/MQC/2012-13/005</td>
+                    <td>2012</td>
+                    <td>32175</td>
+                </tr>
+                <tr class="alternet_row">
+                    <td>6</td>
+                    <td>Vernier Calliper (Digital)</td>
+                    <td>1</td>
+                    <td>NESGI/ENGG/MECH/MQC/2012-13/006</td>
+                    <td>2012</td>
+                    <td>3093</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Outside Micrometer & Inside Micrometer</td>
+                    <td>1</td>
+                    <td>NESGI/ENGG/MECH/MQC/2012-13/007</td>
+                    <td>2012</td>
+                    <td>4050</td>
+                </tr>
+                <tr class="alternet_row">
+                    <td>8</td>
+                    <td>Vernier Calliper (Analog)</td>
+                    <td>1</td>
+                    <td>NESGI/ENGG/MECH/MQC/2012-13/008</td>
+                    <td>2012</td>
+                    <td>2250</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Magnetic Dial Stand &dial gauge</td>
+                    <td>1</td>
+                    <td>NESGI/ENGG/MECH/MQC/2012-13/009</td>
+                    <td>2012</td>
+                    <td>2475</td>
+                </tr>
+                <tr class="alternet_row">
+                    <td>10</td>
+                    <td>Vee block</td>
+                    <td>1</td>
+                    <td>NESGI/ENGG/MECH/MQC/2012-13/0010</td>
+                    <td>2012</td>
+                    <td>2531</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Monochromatic Light & </td>
+                    <td>1</td>
+                    <td>NESGI/ENGG/MECH/MQC/2012-13/0011</td>
+                    <td>2012</td>
+                    <td>43031</td>
+                </tr>
+                <tr class="alternet_row">
+                    <td>12</td>
+                    <td> Optical flat</td>
+                    <td>1</td>
+                    <td>NESGI/ENGG/MECH/MQC/2012-13/0011</td>
+                    <td>2012</td>
+                    <td>34170</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Profile Projector</td>
+                    <td>1</td>
+                    <td>NESGI/ENGG/MECH/MQC/2012-13/012</td>
+                    <td>2012</td>
+                    <td>170436</td>
+                </tr>
+                <tr class="alternet_row">
+                    <td>14</td>
+                    <td>Dial Calibration Tester</td>
+                    <td>1</td>
+                    <td>NESGI/ENGG/MECH/MQC/2012-13/013</td>
+                    <td>2012</td>
+                    <td>65981</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Floating Carriage Micrometer</td>
+                    <td>1</td>
+                    <td>NESGI/ENGG/MECH/MQC/2012-13/014</td>
+                    <td>2012</td>
+                    <td>117785</td>
+                </tr>
+                <tr class="alternet_row">
+                    <th colspan="5">total</th>
+                    <th>521856</th>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <br>
+    </div>
+    <br>
+    <br>
+    <h2 align="center" style="margin: 10px;  ; ">CAD-CAM
+        LABORATORY
+    </h2>
+    <br><br>
+    <div class="about-container">
+        <div class="about-img" style="height: 350px; width: 500px;">
+
+            <img src="{% static 'CAD-CAM.jpg' %}" alt="" width="100%" height="100%">
+
+        </div>
+
+        <br>
+        <br>
+        <table border="2" class="cs_table" width="95%">
+            <tr>
+                <th>Total Cost of Equipment :-</th>
+                <th>Rs. 1022400.00</th>
+            </tr>
+            <tr>
+                <th> Area of the Lab.:-</th>
+                <th>60.66 m2</th>
+            </tr>
+        </table>
+
+
+        <div class="about-text" style="font-family:; ">
+            <h2>List of Equipment</h2>
+            <img src="{% static 'cad_cam_text.jpg' %}" alt="" width="100%" height="100%">
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <h2 align="center" style="margin: 10px; ;">Dynamics of Machinery Laboratory</h2>
+    <div class="about-container">
+
+        <div class="about-img" style="height: 350px; width: 500px;">
+
+            <img src="{% static 'Dynamics of Machinery  Laboratory.jpg' %}" alt="" width="100%" height="100%">
+
+        </div>
+        <div class="about-text">
+            <br><br><br><br>
+            <h2>List of Equipment</h2>
+            <table border="2" class="cs_table">
+                <tr class="h_row">
+                    <th rowspan="2">SR. NO.</th>
+                    <th rowspan="2">EQUIPMENT NAME</th>
+                    <th rowspan="2">QTY</th>
+                    <th rowspan="2">DSR No.</th>
+                    <th colspan="2">PURCHASE</th>
+                </tr>
+                <tr class="h_row">
+                    <th>Year</th>
+                    <th>COST</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Static & Dynamic balancing apparatus</td>
+                    <td>1</td>
+                    <td>NESGI/ENGG/MECH/DOM/2013-14/01</th>
+                    <td>2013</td>
+                    <td>26500</td>
+
+                </tr>
+                <tr class="alternet_row">
+                    <td>2</td>
+                    <td>Vibration setup </td>
+                    <td>1</td>
+                    <td>NESGI/ENGG/MECH/DOM/2013-14/02A ,<br> NESGI/ENGG/MECH/DOM/2013-14/02B</td>
+                    <td>2013</td>
+                    <td>96500</td>
+                </tr>
+                <tr>
+                    <th colspan="5">TOTAL <br>(15% discount.12.5% VAT)</th>
+                    <th>117618</th>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <br>
+    </div>
+    <br>
+    <br>
+    <h2 align="center" style="margin: 10px; ;">Engineering Metallurgy Laboratory</h2>
+    <div class="about-container">
+
+        <br><br><br><br>
+        <div class="about-img" style="height: 350px; width: 500px;">
+
+            <img src="{% static 'com_lab1.jpg' %}" alt="" width="100%" height="100%">
+
+        </div>
+        <br><br>
+        <table border="2" class="cs_table" width="95%">
+            <tr>
+                <th>Total Cost of Equipment :-</th>
+                <th>Rs. 2,13,880</th>
+            </tr>
+            <tr>
+                <th> Area of the Lab.:-</th>
+                <th>66 m2</th>
+            </tr>
+        </table>
+
+        <div class="about-text">
+            <br><br>
+            <div class="about-text">
+
+                <h2>List of Equipment</h2>
+                <table border="2" class="cs_table">
+                    <tr class="h_row">
+                        <th rowspan="2">SR. NO.</th>
+                        <th rowspan="2">EQUIPMENT NAME</th>
+                        <th rowspan="2">QTY</th>
+                        <th rowspan="2">DSR No.</th>
+                        <th colspan="2">PURCHASE</th>
+                    </tr>
+                    <tr class="h_row">
+                        <th>Year</th>
+                        <th>COST</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Dryer</td>
+                        <td>1</td>
+                        <td>NESGI/ ENGG /Mech/META/2011-12/001</th>
+                        <td>2011</td>
+                        <td>1500</td>
+
+                    </tr>
+                    <tr class="alternet_row">
+                        <td>2</td>
+                        <td>Standard Metallurgical Microstructure Set </td>
+                        <td>1</td>
+                        <td>NESGI/ENGG /Mech/META/2011-12/002</td>
+                        <td>2011</td>
+                        <td>12600</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Binocular Metallurgical Microscope</td>
+                        <td>1</td>
+                        <td>NESGI/ ENGG /Mech/META/2011-12/003</td>
+                        <td>2011</td>
+                        <td>27000</td>
+                    </tr>
+                    <tr class="alternet_row">
+                        <td>4</td>
+                        <td>Jominy Hardness Test Apparatus</td>
+                        <td>1</td>
+                        <td>NESGI/ ENGG /Mech/META/2011-12/004</td>
+                        <td>2011</td>
+                        <td>75000</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Dessicators-Glass</td>
+                        <td>1</td>
+                        <td>NESGI/ ENGG /Mech/META/2011-12/005</td>
+                        <td>2011</td>
+                        <td>3580</td>
+                    </tr>
+                    <tr class="alternet_row">
+                        <td>6</td>
+                        <td>Dye Penetration Test Kit with Dye</td>
+                        <td>1</td>
+                        <td>NESGI/ ENGG /Mech/META/2011-12/006</td>
+                        <td>2011</td>
+                        <td>8500</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Trinocular Met. Microscope RXM-7T</td>
+                        <td>1</td>
+                        <td>NESGI/ ENGG /Mech/META/2011-12/007</td>
+                        <td>2011</td>
+                        <td></td>
+                    </tr>
+                    <tr class="alternet_row">
+                        <td>8</td>
+                        <td>Object Micrometer slide MMS</td>
+                        <td>1</td>
+                        <td>NESGI/ ENGG /Mech/META/2011-12/008</td>
+                        <td>2011</td>
+                        <td>2090</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Grain size Eyepiece</td>
+                        <td>1</td>
+                        <td>NESGI/ ENGG /Mech/META/2011-12/009</td>
+                        <td>2011</td>
+                        <td>2310</td>
+                    </tr>
+                    <tr class="alternet_row">
+                        <td>10</td>
+                        <td>Filters green, yellow, day light blue</td>
+                        <td>3</td>
+                        <td>NESGI/ ENGG /Mech/META/2011-12/010</td>
+                        <td>2011</td>
+                        <td>990</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Micrometer Eyepiece With Adj. Focusing</td>
+                        <td>1</td>
+                        <td>NESGI/ ENGG /Mech/META/2011-12/011</td>
+                        <td>2011</td>
+                        <td>2310</td>
+                    </tr>
+                    <tr class="alternet_row">
+                        <th colspan="5" style="text-align: center;">Total</th>
+                        <th>213880</th>
+                    </tr>
+
+
+                </table>
+            </div>
+            <h2 align="center" style="margin: 10px; ;">Engineering Materials and Metallurgy</h2>
+            <div class="about-container">
+
+                <br><br><br><br>
+                <div class="about-img" style="height: 350px; width: 500px;">
+
+                    <img src="{% static 'Engineering Materials and Metallurgy.jpg' %}" alt="" width="100%"
+                        height="100%">
+
+                </div>
+                <br><br>
+
+
+                <div class="about-text">
+                    <br><br>
+                    <h2>List of Equipment</h2>
+
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+            <h2 align="center" style="margin: 10px; ;">Heat Transfer Laboratory</h2>
+            <div class="about-container">
+
+                <br><br><br><br>
+                <div class="about-img" style="height: 350px; width: 500px;">
+
+                    <img src="{% static 'Engineering Materials and Metallurgy.jpg' %}" alt="" width="100%"
+                        height="100%">
+
+                </div>
+                <br><br>
+                <table border="2" class="cs_table" width="95%">
+                    <tr>
+                        <th>Total Cost of Equipment :-</th>
+                        <th>Rs. 1,92,962.00</th>
+                    </tr>
+                    <tr>
+                        <th> Area of the Lab.:-</th>
+                        <th>66 m2</th>
+                    </tr>
+                    <tr>
+                        <th>Lab. In-charge :-</th>
+                        <th>Prof. S. A. Dahake</th>
+                    </tr>
+                </table>
+
+                <div class="about-text">
+                    <br><br>
+                    <h2>List of Equipment</h2>
+                    <table border="2" class="cs_table">
+                        <tr class="h_row">
+                            <th rowspan="2">SR. NO.</th>
+                            <th rowspan="2">EQUIPMENT NAME</th>
+                            <th rowspan="2">QTY</th>
+                            <th rowspan="2">DSR No.</th>
+                            <th colspan="2">PURCHASE</th>
+                        </tr>
+                        <tr class="h_row">
+                            <th>Year</th>
+                            <th>COST</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Determination of emissivity of a taste surface</td>
+                            <td>1</td>
+                            <td>NESGI/ENGG/MECH/HT/2012-13/01</th>
+                            <td>2012-13</td>
+                            <td>20,250/- </td>
+
+                        </tr>
+                        <tr class="alternet_row">
+                            <td>2</td>
+                            <td>Standard Metallurgical Microstructure Set </td>
+                            <td>1</td>
+                            <td>NESGI/ENGG /Mech/META/2011-12/002</td>
+                            <td>2012-13</td>
+                            <td> 18,562/-</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Determination of thermal conductivity of metal rod </td>
+                            <td>1</td>
+                            <td>NESGI/ENGG /Mech/META/2011-12/003</td>
+                            <td>2012-13</td>
+                            <td></td>
+                        </tr>
+                        <tr class="alternet_row">
+                            <td>4</td>
+                            <td>Determination of thermal conductivity of insulating powder</td>
+                            <td>1</td>
+                            <td>NESGI/ENGG /Mech/META/2011-12/004</td>
+                            <td>2012-13</td>
+                            <td>28,125/-</td>
+
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Determination of thermal conductivity of composite wall</td>
+                            <td>1</td>
+                            <td>NESGI/ENGG /Mech/META/2011-12/005</td>
+                            <td>2012-13</td>
+                            <td>25,312/- </td>
+
+                        </tr>
+                        <tr class="alternet_row">
+                            <td>6</td>
+                            <td>Determination of thermal conductivity of composite wall</td>
+                            <td>1</td>
+                            <td>NESGI/ENGG /Mech/META/2011-12/006</td>
+                            <td>2012-13</td>
+                            <td>20,250/- </td>
+
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Determination of heat transfer coefficient in forced convection</td>
+                            <td>1</td>
+                            <td>NESGI/ENGG /Mech/META/2011-12/007</td>
+                            <td>2012-13</td>
+                            <td>33,750/- </td>
+
+                        </tr>
+                        <tr class="alternet_row">
+                            <td>8</td>
+                            <td>Determination of temperature distribution, fin efficiency in forced convection</td>
+                            <td>1</td>
+                            <td>NESGI/ENGG /Mech/META/2011-12/002</td>
+                            <td>2012-13</td>
+                            <td>24,750/- </td>
+
+                        </tr>
+                        <tr>
+
+                            <td colspan="5"> total</td>
+                            <td>192962</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+        </div>
+        </div></div>
+        {% include 'footer.html' %}
+
+</html>

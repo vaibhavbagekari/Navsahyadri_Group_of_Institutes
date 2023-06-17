@@ -35,7 +35,7 @@
       font-size: 1.3rem;
       text-transform: uppercase;
       color: rgb(255, 255, 255);
-      text-shadow: 5px 5px 6px black;
+      /* text-shadow: 5px 5px 6px black; */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -80,8 +80,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   height: max-content;
-  
-
+  padding: 50px auto 50px auto;
 }
 
 .counter_eliment {
@@ -96,7 +95,7 @@
   </style>
 </head>
 {% include "header.html" %}
-{% include 'loginbtn.html'%}
+
 {% include 'engnav.html'%}
 
 <div class="title_div" align="center">
@@ -112,7 +111,7 @@
     <img src="{% static 'eng_principal.jpg' %}" alt="" width="100%">
   </div>
   <div class="p_text_container">
-    <h1>Name of Principal</h1>
+    <h1>Dr. Manojkumar V. Dalvi</h1>
     <p>
 
       Our aims to prepare students for tomorrow, equipping them today with the right knowledge, skills and attitude that
@@ -138,25 +137,25 @@
     <ul class="tablist">
       <li class="tablistitem">
         <div class="card">
-          <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+          <img src="{% static 'IMG_6526.JPG'%}" alt="Avatar" style="width:100%">
           <div class="container">
-            <h4 class="course-title"><b>Machanical engineering</b></h4>
+            <h4 class="course-title"><b>Mechanical engineering</b></h4>
             <p><a class="dep" href="{% url 'mechanical' %}"><button class="button button3">click here to
                   view</button></a></p>
           </div>
       </li>
       <li class="tablistitem">
         <div class="card">
-          <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+          <img src="{% static 'IMG_7286.JPG'%}" alt="Avatar" style="width:100%">
           <div class="container">
-            <h4 class="course-title"><b>civil engineering</b></h4>
+            <h4 class="course-title"><b>Civil engineering</b></h4>
             <p><a class="dep" href="{% url 'Civil' %}"><button class="button button3">click here to view</button></a>
             </p>
           </div>
       </li>
       <li class="tablistitem">
         <div class="card">
-          <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+          <img src="{% static 'IMG_7060.JPG'%}" alt="Avatar" style="width:100%">
           <div class="container">
             <h4 class="course-title"><b>Electrical Engineering</b></h4>
             <p><a class="dep" href="{% url 'Electrical' %}"><button class="button button3">click here to
@@ -165,7 +164,7 @@
       </li>
       <li class="tablistitem">
         <div class="card">
-          <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+          <img src="{% static 'IMG_6209.JPG'%}" alt="Avatar" style="width:100%">
           <div class="container">
             <h4 class="course-title"><b>Electronics & Telecommunication</b></h4>
             <p><a class="dep" href="{% url 'ENTC' %}"><button class="button button3">click here to view</button></a></p>
@@ -173,7 +172,7 @@
       </li>
       <li class="tablistitem">
         <div class="card">
-          <img src="{% static 'cs_img2.jpeg'%}" alt="Avatar" style="width:100%">
+          <img src="{% static 'IMG_6290.JPG'%}" alt="Avatar" style="width:100%">
           <div class="container">
             <h4 class="course-title"><b>Computer Engineering</b></h4>
             <p><a class="dep" href="{% url 'CS' %}"><button class="button button3">click here to view</button></a></p>
@@ -212,7 +211,7 @@
       <div id="counter2">
         <!-- counts -->
       </div>
-      <h3 style="font-size: 20px;">Alumns</h3>
+      <h3 style="font-size: 20px;">Alumins</h3>
       <script>
         let counts2 = setInterval(updated);
         let upto2 = 14500;
@@ -264,3 +263,4 @@
 
   </div>
 {% include 'footer.html' %}
+</html>

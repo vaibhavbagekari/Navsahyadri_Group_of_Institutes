@@ -179,8 +179,28 @@ def engindex(request):
     return render(request, 'engindex.html')
 
 
-def eng_syllabus(request):
-    return render(request, 'eng_syllabus.html')
+def eng_electrical_syllabus(request):
+    return render(request, 'eng_electrical_syllabus.html')
+
+
+def eng_civil_syllabus(request):
+    return render(request, 'eng_civil_syllabus.html')
+
+
+def eng_mech_syllabus(request):
+    return render(request, 'eng_mech_syllabus.html')
+
+
+def eng_entc_syllabus(request):
+    return render(request, 'eng_entc_syllabus.html')
+
+
+def eng_aiml_syllabus(request):
+    return render(request, 'eng_aiml_syllabus.html')
+
+
+def eng_cs_syllabus(request):
+    return render(request, 'eng_cs_syllabus.html')
 
 
 def mbaindex(request):
@@ -218,17 +238,98 @@ def engadmission(request):
 def mba_contact(request):
     return render(request, 'mba_contact.html')
 
+
 def mba_Infrastucture(request):
-    return render(request,'mba_Infrastucture.html')
+    return render(request, 'mba_Infrastucture.html')
+
 
 def mba_placement(request):
-    return render(request,'mba_placement.html')
+    return render(request, 'mba_placement.html')
+
 
 def mba_training(request):
-    return render(request,'mba_training.html')
+    return render(request, 'mba_training.html')
+
 
 def mba_about_ngi(request):
-    return render(request,'mba_about_ngi.html')
+    return render(request, 'mba_about_ngi.html')
+
+def mba_awardss(request):
+    return render(request,'mba_awardss.html')
+
+def eng_mech_ev(request):
+    return render(request, 'eng_mech_ev.html')
+
+
+def eng_placements(request):
+    return render(request, 'eng_placements.html')
+
+
+def m_pharm_faculty(request):
+    m_pharm_f = m_pharm_facultys.objects.all()
+    return render(request, 'm_pharm_faculty.html', {'facultys': m_pharm_f})
+
+
+def b_pharm_faculty(request):
+    b_pharm_f = b_pharm_facultys.objects.all()
+    return render(request, 'b_pharm_faculty.html', {'facultys': b_pharm_f})
+
+
+def d_pharm_faculty(request):
+    d_pharm_f = d_pharm_facultys.objects.all()
+    return render(request, 'd_pharm_faculty.html', {'facultys': d_pharm_f})
+
+
+def mca(request):
+    mca_f = mca_facultys.objects.all()
+    return render(request, 'mca.html', {'faculties': mca_f})
+
+
+def eng_contact(request):
+    return render(request, 'eng_contact.html')
+
+
+def poly_contact(request):
+    return render(request, 'poly_contact.html')
+
+
+def pharm_contact(request):
+    return render(request, 'pharm_contact.html')
+
+
+def eng_civil_ev(request):
+    return render(request, 'eng_civil_ev.html')
+
+
+def eng_aiml_ev(request):
+    return render(request, 'eng_aiml_ev.html')
+
+
+def mba_mba(request):
+    mba_f = mba_facultys.objects.all()
+    return render(request, 'mba_mba.html', {'faculties': mba_f})
+
+
+def mbapp(request):
+    mbapp_f = mbapp_facultys.objects.all()
+    return render(request, 'mbapp.html', {'faculties': mbapp_f})
+
+
+def eng_cs_ev(request):
+    return render(request, 'eng_cs_ev.html')
+
+
+def eng_fe_ev(request):
+    return render(request, 'eng_fe_ev.html')
+
+
+def eng_electrical_ev(request):
+    return render(request, 'eng_electrical_ev.html')
+
+
+def eng_entc_ev(request):
+    return render(request, 'eng_entc_ev.html')
+
 
 def polyadmission(request):
     if request.method == 'POST':
@@ -288,12 +389,8 @@ def mbaadmission(request):
         return render(request, 'mbaadmission.html')
 
 
-def girl_hostel(request):
-    return render(request, 'girl_hostel.html')
-
-
-def boys_hostel(request):
-    return render(request, 'boys_hostel.html')
+def hostel(request):
+    return render(request, 'hostel.html')
 
 
 def tronsport(request):
@@ -334,6 +431,10 @@ def contact(request):
 
 def login(request):
     return render(request, 'login.html')
+
+
+def eng_fe_syllabus(request):
+    return render(request, "eng_fe_syllabus.html")
 
 
 def home(request):

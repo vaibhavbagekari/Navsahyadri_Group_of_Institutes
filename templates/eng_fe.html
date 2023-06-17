@@ -6,80 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>civil</title>
+    <title>First Year Engineering</title>
 
     <link rel="stylesheet" href="{% static 'department.css' %}">
-    <!-- <style>
-        .divh1 {
-            background-image: linear-gradient(rgb(247, 74, 74), rgb(247, 190, 190));
-            color: white;
-            font-size: larger;
-        }
-
-        .about-dep-div {
-            margin: 10px;
-            background-color: rgba(167, 163, 163, 0.488);
-            padding: 10px;
-            height: max-content;
-        }
-
-        .about-img {
-            height: 320px;
-            width: 300px;
-        }
-
-        .topic-title {
-            margin-left: 30px;
-            margin-bottom: 20px;
-            border-bottom: 5px solid red;
-        }
-
-        .about-container {
-            text-align: justify;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 2em;
-            justify-content: space-around;
-        }
-
-        .about-text {
-            width: 50%;
-            margin: 0px;
-
-        }
-
-        .about-img {
-            border-radius: 10px;
-            width: 600px;
-            box-shadow: 6px 6px 6px black;
-        }
-
-        .hod-info {
-            list-style: none;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            gap: .5em;
-        }
-
-        .hod-info-item {
-            font-weight: 700;
-
-        }
-
-        .meh2 {
-            color: white;
-        }
-
-        @media screen and (max-width:600px) {
-            .about-text {
-                width: 90%;
-                /* margin: 0px; */
-
-            }
-        }
-    </style> -->
+    
 </head>
 
 <body>
@@ -92,8 +22,8 @@
             </div>
             
             <div width="100%" class="meimg">
-                <img width="50%" src="{% static 'civil-engineeringimg1.webp' %}">
-                <img width="50%" src="{% static 'civil-engineeringimg2.jpg' %}">
+                <img width="45%" src="{% static 'civil-engineeringimg1.webp' %}">
+                <img width="45%" src="{% static 'civil-engineeringimg2.jpg' %}">
             </div>
             <div class="about-dep-div">
                 <h2 class="topic-title">About Department</h2>
@@ -135,7 +65,7 @@
                     <br>
                     <br>
                     <div class="about-img">
-                        <img src="{% static 'eng_fe_aboutimg.jpg' %}" alt="" width="100%" height="100%">
+                        <img src="{% static 'eng_fe_aboutimg.jpg' %}" alt="" width="100%" s>
                     </div>
                 </div>
             </div>
@@ -189,45 +119,6 @@
 
                 </div>
             </div>
-            <!-- <div>
-                <p>
-                <h2>Aim of the Course</h2>
-                Civil engineering is a professional engineering discipline that deals with the
-                design, construction, and maintenance of the physical and naturally built
-                environment, including works like roads, bridges, canals, dams, and buildings.
-                Civil engineering is the second-oldest engineering discipline after military engineering.
-                </p>
-            </div>
-            <div width="100%" class="meimg">
-                <img width="50%" src="{% static 'civil-engineeringimg1.webp' %}">
-                <img width="50%" src="{% static 'civil-engineeringimg2.jpg' %}">
-            </div>
-            <div class="hod">
-                <h2>HOD'S Message</h2>
-                <figure>
-                    <img width="150px"
-                        src="http://www.navsahyadri.edu.in/assets/images/facultyprofile/Pankaj-Bhokare.jpg">
-                    <figcaption><b>HOD NAME</b>
-                        Head Of CIVIL Department
-                    </figcaption>
-                    <p class="p1">Ever science the establishment of this institution our primary goal has been to impart
-                        and
-                        train our future leaders with best of education.
-
-                        Our objective is to disseminate knowledge through various forms such as class room training,
-                        industrial
-                        visit and organise a attractive curriculum for the all ground development of our students.
-
-                        Mechanical engineering is the basic branch of all engineering that why it is known as MOTHER OF
-                        ENGINEERING as it add-ons state of art technically and exhilarates solution.
-
-                        Here at NAVSAYADRI education society we attempt to provide cheerful, productive and satisfying
-                        experience at all level to explore the amazing world mechanical engineering.
-
-                        With best wishes for a bright future.
-
-                    </p>
-            </div> -->
             <h2 class="facultyh2">Faculty Profile</h2>
             <div class="facultydiv">
                 {% for civil_faculty in civil_faculties %}
@@ -250,21 +141,22 @@
             <h2 class="topic-title">Academics</h2>
             <div class="face_div">
                 <div class="face_sub_div">
-                    <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+                    <img src="{% static 'laboratory.png' %}" alt="" class="face_img">
                     <h3 class="face_title">Laboratory</h3>
                     <a class="dep" href="{% url 'eng_lab_civil' %}"><button class="button button3">click here to
                             view</button></a>
                     </p>
                 </div>
                 <div class="face_sub_div">
-                    <img src="{% static 'cs_img2.jpeg' %}" alt="" class="face_img">
+                    <img src="{% static 'syllabus.img' %}" alt="" class="face_img">
                     <h3 class="face_title">Syllabus</h3>
-                    <a href="{% url 'eng_syllabus'%}"> <button class="button button3">click here to view</button></a>
+                    <a href="{% url 'eng_fe_syllabus'%}"> <button class="button button3">click here to view</button></a>
                     </p>
                 </div>
                 <div class="face_sub_div">
-                    <img src="{% static 'cs_img3.jpeg' %}" alt="" class="face_img">
-                    <a class="dep" href="{% url 'Electrical' %}"><button class="button button3">click here to
+                    <img src="{% static 'events_activity.jpg' %}" alt="" class="face_img">
+                    <h3 class="face_title">Events and Activities</h3>
+                    <a class="dep" href="{% url 'eng_fe_ev' %}"><button class="button button3">click here to
                             view</button></a>
                     </p>
                 </div>

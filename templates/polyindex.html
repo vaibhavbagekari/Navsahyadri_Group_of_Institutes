@@ -35,7 +35,7 @@
       font-size: 1.3rem;
       text-transform: uppercase;
       color: rgb(255, 255, 255);
-      text-shadow: 5px 5px 6px black;
+      /* text-shadow: 5px 5px 6px black; */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -68,7 +68,17 @@
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-
+.poly_stud_achivment_div{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  gap: 2em;
+}
+.poly_stud_achivment_div img{
+  margin: auto;
+}
   </style>
 </head>
 {% include "header.html" %}
@@ -151,5 +161,13 @@
       
 
     </ul>
+  </div>
+  <br><br>
+  <h1>Academic Achievers</h1>
+  <br>
+  <div class="poly_stud_achivment_div">
+    <img src="{% static 'poly _stud_achivment1.jpg' %}" alt="poly _stud_achivment" width="95%">
+    <br>
+    <img src="{% static 'poly _stud_achivment2.jpg' %}" alt="poly _stud_achivment" width="95%">
   </div>
 {% include 'footer.html' %}

@@ -9,7 +9,7 @@ admin.site.register(feature)
 
 class facultyAdmin(admin.ModelAdmin):
     fac_display = ('username', 'password', 'photo', 'Qualifications',
-                   'Experience', 'contact_no', 'Email_Id', 'department')
+                   'Experience', 'contact_no', 'DOJ', 'Email_Id', 'department')
 
 
 admin.site.register(faculty, facultyAdmin)
@@ -21,11 +21,13 @@ class nss_photosAdmin(admin.ModelAdmin):
 
 admin.site.register(nss_photo, nss_photosAdmin)
 
+
 class mandatory_disclosureAdmin(admin.ModelAdmin):
     mandatory_disclosure_display = ('photos', 'description')
 
 
 admin.site.register(mandatory_disclosure, mandatory_disclosureAdmin)
+
 
 class elibrary_urlAdmin(admin.ModelAdmin):
     url_display = ('name_eBooks', 'url_eBooks')
@@ -77,14 +79,20 @@ class aicteAdmin(admin.ModelAdmin):
 
 admin.site.register(aicte_approvals, aicteAdmin)
 
+
 class sppu_affi_admin(admin.ModelAdmin):
-    sppu_display=('title','file')
+    sppu_display = ('title', 'file')
+
+
 admin.site.register(sppu_approvals, sppu_affi_admin)
+
 
 class eventAdmin(admin.ModelAdmin):
     event_display = ('event_title', 'event_file', 'event_discription')
 
+
 admin.site.register(event, eventAdmin)
+
 
 class noticesAdmins(admin.ModelAdmin):
     notice_display = ('notice_title', 'notice_file', 'notice_discription')
@@ -92,26 +100,82 @@ class noticesAdmins(admin.ModelAdmin):
 
 admin.site.register(notices, noticesAdmins)
 
+
 class engadmissionAdmins(admin.ModelAdmin):
-    engadmission_display = ('name','department','contact_no','email','gendar')
+    engadmission_display = ('name', 'department', 'contact_no', 'email',
+                            'gendar')
 
 
 admin.site.register(engadmission_model, engadmissionAdmins)
 
+
 class polyadmissionAdmins(admin.ModelAdmin):
-    polyadmission_display = ('name','department','contact_no','email','gendar')
+    polyadmission_display = ('name', 'department', 'contact_no', 'email',
+                             'gendar')
 
 
 admin.site.register(polyadmission_model, polyadmissionAdmins)
 
+
 class pharmadmissionAdmins(admin.ModelAdmin):
-    pharmadmission_display = ('name','department','contact_no','email','gendar')
+    pharmadmission_display = ('name', 'department', 'contact_no', 'email',
+                              'gendar')
 
 
 admin.site.register(pharmadmission_model, pharmadmissionAdmins)
 
+
 class mbaadmissionAdmins(admin.ModelAdmin):
-    mbaadmission_display = ('name','department','contact_no','email','gendar')
+    mbaadmission_display = ('name', 'department', 'contact_no', 'email',
+                            'gendar')
 
 
 admin.site.register(mbaadmission_model, mbaadmissionAdmins)
+
+
+class d_pharm_facultyAdmin(admin.ModelAdmin):
+    d_pharm_faculty_display = ('id', 'name', 'designation', 'qualification',
+                               'DOJ', 'experience')
+
+
+admin.site.register(d_pharm_facultys, d_pharm_facultyAdmin)
+
+
+class b_pharm_facultyAdmin(admin.ModelAdmin):
+    b_pharm_faculty_display = ('id', 'name', 'designation', 'qualification',
+                               'DOJ', 'experience')
+
+
+admin.site.register(b_pharm_facultys, b_pharm_facultyAdmin)
+
+
+class m_pharm_facultyAdmin(admin.ModelAdmin):
+    m_pharm_faculty_display = ('id', 'name', 'designation', 'qualification',
+                               'DOJ', 'experience')
+
+
+admin.site.register(m_pharm_facultys, m_pharm_facultyAdmin)
+
+
+class mba_facultyAdmin(admin.ModelAdmin):
+    mba_faculty_display = ('id', 'name', 'designation', 'qualification', 'DOJ',
+                           'experience')
+
+
+admin.site.register(mba_facultys, mba_facultyAdmin)
+
+
+class mbapp_facultyAdmin(admin.ModelAdmin):
+    mbapp_faculty_display = ('id', 'name', 'designation', 'qualification',
+                             'DOJ', 'experience')
+
+
+admin.site.register(mbapp_facultys, mbapp_facultyAdmin)
+
+
+class mca_facultyAdmin(admin.ModelAdmin):
+    mca_faculty_display = ('id', 'name', 'designation', 'qualification', 'DOJ',
+                           'experience')
+
+
+admin.site.register(mca_facultys, mca_facultyAdmin)
